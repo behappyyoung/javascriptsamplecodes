@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/UzUQaFO/3/edit
+-->
+<head>
+<meta name="description" content="EventListener / checkbox" />
+<meta charset=utf-8 />
+  <title>EventListener / checkbox </title>
+
+<style id="jsbin-css">
+#upper {
+    min-height: 30px;
+    border: 1px solid black;
+}
+#lower li {
+    padding: .25em;
+}
+</style>
+</head>
+<body>
+<div id="upper"></div>
+<div id="lower">
+    <ul>
+        <li>
+            <input type="checkbox" value="foo" />foo</li>
+        <li>
+            <input type="checkbox" value="bar" />bar</li>
+        <li>
+            <input type="checkbox" value="you" />you</li>
+    </ul>
+</div>
+  <div id="testvalue"> values </div>
+<div id="testobject"> object </div>
+<script>
+var qarray = [];
+var checkinput = document.getElementsByTagName('input');
+            for(var i = 0, j=checkinput.length; i<j; i++){
+                checkinput[i].addEventListener('click', checkClick, false);
+            }
+var upper = document.getElementById('upper');
+    upper.addEventListener('click', clean, false);
+function checkClick() {
+  var temp = document.createElement('div');
+  temp.id = this.value;
+  temp.innerHTML = this.value;
+  temp.setAttribute('name', 'test');
+  temp.setAttribute('onclick', 'alert("test");');
+  
+ // temp.addEventListener('click', alert(this.value), false);   
+          qarray.push(this);
+          document.getElementById('testvalue').innerHTML=qarray.toString();
+          document.getElementById('testobject').innerHTML=temp.outerHTML.replace('<', '');
+          upper.appendChild(temp);
+}
+
+function clean(){
+       document.getElementById('upper').innerHTML='';
+       document.getElementById('testvalue').innerHTML='';
+       document.getElementById('testobject').innerHTML='';
+      for(var i = 0, j=checkinput.length; i<j; i++){
+               checkinput[i].checked=false;
+      }   
+}
+</script>
+</body>
+</html>

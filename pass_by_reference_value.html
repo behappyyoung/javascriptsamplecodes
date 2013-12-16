@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/UzuhOgi/3/edit
+-->
+<head>
+<meta name="description" content="pass by test" />
+<meta charset=utf-8 />
+  <title> pass by test </title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  <div id="result"> here </div>
+  <div id="result2"> here </div>
+<script>
+var myresult = document.getElementById('result');
+var myresult2= document.getElementById('result2');
+
+var x = 2;
+var myo = {};
+var myarray =[];
+
+function passObject(obj){
+  obj.test = 'test';
+}
+
+function passArray(a){
+  a.push('testarray');
+}
+
+
+function passPrimitive(prim){
+  prim++;
+  return prim;
+}
+
+passObject(myo);
+passArray(myarray);
+var y = passPrimitive(x);
+
+
+console.log(myarray);
+console.log(myo.test);
+console.log(x+','+y);
+</script>
+</body>
+</html>

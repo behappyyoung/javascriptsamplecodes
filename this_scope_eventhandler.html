@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/EVArUSof/1/edit
+-->
+<head>
+  <meta name="description" content="this / eventhandler" />
+<meta charset=utf-8 />
+  <title> this / eventhandler </title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  <div id="result"> here </div>
+  
+   <button id='thebutton' onclick='click_handler()'>Click me!</button>
+  
+     <button id='thebutton2' >Click me!</button>
+  
+<script>
+var myresult = document.getElementById('result');
+
+
+
+  function click_handler() { 
+   alert(this); 
+  } 
+   
+  function addhandler() { 
+   document.getElementById('thebutton2').onclick = click_handler; 
+  } 
+  
+  window.onload = addhandler; 
+
+myresult.innerHTML = 'test';
+</script>
+</body>
+</html>
