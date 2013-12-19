@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/uWoROpIl/2/edit
+-->
+<head>
+<meta name="description" content="design pattern : singleton" />
+<meta charset=utf-8 />
+  <title>design pattern : singleton </title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  var mySingleton = (function () {
+  // Instance stores a reference to the Singleton
+  var instance;
+  function init() {
+    // Singleton
+    // Private methods and variables
+    function privateMethod(){
+        console.log( "I am private" );
+    }
+    var privateVariable = "Im also private";
+    var privateRandomNumber = Math.random();
+    return {
+      // Public methods and variables
+      publicMethod: function () {
+        console.log( "The public can see me!" );
+      },
+      publicProperty: "I am also public",
+      getRandomNumber: function() {
+        return privateRandomNumber;
+      }
+    };
+  }
+  return {
+    // Get the Singleton instance if one exists
+    // or create one if it doesn't
+    getInstance: function () {
+      if ( !instance ) {
+        instance = init();
+     }
+      return instance;
+    }
+   };
+})();
+
+// Usage:
+var singleA = mySingleton.getInstance();
+var singleB = mySingleton.getInstance();
+console.log( singleA.getRandomNumber() +'/'+singleB.getRandomNumber() ); // 
+<script>
+var mySingleton = (function () {
+  // Instance stores a reference to the Singleton
+  var instance;
+  function init() {
+    // Singleton
+    // Private methods and variables
+    function privateMethod(){
+        console.log( "I am private" );
+    }
+    var privateVariable = "Im also private";
+    var privateRandomNumber = Math.random();
+    return {
+      // Public methods and variables
+      publicMethod: function () {
+        console.log( "The public can see me!" );
+      },
+      publicProperty: "I am also public",
+      getRandomNumber: function() {
+        return privateRandomNumber;
+      }
+    };
+  }
+  return {
+    // Get the Singleton instance if one exists
+    // or create one if it doesn't
+    getInstance: function () {
+      if ( !instance ) {
+        instance = init();
+     }
+      return instance;
+    }
+   };
+})();
+
+// Usage:
+var singleA = mySingleton.getInstance();
+var singleB = mySingleton.getInstance();
+console.log( singleA.getRandomNumber() +'/'+singleB.getRandomNumber() ); //
+</script>
+</body>
+</html>

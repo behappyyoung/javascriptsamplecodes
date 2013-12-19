@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/ofohaziD/1/edit
+-->
+<head>
+<meta name="description" content="closure" />
+<meta charset=utf-8 />
+<title>closure</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  function foo() {
+  var tmp = 3;
+  return function () {
+    return ++tmp;
+  };
+}
+var bar = foo(); // bar is now a closure.
+
+console.log(bar());
+
+console.log(bar());
+
+
+
+function foo2(x) {
+  var tmp = 3;
+  return function (y) {
+    return x + y + (++tmp);
+  };
+}
+var bar = foo2(2); // bar is now a closure.
+var test = bar(10);
+
+console.log(test);
+
+var test2 = bar(10);
+
+console.log(test2);
+  
+<script>
+function foo() {
+  var tmp = 3;
+  return function () {
+    return ++tmp;
+  };
+}
+var bar = foo(); // bar is now a closure.
+
+console.log(bar());
+
+console.log(bar());
+
+
+
+function foo2(x) {
+  var tmp = 3;
+  return function (y) {
+    return x + y + (++tmp);
+  };
+}
+var bar = foo2(2); // bar is now a closure.
+var test = bar(10);
+
+console.log(test);
+
+var test2 = bar(10);
+
+console.log(test2);
+</script>
+</body>
+</html>r
