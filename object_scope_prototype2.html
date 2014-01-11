@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/aqiCIqI/3/edit
+-->
+<head>
+  <meta name="description" content="object / scope / local - this / prototype  " />
+<meta charset=utf-8 />
+  <title> object / scope / prototype  </title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  <div id="result"> here </div>
+<script>
+function testf(){
+   var v1 = 'test';
+  this.v2 = 'test1'+v1;
+  var f1 = function(){
+    return this.v1;
+  };
+  this.f2 = function(){
+     return v1;
+  };
+}
+
+testf.prototype = {
+  v3 : 'test3',
+  f3 : function(){
+     return this.v2;
+  },
+    f4 : function(){
+      
+     return this.v2;
+  }
+};
+  
+var test = new testf();
+
+console.log(test.f2());
+console.log(test.f3());
+
+
+test.v3 = 'new3';
+
+var test2 = new testf();
+
+console.log(test.v3);
+console.log(test2.v3);
+console.log(test.f4());
+
+
+
+function Podcast(title, url) {
+    this.title = title;
+    this.url = url;
+    
+    this.toString = function() {
+       return 'Title: ' + this.title;
+    };
+}
+
+var podcast = new Podcast('Astronomy cast', 'http:// ...');
+console.log(typeof podcast.download);               
+
+Podcast.prototype.download = function() {
+    console.log("Downloading podcast ...");
+};
+
+var podcast2 = new Podcast('jQuery podcast', 'http:// ...');
+
+console.log(typeof podcast.download);     
+console.log(podcast.download);   
+console.log(podcast.hasOwnProperty('download')); 
+console.log(typeof podcast2.download); 
+
+console.log(podcast.constructor.prototype.hasOwnProperty('download'));    
+podcast.constructor.prototype.download();
+
+//When the download method is called, the JavaScript engine first looks at the methods of the podcast object which doesn’t seem have this method. Next thing, the engine identifies the prototype of the constructor function used for creating the podcast object. If the engine can find the method in the prototype object then this method will be called.
+</script>
+</body>
+</html>
