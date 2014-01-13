@@ -86,6 +86,7 @@ function showList(currentlist){
     var stdin = process.stdin, stdout = process.stdout;
     stdin.resume();
     stdin.setEncoding('utf8');
+    stdout.write( ' input node number : [press "q" for quit] > ');
     stdin.once('data', function(data){
         var input = data.toString().trim();
 
