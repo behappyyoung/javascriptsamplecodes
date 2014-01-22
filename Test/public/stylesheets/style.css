@@ -5,3 +5,20 @@ body {
 a {
   color: #00b7ff;
 }
+a .result-table {
+  margin: 20px 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+a .result-table td {
+  padding: 8px;
+}
+a .result-table > tbody > tr > td:first-child {
+  width: 25%;
+  max-width: 300px;
+  text-align: right;
+}
+a .result-table td table {
+  background-color: #add8e6;
+  text-align: right;
+}

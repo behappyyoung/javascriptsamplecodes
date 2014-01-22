@@ -13,7 +13,7 @@ var db = mongoose.createConnection('localhost', 'pollsapp');
 var PollSchema = require('../models/Poll.js').PollSchema;
 var Poll = db.model('polls', PollSchema);
 exports.index = function(req, res) {
-    res.render('index', {title: 'Polls'});
+    res.render('index', {title: 'Polls -  Nodejs / Express / jQeury / AngularJS Testing'});
 };
 // JSON API for list of polls
 exports.list = function(req, res) {
