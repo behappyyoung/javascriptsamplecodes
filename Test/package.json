@@ -8,6 +8,8 @@
   "dependencies": {
     "express": "3.4.8",
     "jade": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "mongodb": ">= 1.3.19",
+    "mongoose": ">= 3.8.0"
   }
 }

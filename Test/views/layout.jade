@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='en', ng-app='polls')
     head
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width,initial-scale=1, user-scalable=no')
@@ -8,11 +8,14 @@ html(lang='en')
         link(rel='stylesheet', href='/stylesheets/style.css')
         script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js')
         script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js')
-    body
+        script(src='/javascripts/services.js').
+    body(ng-controller='PollListCtrl')
         nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
             div.navbar-header
-                a.navbar-brand(href='#/polls')= title
+                a.navbar-brand(href='#')= title
         div.container
-            block content
+
+            block content1
+
             div
 

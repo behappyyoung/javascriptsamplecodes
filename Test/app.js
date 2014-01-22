@@ -31,6 +31,9 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.get('/polls/polls', routes.list);
+app.get('/polls/:id', routes.poll);
+app.post('/polls', routes.create);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Test Express server listening on port ' + app.get('port'));
