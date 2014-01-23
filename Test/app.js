@@ -35,6 +35,13 @@ app.get('/polls/polls', routes.list);
 app.get('/polls/:id', routes.poll);
 app.post('/polls', routes.create);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Test Express server listening on port ' + app.get('port'));
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', routes.vote);
+
+server.listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
 });
+
+

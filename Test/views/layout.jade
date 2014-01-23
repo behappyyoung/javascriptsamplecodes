@@ -8,9 +8,11 @@ html(lang='en', ng-app='polls')
         link(rel='stylesheet', href='/stylesheets/style.css')
         script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js')
         script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js')
+        script(src='/socket.io/socket.io.js')
         script(src='/javascripts/app.js')
         script(src='/javascripts/controllers.js')
-        script(src='/javascripts/services.js').
+        script(src='/javascripts/services.js')
+
     body(ng-controller='PollListCtrl')
         nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
             div.navbar-header
