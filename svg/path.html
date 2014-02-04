@@ -1,75 +1,32 @@
-<?php
-elgg_load_css("fitness_css");
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js " >
 
-elgg_load_library("shn:lib");
-elgg_load_library("shn:lib:deviceservices");
-elgg_load_library("shn:model:devices");
+    </script>
+    <style>
+        .calind {
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
 
-$memberinfo = elgg_extract('memberinfo', $vars, '');
-$today = elgg_extract('today', $vars, '');
-$today = ($today=='')?  date('Y-m-d') : $today;
-
-
-$guid =  $memberinfo['guid'];
-
-elgg_load_library("shn:model:users");
-$targetUser = SHNUser::loadByGuid($guid);
-$user_id = $targetUser->getId();
-
-
-$calories_consumed = Fitness::getMemberCalories($user_id);
-
-$device =  shn_get_user_devices($guid);
-
-
-$activity = DeviceServices::getDailyActivity($device[0]->device_user_device_id);
-$calories_burned = ($activity['caloriesOut']=='')? '0' : $activity['caloriesOut'];
-
-?>
-
-
+<html>
 <div class="content">
-    <div class="nutrition_date">
-        <input type="text" id="datepicker" value="<?php echo $today?>" />
-    </div>
-    <?php
 
 
-    if($userstat['calories_goal']!=''){
-
-        $calory_goal = $userstat['calories_goal'];
-        echo '<div class="plantitle"> <div>My Calories Summary </div><span class="clear"></span></div>';
-        echo    '<div class="calsum">
-                <div class="calind"> Calories goal  <br /> <span class="calgoal">'.$calory_goal .'</span></div>
-                <div class="calind"> Calories Consumed  <br /> <span class="calgoal" id="cal_consumed"> '.number_format($calories_consumed,2) .'</span></div>
-                <div class="calind"> Calories Burned  <br /> <span class="calgoal"> '.$calories_burned.'</span></div>
-                <div class="calind"> Calories Left  <br /> <span class="calgoal" id="cal_left" style="color: #70B646;">'.number_format(($calory_goal-$calories_consumed+$calories_burned), 2) .'</span></div>
-            </div>';
-    }else{
-        $calory_goal = 0;
-        echo '<div class="nutritionalert">You don\'t have Calories Goal ';
-        echo '<a href="'.elgg_get_site_url().'hra/"> Retake HRA </a> </div>';
-        echo '<div class="plantitle"> <div>My Calories Summary </div><span class="clear"></span></div>';
-        echo    '<div class="calsum">
-                <div class="calind"> Calories goal  <br /> <span class="calgoal">'.$calory_goal .'</span></div>
-                <div class="calind"> Calories Consumed  <br /> <span class="calgoal" id="cal_consumed"> '.number_format($calories_consumed,2) .'</span></div>
-                <div class="calind"> Calories Burned  <br /> <span class="calgoal"> '.$calories_burned .' </span></div>
-                <div class="calind"> Calories Left  <br /> <span class="calgoal" id="cal_left">'.number_format(($calory_goal-$calories_consumed+$calories_burned), 2) .'</span></div>
-            </div>';
-
-    }
-
-
-
-    ?>
     <script>
         function calcPath (value, total, R) {
             var center;
             var alpha = 360 / total * value,
-                a = (90 - alpha) * Math.PI / 180,
-                x = 70 + R * Math.cos(a),
-                y = 70 - R * Math.sin(a),
-                path;
+                    a = (90 - alpha) * Math.PI / 180,
+                    x = 70 + R * Math.cos(a),
+                    y = 70 - R * Math.sin(a),
+                    path;
             if (total == value) {
                 path = "M"+ 70 +","+ (70 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
             } else {
@@ -99,30 +56,17 @@ $calories_burned = ($activity['caloriesOut']=='')? '0' : $activity['caloriesOut'
 
         jQuery(document).ready(function() {
 
-            <?php
-            $distance = $activity['totalDistance'];
-            if($distance!='') {
-                 echo 'var distance_value=0;';
-                 echo 'var distance_actual = '.$distance.';';
-                 echo 'var distance_intvar = setInterval(distanceUpdate, 20);';
-             }
+            var distance_value=0;
+            var distance_actual = 8;
+            var distance_intvar = setInterval(distanceUpdate, 20);
 
-            $step = $activity['steps'];
-            if($step!='') {
-                 echo 'var step_value=0;';
-                 echo 'var step_actual = '.$step.';';
-                 echo 'var step_intvar = setInterval(stepUpdate, 20);';
-             }
+            var step_value=0;
+            var step_actual = 1500;
+            var step_intvar = setInterval(stepUpdate, 20);
 
-            $floor = $activity['floors'];
-            if($floor!='') {
-                 echo 'var floor_value=0;';
-                 echo 'var floor_actual = '.$floor.';';
-                 echo 'var floor_intvar = setInterval(floorUpdate, 100);';
-             }
-
-
-             ?>
+            var floor_value=0;
+            var floor_actual = 10;
+            var floor_intvar = setInterval(floorUpdate, 100);
 
             function distanceUpdate(){
                 distance_value = distance_value +0.1;
@@ -164,8 +108,8 @@ $calories_burned = ($activity['caloriesOut']=='')? '0' : $activity['caloriesOut'
                 <span id="distance_progress" ></span>
 
             </div> <br />
-            <span class="percentage"><?=number_format(($activity['totalDistance']/10)*100, 1)?>%</br></span>
-            <span id="distance_actual" class="calgoal"><?=$activity['totalDistance']?></span>
+            <span class="percentage">%</br></span>
+            <span id="distance_actual" class="calgoal"></span>
         </div>
 
         <div class="calind">
@@ -201,3 +145,7 @@ $calories_burned = ($activity['caloriesOut']=='')? '0' : $activity['caloriesOut'
 
 
 </div>
+</html>
+
+</body>
+</html>
