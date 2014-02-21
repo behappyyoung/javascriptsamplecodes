@@ -32,7 +32,13 @@ $(function(){
      moveEvent = (touch) ? 'touchmove' : 'mousemove',
      endEvent = (touch) ? 'touchend' : 'mouseup';
 
-    target.on(startEvent, function(e){
+    target.on('click', function(){
+    	console.log('click'+this+ touch+startEvent);
+    })
+    .on(
+    		
+    		startEvent, function(e){
+    	    	console.log('click'+this+ touch+startEvent);
         // prevent image drag (Firefox)
         e.preventDefault();
         startTime = e.timeStamp;
