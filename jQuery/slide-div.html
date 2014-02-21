@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.js"></script>
+
+<meta charset=utf-8 />
+<title>jQuery Slide Div</title>
+
+<style>
+body {
+    padding: 0px;    
+}
+
+#container {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+}
+
+.box {
+    position: absolute;
+    width: 50%;
+    height: 300px;
+    line-height: 300px;
+    font-size: 50px;
+    text-align: center;
+    border: 2px solid black;
+    left: 150%;
+    top: 100px;
+    margin-left: -25%;
+}
+
+#box1 {
+    background-color: green;
+    left: 50%;
+}
+
+#box2 {
+    background-color: yellow;
+}
+
+#box3 {
+    background-color: red;
+}
+
+#box4 {
+    background-color: orange;
+}
+
+#box5 {
+    background-color: blue;
+}
+
+
+</style>
+<script>
+/*
+$('.box').click(function() {
+console.log(this);
+    $(this).animate({
+        left: '-50%'
+    }, 500, function() {
+        $(this).css('left', '150%');
+        $(this).appendTo('#container');
+    });
+
+    $(this).next().animate({
+        left: '50%'
+    }, 500);
+});
+*/
+jQuery(function($) {
+$('.box').on({
+	  'click': function(){
+	    $(this).css('color', 'red');
+	  },
+	  'mouseleave': function(){
+	    $(this).css('color', 'blue');
+	  }
+	});
+
+}
+</script>
+</head>
+<body>
+<div id="container">
+    
+    <div id="box1" class="box">Div #1</div>
+    <div id="box2" class="box">Div #2</div>
+    <div id="box3" class="box">Div #3</div>
+    <div id="box4" class="box">Div #4</div>
+    <div id="box5" class="box">Div #5</div>
+    
+</div>
+
+</body>
+</html>

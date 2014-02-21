@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>swipeleft demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+  <style>
+  html, body { padding: 0; margin: 0; }
+  html, .ui-mobile, .ui-mobile body {
+    height: 105px;
+  }
+  .ui-mobile, .ui-mobile .ui-page {
+    min-height: 105px;
+  }
+
+  div.box {
+  position:absolute;
+    width: 30em;
+    height: 3em;
+    left:200px;
+    background-color: #108040;
+  }
+  
+  
+  </style>
+</head>
+<body>
+ 
+<h3>Swipe the green rectangle in the left direction to change its color:</h3>
+<div class="box"></div>
+ 
+<script>
+$(function(){
+  // Bind the swipeleftHandler callback function to the swipe event on div.box
+  $( "div.box" ).on( {
+		  "swipeleft" : swipeleftHandler,
+		  "swiperight": swiperightHandler
+		  
+  });
+ 
+  // Callback function references the event target and adds the 'swipeleft' class to it
+  function swipeleftHandler( event ){
+	  $(event.target ).animate({
+	        left: '-=50px'
+	    }, 500);
+    $( event.target ).css('background-color', 'red');
+  }
+  
+  function swiperightHandler( event ){
+	  $(event.target ).animate({
+	        left: '+=50px'
+	    }, 500);
+	    $( event.target ).css('background-color', 'blue');
+	  }
+});
+</script>
+ 
+</body>
+</html>

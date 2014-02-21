@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<style>
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+#box {
+position:relative;
+    width: 300px;
+    height: 200px;
+    background: #eef;
+    margin: 30px auto;
+}
+#box h1 {
+    padding-top: 80px;
+}  
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script>
+
+$(function(){
+	var maxTime = 1000, // allow movement if < 1000 ms (1 sec)
+    maxDistance = 50,  // swipe movement of 50 pixels triggers the swipe
+
+     target = $('#box');
+     startX = 0,
+     startTime = 0,
+     touch = "ontouchend" in document,
+     startEvent = (touch) ? 'touchstart' : 'mousedown',
+     moveEvent = (touch) ? 'touchmove' : 'mousemove',
+     endEvent = (touch) ? 'touchend' : 'mouseup';
+
+    target.on(startEvent, function(e){
+        // prevent image drag (Firefox)
+        e.preventDefault();
+        startTime = e.timeStamp;
+        startX = e.originalEvent.touches ? e.originalEvent.touches[0].pageX : e.pageX;
+    })
+    .on(endEvent, function(e){
+        startTime = 0;
+        startX = 0;
+    })
+    .on(moveEvent, function(e){
+        e.preventDefault();
+        var currentX = e.originalEvent.touches ? e.originalEvent.touches[0].pageX : e.pageX,
+            currentDistance = (startX === 0) ? 0 : Math.abs(currentX - startX),
+            // allow if movement < 1 sec
+            currentTime = e.timeStamp;
+        if (startTime !== 0 && currentTime - startTime < maxTime && currentDistance > maxDistance) {
+            if (currentX < startX) {
+                // swipe left code here
+                target.find('h1').html('Swipe Left').fadeIn();
+                //setTimeout(function(){   target.find('h1').fadeOut();  }, 1000);
+                target.css('left', '-500px');
+            }
+            if (currentX > startX) {
+                // swipe right code here
+                target.find('h1').html('Swipe Right').fadeIn();
+                target.css('left', '500px');
+                //setTimeout(function(){   target.find('h1').fadeOut();      }, 1000);
+            }
+            startTime = 0;
+            startX = 0;
+        }
+    });
+	
+});
+
+    
+ </script>
+ 
+ <h1>Swipe Inside the Box</h1>
+<div id="box"><h1></h1></div>
+
+</html>
