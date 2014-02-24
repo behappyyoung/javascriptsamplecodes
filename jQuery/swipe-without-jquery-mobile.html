@@ -1,83 +1,448 @@
-<!doctype html>
-<html>
-<style>
-h1 {
-    text-align: center;
-    font-size: 24px;
-}
-#box {
-position:relative;
-    width: 300px;
-    height: 200px;
-    background: #eef;
-    margin: 30px auto;
-}
-#box h1 {
-    padding-top: 80px;
-}  
 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>HSVL API</title>
+
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+            <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+
+      <!-- Bootstrap core CSS -->
+      <link href="../bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+      <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+      
+
+  </head>
+
+  <body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar" >
+                    <div class=" float-left"><img src="../images/logo-hsvl.png" /> </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+
+      
+<link rel="stylesheet" href="inc/swipe.css" />
+
+<div class="jumbotron">
+    <div class="loading">
+        <img src="../images/loading.gif" />
+    </div>
+    <div class="panel panel-primary shadow">
+        <div class="panel-body">
+
+
+
+        </div>
+
+        <div class="panel-body submenu">
+            <!-- sub menu -->
+            <ul class="nav nav-pills" id="tabs" data-tabs="tabs" style="font-size: 12px;margin-left: 20px;">
+                <li class="active"><a href="#dashboard"  data-toggle="tab" id="tab-dashboard">Dashboard</a></li>
+                <li><a href="#behavior"  data-toggle="tab" id="tab-behavior" class="tab-menu" > My Drving  </a></li>
+                <li><a href="#chart"  data-toggle="tab" id="tab-chart"  class="tab-menu" > Charts</a></li>
+                <li><a href="#log"  data-toggle="tab"  id="tab-log"> Log</a></li>
+                <li><a href="#track"  data-toggle="tab" id="tab-track" > Tracking </a></li>
+            </ul>
+        </div>
+
+
+
+
+</div>
+
+    <div class="panel-body" id="base"  >
+        <div class="panel panel-primary shadow" style="width: 100%;padding: 20px 0;" id="swipe-panel">
+            <div id="my-tab-content" class="tab-content" >
+                <div class="sub-pane active" id="dashboard">
+                    <div class="col-sm-6 placeholder">
+    <div class="panel panel-info shadow">
+        <div class="panel-heading">
+            DISTANCE
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-5 details"> Total Distance </div>
+            <div class="col-sm-7 details-data"> <label id="totaldistance">  </label> Miles </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-5 details"> Average </div>
+            <div class="col-sm-7 details-data"> <label id="averagedistance"> </label> Miles </div>
+        </div>
+        <div class="panel-body">
+            <div class="details">Period  BenchMark Data </div>
+            <div class="bench">
+
+                <div id="bench-left"> 0 </div>
+
+                <div id="benchbar">
+                    <span id="arrow" class="arrow"> <img src="../images/benchmark-arrow.png"></span>
+                    <span id="average" class="average">  </span> </div>
+                <div id="bench-right"> <span id="total"> </span>  </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-sm-6 placeholder">
+    <div class="panel panel-info shadow">
+        <div class="panel-heading">
+            DRIVING HOURS
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-5 details"> Driving Hours </div>
+            <div class="col-sm-7 details-data"> <label id="onhour">  </label> Hours </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-5 details"> Resting Hours </div>
+            <div class="col-sm-7 details-data"> <label id="offhour">  </label> Hours </div>
+        </div>
+        <div class="panel-body">
+            <div class="details"> Period On Hours BenchMark  </div>
+            <div class="bench">
+
+                <div id="bench-left"> 0 </div>
+
+                <div id="benchbar">
+                    <span id="arrow-hour" class="arrow"> <img src="../images/benchmark-arrow.png"></span>
+                    <span id="on-hour" class="average">  </span> </div>
+                <div id="bench-right"> <span id="total-hour"> </span>  </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div class="col-sm-12 placeholder">
+    <div class="panel panel-info shadow">
+        <div class="panel-heading">
+            IDLE SUMMARY
+        </div>
+        <div class="panel-body">
+
+            <div  class="col-xs-8"> <div id="timechart" style="width: 100%;height: 200px;"> </div></div>
+            <div class="col-xs-3 "> <div style="margin-top: 50px;"><span id="idle-percent"> </span> <span> % </span> </div> OF IDLE </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-6 "> <div> <span id="idle-driving"> </span> <span> hours</span></div> ACTIVE </div>
+            <div class="col-xs-6 "> <div> <span id="idle"> </span> <span> hours</span></div> IDLE </div>
+
+        </div>
+        <div class="panel-body">
+            <div class="details"> Period Idle / On Hours BenchMark </div>
+            <div class="bench">
+
+                <div id="bench-left"> 0 </div>
+
+                <div id="benchbar">
+                    <span id="arrow-idle" class="arrow"> <img src="../images/benchmark-arrow.png"></span>
+                    <span id="arrow-on-idle" class="average">  </span>  </div>
+                <div id="bench-right"> <span id="total-idle"> </span> Hours </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>                </div>
+
+                <div class="sub-pane" id="behavior">
+                    <div class="col-sm-12 placeholder">
+    <div class="panel panel-info shadow">
+        <div class="panel-heading">
+            Speeding Behavior [ Over 20 Miles/h ]
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-6">
+                <div id="b_speed_chart"  class="bchart" ></div>
+            </div>
+            <div class="col-sm-6">
+                <div class="analysis push20" >
+                    <div> Max Speed : <span id="b_maxspeed" class="green"> </span>  </div>
+                    <div> 40 ~ 65  :
+                        <span id="b_highspeed" class="green"> None </span> <br />
+                    </div>
+
+                    <div> Over Speeding [ Over 65 ] : <span id="b_overspeed" class="green"> None </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="col-sm-12 placeholder">
+    <div class="panel panel-info shadow">
+        <div class="panel-heading">
+            Acceleration Behavior  [ Pedal Pressure > 10 / RPM > 1000 ]
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-6">
+                <div id="b_accel_chart" class="bchart" ></div>
+            </div>
+            <div class="col-sm-6">
+                <div class="analysis push20" >
+                    <div> Max Pressure : <span id="b_maxaccel" class="green"> </span>  </div>
+                    <div> Hard Acceleration  : <span id="b_overaccel" class="green"> None </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-6">
+                <div id="b_rpm_chart"  class="bchart" ></div>
+            </div>
+            <div class="col-sm-6">
+                <div class="analysis push20" >
+                    <div> Max RPM : <span id="b_maxrpm" class="green"> </span>  </div>
+                    <div> Over 3000 : <span id="b_overrpm" class="green"> None </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                </div>
+                <div class="sub-pane" id="chart">
+                        <div class="col-md-6 placeholder">
+        <div class="panel panel-info shadow">
+            <div class="panel-heading">
+                Speed
+            </div>
+            <div class="panel-body">
+                    <div id="speed_chart"  class="chart" ></div>
+            </div>
+
+       </div>
+    </div>
+
+    <div class="col-md-6 placeholder">
+        <div class="panel panel-info shadow">
+            <div class="panel-heading">
+                Yaw Rate
+            </div>
+
+            <div class="panel-body">
+                    <div id="yaw_chart" class="chart"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-6 placeholder">
+        <div class="panel panel-info shadow">
+            <div class="panel-heading">
+                Lateral G
+            </div>
+
+            <div class="panel-body">
+                    <div id="lateralg_chart"  class="chart"></div>
+            </div>
+
+        </div>
+    </div>
+                </div>
+
+                <div class="sub-pane" id="log">
+                    <style>
+    .logcell  {
+        text-transform: uppercase;
+        background-color: rgba(158, 157, 157, 0.19);
+
+        border-color: rgba(239, 249, 255, 0.8);
+        outline: 0;
+        outline: thin dotted \9;
+        /* IE6-9 */
+
+        -webkit-box-shadow: inset 0 1px 1px rgba(87, 20, 20, 0.075), 0 0 8px rgba(137, 139, 135, 0.6);
+        -moz-box-shadow: inset 0 1px 1px rgba(87, 20, 20, 0.075), 0 0 8px rgba(137, 139, 135, 0.6);
+        box-shadow:inset 0 1px 1px rgba(87, 20, 20, 0.075), 0 0 8px rgba(137, 139, 135, 0.6);
+        margin: 10px;
+
+        vertical-align: middle;
+    }
+
+    .logcell  .top {
+        font-size: 14px;
+        height: 80px;
+        border-bottom: 2px rgba(239, 249, 255, 0.8);
+    }
+
+    .logcell  .bottom {
+        font-size: 30px;
+        height: 60px;
+        vertical-align: middle;
+    }
+
+    .logcell .middle{
+        text-transform: lowercase;
+        font-size: 12px;
+        height: 20px;;
+
+    }
+
+    .logcell .line{
+        background-color: rgba(158, 157, 157, 0.19);
+        height: 2px;
+    }
+    .logtable {
+        font-size: 14px;
+    }
+    .table th, td {
+        text-align: center;;
+    }
 </style>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script>
+<div class="col-md-12 placeholder">
+    <div class="panel panel-info shadow">
+        <div class="panel-heading">
+            <div class="row placeholders">
+                    <div class="col-sm-12">Trip Log </div>
 
-$(function(){
-	var maxTime = 1000, // allow movement if < 1000 ms (1 sec)
-    maxDistance = 50,  // swipe movement of 50 pixels triggers the swipe
+            </div>
 
-     target = $('#box');
-     startX = 0,
-     startTime = 0,
-     touch = "ontouchend" in document,
-     startEvent = (touch) ? 'touchstart' : 'mousedown',
-     moveEvent = (touch) ? 'touchmove' : 'mousemove',
-     endEvent = (touch) ? 'touchend' : 'mouseup';
+        </div>
+        <div class="panel-body ">
+            <div class="col-sm-12">
+                <div class="logtable">
+                    <table class="table table-striped">
+                        <thead><th width="20%">Trip Number</th><th width="40%">   Date </th> <th width="15%"> Duration </th> <th width="25%"> Trip Distance (Miles) </th></thead>
+                        <tbody id="log-body">
 
-    target.on('click', function(){
-    	console.log('click'+this+ touch+startEvent);
-    })
-    .on(
-    		
-    		startEvent, function(e){
-    	    	console.log('click'+this+ touch+startEvent);
-        // prevent image drag (Firefox)
-        e.preventDefault();
-        startTime = e.timeStamp;
-        startX = e.originalEvent.touches ? e.originalEvent.touches[0].pageX : e.pageX;
-    })
-    .on(endEvent, function(e){
-        startTime = 0;
-        startX = 0;
-    })
-    .on(moveEvent, function(e){
-        e.preventDefault();
-        var currentX = e.originalEvent.touches ? e.originalEvent.touches[0].pageX : e.pageX,
-            currentDistance = (startX === 0) ? 0 : Math.abs(currentX - startX),
-            // allow if movement < 1 sec
-            currentTime = e.timeStamp;
-        if (startTime !== 0 && currentTime - startTime < maxTime && currentDistance > maxDistance) {
-            if (currentX < startX) {
-                // swipe left code here
-                target.find('h1').html('Swipe Left').fadeIn();
-                //setTimeout(function(){   target.find('h1').fadeOut();  }, 1000);
-                target.css('left', '-500px');
-            }
-            if (currentX > startX) {
-                // swipe right code here
-                target.find('h1').html('Swipe Right').fadeIn();
-                target.css('left', '500px');
-                //setTimeout(function(){   target.find('h1').fadeOut();      }, 1000);
-            }
-            startTime = 0;
-            startX = 0;
-        }
-    });
-	
-});
+                        </tbody>
+                    </table>
 
-    
- </script>
- 
- <h1>Swipe Inside the Box</h1>
-<div id="box"><h1></h1></div>
+                </div>
 
+            </div>
+            <div class="logcell  col-sm-3 col-md-2">
+                  <div class="top"> average speed </div>
+                  <div class="middle"> <span> miles / hour </span> </div>
+                <div class="line"> </div>
+                  <div class="bottom"><span id="l_avgspeed"> 0 </span> </div>
+
+            </div>
+            <div class="logcell  col-sm-3 col-md-2">
+                <div class="top"> average miles </div>
+                <div class="middle"> <span> miles / trip </span> </div>
+                <div class="line"> </div>
+                <div class="bottom"><span id="l_avgdistance"> 0 </span> </div>
+
+            </div>
+            <div class="logcell  col-sm-3 col-md-2">
+                  <div class="top"> max <br /> speed </div>
+                <div class="middle"> miles / hour <hr /></div>
+                <div class="line"> </div>
+                  <div class="bottom"> <span id="l_maxspeed"> 0 </span></div>
+            </div>
+            <div class="logcell col-sm-3 col-md-2">
+                <div class="top"> Hard Acceleration  </div>
+                <div class="middle"> % <hr /></div>
+                <div class="line"> </div>
+                <div class="bottom"> <span id="l_maxaccel"> 0 </span></div>
+            </div>
+            <div class="logcell  col-sm-3 col-md-2">
+                <div class="top"> Idle operation </div>
+                <div class="middle"> % <hr /></div>
+                <div class="line"> </div>
+                <div class="bottom"> <span id="l_idle"> 0 </span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                </div>
+                <div class="sub-pane" id="track">
+                    <style>
+    .map-canvas {
+        height: 500px;
+        width: 100%;
+    }
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="../js/tracking.js"></script>
+
+<div class="col-md-12 placeholder">
+    <div class="panel panel-info shadow">
+        <div class="panel-heading">
+            <div class="row placeholders">
+                <div class="col-sm-12"> Trip Tracking </div>
+
+            </div>
+
+        </div>
+        <div class="panel-body ">
+            <div class="col-md-12">
+                <div id="map-canvas" class="map-canvas" > </div>
+            </div>
+        </div>
+        <div class="panel-body ">
+            <div class="col-md-12">
+                <div class="col-sm-6" >
+                    <div class="shadow" id="starttracking" style="margin-bottom: 5px;margin-right: 2px;"> Start Tracking  </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="shadow" id="stoptracking" style="margin-bottom: 5px;margin-left: 2px;">Stop Tracking  </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>                </div>
+
+                <div class='clear'></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script src="inc/swipe.js"></script>
+
+
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <div class="col-sm-12"> </div>
+      </footer>
+
+    </div><!--/.container-->
+
+
+
+  </body>
 </html>

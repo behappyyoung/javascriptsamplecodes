@@ -12,10 +12,20 @@
 </style>
 </head>
 <body>
-  <table>
+  <table id="table">
     <tr>
       <td>fdsfasd </td>
-  <td>fdsfasd </td><td>fdsfasd </td>
+      <td>fdsfasd </td>
+      <td>
+       <div>
+       <div>
+       		<div id='inner'>
+       		    test
+       		</div>
+       </div>
+
+       </div>
+        </td>
       
     </tr>
     <tr>
@@ -23,15 +33,24 @@
       <td>fdsfasd </td>
     </tr>
   </table>
+  
+  <div id="log"> 
+  </div>
 <script>
-$('td').on({
-  'hover': function(){
-    $(this).css('color', 'red');
-  },
-  'mouseleave': function(){
-    $(this).css('color', 'blue');
-  }
-});
+ 
+
+  $('#inner').on('click', function(e){
+	  console.log('td');
+      $('#log').css('color', 'red');
+      $('#log').html($('#log').html() + 'td clicked');
+    
+   });
+    
+  $('table').on('click', function(e){
+	  console.log('table');
+      $('#log').css('color', 'black');
+      $('#log').html($('#log').html() + 'table clicked');
+   });
 </script>
 </body>
 </html>

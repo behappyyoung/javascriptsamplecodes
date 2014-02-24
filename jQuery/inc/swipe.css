@@ -1,0 +1,123 @@
+.panel-body{
+    text-align: center;
+}
+div.ui-datepicker{
+    font-size:12px;
+}
+.timetable{
+    font-size: 12px;
+    margin: 0 0 5px;
+}
+
+.timetable label{
+    width: 70px;
+}
+.timetable input{
+    width: 140px;
+}
+.details {
+    font-size: 12px;
+
+}
+.nav-pills > li {
+    border-radius:5px;
+    font-size: 12px;
+}
+
+.nav-pills > li a {
+    background-color: #4b50c5;
+    color: #ffffff;
+    padding: 2px 15px;
+}
+
+.nav-pills > li a:hover {
+    background-color: #1621c5;
+    color: #ffffff;
+}
+
+.nav-pills > li.active a, .nav-pills > li.active a:hover{
+    background-color: #c54208;
+    color: #ffffff;
+}
+
+.bench{
+    float: left;
+    width: 100%;
+    font-size: 10px;
+    text-align: left;
+    margin-top: 10px;
+}
+.bench #space{
+    display: block;
+}
+.bench .arrow{
+    position: relative;
+    top: -10px;
+}
+.bench .average{
+    position: relative;
+    top: -15px;
+}
+#bench-left {  float: left; width: 5%; top:5px;}
+#bench-right{float: right; width: 10%; top:25px;}
+#benchbar {float:left; width:85%;height:8px;background-color: greenyellow;}
+
+.calendar {margin-top: 10px;}
+
+.push20 {
+    margin-top: 20px;
+}
+
+.panel-info > .panel-heading{
+    padding:0;
+}
+
+
+@media screen and (orientation: landscape) {
+    .chart > div {
+        left: -5px;
+        width: 370px !important ;
+        overflow: hidden;
+    }
+    .bchart {
+        width: 500px;
+        left: -10px;
+    }
+    .sub-pane{
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (orientation: portrait) {
+    .chart >div {
+        width: 250px !important;
+        overflow: hidden;
+        left: -15px;
+    }
+    .bchart {
+        width: 300px !important;
+        overflow: hidden;
+        left: -30px;
+    }
+    .sub-pane{
+        display: none;
+    }
+}
+
+
+#behavior, #chart, #log, #track{
+    position: relative;
+    left: 900px;
+}
+#dashboard{
+    position: relative;
+    left: 0;
+}
+
+.panel-body.submenu {
+    top: -10px;
+    position: relative;
+}
