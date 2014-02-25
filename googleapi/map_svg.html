@@ -38,12 +38,14 @@
         var longcenter='-122.05561438704';
         var latcenter ='37.396910805247';
         var lineCoordinates = [ ];
+        var timeCoordinates = [ ];
         var count = 0;
         var intervalFunction = function() {
             count = (count + 1) % 200;
             var icons = line.get('icons');
             icons[0].offset = (count / 2) + '%';
             line.set('icons', icons);
+$('#log-screen').html(count + lineCoordinates[count]);            
         };
         var myinterval = null;
         function initialize() {
@@ -132,13 +134,14 @@ console.log(data);
                     var logdata = data;
                     longcenter = logdata.longcenter;
                     latcenter = logdata.latcenter;
-                    console.log(latcenter + '  / ' +longcenter);
+//  console.log(latcenter + '  / ' +longcenter);
                     var coord;
                     for (var prop in logdata.tracklog){
-                        //coord = new google.maps.LatLng(logdata.tracklog[prop].latitude, logdata.tracklog[prop].longitude);
-                        lineCoordinates.push(new google.maps.LatLng(logdata.tracklog[prop].latitude, logdata.tracklog[prop].longitude));
+                    	lineCoordinates.push(new google.maps.LatLng(logdata.tracklog[prop].latitude, logdata.tracklog[prop].longitude));
+                    	timeCoordinates.push(prop + '-' + logdata.tracklog[prop].latitude + '/' +  logdata.tracklog[prop].longitude);
+                        
                     }
-                    console.log(lineCoordinates);
+  //                  console.log(lineCoordinates);
                     initialize();
                     animateCircle(100);
                 });
@@ -170,6 +173,7 @@ console.log(data);
             </div>
        </div>        
     </div>
+    <div id="log-screen"></div>
 
 </div>
 </body>
