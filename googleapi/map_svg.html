@@ -45,8 +45,24 @@
             var icons = line.get('icons');
             icons[0].offset = (count / 2) + '%';
             line.set('icons', icons);
-$('#log-screen').html(count + lineCoordinates[count]);            
+			$('#log-screen').html(count + lineCoordinates[count]+ timeCoordinates[count]);
+			getAddress(lineCoordinates[count]);
+			
+			
+			
         };
+
+        function getAddress(position){
+            
+            $.ajax({
+                url : 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.d + ', '+position.e + '&sensor=false'
+            })
+             .done(function(data){
+            	$('#log-location').html(data.results[0].formatted_address);
+            });
+        }
+
+        
         var myinterval = null;
         function initialize() {
             var mapOptions = {
@@ -85,6 +101,7 @@ $('#log-screen').html(count + lineCoordinates[count]);
                 scale: 0.05,
                 strokeColor: 'red',
                 strokeWeight:2
+                
             };
 
             // Create the polyline and add the symbol to it via the 'icons' property.
@@ -108,18 +125,43 @@ $('#log-screen').html(count + lineCoordinates[count]);
                 map: map
             });
 
-
+            google.maps.event.addListener(map, 'click', function(e) {
+                placeInfo(e.latLng, map);
+            });
         }
+        
+        function placeInfo(position, map) {
+        	$.ajax({
+        		url : 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.d + ', '+position.e + '&sensor=false' 
+        	})
+        	        	
+        	  .done(function(data){
+        		  console.log(data);
+	       		  var infowindow = new google.maps.InfoWindow({
+	       		    content: '['+ timeCoordinates[count]+'] '+data.results[0].formatted_address,
+	       		    position: position
+	       		  });
+	       		  infowindow.open(map);
+        	  });
+        	
+        	  
+       }
 
         // Use the DOM setInterval() function to change the offset of the symbol
         // at fixed intervals.
         function animateCircle(interval) {
-            myinterval = window.setInterval(intervalFunction, interval);
+        	if(myinterval){
+        		//
+        	}else{
+        		myinterval = window.setInterval(intervalFunction, interval);	
+        	}
+            
         }
 
 
         function stopAnimation(){
             window.clearInterval(myinterval);
+            myinterval=null;
         }
 
         jQuery(function($) {
@@ -130,18 +172,15 @@ $('#log-screen').html(count + lineCoordinates[count]);
                 url : url
             })
                 .done(function(data){
-console.log(data);
                     var logdata = data;
                     longcenter = logdata.longcenter;
                     latcenter = logdata.latcenter;
-//  console.log(latcenter + '  / ' +longcenter);
                     var coord;
                     for (var prop in logdata.tracklog){
                     	lineCoordinates.push(new google.maps.LatLng(logdata.tracklog[prop].latitude, logdata.tracklog[prop].longitude));
-                    	timeCoordinates.push(prop + '-' + logdata.tracklog[prop].latitude + '/' +  logdata.tracklog[prop].longitude);
+                    	timeCoordinates.push(prop);
                         
                     }
-  //                  console.log(lineCoordinates);
                     initialize();
                     animateCircle(100);
                 });
@@ -168,12 +207,13 @@ console.log(data);
         </div>
         <div class="panel-body ">
             <div class="col-md-12">
-                <div class="col-md-6"> <div onclick="startAnimation(200);"> Start Tracking  </div> </div>
+                <div class="col-md-6"> <div onclick="animateCircle(200);"> Start Tracking  </div> </div>
                 <div class="col-md-6"> <div onclick="stopAnimation();">Stop Tracking  </div> </div>
             </div>
        </div>        
     </div>
     <div id="log-screen"></div>
+        <div id="log-location"></div>
 
 </div>
 </body>
