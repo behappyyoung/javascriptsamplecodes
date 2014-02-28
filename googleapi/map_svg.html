@@ -21,6 +21,21 @@
             height: 400px;
             width: 100%;
         }
+.shadow {
+    box-shadow: 2px 2px 5px #333333;
+
+}
+
+.shadowbox{
+    -moz-box-shadow:    inset 0 0 15px #57686d;
+    -webkit-box-shadow: inset 0 0 15px #57686d;
+    box-shadow:         inset 0 0 15px #57686d;
+    border-left: 1px solid #888888;
+    padding-left: 30px;
+    background-color: #fbfffb;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}        
     </style>
 
     
@@ -39,14 +54,29 @@
         var latcenter ='37.396910805247';
         var lineCoordinates = [ ];
         var timeCoordinates = [ ];
-        var count = 0;
+        var trackcount = 0;
+        var linecount = 0;
+        var tracksize = 1;
+        var linesize = 0;
         var intervalFunction = function() {
-            count = (count + 1) % 200;
-            var icons = line.get('icons');
-            icons[0].offset = (count / 2) + '%';
-            line.set('icons', icons);
-			$('#log-screen').html(count + lineCoordinates[count]+ timeCoordinates[count]);
-			getAddress(lineCoordinates[count]);
+        	trackcount = (trackcount + 1) % tracksize;
+            var percentage = (trackcount / tracksize)*100 + '%';
+            
+        	if(timeCoordinates[trackcount][0]){
+        		linecount = (linecount + 1) % linesize;
+                var icons = line.get('icons');
+                icons[0].offset =(linecount / linesize)*100 + '%';;
+                line.set('icons', icons);
+                getAddress(lineCoordinates[linecount]);
+        	}else{
+        		
+        	}
+			$('#progress').css('width', percentage);
+			$('#log-time').html(timeCoordinates[trackcount][1]);
+			$('#log-screen').html(trackcount + ' ' + linecount + lineCoordinates[linecount]+timeCoordinates[trackcount][1]);
+			
+
+			
 			
 			
 			
@@ -172,17 +202,29 @@
                 url : url
             })
                 .done(function(data){
+                	
                     var logdata = data;
                     longcenter = logdata.longcenter;
                     latcenter = logdata.latcenter;
-                    var coord;
-                    for (var prop in logdata.tracklog){
-                    	lineCoordinates.push(new google.maps.LatLng(logdata.tracklog[prop].latitude, logdata.tracklog[prop].longitude));
-                    	timeCoordinates.push(prop);
-                        
+                    
+ 					tracksize = Object.keys(logdata.tracklog).length;
+ 					var clat, clong, prelat='', prelong='';
+ 					for (var prop in logdata.tracklog){
+                    		clat = logdata.tracklog[prop].latitude;
+                    		clong = logdata.tracklog[prop].longitude;
+                    	if((prelat == clat)&&(prelong = clong)){
+                    		timeCoordinates.push([false, prop]);
+                    	}else{
+                    		lineCoordinates.push(new google.maps.LatLng(clat, clong));
+                    		timeCoordinates.push([true, prop]);
+                        	prelat = clat;
+                        	prelong = clong;
+                    	}
+                    	
                     }
+ 					linesize = lineCoordinates.length;
                     initialize();
-                    animateCircle(100);
+                    animateCircle(50);
                 });
 
         });
@@ -195,26 +237,52 @@
     <div class="panel panel-info shadow">
         <div class="panel-heading">
             <div class="row placeholders">
-                <div class="col-sm-12"> Trip Tracking  </div>
-
+                <div class="col-sm-8"> Trip Tracking  </div>
+			    <div class="col-sm-4" id="log-time"></div>
             </div>
-
+			    <div class="" id="log-screen"></div>
         </div>
+        <div class="panel-body ">
+            <div class="col-md-12">
+                <div class="col-md-6 shadow"> <div id="starttracking"> Start Tracking  </div> </div>
+                <div class="col-md-6 shadow"> <div id="stoptracking">Stop Tracking  </div> </div>
+            </div>
+            <div class="progress col-md-12">
+            	<div class="progress-bar progress-bar-success" id="progress" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%" >
+            		 
+            	</div>
+            	
+            </div>
+            <div id="log-location"></div>
+       </div>         
         <div class="panel-body ">
             <div class="col-md-12">
                 <div id="map-canvas" class="map-canvas" > </div>
             </div>
         </div>
-        <div class="panel-body ">
-            <div class="col-md-12">
-                <div class="col-md-6"> <div onclick="animateCircle(200);"> Start Tracking  </div> </div>
-                <div class="col-md-6"> <div onclick="stopAnimation();">Stop Tracking  </div> </div>
-            </div>
-       </div>        
+       
     </div>
-    <div id="log-screen"></div>
-        <div id="log-location"></div>
+    
+        
+<script>
 
+$('#starttracking').on('click', function(e){
+	animateCircle(200);
+    $(this).removeClass('shadow');
+    $(this).addClass('shadowbox');
+    $('#stoptracking').removeClass('shadowbox');
+    $('#stoptracking').addClass('shadow');
+});
+
+$('#stoptracking').on('click', function(e){
+    stopAnimation();
+    $(this).removeClass('shadow');
+    $(this).addClass('shadowbox');
+    $('#starttracking').removeClass('shadowbox');
+    $('#starttracking').addClass('shadow');
+});
+
+</script>
 </div>
 </body>
 </html>
