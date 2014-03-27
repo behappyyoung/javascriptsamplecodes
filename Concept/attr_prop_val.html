@@ -17,27 +17,7 @@
   <input id="test" value="test" />
   <div id="div" value="div" > click here  </div>
 
-<div>
-=============== code ================= <br > 
-$('#test').change(function(){				<br >
-    alert('attr(): '+$(this).attr('value')); <br > 
-   alert('val(): '+$(this).val()); <br > 
-    alert('prop(): '+$(this).prop('value')); <br > 
-}); <br > 
 
-$('#div').click(function(){ <br > 
-    alert('attr(): '+$(this).attr('value')); <br > 
-      alert('prop(): '+$(this).prop('value')); <br > 
-   alert('val(): '+$(this).val()); <br > 
-
-   $(this).prop('value', 'newdiv'); <br > 
-
-      alert('attr(): '+$(this).attr('value')); <br > 
-    alert('prop(): '+$(this).prop('value')); <br > 
-   alert('val(): '+$(this).val()); <br > 
-
-}); <br > 
-</div>
 <script>
 $('#test').change(function(){
     alert('attr(): '+$(this).attr('value'));
