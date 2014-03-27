@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['gauge']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Max Speed', 72.22],
+
+        ]);
+
+        var options = {
+          width: 400, height: 200,
+          redFrom: 65, redTo: 100,
+          yellowFrom:45, yellowTo: 65,
+          minorTicks: 5,
+          
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id='chart_div'></div>
+  </body>
+</html>
