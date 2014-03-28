@@ -1,7 +1,9 @@
 
 
 	var jsfile = window.location.pathname.replace('.html', '.js');
+	
 	document.write('============ show file : ' + jsfile + '=========== <br />');
+	document.write('<div id="sourceText"> </div>');
 	var xmlhttp;
 	if(window.XMLHttpRequest){
 		xmlhttp=new XMLHttpRequest();
@@ -9,21 +11,32 @@
 		xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
 	}
 	
+	xmlhttp.open('GET', jsfile, true);
 	xmlhttp.onreadystatechange=function(){
-		if(xmlhttp.readState==4 && xmlhttp.status ==200){
-			console.log(xmlhttp.response);
-			var mydata = xmlhttp.response.Text;
-			
-			var myvar = mydata.split('$').join('S');
-		    myvar = myvar.split('<').join('&lt;');
-		    myvar = myvar.split('\n').join('<br />');
-		   document.write(myvar);
-		   
-		}
-		xmlhttp.open('GET', jsfile, true);
-		xmlhttp.send();
+			var mydata = xmlhttp.response;
+			mydata = mydata.split('<').join('&lt;');
+			mydata = mydata.split('\n').join('<br />');
+			document.getElementById('sourceText').innerHTML = mydata;
+	};
+	xmlhttp.send();
+	
+	
+	
+
+	// Check for the various File API support.
+	if (window.File && window.FileReader && window.FileList && window.Blob) {
+		console.log('The File APIs are fully supported by your browser.');
+	} else {
+	  console.log('The File APIs are not fully supported by your browser.');
 	}
 	
+	    
+	
+
+
+
+
+
 	    
 	
 
