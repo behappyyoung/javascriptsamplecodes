@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Subscribe Page</title>
+<script type="text/javascript"> function validate() {
+	var number = document.getElementById("number").value
+	var carrier = document.getElementById("carrier").value
+      if (number=="") {
+		  alert("please enter phone number, it should be 10 numbers long")
+		return false;
+	  }
+  else function join(number,carrier) {
+	  return number + carrier;
+	  return true;
+	  
+  }
+     var myresult = number.concat(carrier);
+	 document.write(myresult);
+	 return myresult;
+}
+</script>
+</head>
+
+  <body>
+
+    <form action="" method="post" id="subscribeForm" >Phone number:
+    <input id="number" name="number"  type="text" />
+		<select onchange="validate()" id="carrier">
+			<option id="verizon"value="@vtext.com">verizon</option>
+			<option id="att" value="@txt.att.net">att</option>
+		</select>
+
+
+	<input type="submit" onclick="formsendscript.php" />
+	</form>
+</body>
+</html>

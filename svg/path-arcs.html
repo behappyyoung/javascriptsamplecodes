@@ -1,0 +1,157 @@
+	<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            float: left;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js " >    </script>
+    
+</head>
+<body>
+
+<html>
+<div class="content">
+   <div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <path fill="#CCC" d="M 20 130 
+    C 20.000000000000043 77.5329487660747 62.53294876607467 35.00000000000006 114.99999999999999 35.000000000000014 
+    C 167.4670512339253 35.00000000000007 209.9999999999999 77.53294876607465 210 129.99999999999997 
+    C 210 132.76142374915395 207.76142374915395 134.99999999999997 205 134.99999999999997 L 178 135 
+    C 175.23857625084605 135 173 132.76142374915398 173 130 C 172.99999999999997 97.96748450981401 147.03251549018597 72.00000000000003 115 72 
+    C 82.96748450981403 72.00000000000003 57.000000000000036 97.96748450981401 57.00000000000002 130 
+    C 57.00000000000002 132.76142374915398 54.76142374915398 135 52 135 L 25 135 C 22.238576250846037 135 20 132.76142374915398 20 130"></path>
+    
+    </svg>
+        
+
+</div>
+
+   <div>
+     <span id="progress" ></span>   
+</div>
+<script>
+        function calcPath(value, total, R) {
+            var center;
+            var alpha = value / total * 180,
+                     x = 20 + R * Math.cos(alpha),
+                    y = 70 - R * Math.sin(alpha),
+                    path;
+console.log(alpha)            
+            if (total == value) {
+                path = "M"+ 20 +","+ (70 ) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
+            } else {
+                
+                path = "M"+ 20+","+ (70 ) +" A"+ R+","+ R+","+ 0+"," + 0 +","+ 1+","+ x+","+ y;
+            }
+
+            return path;
+        }
+
+     
+
+        function updatePath(value, total, color){
+            if(value<total){
+                path = calcPath(value, total, 50);
+            }else{
+                path = calcPath(total-0.1, total, 50);
+            }
+          document.write(path);
+       
+            $('#progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' 
+            +'<path d="M20,70 A50,50,0,1,1,140.86047402353434,70.098663578586425"   fill="none" stroke="#DFDFDF" stroke-width="10" />' 
+            +'<path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
+
+        }
+
+        function fakePath(R, value, total, color){
+        	var alpha = (value/total)*180,
+        	x, y;
+            if(alpha > 90){
+            	alpha = 180-alpha;
+            	x = R + R * Math.cos(alpha);
+            	y = 80 - R * Math.sin(alpha);
+            }else{
+            	y = 80 + R * Math.sin(alpha);
+            	x = R - R * Math.cos(alpha);
+                	
+            }
+            
+            		
+			
+        	var path = "M10,80 A65,65 0 0,1  "+x+", "+y;
+            document.write(alpha + '---<br />'+R * Math.sin(alpha)+' <br />---' + x+'-- <br />'+y+path);        	
+            $('#progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' 
+            +'<path d="M10,80 A65,65 0 0,1  140,80"   fill="none" stroke="#DFDFDF" stroke-width="10" />' 
+            +'<path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
+
+        }
+//        var distance_intvar = setInterval(updatePath(10, 100, 'FF0000'), 20);
+        //updatePath(1, 100, '#FF0000');
+        fakePath(65, 120, 130, '#FF0000');
+        //fakePath(65, 40, 130, '#ff0000');
+  //      updatePath(20, 100, '00FF00');
+        //updatePath(30, 100, yellos);
+ </script>
+        
+                    
+   <div>
+
+                    
+                    
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	// A : Starting point  /   x-axis-rotation / large-arc-flag /  sweep-flag 
+	<path d="M10,80 A65,65 0 1,1  140,80"   fill="none" stroke="#DDDDDD" stroke-width="10" /> 
+	<path d="M10,80 A65,65 0 1,1 39.28463330591856, 20.303099613221754"   fill="none" stroke="#ff0000" stroke-width="10" />
+</svg>
+    
+    <div>
+    
+    
+      
+      </div>
+    
+</div>
+    <div>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<path d="M70,20 A50,50,0,1,1,66.86047402353434,20.098663578586425"   fill="none" stroke="#DDDDDD" stroke-width="10" /> 
+ 	
+ 	
+ 	
+ 	
+ 	<path d="M140,120  A140,120 0 0,0 270,120"   style="stroke: #00ff00; stroke-width:2; fill:none;"/>
+ 	<path d="M140,120  A140,120 0 1,0 270,120"   style="stroke: #FF0000; stroke-width:2; fill:none;"/>
+ 	<path d="M140,120  A140,120 0 0,1 370,120"   style="stroke: #000000; stroke-width:2; fill:none;"/>
+ 	<path d="M140,120  A140,120 0 1,1 270,120"   style="stroke: #0000FF; stroke-width:2; fill:none;"/>
+ 	
+ 	<path d="M140,220  Q300,10 440,220"   style="stroke: #00ff00; stroke-width:20; fill:none;"/>
+ 	
+ 	    <path d="M140,220  A140,140 0 1,1 440,220"   style="stroke: #0000FF; stroke-width:20; fill:none;"/>
+    
+    //M : starting point C : first control point  second control point  end point 
+    <path d="M140,220  C180,20 400,20 440,220"   style="stroke: #FF0000; stroke-width:40; fill:none;"/>
+    
+    
+    
+    <path fill="none" d="M 30.02002998656704 150.8434243232989 A 86.5 86.5 0 1 1 169.9800208568223 150.84335434330347 L 169.1710032746625 150.2555699000283 A 85.5 85.5 0 1 0 30.829046980941996 150.25563907100644 Z" stroke="#E9E9E9" stroke-width="26" stroke-linejoin="round" stroke-linecap="round"></path>
+    
+
+    
+    
+    </svg>
+    
+	</div>
+
+
+
+
+</div>
+</html>
+
+</body>
+</html>

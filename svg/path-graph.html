@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <style>
+        .calind {
+            width: 200px;
+            height: 200px;
+	border : solid;
+	float : left;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js " >    </script>
+    <script src='path-graph.js'>    </script>
+</head>
+<body>
+
+<div class="content">
+
+
+    
+    
+    <div class="activity">
+        <div class="calind">
+            <h2>Title[10]</h2>
+            <div class="distance_chart">
+
+                <span id="distance_progress" ></span>
+
+            </div> <br />
+            <span class="percentage">%</br></span>
+            <span id="distance_actual" class="calgoal"></span>
+        </div>
+
+    </div>
+    
+        <div class="activity">
+        <div class="calind">
+            <h2>Title[10]</h2>
+            <div class="my_chart">
+
+                <span id="my_progress" ></span>
+
+            </div> <br />
+            <span class="percentage">%</br></span>
+            <span id="my_actual" class="calgoal"></span>
+        </div>
+
+    </div>
+    
+    <div>
+        <div class="calind">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<path d="M50,50   L100,100"   style="stroke:#660000; fill:none;"/>
+	// A : Starting point  /   x-axis-rotation / large-arc-flag /  sweep-flag 
+	<path d="M20,70 A60,60 0 1,0  20.098663578586425,66.86047402353434"   fill="none" stroke="#DDDDDD" stroke-width="10" />
+	 
+ 	</svg>
+ 	</div>
+        <div class="calind">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	// A : Starting point  /   x-axis-rotation / large-arc-flag /  sweep-flag 
+	<path d="M20,70 A50,50 0 1,1  140,70"   fill="none" stroke="#DDDDDD" stroke-width="10" /> 
+ 	</svg>
+ 	</div> 	
+</div>
+
+</div>
+
+</body>
+</html>

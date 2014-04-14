@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<div id="bar" >
+	
+</div>
+
+
+<div id="bargraph" >
+	
+</div>
+
+
+
+</body>
+</html>
+
+<script>
+	var bargraph='';
+
+	for(var i= 0;i<65; i++){
+		
+		bargraph += '<img src="bar-line-blue.png" width="2px;" height="'+(i)+'" style="margin-right:1px;"/>';
+	} 
+	
+
+	for(var i= 65;i<100; i++){
+
+		bargraph += '<img src="bar-line-red.png" width="2px;" height="'+(i)+'" style="margin-right:1px;"/>';
+	} 
+
+	
+	document.getElementById('bar').innerHTML = bargraph;
+	
+	bargraph='';
+	for(var i= 0;i<100; i++){
+		bargraph += '<img src="bar-line-red.png" width="2px;" height="'+(i*2)+'" style="margin-right:1px;"/>';
+	} 
+	document.getElementById('bargraph').innerHTML = bargraph;
+	
+	function drawGraph(tilwhat){
+		for(var i= 0;i<tilwhat; i++){
+			bargraph += '<img src="bar-line-blue.png" width="2px;" height="'+(i)+'" style="margin-right:1px;"/>';
+		} 
+		for(i= tilwhat;i<70; i++){
+			bargraph += '<img src="bar-line-red.png" width="2px;" height="'+(i)+'" style="margin-right:1px;"/>';
+		}	
+	}
+	
+	
+</script>

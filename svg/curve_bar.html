@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+<svg viewBox = "0 0 500 300" version = "1.1">
+    <desc>
+        Text example
+    </desc>
+    <defs>
+        <path id = "s3" d = "M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60" fill = "green" stroke = "black" stroke-width = "3"/>
+        <path id = "s2" d = "M 10,90 Q 100,15 200,70 Q 340,140 400,30"/>
+    </defs>
+    
+    <g fill = "navy">
+        <text font-size = "20">
+
+            <textPath xlink:href = "#s2" id="bar">
+                ||||||||||||||||||||||||||||||||||||||||||||
+            </textPath>
+        </text>
+    </g>
+</svg>
+
+<script>
+	var bargraph='';
+	var j = -10;
+	for(var i= 0;i<35; i++){
+		j++;
+		bargraph += '<img src="bar-line-blue.png" width="2px;" height="'+(i-j)+'" style="margin-right:1px;margin-bottom:'+j+'px;"/>';
+	} 
+	
+	var j = 25;
+	for(var i= 35;i<70; i++){
+		j--;
+		bargraph += '<img src="bar-line-red.png" width="2px;" height="'+(i-j)+'" style="margin-right:1px;margin-bottom:'+j+'px;"/>';
+	} 
+
+	bargraph = 'LLLLLLLLLLLLLLLLLLLLLL';
+	
+	//document.getElementById('bar').innerHTML = '<textPath xlink:href = "#s2" id="bar">'+bargraph+' </textPath>';
+	document.getElementById('bar').innerHTML = bargraph;
+	
+	</script>
