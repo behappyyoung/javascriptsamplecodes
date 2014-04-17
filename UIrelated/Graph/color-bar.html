@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>color-bar</title>
+</head>
+<style>
+	#div {
+		width : 100px;
+		height : 150px;
+	}
+	#cover {
+		background-color: white;
+		width : 100px;
+		height:50px;
+		position: absolute;
+		top : -20px;
+
+		
+	}
+	#cover > div {
+	width : 100px;
+		position : absolute;
+		bottom : 5px;
+			text-align:center;
+		
+	}
+</style>
+<script src="../../jQuery/inc/jquery-2.1.0.min.js"></script>
+<body>
+
+<div id="div">
+	<img src='coloring-bar1.png' width="100%" height="100%" />
+	<div id="cover"> <div> test </div> </div>
+</div>
+
+<script>
+jQuery(function($) {
+	function startGraph(min){
+		var cur_min = 170;
+	var myint = setInterval(updateGraph, 20);
+	
+
+		function updateGraph(){
+			cur_min -= 2;
+			$('#cover').css('height',  cur_min + 'px');
+
+			if(cur_min<min){
+				clearInterval(myint);
+			}
+		}
+	}
+	
+startGraph(40);
+
+
+});
+
+
+</script>
+</body>
+</html>

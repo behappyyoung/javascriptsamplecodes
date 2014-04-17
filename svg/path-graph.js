@@ -55,11 +55,11 @@
         
         function updatePath2(progress_id,  value, total, color){
             if(value<total){
-                path = calcPath2(value, total, 50);
+                path = calcPath2(value, total, 60);
             }else{
-                path = calcPath2(total-0.1, total, 50);
+                path = calcPath2(total-0.1, total, 60);
             }
-            $('#'+progress_id+'_progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M70,20 A50,50,0,1,1,67,20"   fill="none" stroke="#DFDFDF" stroke-width="10" /> <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
+            $('#'+progress_id+'_progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M70,10 A60,60,0,1,1,67,10"   fill="none" stroke="#DFDFDF" stroke-width="10" /> <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
             $('#'+progress_id+'_actual').html(value);
 
         }
@@ -79,15 +79,15 @@ jQuery(document).ready(function() {
             }
             
             var my_value=0;
-            var my_actual = 8;
+            var my_actual = 100;
             var my_intvar = setInterval(myUpdate, 20);
 
             function myUpdate(){
-                my_value = my_value +0.1;
-                updatePath2('my', Number(my_value).toFixed(2), 10, '#FF7DC0');
+                my_value = my_value +1;
+                updatePath2('my', Number(my_value).toFixed(2), 100, '#FF7DC0');
                 if(my_value>my_actual){
                     clearInterval(my_intvar);
-                    updatePath2('my', my_actual, 10, '#007DC0');
+                    updatePath2('my', my_actual, 100, '#007DC0');
                 }
             }            
     });

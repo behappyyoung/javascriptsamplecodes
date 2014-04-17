@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.min.js " >    </script>
+<script>
+
+function calcPath (value, total, R) {
+    var center;
+    var alpha = 360 / total * value,
+        a = (90 - alpha) * Math.PI / 180,
+        x = 80 + R * Math.cos(a),
+        y = 70 - R * Math.sin(a),
+        path;
+    if (total == value) {
+        path = "M"+ 70 +","+ (70 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
+    } else {
+        if(alpha > 180) {
+            center = 1;
+        } else {
+            center = 0;
+        }
+        path = "M"+ 70+","+ (70 - R) +" A"+ R+","+ R+","+ 0+"," + center +","+ 1+","+ x+","+ y;
+    }
+
+    return path;
+}
+
+
+function updatePath(progress_id,  value, total, color){
+    if(value<total){
+        path = calcPath(value, total, 60);
+    }else{
+        path = calcPath(total-0.1, total, 60);
+    }
+    var html = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M20,70 A60,60 0 1,0 20,69"   fill="none" stroke="#DFDFDF" stroke-width="10" /> <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>';
+    console.log(html);
+    $('#'+progress_id+'_progress').html(html);
+    $('#'+progress_id+'_actual').html(Number(value/total * 100).toFixed(0));
+
+}
+
+function updatempg(mpg, name){
+    var mpg_value=0;
+    var mpg_actual = mpg;
+    var mpg_intvar = setInterval(mpgUpdate, 100);
+
+    function mpgUpdate(){
+        mpg_value++;
+        updatePath(name, Number(mpg_value).toFixed(2), 50, '#007DC0');
+        if(mpg_value>mpg_actual){
+            clearInterval(mpg_intvar);
+            updatePath(name, mpg_actual, 50, '#007DC0');
+
+        }
+    }
+}
+
+updatempg(45, 'test');	
+
+
+
+</script>
+</head>
+<body>
+<div id="test_progress">
+</div>
+<div id="test_actual">
+</div>
+</body>
+</html>

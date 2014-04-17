@@ -24,6 +24,30 @@ function drawChart() {
 
 		  chart.draw(dataTable, options);
 }
+
+google.setOnLoadCallback(drawChart2);
+function drawChart2() {
+	  var container = document.getElementById('example2.2');
+	  var chart = new google.visualization.Timeline(container);
+	  var dataTable = new google.visualization.DataTable();
+
+	  dataTable.addColumn({ type: 'string', id: 'Term' });
+	  dataTable.addColumn({ type: 'string', id: 'Name' });
+	  dataTable.addColumn({ type: 'number or date', id: 'Start' });
+	  dataTable.addColumn({ type: 'number or date', id: 'End' });
+
+	  dataTable.addRows([
+	    [ '1', 'George Washington', 1, 30 ],
+	    [ '1', 'John Adams',        30,  60 ],
+	    [ '1', 'Thomas Jefferson',  60, 90]]);
+
+	  var options = {
+			    colors: ['#00ff00', '#ffff00', '#ff0000'],
+			  };
+
+			  chart.draw(dataTable, options);
+	}
 </script>
 
+<div id="example2.1" style="width: 900px; height: 200px;"></div>
 <div id="example2.1" style="width: 900px; height: 200px;"></div>
