@@ -63,8 +63,45 @@
             $('#'+progress_id+'_actual').html(value);
 
         }
-        
-jQuery(document).ready(function() {
+
+
+        function calcPath3 (value, total, R) {
+            var center;
+            var alpha = 360 / total * value,
+                a = (90 - alpha) * Math.PI / 180,
+                x = 80 + R * Math.cos(a),
+                y = 80 - R * Math.sin(a),
+                path;
+            if (total == value) {
+                path = "M"+ 70 +","+ (90 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
+            } else {
+                if(alpha > 180) {
+                    center = 1;
+                } else {
+                    center = 0;
+                }
+                path = "M"+ 80+","+ (80 - R) +" A"+ R+","+ R+","+ 0+"," + center +","+ 1+","+ x+","+ y;
+            }
+
+            return path;
+        }
+
+        // bigger radius
+
+        function updatePath3(progress_id,  value, total, color){
+            if(value<total){
+                path = calcPath3(value, total, 70);
+            }else{
+                path = calcPath3(total-0.1, total, 70);
+            }
+            $('#'+progress_id+'_progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M10,80 A70,70 0 1,0  10,79.999"   fill="none" stroke="#DFDFDF" stroke-width="10" /> <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
+            $('#'+progress_id+'_actual').html(Number(value/total * 100).toFixed(0));
+
+        }
+
+
+
+        jQuery(document).ready(function() {
             var distance_value=0;
             var distance_actual = 32;
             var distance_intvar = setInterval(distanceUpdate, 10);
@@ -89,5 +126,18 @@ jQuery(document).ready(function() {
                     clearInterval(my_intvar);
                     updatePath2('my', my_actual, 100, '#007DC0');
                 }
-            }            
-    });
+            }
+
+            var value = 0;
+            var myvalue = 80;
+            var myint = setInterval(updateGraph, 5);
+            function updateGraph(){
+                value++;
+                if(value>myvalue){
+                    clearInterval(myint);
+                }
+                updatePath3('overall',  value, 100, 'blue');
+            }
+
+
+        });

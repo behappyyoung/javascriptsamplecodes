@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Reverse-Polish-Calculator.js" description="   stdin.setEncoding('utf8');&#10;   stdout.write('&gt;')..." line="5" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svg/path-graph.html" afterPath="$PROJECT_DIR$/svg/path-graph.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svg/path-graph.js" afterPath="$PROJECT_DIR$/svg/path-graph.js" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,55 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LRU_doublelinked.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LRU_doublelinked.js">
+      <file leaf-file-name="path-graph.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/svg/path-graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1185">
+            <state line="89" column="0" selection-start="3551" selection-end="3551" vertical-scroll-proportion="0.22310758" vertical-offset="1111" max-vertical-offset="2220">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LRU_doublelinked_input.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LRU_doublelinked_input.js">
+      <file leaf-file-name="path-graph.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/svg/path-graph.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="1" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2370">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recursive_getmin_rotated_array.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/recursive_getmin_rotated_array.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="7" selection-start="762" selection-end="762" vertical-scroll-proportion="0.37688443" vertical-offset="0" max-vertical-offset="995">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recursive_getmin_rotated_array_test.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recursive_getmin_rotated_array_test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reverse-Polish-Calculator.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reverse-Polish-Calculator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="131" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="765">
+            <state line="31" column="46" selection-start="623" selection-end="623" vertical-scroll-proportion="-12.625" vertical-offset="162" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -113,13 +75,15 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/LRU_doublelinked.js" />
         <option value="$PROJECT_DIR$/LRU_doublelinked_input.js" />
+        <option value="$PROJECT_DIR$/svg/path-graph.html" />
+        <option value="$PROJECT_DIR$/svg/path-graph.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP5.3" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
-    <option name="y" value="24" />
+    <option name="x" value="1460" />
+    <option name="y" value="91" />
     <option name="width" value="1619" />
     <option name="height" value="1176" />
   </component>
@@ -149,7 +113,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,8 +131,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,40 +165,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="name" value="Dart" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <browser start="false" url="" with-js-debugger="false" />
       <method />
     </configuration>
     <list size="0" />
@@ -252,15 +197,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="24" width="1619" height="1176" extended-state="4" />
+    <frame x="1460" y="91" width="1619" height="1176" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24922696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25238398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -268,7 +214,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33037037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -294,13 +239,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
     </option>
   </component>
@@ -316,206 +261,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LRU_doublelinked.js">
+    <entry file="file://$PROJECT_DIR$/svg/path-graph.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
+        <state line="31" column="46" selection-start="623" selection-end="623" vertical-scroll-proportion="-12.625" vertical-offset="162" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LRU_doublelinked_input.js">
+    <entry file="file://$PROJECT_DIR$/svg/path-graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="26" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2370">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reverse-Polish-Calculator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="131" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design_pattern_singleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1818" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recursive_getmin_rotated_array.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="495" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pass_by_reference_value.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="279" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="1008" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eventlistener_checkbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="505" max-vertical-offset="1314" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/this_scope_eventhandler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recursive_getmin_rotated_array.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recursive_getmin_rotated_array_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="40" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object_scope_prototype.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="486" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object_scope_prototype_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="414" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object_scope_prototype.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="522" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/closure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="14" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="1476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/closure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="14" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="1476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/closure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="14" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="1476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/closure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1230" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design_pattern_singleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="1818" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pass_by_reference_value.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="279" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="1008" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eventlistener_checkbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="505" max-vertical-offset="1314" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/closure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="251" selection-end="258" vertical-scroll-proportion="0.44680852" vertical-offset="0" max-vertical-offset="1476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doublelinked.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1872" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_method.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5638298" vertical-offset="318" max-vertical-offset="882" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recursive_getmin_rotated_array.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="298" selection-end="298" vertical-scroll-proportion="0.12337662" vertical-offset="104" max-vertical-offset="720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/this_scope_eventhandler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object_scope_prototype.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="694" selection-end="694" vertical-scroll-proportion="0.49837133" vertical-offset="0" max-vertical-offset="614" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object_scope_prototype_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.42121685" vertical-offset="0" max-vertical-offset="641" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object_scope_prototype.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="280" selection-end="280" vertical-scroll-proportion="0.47737908" vertical-offset="0" max-vertical-offset="641" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LRU_doublelined.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="1" selection-start="2487" selection-end="2487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2034" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reverse-Polish-Calculator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="131" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LRU_doublelinked.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0" vertical-offset="781" max-vertical-offset="1422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LRU_doublelinked_input.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="1" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2370">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recursive_getmin_rotated_array_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recursive_getmin_rotated_array.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="7" selection-start="762" selection-end="762" vertical-scroll-proportion="0.37688443" vertical-offset="0" max-vertical-offset="995">
+        <state line="89" column="0" selection-start="3551" selection-end="3551" vertical-scroll-proportion="0.22310758" vertical-offset="1111" max-vertical-offset="2220">
           <folding />
         </state>
       </provider>
