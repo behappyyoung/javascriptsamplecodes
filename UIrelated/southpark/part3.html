@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>Who Killed Kenny?</title>
+    <style>
+        body	 {background-color: #000; color:#fff; font-family:arial; max-width:990px;}
+        .image {
+            display: inline-block;
+            background: #ffffff;
+            text-align: center;
+            margin: 10px;
+        }
+        .image > img {
+            border: solid black 1px;
+            margin: 5px;
+        }
+
+        .image > div {
+            color: #000000;
+        }
+        .details{
+            font-size: 10px;
+        }
+        #top, #bottom {
+            width: 990px;
+            height: 200px;
+            display: inline-block;
+            text-align: center;
+        }
+        .buttons{
+            float: right;
+        }
+    </style>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        jQuery(function($) {
+            var savetop = $('#top').html();
+            $('.image').on({
+                click : function(){
+                    $('#bottom').append(this);
+                    $('#top').remove(this);
+                },
+                mouseover : function(){
+                    $('#top').children('.image').not(this).css('opacity', '0.1');             // change other
+                    $(this).css('opacity', '1');
+                }
+            });
+            $('#reset').on('click', function(){
+                $('#top').html(savetop);
+                $('#bottom').html('');
+                $('.image').on({
+                    click : function(){
+                        $('#bottom').append(this);
+                        $('#top').remove(this);
+                    },
+                    mouseover : function(){
+                        $('#top').children('.image').not(this).css('opacity', '0.1');             // change other
+                        $(this).css('opacity', '1');
+                    }
+                });
+            });
+        })
+    </script>
+</head>
+
+
+<body>
+
+<h2>
+    Who killed Kenny ?
+</h2>
+<div class="details"> Here are the suspects. Your job is to sort them from who you think is the most likely to the least likely, by clicking on the suspect</div>
+<div id="top">
+    <div class="image">
+        <img src="i/stan.png">
+        <div>Stan</div>
+    </div>
+    <div class="image">
+        <img src="i/kyle.png">
+        <div>Kyle</div>
+    </div>
+    <div class="image">
+        <img src="i/kenny.png">
+        <div>Kenny</div>
+    </div>
+    <div class="image">
+        <img src="i/cartman.png">
+        <div>Cartman</div>
+    </div>
+    <div class="image">
+        <img src="i/wendy.png">
+        <div>Wendy</div>
+    </div>
+    <div class="image">
+        <img src="i/ike.png">
+        <div>Ike</div>
+    </div>
+    <div class="image">
+        <img src="i/tweak.png">
+        <div>Tweak</div>
+    </div>
+</div>
+
+<hr />
+
+<div id="bottom" >
+
+</div>
+
+<div class="buttons">
+    <button type="submit" id="reset"> Reset </button>
+    <button type="submit" > Save </button>
+</div>
+</body>
+
+</html>
