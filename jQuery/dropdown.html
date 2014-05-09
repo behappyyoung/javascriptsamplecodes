@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  </head>
+  <style>
+      .ui-menu {
+          width: 200px;
+      }
+  </style>
+  <body>
+    <div>
+		<ul class="main-menu">
+		    <li class="active">
+		        <a href="#/home">Home</a>
+		    </li>
+		    <li>
+		        <a href="#/menu1">Menu 1</a>
+		        <ul>
+		            <li><a href="#/sm1">Submenu 1</a></li>
+		            <li><a href="#/sm2">Submenu 2</a></li>
+		            <li><a href="#/sm3">Submenu 3</a></li>
+		        </ul>
+		    </li>
+		    <li>
+		        <a href="#/home">Menu 2</a>
+		    </li>
+		</ul>
+    </div>
+    <script>
+    $('.main-menu').menu();
+    </script>    
+  </body>
+</html>
