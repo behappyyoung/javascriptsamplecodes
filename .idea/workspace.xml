@@ -38,10 +38,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uibootstrap.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="uibootstrap.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularJS/uibootstrap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="2" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.91150445" vertical-offset="123" max-vertical-offset="1140">
+            <state line="30" column="38" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="1140">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swipe.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jQuery/swipe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1005">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event_on_delegate.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jQuery/event_on_delegate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="993">
               <folding />
             </state>
           </provider>
@@ -558,7 +576,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/uibootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="2" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.91150445" vertical-offset="123" max-vertical-offset="1140">
+        <state line="30" column="38" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery/swipe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1017">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery/event_on_delegate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1017">
           <folding />
         </state>
       </provider>
