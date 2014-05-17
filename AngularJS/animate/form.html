@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" ng-app="animateApp">
+  <head>
+      <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+      <style>
+      </style>
+  </head>
+  <body>
+    <h2>Animation - Form Search </h2>
+
+    <div ng-init="names=['Igor Minar', 'Brad Green', 'Dave Geddes', 'Naomi Black', 'Greg Weber', 'Dean Sofer', 'Wes Alvaro', 'John Scott', 'Daniel Nadasi'];">
+        <div class="well" style="margin-top: 30px; width: 200px; overflow: hidden;">
+            <form class="form-search">
+                <div class="input-append">
+                    <input type="text" ng-model="search" class="search-query" style="width: 80px">
+                    <button type="submit" class="btn">Search</button>
+                </div>
+                <ul class="nav nav-pills nav-stacked">
+                    <li ng-animate="'animate'" ng-repeat="name in names | filter:search">
+                        <a href="#"> {{name}} </a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    <script src="../inc/angular.min.js"></script>
+    <script src="angular-animate.js"></script>
+    <script src="form.js"></script>
+    <script src="../../showFile.js"></script>
+  </body>
+</html>

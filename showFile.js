@@ -2,7 +2,7 @@
 
 	var jsfile = window.location.pathname.replace('.html', '.js');
 	
-	document.write('============ show file : ' + jsfile + '=========== <br />');
+	document.write(' <p>============ show file : ' + jsfile + '=========== </p>');
 	document.write('<div id="sourceText"> </div>');
 	var xmlhttp;
 	if(window.XMLHttpRequest){
