@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;" />
+    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.html" afterPath="$PROJECT_DIR$/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/googlead.js" afterPath="$PROJECT_DIR$/googlead.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html" afterPath="$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+    </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,19 +28,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/animate/form.html">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="1098" selection-end="1276" vertical-scroll-proportion="-0.0" vertical-offset="390" max-vertical-offset="570">
+            <state line="4" column="67" selection-start="140" selection-end="156" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/Concept/HanoiTower/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="450">
+            <state line="20" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="390">
+              <folding>
+                <element signature="e#6#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Concept/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="586" selection-end="586" vertical-scroll-proportion="0.30852106" vertical-offset="0" max-vertical-offset="1021">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="102" selection-start="173" selection-end="275" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="285">
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -43,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="test.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concept/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1021">
+            <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -55,8 +80,19 @@
       <file leaf-file-name="googlead.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googlead.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="4" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+            <state line="0" column="0" selection-start="0" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="analytics.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analytics.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,71 +100,28 @@
       <file leaf-file-name="hanoitower.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="7" selection-start="275" selection-end="275" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
+            <state line="14" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="330">
               <folding>
-                <marker date="1400620335267" expanded="true" signature="6:274" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concept/TenExercises/index.html">
+      <file leaf-file-name="footer.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/footer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="39" selection-start="6184" selection-end="6184" vertical-scroll-proportion="-37.625" vertical-offset="1287" max-vertical-offset="2310">
-              <folding>
-                <element signature="n#style#0;n#a#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#8;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concept/TenExercises/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="0" selection-start="4265" selection-end="4265" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="2535">
-              <folding>
-                <element signature="e#4267#4306#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hanoitower.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concept/HanoiTower/hanoitower.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-              <folding>
-                <element signature="e#1282#1321#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hanoitower.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concept/HanoiTowerWithGraphic/hanoitower.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="585">
+            <state line="18" column="8" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hanoitower.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concept/HanoiTowerWithGraphic/hanoitower.js">
+      <file leaf-file-name="closure.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concept/closure.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
-              <folding>
-                <marker date="1400604883219" expanded="false" signature="355:379" placeholder="..." />
-                <marker date="1400604883219" expanded="false" signature="686:697" placeholder="..." />
-                <marker date="1400604883219" expanded="false" signature="711:732" placeholder="..." />
-                <marker date="1400604883219" expanded="false" signature="1095:1129" placeholder="..." />
-                <marker date="1400604883219" expanded="false" signature="1196:1217" placeholder="..." />
-                <marker date="1400604883219" expanded="false" signature="1591:1625" placeholder="..." />
-                <marker date="1400604883219" expanded="false" signature="1696:1717" placeholder="..." />
-                <marker date="1400604883219" expanded="false" signature="2077:2111" placeholder="..." />
-              </folding>
+            <state line="18" column="39" selection-start="305" selection-end="344" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="390">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,10 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/recursive_getmin_rotated_array_test.js" />
-        <option value="$PROJECT_DIR$/recursive_getmin_rotated_array.js" />
-        <option value="$PROJECT_DIR$/object_scope_prototype.html" />
-        <option value="$PROJECT_DIR$/object_scope_prototype.js" />
         <option value="$PROJECT_DIR$/object_scope_prototype_test.js" />
         <option value="$PROJECT_DIR$/LRU_doublelined.js" />
         <option value="$PROJECT_DIR$/test.html" />
@@ -172,7 +161,6 @@
         <option value="$PROJECT_DIR$/BackboneJS/nodejs/public/index.html" />
         <option value="$PROJECT_DIR$/BackboneJS/nodejs/public/client.js" />
         <option value="$PROJECT_DIR$/AngularJS/ui-bootstrap.html" />
-        <option value="$PROJECT_DIR$/footer.html" />
         <option value="$PROJECT_DIR$/AngularJS/todo.html" />
         <option value="$PROJECT_DIR$/AngularJS/animate/env.html" />
         <option value="$PROJECT_DIR$/AngularJS/animate/envelop.html" />
@@ -194,14 +182,19 @@
         <option value="$PROJECT_DIR$/Concept/HanoiTowerWithGraphic/hanoitower.html" />
         <option value="$PROJECT_DIR$/Concept/HanoiTower/index.html" />
         <option value="$PROJECT_DIR$/Concept/HanoiTower/hanoitower.js" />
-        <option value="$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html" />
         <option value="$PROJECT_DIR$/Concept/TenExercises/index.php" />
         <option value="$PROJECT_DIR$/Concept/TenExercises/index.js" />
         <option value="$PROJECT_DIR$/Concept/TenExercises/index.html" />
         <option value="$PROJECT_DIR$/showFile.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/analytics.js" />
         <option value="$PROJECT_DIR$/googlead.js" />
+        <option value="$PROJECT_DIR$/footer.html" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/footer.js" />
+        <option value="$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html" />
+        <option value="$PROJECT_DIR$/Concept/HanoiTower/index.php" />
+        <option value="$PROJECT_DIR$/Concept/index.php" />
       </list>
     </option>
   </component>
@@ -275,6 +268,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Concept" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HanoiTower" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -292,11 +303,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Concept" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Concept/HanoiTowerWithGraphic" />
       <recent name="$PROJECT_DIR$/UIrelated/Animation" />
       <recent name="$PROJECT_DIR$/AngularJS" />
-      <recent name="$PROJECT_DIR$/AngularJS/animate" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/AngularJS/animate" />
@@ -410,31 +421,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Concept/array_sort.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/showFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concept/array_sort.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/ui-bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1695" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svg/curve_bar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/svg/path.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2340" />
@@ -513,11 +499,6 @@
     <entry file="file://$PROJECT_DIR$/jQuery/event_on_delegate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="36" selection-start="592" selection-end="627" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="675" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="959" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/todo.html">
@@ -636,14 +617,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
           <folding>
-            <marker date="1400604883219" expanded="false" signature="355:379" placeholder="..." />
-            <marker date="1400604883219" expanded="false" signature="686:697" placeholder="..." />
-            <marker date="1400604883219" expanded="false" signature="711:732" placeholder="..." />
-            <marker date="1400604883219" expanded="false" signature="1095:1129" placeholder="..." />
-            <marker date="1400604883219" expanded="false" signature="1196:1217" placeholder="..." />
-            <marker date="1400604883219" expanded="false" signature="1591:1625" placeholder="..." />
-            <marker date="1400604883219" expanded="false" signature="1696:1717" placeholder="..." />
-            <marker date="1400604883219" expanded="false" signature="2077:2111" placeholder="..." />
+            <marker date="1400604883219" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400604883219" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400604883219" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400604883219" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400604883219" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400604883219" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400604883219" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1400604883219" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -653,15 +634,6 @@
         <state line="50" column="0" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
           <folding>
             <element signature="e#1282#1321#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="275" selection-end="275" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
-          <folding>
-            <marker date="1400620335267" expanded="true" signature="6:274" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -699,32 +671,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googlead.js">
+    <entry file="file://$PROJECT_DIR$/Concept/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+        <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concept/closure.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="39" selection-start="305" selection-end="344" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/showFile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+        <state line="17" column="4" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/googlead.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="450">
+        <state line="0" column="0" selection-start="0" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analytics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="8" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="330">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="102" selection-start="173" selection-end="275" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="285">
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concept/test.php">
+    <entry file="file://$PROJECT_DIR$/Concept/HanoiTower/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1045">
+        <state line="20" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="390">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="67" selection-start="140" selection-end="156" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concept/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="586" selection-end="586" vertical-scroll-proportion="0.30852106" vertical-offset="0" max-vertical-offset="1021">
           <folding />
         </state>
       </provider>
