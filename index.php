@@ -10,3 +10,15 @@ if ($handle = opendir('.')) {
 }
 
 ?>
+
+<div style="height:300px;">
+
+</div>
+
+<br />
+
+
+
+    <script type="text/javascript" src="googlead.js">   </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
