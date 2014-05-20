@@ -1,0 +1,149 @@
+<html>
+<body>
+<style>
+body {
+  font-size: 90%;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: arial, helvetica;
+}
+#page {
+   background-color: linen;
+   margin-left: 3em;
+   width:800px;
+}
+
+#inner {
+   padding: 10px;
+}
+
+
+</style>
+
+<br />
+<div id="page">
+    <a href="http://www.ling.gu.se/~lager/kurser/webtechnology/lab4.html" target="_new" >http://www.ling.gu.se/~lager/kurser/webtechnology/lab4.html</a>
+    <div id="inner">
+<h2>Ten Simple Javascript Exercises</h2>
+<ol>
+  <li>
+    <p>Define a function <code>max()</code> that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
+    <a href="#max">Solution</a>
+  </li>
+  <li>
+    <p>Define a function <code>maxOfThree()</code> that takes three numbers as arguments and returns the largest of them.
+
+    <a href="#maxofthree">Solution</a>
+  </li>
+  <li>
+    <p>Write a function that takes a character (i.e. a string of length 1) and returns <code>true</code> if it is a vowel, <code>false</code> otherwise.
+    <a href="#vowel">Solution</a>
+
+  </li>
+  <li>
+    <p>Write a function <code>translate()</code> that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of <code>"o"</code> in between. For example, <code>translate("this is fun")</code> should return the string <code>"tothohisos isos fofunon"</code>.
+
+    <a href="#translate">Solution</a>
+  </li>
+  <li>
+    <p>Define a function <code>sum()</code> and a function <code>multiply()</code> that sums and multiplies (respectively) all the numbers in an array of numbers. For example, <code>sum([1,2,3,4])</code> should return <code>10</code>, and <code>multiply([1,2,3,4])</code> should return <code>24</code>.
+
+    <a href="#sum_and_multiply">Solution</a>
+  </li>
+  <li>
+    <p>Define a function <code>reverse()</code> that computes the reversal of a string. For example, <code>reverse("jag testar")</code> should return the string <code>"ratset gaj"</code>.
+
+    <a href="#reverse">Solution</a>
+  </li>
+  <li>
+    <p>Represent a small bilingual lexicon as a Javascript object in the following fashion <code>{"merry":"god", "christmas":"jul", "and":"och", "happy":gott", "new":"nytt", "year":"år"}</code> and use it to translate your Christmas cards from English into Swedish.
+    <a href="#translate2">Solution</a>
+  </li>
+
+  <li>
+    <p>Write a function <code>findLongestWord()</code> that takes an array of words and returns the length of the longest one.
+    <a href="#findLongest">Solution</a>
+  </li>
+  <li>
+    <p>Write a function <code>filterLongWords()</code> that takes an array of words and an integer <code>i</code> and returns the array of words that are longer than <code>i</code>.
+
+    <a href="#filterLongWords">Solution</a>
+  </li>
+  <li>
+    <p>Write a function <code>charFreq()</code> that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like <code>charFreq("abbabcbdbabdbdbabababcbcbab")</code>.
+    <a href="#charFreq">Solution</a>
+  </li>
+  <ol>
+  </div></div>
+
+<script type="text/javascript" src="index.js"></script>
+<br />
+<a name="max" >1. Max </a>
+<form id="max" name="max">
+<input type="text" id="one" name="one" value="" />
+<input type="text" id="two" name="two" value="" />
+<input type="button" id="calc" value=" show max" onclick="showmax();" />
+</form>
+<br />
+<a name="maxofthree" >2. MaxOfThree </a>
+<form id="maxofthree" name="maxofthree">
+<input type="text" id="one" name="one" value="" />
+<input type="text" id="two" name="two" value="" />
+<input type="text" id="three" name="three" value="" />
+<input type="button" id="calc" value="show MaxOfThree" onclick="showmaxofthree();" />
+</form>
+<br />
+<a name="vowel" >3. Vowel </a>
+<form id="vowel" name="vowel">
+<input type="text" id="one" name="one" value="" />
+<input type="button" id="calc" value=" show vowel " onclick="showvowel();" />
+</form>
+<br />
+<a name="translate" >4. Translate </a> <a name="reverse" style="margin-left:250px;" >6. Reverse </a>
+<form id="translate" name="translate">
+<input type="text" id="one" name="one" value="this is fun" />
+<input type="button" id="calc" value=" show translate " onclick="showtranslate();" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" id="calc" value=" show Reverse " onclick="showreverse();" />
+</form>
+<br />
+<a name="sum_and_multiply" >5. Sum and Multiply </a>
+<form id="sum_and_multiply" name="sum_and_multiply">
+<input type="text" id="one" name="one" value="1" />
+<input type="text" id="two" name="two" value="2" />
+<input type="text" id="three" name="three" value="3" />
+<input type="text" id="four" name="four" value="4" />
+<input type="button" id="calc" value="show Sum" onclick="showsum();" />
+<input type="button" id="calc2" value="show Muliply" onclick="showmultiply();" />
+</form>
+<br />
+<a name="translate2" >7. Translate2 </a>
+<br />  {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"}
+<form id="translate2" name="translate2">
+<input type="text" id="one" name="one" value="merry" />
+<input type="button" id="calc" value=" show translate " onclick="showtranslate2();" />
+</form>
+<br />
+<a name="findLongest" >8. findLongest </a>  <a name="filterLongWords"  style="margin-left:400px;" >9. filterLongWords </a>
+<form id="findLongest" name="findLongest">
+<input type="text" id="one" name="one" value="test these word sacramento irvine" size="50"/>
+<input type="button" id="calc" value=" show FindLongest " onclick="showfindLongest();" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="two" name="two" value="4"/>
+<input type="button" id="calc" value=" show filterLongWords " onclick="showfilterLongWords();" />
+</form>
+<br />
+<br />
+<a name="charFreq" >10. charFreq </a> 
+<form id="charFreq" name="charFreq">
+<input type="text" id="one" name="one" value="abcdaaccddabcffe"  size="50"/>
+<input type="button" id="calc" value=" show charFreq " onclick="showcharFreq();" />
+</form>
+<br />
+<br />
+I didn't put any input check for these excercise. 
+<br />
+
+<script type="text/javascript" src="../../showFile.js"> </script>
+</body>
+</html>

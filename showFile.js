@@ -1,6 +1,11 @@
 
 
-	var jsfile = window.location.pathname.replace('.html', '.js');
+    if(/html/.test(window.location.pathname)){
+        var jsfile = window.location.pathname.replace('.html', '.js');
+    }else{
+        var jsfile = 'index.js';
+    }
+
 	
 	document.write(' <p>============ show file : ' + jsfile + '=========== </p>');
 	document.write('<div id="sourceText"> </div>');

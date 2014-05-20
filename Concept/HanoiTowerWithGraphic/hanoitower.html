@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript" src="hanoitower.js"> </script>
+<script type="text/javascript">
+
+
+function showStep(){
+    hanoi = new HanoiTower();
+    var disk = document.getElementById("totaldisk").value;
+    if(disk > 1){
+      hanoi.getDiskInput(disk);
+      hanoi.moveDisks(hanoi.totaldisk, 'Source', 'Destination', 'Spare');
+      var steptext = hanoi.getSteps();
+      document.getElementById("stepdiv").innerHTML = steptext;
+    }else{
+        document.getElementById("stepdiv").innerHTML = "HANOI TOWER";
+    }
+
+    
+}
+
+</script>
+Total Disk : 
+<input type="text" id="totaldisk" value="" />  <a href="#" onclick="showStep();" >  show steps </a>
+<div id="stepdiv" style="margin-top: 20px;">
+    
+    HANOI TOWER
+    
+</div>
+
+
