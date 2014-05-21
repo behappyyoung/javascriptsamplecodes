@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/ajax.html" afterPath="$PROJECT_DIR$/AngularJS/ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/ui-bootstrap.html" afterPath="$PROJECT_DIR$/AngularJS/ui-bootstrap.html" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.22321428" vertical-offset="0" max-vertical-offset="1008">
+            <state line="15" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -58,10 +67,19 @@
       <file leaf-file-name="subindex.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/subindex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="86" selection-start="477" selection-end="595" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="780">
+            <state line="12" column="31" selection-start="288" selection-end="288" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="780">
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AngularJS/animate/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="17" selection-start="104" selection-end="104" vertical-scroll-proportion="0.10284035" vertical-offset="0" max-vertical-offset="1021">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,28 +113,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analytics.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analytics.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-              <folding>
-                <element signature="e#0#39#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hanoitower.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="330">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="footer.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/footer.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -144,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/LRU_doublelined.js" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/LRU_doublelinked.js" />
         <option value="$PROJECT_DIR$/LRU_doublelinked_input.js" />
@@ -159,7 +154,6 @@
         <option value="$PROJECT_DIR$/BackboneJS/nodejs/package.json" />
         <option value="$PROJECT_DIR$/BackboneJS/nodejs/public/index.html" />
         <option value="$PROJECT_DIR$/BackboneJS/nodejs/public/client.js" />
-        <option value="$PROJECT_DIR$/AngularJS/ui-bootstrap.html" />
         <option value="$PROJECT_DIR$/AngularJS/todo.html" />
         <option value="$PROJECT_DIR$/AngularJS/animate/env.html" />
         <option value="$PROJECT_DIR$/AngularJS/animate/envelop.html" />
@@ -169,7 +163,6 @@
         <option value="$PROJECT_DIR$/AngularJS/animate/envelop.js" />
         <option value="$PROJECT_DIR$/AngularJS/animate/animate.js" />
         <option value="$PROJECT_DIR$/AngularJS/animate/withcss.html" />
-        <option value="$PROJECT_DIR$/AngularJS/ajax.html" />
         <option value="$PROJECT_DIR$/AngularJS/ajax.js" />
         <option value="$PROJECT_DIR$/AngularJS/ajax.text" />
         <option value="$PROJECT_DIR$/AngularJS/animate/animate.html" />
@@ -195,6 +188,9 @@
         <option value="$PROJECT_DIR$/Concept/HanoiTower/index.php" />
         <option value="$PROJECT_DIR$/subindex.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/AngularJS/ajax.html" />
+        <option value="$PROJECT_DIR$/AngularJS/ui-bootstrap.html" />
+        <option value="$PROJECT_DIR$/AngularJS/animate/index.php" />
       </list>
     </option>
   </component>
@@ -254,6 +250,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Concept" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="animate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -271,11 +313,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AngularJS/animate" />
+      <recent name="$PROJECT_DIR$/AngularJS" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/Concept" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Concept/HanoiTowerWithGraphic" />
-      <recent name="$PROJECT_DIR$/UIrelated/Animation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/AngularJS/animate" />
@@ -389,21 +431,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Concept/array_sort.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/showFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concept/array_sort.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/ui-bootstrap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1695" />
@@ -472,11 +499,6 @@
     <entry file="file://$PROJECT_DIR$/AngularJS/autocomplete/autocomplete.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="959" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/ui-bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="40" selection-start="3631" selection-end="3669" vertical-scroll-proportion="-64.375" vertical-offset="0" max-vertical-offset="1695" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/todo.js">
@@ -714,18 +736,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.4701273" vertical-offset="0" max-vertical-offset="1021">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/subindex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="86" selection-start="477" selection-end="595" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="780">
+        <state line="12" column="31" selection-start="288" selection-end="288" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="780">
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/AngularJS/ui-bootstrap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.22321428" vertical-offset="0" max-vertical-offset="1008">
+        <state line="89" column="50" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.6666667" vertical-offset="663" max-vertical-offset="1680">
+          <folding>
+            <marker date="1400632461427" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400632461427" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400632461427" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400632461427" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400632461427" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/animate/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="104" selection-end="104" vertical-scroll-proportion="0.10284035" vertical-offset="0" max-vertical-offset="1021">
           <folding />
         </state>
       </provider>
