@@ -6,35 +6,36 @@
         var jsfile = 'index.js';
     }
 
+    var jsshow = true;
 
-    document.write('<button id="js-showhide" onclick="showhide();"> show JS file content  </button>');
+    document.write('<p> <br /><button id="js-showhide" onclick="jsshowhide();"> show JS file content  </button></p>');
     document.write('<div id="js-sourceText" style="display: none;"> </div>');
-    var xmlhttp;
+    var xmlhttp2;
     if(window.XMLHttpRequest){
-        xmlhttp=new XMLHttpRequest();
+        xmlhttp2=new XMLHttpRequest();
     }else{
-        xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+        xmlhttp2=new ActiveXObject('Microsoft.XMLHTTP');
     }
 
-    xmlhttp.open('GET', jsfile, true);
-    xmlhttp.onreadystatechange=function(){
+    xmlhttp2.open('GET', jsfile, true);
+    xmlhttp2.onreadystatechange=function(){
         var mydata = xmlhttp.response;
         mydata = mydata.split('<').join('&lt;');
         mydata = mydata.split('\n').join('<br />');
         document.getElementById('js-sourceText').innerHTML = mydata;
     };
-    xmlhttp.send();
+    xmlhttp2.send();
 
 
-    function showhide(){
-        if(show){
+    function jsshowhide(){
+        if(jsshow){
             document.getElementById('js-sourceText').style.display = 'block';
             document.getElementById('js-showhide').innerHTML = ' hide HTML file content ';
-            show = false;
+            jsshow = false;
         }else{
             document.getElementById('js-sourceText').style.display = 'none';
             document.getElementById('js-showhide').innerHTML = ' show HTML file content ';
-            show = true;
+            jsshow = true;
         }
     }
 	
