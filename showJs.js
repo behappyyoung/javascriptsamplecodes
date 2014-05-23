@@ -17,6 +17,7 @@
         xmlhttp2=new ActiveXObject('Microsoft.XMLHTTP');
     }
 
+    console.log(jsfile);
     xmlhttp2.open('GET', jsfile, true);
     xmlhttp2.onreadystatechange=function(){
         var mydata = xmlhttp.response;
@@ -30,11 +31,11 @@
     function jsshowhide(){
         if(jsshow){
             document.getElementById('js-sourceText').style.display = 'block';
-            document.getElementById('js-showhide').innerHTML = ' hide HTML file content ';
+            document.getElementById('js-showhide').innerHTML = ' hide JS file content ';
             jsshow = false;
         }else{
             document.getElementById('js-sourceText').style.display = 'none';
-            document.getElementById('js-showhide').innerHTML = ' show HTML file content ';
+            document.getElementById('js-showhide').innerHTML = ' show JS file content ';
             jsshow = true;
         }
     }

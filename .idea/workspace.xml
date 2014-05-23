@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/ngRepeat.html" afterPath="$PROJECT_DIR$/AngularJS/ngRepeat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showFile.js" afterPath="$PROJECT_DIR$/showFile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/ui-bootstrap.html" afterPath="$PROJECT_DIR$/AngularJS/ui-bootstrap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/animate/form.html" afterPath="$PROJECT_DIR$/AngularJS/animate/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showJs.js" afterPath="$PROJECT_DIR$/showJs.js" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,64 +26,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="27" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dropdown.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/dropdown.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="45" selection-start="0" selection-end="45" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dropdown.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/dropdown.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1005">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ngRepeat.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ngRepeat.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularJS/ngRepeat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="48" selection-start="662" selection-end="662" vertical-scroll-proportion="0.27190334" vertical-offset="0" max-vertical-offset="993">
+            <state line="36" column="7" selection-start="1146" selection-end="1146" vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ui-bootstrap.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/ui-bootstrap.html">
+      <file leaf-file-name="animate.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/animate/animate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="23" selection-start="3694" selection-end="3694" vertical-scroll-proportion="-35.75" vertical-offset="717" max-vertical-offset="1710">
+            <state line="36" column="0" selection-start="1036" selection-end="1036" vertical-scroll-proportion="-14.875" vertical-offset="183" max-vertical-offset="1200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="envelop.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/animate/envelop.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="780">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/animate/form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="1231" selection-end="1231" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="585">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showJs.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/showJs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="0" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.6637168" vertical-offset="0" max-vertical-offset="1017">
               <folding>
-                <marker date="1400801533423" expanded="true" signature="2719:2792" placeholder="..." />
-                <marker date="1400801533423" expanded="true" signature="2827:3079" placeholder="..." />
-                <marker date="1400801533423" expanded="true" signature="2846:3011" placeholder="..." />
-                <marker date="1400801533423" expanded="true" signature="2895:2991" placeholder="..." />
-                <marker date="1400801533423" expanded="true" signature="3116:3289" placeholder="..." />
+                <marker date="1400804111279" expanded="true" signature="365:379" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showJs.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/showJs.js">
+      <file leaf-file-name="form.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/animate/form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="115" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-              <folding>
-                <marker date="1400802242627" expanded="true" signature="365:379" placeholder="..." />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,16 +85,16 @@
       <file leaf-file-name="form.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularJS/form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="40" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+            <state line="15" column="1" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/ajax.js">
+      <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="31" column="0" selection-start="956" selection-end="956" vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
@@ -157,7 +149,6 @@
         <option value="$PROJECT_DIR$/AngularJS/todo.html" />
         <option value="$PROJECT_DIR$/AngularJS/animate/env.html" />
         <option value="$PROJECT_DIR$/AngularJS/animate/envelop.html" />
-        <option value="$PROJECT_DIR$/AngularJS/animate/form.html" />
         <option value="$PROJECT_DIR$/AngularJS/animate/form.js" />
         <option value="$PROJECT_DIR$/AngularJS/animate/withcss.js" />
         <option value="$PROJECT_DIR$/AngularJS/animate/envelop.js" />
@@ -194,9 +185,10 @@
         <option value="$PROJECT_DIR$/showFile.js" />
         <option value="$PROJECT_DIR$/AngularJS/ui-bootstrap.html" />
         <option value="$PROJECT_DIR$/AngularJS/ngClick-ngClass.html" />
-        <option value="$PROJECT_DIR$/showJs.js" />
         <option value="$PROJECT_DIR$/showHtml.js" />
         <option value="$PROJECT_DIR$/AngularJS/ngRepeat.html" />
+        <option value="$PROJECT_DIR$/showJs.js" />
+        <option value="$PROJECT_DIR$/AngularJS/animate/form.html" />
       </list>
     </option>
   </component>
@@ -304,6 +296,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="animate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -553,21 +563,6 @@
         <state line="14" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/animate/animate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1200" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/animate/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1098" selection-end="1276" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="570" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/animate/form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1017" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/animate/withcss.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1017" />
@@ -633,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/dropdown.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1005">
@@ -668,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="40" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/showFile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="36" selection-start="771" selection-end="771" vertical-scroll-proportion="0.33923304" vertical-offset="0" max-vertical-offset="1017">
@@ -688,29 +669,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="23" selection-start="3694" selection-end="3694" vertical-scroll-proportion="-35.75" vertical-offset="717" max-vertical-offset="1710">
           <folding>
-            <marker date="1400801533423" expanded="true" signature="2719:2792" placeholder="..." />
-            <marker date="1400801533423" expanded="true" signature="2827:3079" placeholder="..." />
-            <marker date="1400801533423" expanded="true" signature="2846:3011" placeholder="..." />
-            <marker date="1400801533423" expanded="true" signature="2895:2991" placeholder="..." />
-            <marker date="1400801533423" expanded="true" signature="3116:3289" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/showJs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="115" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <folding>
-            <marker date="1400802242627" expanded="true" signature="365:379" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/showHtml.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-          <folding>
-            <marker date="1400802282411" expanded="true" signature="343:357" placeholder="..." />
+            <marker date="1400801533423" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400801533423" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400801533423" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400801533423" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1400801533423" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -724,8 +687,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/ngRepeat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="48" selection-start="662" selection-end="662" vertical-scroll-proportion="0.27190334" vertical-offset="0" max-vertical-offset="993">
+        <state line="36" column="7" selection-start="1146" selection-end="1146" vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="630">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/animate/animate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1036" selection-end="1036" vertical-scroll-proportion="-14.875" vertical-offset="183" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/animate/envelop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1017">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/animate/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="1" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="956" selection-end="956" vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/animate/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1231" selection-end="1231" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showHtml.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <folding>
+            <marker date="1400802282411" expanded="true" signature="343:357" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showJs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.6637168" vertical-offset="0" max-vertical-offset="1017">
+          <folding>
+            <marker date="1400804111279" expanded="true" signature="365:379" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
