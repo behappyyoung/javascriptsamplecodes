@@ -1,0 +1,13 @@
+{
+    "status" : 1,
+    "user": [{
+        "firstName": "Vikas",
+        "lastName": "Bhagwagar"
+    }, {
+        "firstName": "Gaurav",
+        "lastName": "Patel"
+    }, {
+        "firstName": "Ankur",
+        "lastName": "Shah"
+    }]
+}

@@ -10,8 +10,10 @@ test(' object Test ', function() {
     var test2 = new testf();
 
     equal(test1.v3, 'new3', 'correct');
+    equal(test1.v3, 'new4', 'incorrect');
     equal(test2.v3, 'test3', 'correct');
     equal(test2.f4(), 'test1test', 'correct');
     equal(test2.v3, 'test3', 'correct');
+    equal(test2.v3, 'test4', 'incorrect');
 
 });

@@ -17,12 +17,16 @@
 <body>
 
 <div ng-controller="Controller">
-    <form validate class="css-form">
+    <form name="myform" validate class="css-form">
         Name:
-        <input type="text" ng-model="user.name" required /><br />
-        E-mail: <input type="email" ng-model="user.email" required /><br />
+        <input type="text" ng-model="user.name" name="name" required /><br />
+        <span ng-show="myform.name.$error.required"> required <br /> </span>
+        E-mail: <input type="email" ng-model="user.email" name="email" required /> <br />
+        <span ng-show="myform.email.$dirty && myform.email.$error.email"> not an email  <br /></span><br />
         Gender: <input type="radio" ng-model="user.gender" value="male" />male
         <input type="radio" ng-model="user.gender" value="female" />female<br />
+        password <input type="password" name="password" ng-model="user.password" required ng-minlength="5" /> <br/>
+        <span ng-show="myform.password.$dirty && myform.password.$error.minlength"> too short !! <br /></span>
         <button ng-click="reset()">RESET</button>
         <button ng-click="update(user)">SAVE</button>
     </form>
