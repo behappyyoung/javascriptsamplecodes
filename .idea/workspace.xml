@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/form.html" afterPath="$PROJECT_DIR$/AngularJS/form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/ngRepeat.html" afterPath="$PROJECT_DIR$/AngularJS/ngRepeat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Concept/object_scope_prototype.html" afterPath="$PROJECT_DIR$/Concept/object_scope_prototype.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Concept/object_scope_prototype_test.js" afterPath="$PROJECT_DIR$/Concept/object_scope_prototype_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;" />
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,19 +70,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jQuery/QUnit/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="435">
+            <state line="23" column="0" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.35204083" vertical-offset="0" max-vertical-offset="980">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jQuery/QUnit/Test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="16" selection-start="685" selection-end="685" vertical-scroll-proportion="0.5014749" vertical-offset="0" max-vertical-offset="1017">
+            <state line="34" column="16" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -762,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jQuery/QUnit/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jQuery/QUnit/sample.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="239" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="270">
@@ -778,7 +765,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jQuery/QUnit/Test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="685" selection-end="685" vertical-scroll-proportion="0.5014749" vertical-offset="0" max-vertical-offset="1017">
+        <state line="34" column="16" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery/QUnit/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.35204083" vertical-offset="0" max-vertical-offset="980">
           <folding />
         </state>
       </provider>
