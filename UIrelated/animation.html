@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+      <style>
+          div#movingdiv
+          {
+              width:100px;
+              height:100px;
+              background:red;
+              position:relative;
+              /* Chrome, Safari, Opera */
+              -webkit-animation-name:myfirst;
+              -webkit-animation-duration:5s;
+              -webkit-animation-timing-function:linear;
+              -webkit-animation-delay:2s;
+              -webkit-animation-iteration-count:infinite;
+              -webkit-animation-direction:alternate;
+              -webkit-animation-play-state:running;
+              /* Standard syntax */
+              animation-name:myfirst;
+              animation-duration:5s;
+              animation-timing-function:linear;
+              animation-delay:2s;
+              animation-iteration-count:infinite;
+              animation-direction:alternate;
+              animation-play-state:running;
+          }
+
+          /* Chrome, Safari, Opera */
+          @-webkit-keyframes myfirst
+          {
+              0%   {background:red; left:0px; top:0px;}
+              25%  {background:yellow; left:200px; top:0px;}
+              50%  {background:blue; left:200px; top:200px;}
+              75%  {background:green; left:0px; top:200px;}
+              100% {background:red; left:0px; top:0px;}
+          }
+
+          /* Standard syntax */
+          @keyframes myfirst
+          {
+              0%   {background:red; left:0px; top:0px;}
+              25%  {background:yellow; left:200px; top:0px;}
+              50%  {background:blue; left:200px; top:200px;}
+              75%  {background:green; left:0px; top:200px;}
+              100% {background:red; left:0px; top:0px;}
+          }
+
+
+
+          #movingdiv2
+          {
+              width:100px;
+              height:100px;
+              background:green;
+              position:relative;
+          }
+
+          #movingdiv2:hover
+          {
+              width:100px;
+              height:100px;
+              background:green;
+              position:relative;
+              /* Chrome, Safari, Opera */
+              -webkit-animation-name:mysecond;
+              -webkit-animation-duration:1s;
+              -webkit-animation-timing-function:linear;
+              -webkit-animation-delay:0;
+              -webkit-animation-iteration-count:2;
+              -webkit-animation-direction:alternate;
+              -webkit-animation-play-state:running;
+              /* Standard syntax */
+              animation-name:myfirst;
+              animation-duration:1s;
+              animation-timing-function:linear;
+              animation-delay:0;
+              animation-iteration-count:2;
+              animation-direction:alternate;
+              animation-play-state:running;
+          }
+          /* Chrome, Safari, Opera */
+          @-webkit-keyframes mysecond
+          {
+              0%   {background:green; left:0px; top:0px;}
+              50%  {background:yellow; left:200px; top:0px;}
+              100%  {background:blue; left:200px; top:200px;}
+          }
+
+          /* Standard syntax */
+          @keyframes mysecond
+          {
+              0%   {background:green; left:0px; top:0px;}
+              50%  {background:yellow; left:200px; top:0px;}
+              100%  {background:blue; left:200px; top:200px;}
+          }
+
+      </style>
+  </head>
+  <body>
+    <h2>Animation - with CSS3</h2>
+
+    <div id="movingdiv"></div>
+
+    <div id="movingdiv2"></div>
+
+    <script src="../showHtml.js"></script>
+
+  </body>
+</html>
