@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/Double_linked_list.html" afterPath="$PROJECT_DIR$/Algorithm/Double_linked_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showJs.js" afterPath="$PROJECT_DIR$/showJs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html" afterPath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,10 +37,8 @@
       <file leaf-file-name="Double_linked_list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Algorithm/Double_linked_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="7" selection-start="328" selection-end="328" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
-              <folding>
-                <marker date="1401214178011" expanded="true" signature="21:327" placeholder="..." />
-              </folding>
+            <state line="16" column="0" selection-start="237" selection-end="312" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="375">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,13 +52,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Double_linked_list.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Double_linked_list.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Algorithm/Double_linked_list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="33" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.9557522" vertical-offset="678" max-vertical-offset="1770">
+            <state line="112" column="33" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.0" vertical-offset="753" max-vertical-offset="1770">
               <folding>
                 <element signature="n#!!doc;n#DoublyLinkedList#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recursive_getmin_rotated_array.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.2265861" vertical-offset="0" max-vertical-offset="993">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,15 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sample.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jQuery/QUnit/sample.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -145,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AngularJS/animate/withcss.js" />
         <option value="$PROJECT_DIR$/AngularJS/animate/envelop.js" />
         <option value="$PROJECT_DIR$/AngularJS/animate/animate.js" />
         <option value="$PROJECT_DIR$/AngularJS/animate/withcss.html" />
@@ -196,6 +191,7 @@
         <option value="$PROJECT_DIR$/Algorithm/Double_linked_list.html" />
         <option value="$PROJECT_DIR$/showJs.js" />
         <option value="$PROJECT_DIR$/Algorithm/Double_linked_list.js" />
+        <option value="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html" />
       </list>
     </option>
   </component>
@@ -506,11 +502,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/svg/path.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Concept/array_sort.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -758,15 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/Double_linked_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="7" selection-start="328" selection-end="328" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
-          <folding>
-            <marker date="1401214178011" expanded="true" signature="21:327" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/showFile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="0" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
@@ -796,10 +778,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/Double_linked_list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="33" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.9557522" vertical-offset="678" max-vertical-offset="1770">
+        <state line="112" column="33" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.0" vertical-offset="753" max-vertical-offset="1770">
           <folding>
             <element signature="n#!!doc;n#DoublyLinkedList#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/Double_linked_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="237" selection-end="312" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.2265861" vertical-offset="0" max-vertical-offset="993">
+          <folding />
         </state>
       </provider>
     </entry>
