@@ -17,16 +17,14 @@
         xmlhttp2=new ActiveXObject('Microsoft.XMLHTTP');
     }
 
-    console.log(jsfile);
     xmlhttp2.open('GET', jsfile, true);
     xmlhttp2.onreadystatechange=function(){
-        var mydata = xmlhttp.response;
+        var mydata = xmlhttp2.response;
         mydata = mydata.split('<').join('&lt;');
         mydata = mydata.split('\n').join('<br />');
         document.getElementById('js-sourceText').innerHTML = mydata;
     };
     xmlhttp2.send();
-
 
     function jsshowhide(){
         if(jsshow){
