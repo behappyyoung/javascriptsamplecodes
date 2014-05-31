@@ -1,0 +1,73 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" ng-app="animateApp">
+  <head>
+      <style>
+          .view-animate-container {
+              position:relative;
+              height:100px!important;
+              position:relative;
+              background:white;
+              border:1px solid black;
+              height:40px;
+              overflow:hidden;
+          }
+
+          .view-animate {
+              padding:10px;
+          }
+
+          .view-animate.ng-enter, .view-animate.ng-leave {
+              -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+              transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+
+              display:block;
+              width:100%;
+              border-left:1px solid black;
+
+              position:absolute;
+              top:0;
+              left:0;
+              right:0;
+              bottom:0;
+              padding:10px;
+          }
+
+          .view-animate.ng-enter {
+              left:100%;
+          }
+          .view-animate.ng-enter.ng-enter-active {
+              left:0;
+          }
+          .view-animate.ng-leave.ng-leave-active {
+              left:-100%;
+          }
+      </style>
+  </head>
+  <body>
+    <h2>Animation - ngView</h2>
+    <div ng-controller="MainCtrl as main">
+        Choose:
+        <a href="Book/Moby">Moby</a> |
+        <a href="Book/Moby/ch/1">Moby: Ch1</a> |
+        <a href="Book/Gatsby">Gatsby</a> |
+        <a href="Book/Gatsby/ch/4?key=value">Gatsby: Ch4</a> |
+        <a href="Book/Scarlet">Scarlet Letter</a><br/>
+
+        <div class="view-animate-container">
+            <div ng-view class="view-animate"></div>
+        </div>
+        <hr />
+
+        <pre>$location.path() = {{main.$location.path()}}</pre>
+        <pre>$route.current.templateUrl = {{main.$route.current.templateUrl}}</pre>
+        <pre>$route.current.params = {{main.$route.current.params}}</pre>
+        <pre>$routeParams = {{main.$routeParams}}</pre>
+    </div>
+
+    <script src="../inc/angular.min.js"></script>
+    <script src="../inc/angular-route.min.js"></script>
+    <script src="../inc/angular-animate.min.js"></script>
+    <script src="ngView.js"></script>
+    <script src="../../showFile.js"></script>
+  </body>
+</html>
