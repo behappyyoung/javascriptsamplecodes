@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+Element.prototype.hasClassName = function (a) {                                 <br />
+return new RegExp("(?:^|\\s+)" + a + "(?:\\s+|$)").test(this.className);    <br />
+};
+<br /><br />
+Element.prototype.addClassName = function (a) {                     <br />
+if (!this.hasClassName(a)) {                                        <br />
+this.className = [this.className, a].join(" ");                     <br />
+}
+};
+<br /><br />
+Element.prototype.removeClassName = function (b) {                      <br />
+if (this.hasClassName(b)) {                                                 <br />
+var a = this.className;
+this.className = a.replace(new RegExp("(?:^|\\s+)" + b + "(?:\\s+|$)", "g"), " ");  <br />
+}
+};
+<br /><br />
+Element.prototype.toggleClassName = function (a) {                  <br />
+this[this.hasClassName(a) ? "removeClassName" : "addClassName"](a); <br />
+};
+<br />
+<a href="../UIrelated/transform_flip.html"> example </a>
+</body>
+</html>
