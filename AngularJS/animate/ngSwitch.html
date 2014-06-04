@@ -16,8 +16,10 @@
         }
 
         .animate-switch.ng-animate {
-            -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-            transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+            -moz-transition: 325ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            -ms-transition: 325ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            -o-transition: 325ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            transition: 325ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
 
             position:absolute;
             top:0;
@@ -30,10 +32,40 @@
         .animate-switch.ng-enter {
             top:-100px;
         }
-        .animate-switch.ng-leave,
-        .animate-switch.ng-enter.ng-enter-active {
+
+        .animate-switch.ng-leave, .animate-switch.ng-enter.ng-enter-active {
             top:0;
         }
+
+        .animate-slide-container {
+            position:relative;
+            background:white;
+            border:1px solid black;
+            height:40px;
+            overflow:hidden;
+        }
+
+        .animate-slide.ng-animate{
+            -moz-transition: 325ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            -ms-transition: 325ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            -o-transition: 325ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            transition: 325ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+        }
+
+        .animate-slide.ng-leave.ng-leave-active,
+        .animate-slide.ng-enter {
+            left:100%;
+        }
+
+        .animate-slide.ng-leave, .animate-slide.ng-enter.ng-enter-active {
+            left:0;
+        }
+
     </style>
 </head>
 <body ng-app="ngAnimate">
@@ -50,9 +82,25 @@
         </div>
     </div>
 
+    <div class="btn-group">
+        <button ng-click="quote=1;">slide 1</button>
+        <button ng-click="quote=2;">slide 2</button>
+        <button ng-click="quote=3;">slide 3</button>
+        <button ng-click="quote=4;">slide 4</button>
+
+    </div>
+    <br />
+<div ng-switch on="quote" ng-animate="slide" class="animate-slide-container" >
+
+    <div ng-switch-when="1" class="animate-slide"> slide 1</div>
+    <div ng-switch-when="2" class="animate-slide"> slide 2</div>
+    <div ng-switch-when="3" class="animate-slide"> slide 3</div>
+    <div ng-switch-when="4" class="animate-slide"> slide 4</div>
+
+</div>
 
     <script src="../inc/angular.min.js"></script>
-    <script src="angular-animate.js"></script>
+    <script src="../inc/angular-animate.min.js"></script>
     <script src="ngSwitch.js"></script>
     <script src="../../showHtml.js"></script>
     <script src="../../showJs.js"></script>

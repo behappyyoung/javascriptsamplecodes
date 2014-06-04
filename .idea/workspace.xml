@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/transform.html" afterPath="$PROJECT_DIR$/UIrelated/transform.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/ngClick-ngClass.html" afterPath="$PROJECT_DIR$/AngularJS/ngClick-ngClass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/animate/ngSwitch.html" afterPath="$PROJECT_DIR$/AngularJS/animate/ngSwitch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlanHtml/test.html" afterPath="$PROJECT_DIR$/PlanHtml/test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
@@ -26,37 +28,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ngView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/route/ngView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="2" selection-start="175" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="882">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/route/example/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1201" selection-end="1201" vertical-scroll-proportion="-20.0" vertical-offset="36" max-vertical-offset="1026">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transform.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UIrelated/transform.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="12" selection-start="659" selection-end="659" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="738">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transform_flip.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="transform_flip.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="4" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.60829014" vertical-offset="889" max-vertical-offset="1926">
+            <state line="57" column="0" selection-start="1840" selection-end="1840" vertical-scroll-proportion="-13.074074" vertical-offset="673" max-vertical-offset="1926">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ngClick-ngClass.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/ngClick-ngClass.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="111" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="810">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectiveCollections.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/DirectiveCollections.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="11" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="882">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ngSwitch.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/animate/ngSwitch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ngSwitch.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AngularJS/animate/ngSwitch.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.16787565" vertical-offset="630" max-vertical-offset="2052">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basics_ngBind.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/basics_ngBind.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="54" selection-start="319" selection-end="367" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="432">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="todo.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/todo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
               <folding />
             </state>
           </provider>
@@ -65,10 +94,8 @@
       <file leaf-file-name="transform_flip.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="40" selection-end="658" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-              <folding>
-                <element signature="e#0#38#0" expanded="false" />
-              </folding>
+            <state line="4" column="0" selection-start="40" selection-end="658" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="720">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,43 +103,7 @@
       <file leaf-file-name="toggleClassName.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concept/toggleClassName.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="12" selection-start="788" selection-end="788" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="630">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/route/example/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="1" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="972">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/route/example/pages/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/route/example/pages/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="13" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/route/example/pages/contact.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180">
+            <state line="22" column="12" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
@@ -136,9 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Concept/object_scope_prototype.html" />
-        <option value="$PROJECT_DIR$/Concept/object_scope_prototype_test.js" />
-        <option value="$PROJECT_DIR$/QUnit/index.html" />
         <option value="$PROJECT_DIR$/jQuery/QUnit/index.html" />
         <option value="$PROJECT_DIR$/AngularJS/ngRepeat.html" />
         <option value="$PROJECT_DIR$/AngularJS/index.html" />
@@ -152,7 +140,6 @@
         <option value="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html" />
         <option value="$PROJECT_DIR$/AngularJS/ajax.html" />
         <option value="$PROJECT_DIR$/AngularJS/todo.html" />
-        <option value="$PROJECT_DIR$/AngularJS/animate/ngSwitch.html" />
         <option value="$PROJECT_DIR$/AngularJS/animate/withcss.html" />
         <option value="$PROJECT_DIR$/showFile.js" />
         <option value="$PROJECT_DIR$/googleapi/gauge-chart.js" />
@@ -187,6 +174,10 @@
         <option value="$PROJECT_DIR$/UIrelated/transform_flip.js" />
         <option value="$PROJECT_DIR$/Concept/toggleClassName.html" />
         <option value="$PROJECT_DIR$/UIrelated/transform_flip.html" />
+        <option value="$PROJECT_DIR$/AngularJS/ngClick-ngClass.html" />
+        <option value="$PROJECT_DIR$/AngularJS/DirectiveCollections.html" />
+        <option value="$PROJECT_DIR$/PlanHtml/test.html" />
+        <option value="$PROJECT_DIR$/AngularJS/animate/ngSwitch.html" />
       </list>
     </option>
   </component>
@@ -197,8 +188,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP5.3" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="170" />
-    <option name="y" value="52" />
+    <option name="x" value="339" />
+    <option name="y" value="39" />
     <option name="width" value="1460" />
     <option name="height" value="1148" />
   </component>
@@ -273,7 +264,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="UIrelated" />
+              <option name="myItemId" value="PlanHtml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -287,7 +278,61 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Concept" />
+              <option name="myItemId" value="AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autocomplete" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="animate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,11 +352,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AngularJS" />
       <recent name="$PROJECT_DIR$/UIrelated" />
       <recent name="$PROJECT_DIR$/AngularJS/route/example/pages" />
       <recent name="$PROJECT_DIR$/AngularJS/route" />
       <recent name="$PROJECT_DIR$/AngularJS/inc" />
-      <recent name="$PROJECT_DIR$/AngularJS/animate" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Nodejs/Algorithm" />
@@ -322,6 +367,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -332,23 +385,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -387,7 +432,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="170" y="52" width="1460" height="1148" extended-state="0" />
+    <frame x="339" y="39" width="1460" height="1148" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -404,12 +449,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283721" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283721" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33037037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -429,9 +474,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -451,21 +496,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/showFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleapi/line-chart-one-with-different-color.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/googleapi/timeline-chart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1017" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/map_svg.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="90" selection-end="120" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="4140" />
@@ -526,11 +556,6 @@
         <state line="4" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/animate/ngSwitch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/Animation/withcss.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="37" selection-start="3454" selection-end="3454" vertical-scroll-proportion="-36.77778" vertical-offset="879" max-vertical-offset="2088" />
@@ -539,16 +564,6 @@
     <entry file="file://$PROJECT_DIR$/AngularJS/ngRepeat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="53" selection-start="1174" selection-end="1174" vertical-scroll-proportion="-21.333334" vertical-offset="0" max-vertical-offset="900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/animate/ngSwitch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="40" selection-start="1092" selection-end="1092" vertical-scroll-proportion="-20.777779" vertical-offset="195" max-vertical-offset="1188" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/ngClick-ngClass.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="7" selection-start="858" selection-end="858" vertical-scroll-proportion="-23.333334" vertical-offset="0" max-vertical-offset="756" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/animate/animate.html">
@@ -564,14 +579,6 @@
     <entry file="file://$PROJECT_DIR$/AngularJS/animate/book.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/inc/angular.min.js.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="978" />
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/inc/angular-animate.min.js">
@@ -602,11 +609,6 @@
     <entry file="file://$PROJECT_DIR$/AngularJS/basics_ngBind.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="1" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/basics_ngBind.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="26" selection-start="493" selection-end="493" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="432" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/dropdown.html">
@@ -641,100 +643,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/routes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="48" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="792">
-          <folding />
-        </state>
+        <state line="11" column="48" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/animate/ngView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="17" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/ngView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="530" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="738">
-          <folding />
-        </state>
+        <state line="22" column="0" selection-start="530" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/ngView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2" selection-start="175" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
-          <folding />
-        </state>
+        <state line="6" column="2" selection-start="175" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/example/pages/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="1" column="13" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/example/pages/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/example/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="1" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="936">
-          <folding />
-        </state>
+        <state line="28" column="1" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="936" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/example/pages/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/example/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1201" selection-end="1201" vertical-scroll-proportion="-20.0" vertical-offset="36" max-vertical-offset="1026">
-          <folding />
-        </state>
+        <state line="32" column="0" selection-start="1201" selection-end="1201" vertical-scroll-proportion="-20.0" vertical-offset="36" max-vertical-offset="1026" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="659" selection-end="659" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="738">
-          <folding />
-        </state>
+        <state line="22" column="12" selection-start="659" selection-end="659" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="40" selection-end="658" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Concept/toggleClassName.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="788" selection-end="788" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="630">
+        <state line="22" column="12" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="4" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.60829014" vertical-offset="889" max-vertical-offset="1926">
+        <state line="57" column="0" selection-start="1840" selection-end="1840" vertical-scroll-proportion="-13.074074" vertical-offset="673" max-vertical-offset="1926">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/todo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="992">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/basics_ngBind.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="54" selection-start="319" selection-end="367" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/ngClick-ngClass.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="111" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/DirectiveCollections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/animate/ngSwitch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlanHtml/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="965" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/inc/angular.min.js.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="923">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/animate/ngSwitch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.16787565" vertical-offset="630" max-vertical-offset="2052">
           <folding />
         </state>
       </provider>

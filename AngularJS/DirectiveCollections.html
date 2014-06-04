@@ -3,8 +3,8 @@
 <head>
     <script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
     <style>
-        .main > div { width: 100px;
-                height: 100px;
+        .main > div { width: 200px;
+                height: 50px;
         margin: 10px;}
         .red {
             background-color: red;
@@ -28,8 +28,12 @@
     <div ng-init="index=0; classes=['red', 'green', 'blue']" ng-class="classes[index]">Test 1 2 3. [ ng-class ]</div>
 
 
-    <button ng-click="index = (index + 1) % 3 " class=""> click to change color  [ng-click] </button>
+    <button ng-click="index = (index + 1) % 3 " class=""> click to change color [ng-click] </button>
 
+
+    <div> index = {{index}}</div>
+    <h4> index =  <span ng-bind="index"></span>! [ ng-bind ] </h4>
+    <div ng-show="(index==1)" class="green"> only shows when index = 1   [ng-show]</div>
 
 </div>
 
