@@ -1,16 +1,35 @@
 /**
  * Created by young on 5/23/14.
  */
-module('async');
 
-asyncTest( "asynchronous test: one second later!", function() {
-    expect( 1 );
+module('Basic Test : ');
 
+
+test(" do basic tests", function() {
+    var status;
+    equal(status, undefined, "no user specified, status ");
+    notEqual(status, '', "no user specified, status ");
+    strictEqual(status, undefined, "no user specified, status === undefined ");
+    notStrictEqual(status, '', "no user specified, status === '' ");
+
+});
+
+
+module('AsyncTest : ');
+
+asyncTest("asyncTest & start", function() {
+    expect(1);
+
+    var actual = true;
     setTimeout(function() {
-        ok( true, "Passed and ready to resume!" );
+        ok(actual, " ok test after 1 second actual == true ");
         start();
     }, 1000);
 });
+
+
+
+module('AsyncTest with mockjax : ');
 
 $.mockjax({
     url: "/user",

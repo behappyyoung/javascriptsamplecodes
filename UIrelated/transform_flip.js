@@ -30,6 +30,11 @@ var init = function() {
     document.getElementById('flip').addEventListener( 'click', function(){
         card.toggleClassName('flipped');
     }, false);
+
+    card.addEventListener( 'mouseover', function(){
+        this.toggleClassName('flipped');
+    }, false);
+
 };
 
 window.addEventListener('DOMContentLoaded', init, false);
