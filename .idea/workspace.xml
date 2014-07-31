@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/jQuery/QUnit/Test.js" afterPath="$PROJECT_DIR$/QUnit/TestExamples.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/jQuery/QUnit/index.html" afterPath="$PROJECT_DIR$/QUnit/TestExamples.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/jQuery/QUnit/sample.json" afterPath="$PROJECT_DIR$/QUnit/sample.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/route/routes.html" afterPath="$PROJECT_DIR$/AngularJS/route/routes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/transform_flip.html" afterPath="$PROJECT_DIR$/UIrelated/transform_flip.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/transform_flip.js" afterPath="$PROJECT_DIR$/UIrelated/transform_flip.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
@@ -31,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestExamples.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TestExamples.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QUnit/TestExamples.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.4145343" vertical-offset="0" max-vertical-offset="977">
+            <state line="27" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="495">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestExamples.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestExamples.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/QUnit/TestExamples.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="30" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1035">
+            <state line="37" column="21" selection-start="769" selection-end="769" vertical-scroll-proportion="0.5204795" vertical-offset="34" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -128,7 +122,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP5.3" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="74" />
+    <option name="x" value="62" />
     <option name="y" value="69" />
     <option name="width" value="1481" />
     <option name="height" value="1131" />
@@ -332,15 +326,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="69" width="1481" height="1131" extended-state="0" />
-    <editor active="true" />
+    <frame x="62" y="69" width="1481" height="1131" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24780554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24780554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -398,30 +392,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/todo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="660" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="810">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="660" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="810" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.html">
@@ -431,23 +417,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/routes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="9" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="792">
-          <folding />
-        </state>
+        <state line="38" column="9" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/todo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="660" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="810">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="660" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="810" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.html">
@@ -457,16 +437,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/todo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="660" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="675">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="660" selection-end="1035" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="675" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/googleapi/map_svg.html">
@@ -604,9 +580,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/templates/show_orders.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.030706244" vertical-offset="0" max-vertical-offset="977">
-          <folding />
-        </state>
+        <state line="2" column="13" selection-start="35" selection-end="35" vertical-scroll-proportion="0.030706244" vertical-offset="0" max-vertical-offset="977" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/example/script.js">
@@ -621,77 +595,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="939">
-          <folding />
-        </state>
+        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="939" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/ngClick-ngClass.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="526" selection-end="526" vertical-scroll-proportion="0.34663865" vertical-offset="0" max-vertical-offset="952">
-          <folding />
-        </state>
+        <state line="22" column="13" selection-start="526" selection-end="526" vertical-scroll-proportion="0.34663865" vertical-offset="0" max-vertical-offset="952" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/todo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.5042017" vertical-offset="0" max-vertical-offset="952">
-          <folding />
-        </state>
+        <state line="32" column="0" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.5042017" vertical-offset="0" max-vertical-offset="952" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1018">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1018" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1018">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1018" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/ngRepeat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="662" selection-end="662" vertical-scroll-proportion="0.30706245" vertical-offset="0" max-vertical-offset="977">
-          <folding />
-        </state>
+        <state line="20" column="0" selection-start="662" selection-end="662" vertical-scroll-proportion="0.30706245" vertical-offset="0" max-vertical-offset="977" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/templates/add_order.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="0.030706244" vertical-offset="0" max-vertical-offset="977">
-          <folding />
-        </state>
+        <state line="2" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="0.030706244" vertical-offset="0" max-vertical-offset="977" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/route/routes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="23" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.61617196" vertical-offset="88" max-vertical-offset="1065">
-          <folding />
-        </state>
+        <state line="46" column="23" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.61617196" vertical-offset="88" max-vertical-offset="1065" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIrelated/transform_flip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="660" selection-end="1035" vertical-scroll-proportion="0.38961038" vertical-offset="0" max-vertical-offset="1001">
+        <state line="26" column="0" selection-start="660" selection-end="1035" vertical-scroll-proportion="0.38961038" vertical-offset="0" max-vertical-offset="1001" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QUnit/TestExamples.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QUnit/TestExamples.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QUnit/TestExamples.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.4145343" vertical-offset="0" max-vertical-offset="977">
+        <state line="37" column="21" selection-start="769" selection-end="769" vertical-scroll-proportion="0.5204795" vertical-offset="34" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
