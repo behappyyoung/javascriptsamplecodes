@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Threejs/example.html" afterPath="$PROJECT_DIR$/3D/Threejs/example.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gita" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Samples/webviewer.html" afterPath="$PROJECT_DIR$/3D/Samples/webviewer.html" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +65,7 @@
       <file leaf-file-name="webviewer.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/3D/Samples/webviewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="369" column="0" selection-start="10249" selection-end="10249" vertical-scroll-proportion="0.48630136" vertical-offset="5109" max-vertical-offset="6165">
+            <state line="400" column="9" selection-start="11358" selection-end="11358" vertical-scroll-proportion="0.5212766" vertical-offset="5559" max-vertical-offset="6435">
               <folding />
             </state>
           </provider>
@@ -174,8 +174,8 @@
         <option value="$PROJECT_DIR$/3D/Threejs/example.html" />
         <option value="$PROJECT_DIR$/3D/Threejs/cube.html" />
         <option value="$PROJECT_DIR$/3D/Threejs/cubes.html" />
-        <option value="$PROJECT_DIR$/3D/Samples/webviewer.html" />
         <option value="$PROJECT_DIR$/3D/Threejs/webviewer.html" />
+        <option value="$PROJECT_DIR$/3D/Samples/webviewer.html" />
       </list>
     </option>
   </component>
@@ -760,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3D/Threejs/cubes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="41" selection-start="1836" selection-end="1836" vertical-scroll-proportion="-28.166666" vertical-offset="104" max-vertical-offset="1005">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/3D/Threejs/example.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="48" selection-start="135" selection-end="135" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="555">
@@ -781,9 +774,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/3D/Threejs/cubes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="41" selection-start="1836" selection-end="1836" vertical-scroll-proportion="-28.166666" vertical-offset="104" max-vertical-offset="1005">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/3D/Samples/webviewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="369" column="0" selection-start="10249" selection-end="10249" vertical-scroll-proportion="0.48630136" vertical-offset="5109" max-vertical-offset="6165">
+        <state line="400" column="9" selection-start="11358" selection-end="11358" vertical-scroll-proportion="0.5212766" vertical-offset="5559" max-vertical-offset="6435">
           <folding />
         </state>
       </provider>

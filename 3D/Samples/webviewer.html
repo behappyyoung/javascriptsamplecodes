@@ -68,7 +68,21 @@
 
 	    var _camera, _scene, _renderer, _trackball, _projector;
 
+        // rotation along x direction controls y-rotation
+        var targetRotationY = 0;
+        var targetRotationYOnMouseDown = 0;
+        var mouseX = 0;
+        var mouseXOnMouseDown = 0;
+
+        // rotation along y direction controls x-rotation
+        var targetRotationX = 0;
+        var targetRotationXOnMouseDown = 0;
+        var mouseY = 0;
+        var mouseYOnMouseDown = 0;
+        var WIDTH;
+        var HEIGHT;
 	    var _entities = [];
+
 
 	    initUI();
 	    initGL();
@@ -279,6 +293,9 @@
 	        var width = container.clientWidth - 35;
 	        var height = 700;
 
+            WIDTH = width;
+            HEIGHT = height;
+
 	        _camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 500);
 
 	        _camera.position.x = 0;
@@ -361,42 +378,43 @@
 
 	        event.preventDefault();
 
-	        var container = document.getElementById("GLDiv");
+            mouseXOnMouseDown = event.clientX - WIDTH;
+            targetRotationYOnMouseDown = targetRotationY;
 
-	        var mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-	        var mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-
-	        var vector = new THREE.Vector3(mouseX, mouseY, 0.5);
-
-	        var ray = new THREE.Ray(
-                _camera.position,
-                vector.subSelf(_camera.position).normalize());
-
-	        /*var vector = new THREE.Vector3(
-                ((event.clientX - container.offsetLeft) / _scene.WIDTH) * 2 - 1,
-                -((event.clientY - container.offsetTop) / _scene.HEIGHT) * 2 + 1,
-                0.5);*/
-
-	        _projector.unprojectVector(vector, _camera);
-
-	        var intersects = ray.intersectObjects(_entities);
-
-	        if (intersects.length > 0) {
-
-	            //SELECTED = intersects[0].object;
-
-	            alert("Intersect: " + intersects.length)
-
-	        }
+            mouseYOnMouseDown = event.clientY - HEIGHT;
+            targetRotationXOnMouseDown = targetRotationX;
 	    }
+
+        function onDocumentMouseMove( event )
+        {
+            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+            document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+            document.addEventListener( 'mouseout', onDocumentMouseOut, false );
+            mouseX = event.clientX - WIDTH;
+            targetRotationY = targetRotationYOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.02;
+
+            mouseY = event.clientY - HEIGHT;
+            targetRotationX = targetRotationXOnMouseDown + ( mouseY - mouseYOnMouseDown ) * 0.02;
+        }
+
+        function onDocumentMouseUp( event )
+        {
+            document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
+            document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
+            document.removeEventListener( 'mouseout', onDocumentMouseOut, false );
+        }
 
 	    function animate() {
 	        requestAnimationFrame(animate);
-	        _trackball.update();
+	       // _trackball.update();
 	        render();
 	    }
 
 	    function render() {
+            _entities.rotation.x +=  targetRotationX ;
+            _entities.rotation.y +=  targetRotationY ;
+            //_entities.rotation.x += ( targetRotationX - _entities.rotation.x ) * 0.02;
+            //_entities.rotation.y += ( targetRotationY - _entities.rotation.y ) * 0.02;
 	        _renderer.render(_scene, _camera);
 	    }
 
