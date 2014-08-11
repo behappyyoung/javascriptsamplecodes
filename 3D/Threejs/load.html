@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>threejs - cubes </title>
+    <style>
+        .canvas-wrap{
+            height: 350px;width: 350px;
+            float: left;
+        }
+
+    </style>
+    <script src="three.min.js"></script>
+</head>
+<body>
+
+<div class="canvas-wrap" id="first">test</div>
+<div class="canvas-wrap" id="second">test</div>
+<div class="canvas-wrap" id="third">test</div>
+
+  <script>
+      var scene = new THREE.Scene();
+      var scene2 = new THREE.Scene();
+      var scene3 = new THREE.Scene();
+      var wrap1 = document.getElementById('first');
+      var wrap2 = document.getElementById('second');
+      var wrap3 = document.getElementById('third');
+      var camera = new THREE.PerspectiveCamera(50, 1, 1, 100);
+      var camera2 = new THREE.PerspectiveCamera(50, 1, 1, 100);
+      var camera3 = new THREE.PerspectiveCamera(50, 1, 1, 100);
+      var renderer = new THREE.WebGLRenderer();
+      var renderer2 = new THREE.WebGLRenderer();
+      var renderer3 = new THREE.WebGLRenderer();
+      renderer.setSize(300, 300);
+      renderer2.setSize(300, 300);
+      renderer3.setSize(300, 300);
+
+
+
+
+      wrap1.appendChild(renderer.domElement);
+      wrap2.appendChild(renderer2.domElement);
+      wrap3.appendChild(renderer3.domElement);
+
+      //Create a new loader for loading the model
+      var jsonLoader = new THREE.JSONLoader();
+      var objLoader = new THREE.ObjectLoader();
+
+      //TEST
+
+/*
+      //Load a model and store it in the variable XXX
+      jsonLoader.load( "../Samples/data/Analyze.json", function( geometry ) {
+          var redPhongMaterial = new THREE.MeshBasicMaterial();
+          var testmesh = new THREE.Mesh(geometry, redPhongMaterial);
+          scene3.add(testmesh);
+      } );
+
+*/
+    //  var model = jsonLoader.parse( "../Samples/data/Analyze.json" );
+//console.log(model);
+
+      //var mesh = new THREE.Mesh( model.geometry, new THREE.MeshBasicMaterial() );
+     // scene3.add( mesh );
+      /*
+      objLoader.load( "../Samples/data/Analyze.json", function( obj ) {
+          console.log(obj);
+              scene3.add(obj)
+          });
+*/
+
+      var geometry1 = new THREE.BoxGeometry(1,1,1);
+      var material1 = new THREE.MeshBasicMaterial({color: 0x00fff0, wireframe: true});
+      var geometry2 = new THREE.BoxGeometry(1,1,1);
+      var material2 = new THREE.MeshBasicMaterial({color: 0x00fff0});
+      var cube = new THREE.Mesh(geometry1, material1);
+      var cube2 = new THREE.Mesh(geometry2, material2);
+
+      scene.add(cube);
+      scene2.add(cube2);
+
+      camera.position.z = 5;
+      camera2.position.z = 5;
+          camera3.position.z = 5;
+      var render = function () {
+          requestAnimationFrame(render);
+          cube.rotation.x += 0.01;
+          cube.rotation.y += 0.01;
+          cube2.rotation.x += 0.01;
+          cube2.rotation.y += 0.01;
+          renderer.render(scene, camera);
+          renderer2.render(scene2, camera2);
+          renderer3.render(scene3, camera3);
+      };
+
+      render();
+
+  </script>
+
+</body>
+</html>
