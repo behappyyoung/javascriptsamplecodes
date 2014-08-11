@@ -1,0 +1,7 @@
+#!/bin/bash
+NOW=$(date +"%F-%T")
+echo $NOW
+git add .
+git commit -m "update $NOW - $1"
+git push
+
