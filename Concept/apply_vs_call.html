@@ -10,20 +10,21 @@
 <body>
   
     
-  <div id="div1" >  theFunction("John", "fireman");  </div>
+  <div id="div1" >   </div>
   <div id="div11" >   </div>
-  <div id="div2" >  theFunction.apply(undefined, ["Susan", "school teacher"]); </div>
+  <div id="div2" >   </div>
   <div id="div21" >   </div>
-  <div id="div3" >  theFunction.call(undefined, "Claude", "mathematician"); </div>
+  <div id="div3" >  </div>
   <div id="div31" >   </div>
 
   <script type="text/javascript" >
       function theFunction(div, name, profession) {
+          document.getElementById(div).innerHTML= this;
           document.getElementById(div+"1").innerHTML= "   = > My name is " + name + " and I am a " + profession + ".";
       }
       theFunction("div1", "John", "fireman");
-      theFunction.apply(null, ["div2", "Susan", "school teacher"]);
-      theFunction.call(undefined, "div3", "Claude", "mathematician");
+      theFunction.apply("apply function ", ["div2", "Susan", "school teacher"]);
+      theFunction.call("call function ", "div3", "Claude", "mathematician");
   </script>
 
 <script type="text/javascript" src="../showFile.js"> </script>

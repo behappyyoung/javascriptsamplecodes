@@ -1,3 +1,5 @@
+
+
 function foo() {
   var tmp = 3;
   return function () {
@@ -6,8 +8,8 @@ function foo() {
 }
 var bar = foo(); // bar is now a closure.
 
+document.write(bar+'<br />');
 document.write(bar()+'<br />');
-
 document.write(bar()+'<br />');
 
 
@@ -19,10 +21,10 @@ function foo2(x) {
   };
 }
 var bar = foo2(2); // bar is now a closure.
+
+
+document.write(bar+'<br />');
 var test = bar(10);
-
 document.write(test+'<br />');
-
 var test2 = bar(10);
-
 document.write(test2+'<br />');
