@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title> Apply Vs Call function </title>
+
+</head>
+<body>
+  
+    
+  <div id="div1" >  theFunction("John", "fireman");  </div>
+  <div id="div11" >   </div>
+  <div id="div2" >  theFunction.apply(undefined, ["Susan", "school teacher"]); </div>
+  <div id="div21" >   </div>
+  <div id="div3" >  theFunction.call(undefined, "Claude", "mathematician"); </div>
+  <div id="div31" >   </div>
+
+  <script type="text/javascript" >
+      function theFunction(div, name, profession) {
+          document.getElementById(div+"1").innerHTML= "   = > My name is " + name + " and I am a " + profession + ".";
+      }
+      theFunction("div1", "John", "fireman");
+      theFunction.apply(null, ["div2", "Susan", "school teacher"]);
+      theFunction.call(undefined, "div3", "Claude", "mathematician");
+  </script>
+
+<script type="text/javascript" src="../showFile.js"> </script>
+</body>
+</html>
