@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="inc/ng-grid.-2.0.11.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://angular-ui.github.com/ng-grid/css/ng-grid.css" />
+    <style>
+        .gridStyle {
+            border: 1px solid rgb(212,212,212);
+            width: 800px;
+            height: 300px
+        }
+    </style>
+</head>
+
+<body>
+<div data-ng-controller="gridControl" >
+    I have {{friends.length}} friends. They are:
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+</div>
+
+<script>
+    var app = angular.module('myApp', ['ngGrid']);
+    app.controller('gridControl', function($scope) {
+        $scope.friends = [
+            {name:'John', age:25, gender:'boy'},
+            {name:'Jessie', age:30, gender:'girl'},
+            {name:'Johanna', age:28, gender:'girl'},
+            {name:'Joy', age:15, gender:'girl'},
+            {name:'Mary', age:28, gender:'girl'},
+            {name:'Peter', age:95, gender:'boy'},
+            {name:'Sebastian', age:50, gender:'boy'},
+            {name:'Erika', age:27, gender:'girl'},
+            {name:'Patrick', age:40, gender:'boy'},
+            {name:'Samantha', age:60, gender:'girl'}
+        ];
+        // ng-grid
+        $scope.gridOptions = { data: 'friends',
+            columnDefs : [{field : 'name', displayName : 'Name', width:200 },
+                {field : 'age', width:300},
+                {field : 'gender', displayName: 'Gender' }]
+        };
+
+    });
+
+</script>
+
+<script src="../showHtml.js"></script>
+
+</body>
+</html>
