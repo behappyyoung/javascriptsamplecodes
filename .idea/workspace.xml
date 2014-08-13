@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Concept/object_array_prototype.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Concept/object_prototype.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Concept/object_prototype.html" afterPath="$PROJECT_DIR$/Concept/object_array_prototype.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Concept/static_method.html" afterPath="$PROJECT_DIR$/Concept/static_method.html" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,11 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="object_array_prototype.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="object_array_prototype.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concept/object_array_prototype.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29886246" vertical-offset="0" max-vertical-offset="967">
+            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="476">
               <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="static_method.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Concept/static_method.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29886246" vertical-offset="0" max-vertical-offset="967">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,16 +125,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ngRepeat.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/ngRepeat.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="850">
-              <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -146,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AngularJS/route/chapter.html" />
         <option value="$PROJECT_DIR$/AngularJS/route/ngView.html" />
         <option value="$PROJECT_DIR$/AngularJS/route/example/pages/home.html" />
         <option value="$PROJECT_DIR$/AngularJS/route/example/pages/about.html" />
@@ -197,6 +193,7 @@
         <option value="$PROJECT_DIR$/Concept/object_prototype.js" />
         <option value="$PROJECT_DIR$/Concept/object_prototype.html" />
         <option value="$PROJECT_DIR$/Concept/object_array_prototype.html" />
+        <option value="$PROJECT_DIR$/Concept/static_method.html" />
       </list>
     </option>
   </component>
@@ -704,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concept/static_method.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="993">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/showJs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="993">
@@ -913,8 +903,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Concept/object_array_prototype.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29886246" vertical-offset="0" max-vertical-offset="967">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="476">
           <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concept/static_method.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29886246" vertical-offset="0" max-vertical-offset="967">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
