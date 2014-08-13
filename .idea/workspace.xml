@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;" />
+    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Concept/object_array_prototype.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Concept/object_prototype.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Concept/object_prototype.html" afterPath="$PROJECT_DIR$/Concept/object_array_prototype.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="object_prototype.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Concept/object_prototype.js">
+      <file leaf-file-name="object_array_prototype.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concept/object_array_prototype.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41087613" vertical-offset="0" max-vertical-offset="993">
-              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="object_prototype.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concept/object_prototype.html">
+      <file leaf-file-name="object_array_prototype.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Concept/object_array_prototype.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="425">
-              <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.29886246" vertical-offset="0" max-vertical-offset="967">
+              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -141,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AngularJS/animate/ngView.html" />
         <option value="$PROJECT_DIR$/AngularJS/route/chapter.html" />
         <option value="$PROJECT_DIR$/AngularJS/route/ngView.html" />
         <option value="$PROJECT_DIR$/AngularJS/route/example/pages/home.html" />
@@ -190,8 +194,9 @@
         <option value="$PROJECT_DIR$/AngularJS/inc/ng-grid.js" />
         <option value="$PROJECT_DIR$/AngularJS/ngRepeat.html" />
         <option value="$PROJECT_DIR$/AngularJS/ngGrid.html" />
-        <option value="$PROJECT_DIR$/Concept/object_prototype.html" />
         <option value="$PROJECT_DIR$/Concept/object_prototype.js" />
+        <option value="$PROJECT_DIR$/Concept/object_prototype.html" />
+        <option value="$PROJECT_DIR$/Concept/object_array_prototype.html" />
       </list>
     </option>
   </component>
@@ -724,6 +729,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="646">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -897,18 +903,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concept/object_prototype.html">
+    <entry file="file://$PROJECT_DIR$/Concept/object_array_prototype.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="425">
-          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concept/object_prototype.js">
+    <entry file="file://$PROJECT_DIR$/Concept/object_array_prototype.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41087613" vertical-offset="0" max-vertical-offset="993">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.29886246" vertical-offset="0" max-vertical-offset="967">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding />
         </state>
       </provider>
