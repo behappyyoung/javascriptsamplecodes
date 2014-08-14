@@ -7,7 +7,27 @@
 
 </head>
 <body>
-  
+
+
+function foo() {                            <br />
+    var tmp = 3;                           <br />
+    return function () {               <br />
+    return ++tmp;               <br />
+    };               <br />
+}               <br />
+var bar = foo(); // bar is now a closure.               <br />
+<br />
+
+function foo2(x) {               <br />
+    var tmp = 3;               <br />
+    return function (y) {               <br />
+    return x + y + (++tmp);               <br />
+    };               <br />
+}               <br />
+var bar2 = foo2(2); // bar is now a closure.               <br />
+
+============================================                <br />
+
 <script src="closure.js"> </script>
 <script src="../showFile.js"> </script>
 <script src="../showJs.js"> </script>

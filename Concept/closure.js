@@ -8,9 +8,9 @@ function foo() {
 }
 var bar = foo(); // bar is now a closure.
 
-document.write(bar+'<br />');
-document.write(bar()+'<br />');
-document.write(bar()+'<br />');
+document.write('bar : ' + bar+'<br />');
+document.write('bar() : ' +bar()+'<br />');
+document.write('bar() : ' +bar()+'<br />');
 
 
 
@@ -20,11 +20,9 @@ function foo2(x) {
     return x + y + (++tmp);
   };
 }
-var bar = foo2(2); // bar is now a closure.
+var bar2 = foo2(2); // bar is now a closure.
 
 
-document.write(bar+'<br />');
-var test = bar(10);
-document.write(test+'<br />');
-var test2 = bar(10);
-document.write(test2+'<br />');
+document.write('bar2 : ' +bar2+'<br />');
+document.write('bar2(10) : ' +bar2(10)+'<br />');
+document.write('bar2(10) : ' +bar2(10)+'<br />');

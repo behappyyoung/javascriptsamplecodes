@@ -9,7 +9,10 @@
     var jsshow = true;
 
     document.write('<p> <br /><button id="js-showhide" onclick="jsshowhide();"> show JS file content  </button></p>');
-    document.write('<div id="js-sourceText" style="display: none;"> </div>');
+    if(! document.getElementById('js-sourceText')){
+        document.write('<div id="js-sourceText" style="display: none;"> </div>');
+    }
+
     var xmlhttp2;
     if(window.XMLHttpRequest){
         xmlhttp2=new XMLHttpRequest();
@@ -22,7 +25,7 @@
         var mydata = xmlhttp2.response;
         mydata = mydata.split('<').join('&lt;');
         mydata = mydata.split('\n').join('<br />');
-        document.getElementById('js-sourceText').innerHTML = mydata;
+        document.getElementById('js-sourceText').innerHTML = '--- javascript content start ----<br />' + mydata + ' <br /><br />--- javascript content end---- <br /><br /><br />';
     };
     xmlhttp2.send();
 
