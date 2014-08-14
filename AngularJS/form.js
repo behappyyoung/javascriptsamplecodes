@@ -1,7 +1,4 @@
-/**
- * Created by young on 5/22/14.
- */
-function Controller($scope) {
+function myController($scope) {
     $scope.master = {};
 
     $scope.update = function(user) {
