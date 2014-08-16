@@ -17,16 +17,9 @@
   <div id="div3" >  </div>
   <div id="div31" >   </div>
 
-  <script type="text/javascript" >
-      function theFunction(div, name, profession) {
-          document.getElementById(div).innerHTML= this;
-          document.getElementById(div+"1").innerHTML= "   = > My name is " + name + " and I am a " + profession + ".";
-      }
-      theFunction("div1", "John", "fireman");
-      theFunction.apply("apply function ", ["div2", "Susan", "school teacher"]);
-      theFunction.call("call function ", "div3", "Claude", "mathematician");
-  </script>
+  <script type="text/javascript"  src="apply_vs_call.js"> </script>
 
 <script type="text/javascript" src="../showFile.js"> </script>
+  <script type="text/javascript" src="../showJs.js"> </script>
 </body>
 </html>

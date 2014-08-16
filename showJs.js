@@ -24,8 +24,10 @@
     xmlhttp2.onreadystatechange=function(){
         var mydata = xmlhttp2.response;
         mydata = mydata.split('<').join('&lt;');
-        mydata = mydata.split('\n').join('<br />');
-        document.getElementById('js-sourceText').innerHTML = '--- javascript content start ----<br />' + mydata + ' <br /><br />--- javascript content end---- <br /><br /><br />';
+        //mydata = mydata.split('\n').join('<br /> ');
+        mydata = mydata.replace(/\n/g, '<br /> ');
+        mydata = mydata.replace(/ /g, ' &nbsp;');
+        document.getElementById('js-sourceText').innerHTML = '====== javascript content start ======<br /><br />' + mydata + ' <br /><br />====== javascript content end ======<br /><br /><br />';
     };
     xmlhttp2.send();
 
