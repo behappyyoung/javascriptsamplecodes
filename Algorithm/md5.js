@@ -4,16 +4,6 @@
  */
 
 function md5(str) {
-    //  discuss at: http://phpjs.org/functions/md5/
-    // original by: Webtoolkit.info (http://www.webtoolkit.info/)
-    // improved by: Michael White (http://getsprink.com)
-    // improved by: Jack
-    // improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    //    input by: Brett Zamir (http://brett-zamir.me)
-    // bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    //  depends on: utf8_encode
-    //   example 1: md5('Kevin van Zonneveld');
-    //   returns 1: '6e658d4bfcb59cc13f96c14450ac40b9'
 
     var xl;
 

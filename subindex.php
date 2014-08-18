@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: young
- * Date: 5/20/14
- * Time: 4:02 PM
- */
 
 
 if ($handle = opendir('.')) {
@@ -26,7 +20,7 @@ if ($handle = opendir('.')) {
 
 ?>
 
-<div style="height:300px;">
+<div style="height:500px;">
 
 </div>
 

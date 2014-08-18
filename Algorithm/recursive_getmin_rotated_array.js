@@ -1,10 +1,6 @@
-/**
- * Created by young on 1/4/14.
- */
 function getMin(inputa, start, end){
 
     var term = end-start;
-  //  resultText += start +'/'+ end + '<br />';
     if(term<2){
         if(inputa[start] < inputa[end]){
             return inputa[start];
