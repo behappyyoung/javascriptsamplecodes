@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/subindex.php" afterPath="$PROJECT_DIR$/subindex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/md5.js" afterPath="$PROJECT_DIR$/Algorithm/md5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.js" afterPath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/sort_quick.js" afterPath="$PROJECT_DIR$/Algorithm/sort_quick.js" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sort_quick.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sort_quick.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Algorithm/sort_quick.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5212661" vertical-offset="0" max-vertical-offset="1011">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+              <caret line="27" column="62" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sort_merge.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Algorithm/sort_merge.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.67105263" vertical-offset="0" max-vertical-offset="988">
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -73,6 +80,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="425">
               <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sort_merge.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Algorithm/sort_merge.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="425">
+              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -163,10 +180,10 @@
         <option value="$PROJECT_DIR$/showJs.js" />
         <option value="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.js" />
         <option value="$PROJECT_DIR$/Algorithm/md5.js" />
-        <option value="$PROJECT_DIR$/Algorithm/sort_merge.html" />
-        <option value="$PROJECT_DIR$/Algorithm/sort_merge.js" />
         <option value="$PROJECT_DIR$/Algorithm/sort_quick.html" />
+        <option value="$PROJECT_DIR$/Algorithm/sort_merge.html" />
         <option value="$PROJECT_DIR$/Algorithm/sort_quick.js" />
+        <option value="$PROJECT_DIR$/Algorithm/sort_merge.js" />
       </list>
     </option>
   </component>
@@ -439,20 +456,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/3D/Samples/webviewer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6331" max-vertical-offset="7293">
-          <caret line="252" column="37" selection-start-line="252" selection-start-column="31" selection-end-line="252" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3D/Threejs/cubes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1139">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/3D/Threejs/load.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.653846" vertical-offset="453" max-vertical-offset="1802">
@@ -814,8 +817,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/sort_quick.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5212661" vertical-offset="0" max-vertical-offset="1011">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/sort_merge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="425">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/sort_merge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67105263" vertical-offset="0" max-vertical-offset="988">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
           <folding />
         </state>
       </provider>

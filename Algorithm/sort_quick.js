@@ -1,5 +1,10 @@
+/**
+ * Quick sort algorithm.
+ */
+
 var processText ='';
 var processCount = 0;
+
 function  quickSort(arr, left, right) {
     var i = left;
     var j = right;
@@ -20,7 +25,7 @@ function  quickSort(arr, left, right) {
             arr[j] = swapl;
             i++;
             j--;
-            processText += '<br /> '+(processCount++)+' swap l, r  :   ' + swapl +  ' ... ' + swapr + ' /  new array => ' + arr.toString() + '<br />';
+            processText += '<br /> step '+(processCount++)+' - swap l, r  :   ' + swapl +  ' ... ' + swapr + ' /  new array => ' + arr.toString() + '<br />';
         }
     }
 
