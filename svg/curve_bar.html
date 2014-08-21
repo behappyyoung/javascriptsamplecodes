@@ -1,5 +1,7 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+<!DOCTYPE html>
+<html>
+<body>
+
 <svg viewBox = "0 0 500 300" version = "1.1">
     <desc>
         Text example
@@ -19,23 +21,5 @@
     </g>
 </svg>
 
-<script>
-	var bargraph='';
-	var j = -10;
-	for(var i= 0;i<35; i++){
-		j++;
-		bargraph += '<img src="bar-line-blue.png" width="2px;" height="'+(i-j)+'" style="margin-right:1px;margin-bottom:'+j+'px;"/>';
-	} 
-	
-	var j = 25;
-	for(var i= 35;i<70; i++){
-		j--;
-		bargraph += '<img src="bar-line-red.png" width="2px;" height="'+(i-j)+'" style="margin-right:1px;margin-bottom:'+j+'px;"/>';
-	} 
-
-	bargraph = 'LLLLLLLLLLLLLLLLLLLLLL';
-	
-	//document.getElementById('bar').innerHTML = '<textPath xlink:href = "#s2" id="bar">'+bargraph+' </textPath>';
-	document.getElementById('bar').innerHTML = bargraph;
-	
-	</script>
+</body>
+</html>
