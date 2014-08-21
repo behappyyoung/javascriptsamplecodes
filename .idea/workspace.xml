@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/curve_bar.html" afterPath="$PROJECT_DIR$/SVG/curve_bar.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/curve_text.html" afterPath="$PROJECT_DIR$/SVG/curve_text.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/def_use.html" afterPath="$PROJECT_DIR$/SVG/def_use.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/index.php" afterPath="$PROJECT_DIR$/SVG/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/path-arcs.html" afterPath="$PROJECT_DIR$/SVG/path-arcs.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/path-graph.html" afterPath="$PROJECT_DIR$/SVG/path-graph.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/path-graph.js" afterPath="$PROJECT_DIR$/SVG/path-graph.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/path-images.html" afterPath="$PROJECT_DIR$/SVG/path-images.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/path-poly.html" afterPath="$PROJECT_DIR$/SVG/path-poly.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/path.html" afterPath="$PROJECT_DIR$/SVG/path.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/path_animation.html" afterPath="$PROJECT_DIR$/SVG/path_animation.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/svg/test.html" afterPath="$PROJECT_DIR$/SVG/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SVG/path_animation.html" afterPath="$PROJECT_DIR$/SVG/path_animation.html" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,21 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="path_animation.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="path_animation.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SVG/path_animation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="731">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.4948025" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="def_use.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="def_use.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SVG/def_use.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6008316" vertical-offset="0" max-vertical-offset="962">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            <state vertical-scroll-proportion="-22.884615" vertical-offset="0" max-vertical-offset="697">
+              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -109,8 +98,8 @@
       <file leaf-file-name="curve_text.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SVG/curve_text.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="816">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="816">
+              <caret line="16" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -154,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AngularJS/route/routes.html" />
         <option value="$PROJECT_DIR$/AngularJS/route/templates/add_order.html" />
         <option value="$PROJECT_DIR$/AngularJS/route/templates/show_orders.html" />
         <option value="$PROJECT_DIR$/test/test.json" />
@@ -205,6 +193,7 @@
         <option value="$PROJECT_DIR$/svg/curve_bar.html" />
         <option value="$PROJECT_DIR$/svg/path_follow.html" />
         <option value="$PROJECT_DIR$/svg/def_use.html" />
+        <option value="$PROJECT_DIR$/SVG/path_animation.html" />
       </list>
     </option>
   </component>
@@ -805,14 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVG/curve_text.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="988">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SVG/path-graph.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="11.769231" vertical-offset="306" max-vertical-offset="1445">
@@ -853,18 +834,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVG/path_animation.html">
+    <entry file="file://$PROJECT_DIR$/SVG/def_use.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="731">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="7" />
+        <state vertical-scroll-proportion="-22.884615" vertical-offset="0" max-vertical-offset="697">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVG/def_use.html">
+    <entry file="file://$PROJECT_DIR$/SVG/curve_text.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6008316" vertical-offset="0" max-vertical-offset="962">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="816">
+          <caret line="16" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SVG/path_animation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4948025" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
           <folding />
         </state>
       </provider>

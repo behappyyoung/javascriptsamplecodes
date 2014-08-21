@@ -16,8 +16,8 @@
 c39.047-56.667,72.381-92.382,113.333-42.381S335.5,178.5,374,200.5s82-18.5,97.5-33.5"/>
     </defs>
 
-    <use x = "10" y = "200" xlink:href = "#s3"/>
-    <use x = "200" y = "200" xlink:href = "#thepath"/>
+    <use x = "10" y = "300" xlink:href = "#s3"/>
+    <use x = "200" y = "300" xlink:href = "#thepath"/>
 
     <circle r="15" cx="15" cy="15" fill="green">
         <animateMotion dur="4s">
@@ -26,10 +26,27 @@ c39.047-56.667,72.381-92.382,113.333-42.381S335.5,178.5,374,200.5s82-18.5,97.5-3
     </circle>
 
     <circle r="15" cx="200" cy="15" fill="slategrey">
-        <animateMotion dur="4s">
+        <animateMotion dur="4s" repeatDur="indefinite" >
             <mpath xlink:href="#thepath"/>
         </animateMotion>
     </circle>
+
+    <text  transform="translate(20,20)" font-size = "20">
+        <textPath  id="text"  xlink:href = "#s3">
+            Test Text
+        </textPath>
+    </text>
+
+    <animate xlink:href="#text"
+             attributeName="startOffset"
+             attributeType="XML"
+             to="100%"
+             dur="5s"
+             repeatDur="indefinite" />
+
+
+
+
 
 </svg>
 
