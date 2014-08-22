@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>MindMeld JavaScript SDK Hello World</title>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../mindmeld.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+// Global variables for your appid and appsecret values.  You can find this on your app console at developer.expectlabs.com.
+// You can copy and paste them manually into the UI or enter them here directly and they will be set as the default UI values.
+var APPID = 'enter your appid';
+var APPSECRET = 'enter your appsecret';
+
+$(document).ready(function() {
+    $('#appid').val(APPID);
+    $('#appsecret').val(APPSECRET);
+    if (appIdNotSet()) return;
+    init();
+});
+
+// Temporary credentials for a test user account.  Change this to anything you like.
+var USERID = 'testuser1-id';
+var USERNAME = 'Test User 1';
+
+// Test session name and privacy mode setting.  You can change this as well.
+var SESSION_NAME = 'My Test Session';
+var PRIVACY_MODE = 'inviteonly';
+
+// This method initializes the MindMeld JS SDK with the provided APPID value.
+function init() {
+    var config = {
+        'appid': APPID,
+        'onInit': function() {
+            log("MindMeld JavaScript SDK version " + MM.version + " loaded.");
+        }
+    };
+    MM.init(config);
+}
+
+// ENTER APPID:
+// Set the appid based on the value entered into the 'appid' field in the UI.  If the appid value is valid, then
+// attempt to initialize the MindMeld API object.
+$(document).on('blur', '#appid', function(e) {
+    APPID = $(this).val();
+    if (appIdNotSet()) return;
+    init();
+    log("Appid set.  Make sure your appsecret value is also set. It can be found in the developer console.");
+});
+
+// ENTER APPSECRET:
+// Set the appsecret based on the value entered into the 'appsecret' field in the UI.  Display an error if the value is invalid.
+$(document).on('blur', '#appsecret', function(e) {
+    APPSECRET = $(this).val();
+    if (appSecretNotSet()) return;
+    log("Appsecret set.  Now click 'request an access token' to get a token in order to access the MindMeld API.");
+});
+
+// STEP 1:
+// Request an admin access token when the button is clicked.  
+$(document).on('click', '.requestAdminToken', function() {
+    if (appIsNotSet()) return;
+    var onSuccess = function(response) {
+        log("Admin token (" + MM.token + ") successfully retrieved " +
+                "for the application " + response.appname + " (appid: " + response.appid + ").");
+    };
+    var onFail = function(error) {
+        log("Error getting admin token:  (Type " + error.code + " - " + error.type + "): " + error.message + "  " +
+                "Please make sure your appid and appsecret are set correctly.");
+    };
+    var credentials = {'appsecret': APPSECRET};
+    MM.getToken(credentials, onSuccess, onFail);
+});
+
+// STEP 2:
+// Post a new document to your searchable documents collection.  This can also be done by using the Crawl Manager tool to
+// automatically crawl specific sites on the Web.
+$(document).on('click', '.postDocument', function() {
+    if (tokenIsNotSet()) return;
+    var documents = [
+        {'title': 'Sandra Bullock',
+            'originurl': 'http://en.wikipedia.org/wiki/Sandra_Bullock',
+            'text': 'Sandra Annette Bullock is an American actress and producer. She rose to fame in the 1990s with roles in films such as Demolition Man (1993), Speed (1994), The Net (1995), While You Were Sleeping (1995), A Time to Kill (1996), and Hope Floats (1998). In the new millennium, Bullock starred in Miss Congeniality (2000), Two Weeks Notice (2002), The Lake House (2006), and the critically acclaimed Crash (2004). In 2007, she was ranked as the 14th richest woman in the entertainment industry with an estimated fortune of $85 million.',
+            'image': {
+                'url': 'http://upload.wikimedia.org/wikipedia/commons/d/da/Sandra_Bullock%2C_The_Heat%2C_London%2C_2013_%28crop%29.jpg'
+            },
+            'source': {
+                'name': 'Wikipedia',
+                'url': 'http://www.wikipedia.org/',
+                'icon': 'http://www.wikipedia.org/favicon.ico'
+            }
+        },
+        {'title': 'Gravity (film)',
+            'originurl': 'http://en.wikipedia.org/wiki/Gravity_(film)',
+            'text': 'Gravity is a 2013 British-American 3D science-fiction thriller and space drama film. Directed, co-written, co-produced and co-edited by Alfonso Cuaron, the film stars Sandra Bullock and George Clooney as astronauts involved in the mid-orbit destruction of a space shuttle and their attempt to return to Earth. Cuaron wrote the screenplay with his son Jonas and attempted to develop the project at Universal Studios. The rights to the project were sold to Warner Bros. and the project later found traction there. David Heyman, who previously worked with Cuaron on Harry Potter and the Prisoner of Azkaban, produced the film with him. Made in the UK, Framestore, a British visual effects company based near Oxford Street in London, spent over 3 years creating most of the visual effects for the entire film, encompassing over 80 minutes of screen time.',
+            'image': {
+                'url': 'http://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Gravity_Poster.jpg/220px-Gravity_Poster.jpg'
+            },
+            'source': {
+                'name': 'Wikipedia',
+                'url': 'http://www.wikipedia.org/',
+                'icon': 'http://www.wikipedia.org/favicon.ico'
+            }
+        },
+        {'title': 'Dennis Rodman',
+            'originurl': 'http://en.wikipedia.org/wiki/Dennis_Rodman',
+            'text': 'Dennis Keith Rodman (born May 13, 1961) is a retired American professional basketball player, who played for the Detroit Pistons, San Antonio Spurs, Chicago Bulls, Los Angeles Lakers, and Dallas Mavericks in the National Basketball Association (NBA). Born in Trenton, New Jersey, he was nicknamed "The Worm" and was known for his fierce defensive and rebounding abilities.',
+            'image': {
+                'url': 'http://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rodman_Lipofsky.jpg/220px-Rodman_Lipofsky.jpg'
+            },
+            'source': {
+                'name': 'Wikipedia',
+                'url': 'http://www.wikipedia.org/',
+                'icon': 'http://www.wikipedia.org/favicon.ico'
+            }
+        },
+        {'title': 'Harlem Globetrotters go to North Korea (with Dennis Rodman)',
+            'originurl': 'http://www.youtube.com/watch?v=SS5yF6OkQ5Y',
+            'text': 'In the latest bizarre turn of events in the Democratic People\'s Republic of Korea, Kim Jong-Un and Dennis Rodman have presided over a basketball game between the Harlem Globetrotters and a North Korean team.',
+            'image': {
+                'url': 'http://i1.ytimg.com/vi/SS5yF6OkQ5Y/hqdefault.jpg'
+            },
+            'source': {
+                'name': 'YouTube',
+                'url': 'http://www.youtube.com',
+                'icon': 'http://www.youtube.com/favicon.ico'
+            },
+            'type': 'video'
+        }
+    ];
+    var onSuccess = function(response) {
+        log("Successfully created document id " + response.data.documentid + ".");
+    };
+    var onFail = function(error) {
+        log("Error posting document:  (Type " + error.code + " - " + error.type + "): " + error.message);
+        log("Posting documents is not allowed with a user token.  Request an admin token before posting documents.");
+    };
+    var document = documents[Math.floor(Math.random() * documents.length)];
+    log("Posting the document '" + document.title + "'.");
+    MM.documents.post(document, onSuccess, onFail);
+});
+
+// STEP 3:
+// Request an access token using Simple User Authentication when the button is clicked.  If a token is received, 
+// then set the active user, and then subscribe to update events for the user object and its associated collections.
+$(document).on('click', '.requestUserToken', function() {
+    if (appIsNotSet()) return;
+    var onSuccess = function(response) {
+        log("Your access token was successfully retrieved: " + MM.token + ".");
+        log("Setting the active user to: " + response.user.name + " (userid: " + response.user.userid + ").");
+        if (response.user && response.user.userid) MM.setActiveUserID(response.user.userid, subscribeToUserChannel);
+    };
+    var onFail = function(error) {
+        log("Error getting access token:  (Type " + error.code + " - " + error.type + "): " + error.message + "  " +
+                "Please make sure your appid and appsecret are set correctly.");
+    };
+    var credentials = {'appsecret': APPSECRET, 'simple': {'userid': USERID, 'name': USERNAME}};
+    MM.getToken(credentials, onSuccess, onFail);
+});
+
+// Handle push updates for the active user and its associated collections.
+// Also subscribe to the custom event named 'CustomUserEvent'.
+function subscribeToUserChannel(response) {
+    log("Subscribing to user channel: " + JSON.stringify(response.data.name) + ".");
+    MM.activeUser.onUpdate(handleUpdate);
+    MM.activeUser.sessions.onUpdate(handleUpdate);
+    MM.activeUser.subscribe("CustomUserEvent", handleUpdate);
+}
+
+// STEP 4:
+// Create a new session object when the button is clicked.  After the new session is created, subscribe to
+// updates for the session and its associated collections.
+$(document).on('click', '.createSession', function() {
+    if (activeUserIsNotSet()) return;
+    log("Creating new session with name '" + SESSION_NAME + "' and privacymode '" + PRIVACY_MODE +"'.");
+    var onNewSession = function(response) {
+        log("New session created with id " + response.data.sessionid + ".");
+        MM.setActiveSessionID(response.data.sessionid, subscribeToSessionChannel);
+    };
+    var onFail = function(error) {
+        log("Error creating new session:  (Type " + error.code + " - " + error.type + "): " + error.message);
+    };
+    MM.activeUser.sessions.post({'name': SESSION_NAME, 'privacymode': PRIVACY_MODE}, onNewSession, onFail);
+});
+
+// Handle push updates for the active session and its associated collections. 
+// Also subscribe to the custom event named 'CustomSessionEvent'.
+function subscribeToSessionChannel(response) {
+    log('Subscribing to session channel: ' + JSON.stringify(response.data.name) + ".");
+    MM.activeSession.onUpdate(handleUpdate);
+    MM.activeSession.textentries.onUpdate(handleUpdate);
+    MM.activeSession.entities.onUpdate(handleUpdate);
+    MM.activeSession.documents.onUpdate(handleUpdate);
+    MM.activeSession.activities.onUpdate(handleUpdate);
+    MM.activeSession.liveusers.onUpdate(handleUpdate);
+    MM.activeSession.invitedusers.onUpdate(handleUpdate);
+    MM.activeSession.subscribe("CustomSessionEvent", handleUpdate);
+}
+
+// STEP 5:
+// Post a new text entry to the session you just created.
+$(document).on('click', '.postTextEntry', function() {
+    if (activeSessionIsNotSet()) return;
+    var textEntries = [
+        {'text': 'Sandra Bullock might with an Academy Award for Best Actress in the movie Gravity.', 'type': 'text', 'weight': 1.0 },
+        {'text': 'Dennis Rodman went to North Korea to play basketball with the Harlem Globetrotters.', 'type': 'text', 'weight': 1.0 },
+        {'text': 'New Jersey Governor Chris Christy caused a traffic jam on the George Washington Bridge.', 'type': 'text', 'weight': 1.0 }
+    ];
+    var textEntry = textEntries[Math.floor(Math.random() * textEntries.length)];
+    log("Posting the textentry '" + textEntry.text + "'.");
+    MM.activeSession.textentries.post(textEntry);
+});
+
+// STEP 6:
+// Get documents for the active session.
+$(document).on('click', '.getDocuments', function() {
+    if (activeSessionIsNotSet()) return;
+    log("Retrieving documents for the current session.");
+    MM.activeSession.documents.get();
+});
+
+// STEP 7:
+// Get entities for the active session.
+$(document).on('click', '.getEntities', function() {
+    if (activeSessionIsNotSet()) return;
+    log("Retrieving entities for the current session.");
+    MM.activeSession.entities.get();
+});
+
+// STEP 8:
+// Publish a custom event on the channel for the currently active user.
+$(document).on('click', '.publishUserEvent', function() {
+    if (activeUserIsNotSet()) return;
+    log("Publishing a custom event on the user channel.");
+    MM.activeUser.publish("CustomUserEvent", {'field1': 'This is a custom event', 'field2': 'published on the user channel'});
+});
+
+// STEP 9:
+// Publish a custom event on the channel for the currently active session.
+$(document).on('click', '.publishSessionEvent', function() {
+    if (activeSessionIsNotSet()) return;
+    log("Publishing a custom event on the session channel.");
+    MM.activeSession.publish("CustomSessionEvent", {'field1': 'This is another custom event', 'field2': 'published on the session channel'});
+});
+
+// Utility methods.
+function log(msg) {
+    $('#log').prepend("<div class='logentry'>"+msg+"</div>");
+}
+
+function logError (error) {
+    $('#log').prepend("<div class='logentry error'>"+error+"</div>");
+}
+
+function handleUpdate(response) {
+    if (!response.request) {
+        log("Event received: " + JSON.stringify(response));
+        return;
+    }
+    if (response.request.connectiontype) {
+        var count = response.data.length;
+        var msg = count + " object" + ((count==1)?"":"s") + " received for the '" + response.request.connectiontype +
+                "' collection of " + response.request.objecttype + " object (id=" + response.request.objectid + ").";
+    }
+    else {
+        var msg = "Update received for " + response.request.objecttype + " object (id=" + response.request.objectid + ").";
+    }
+    log(msg);
+    $('#json').html('<pre>' + JSON.stringify(response.data, null, '  ') + '</pre>');
+}
+var onError = function(error) {
+    log("API error:  (Type " + error.code + " - " + error.type + "): " + error.message);
+};
+function tokenIsNotSet() {
+    if (!MM.token) { alert('Please request an admin token first.'); return true; }
+    return false;
+}
+function activeUserIsNotSet() {
+    if (!MM.activeUserId) { alert('Please request a user token first.'); return true; }
+    return false;
+}
+function activeSessionIsNotSet() {
+    if (!MM.activeSessionId) { alert('Please create a session first.'); return true; }
+    return false;
+}
+function appIdNotSet() {
+    if (APPID.length != 40)  {
+        logError('Please enter a valid APPID value. This can be found on your app console at developer.expectlabs.com.');
+        return true;
+    }
+    return false;
+}
+function appSecretNotSet() {
+    if (APPSECRET.length != 40)  {
+        logError('Please enter a valid APPSECRET value. This can be found on your app console at developer.expectlabs.com.');
+        return true;
+    }
+    return false;
+}
+function appIsNotSet() {
+    if (appIdNotSet() || appSecretNotSet())  return true;
+    return false;
+}
+
+</script>
+
+
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        background-color: #efefef;
+    }
+    table td {
+        vertical-align: top;
+        padding: 8px;
+    }
+    td.controlPanel {
+        padding-top: 22px;
+    }
+    .btn {
+        color: rgba(0,0,255,0.7);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .btn:hover {
+        cursor: pointer;
+        color: blue;
+    }
+    .btnarea {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .btnarea input {
+        margin: 0;
+        float: right;
+    }
+    .label {
+        color: #bbbbbb;
+    }
+    .logentry {
+        padding: 4px;
+    }
+    #log, #json {
+        font-family: Monaco, monospace;
+        font-size: 10px;
+        color: #2b2b5c;
+        padding: 4px;
+        background-color: white;
+        border: 1px solid #bbbbbb;
+        vertical-align: top;
+        overflow: scroll;
+    }
+    #log {
+        width: 400px;
+        height: 482px;
+    }
+    #json {
+        height: 800px;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+
+</head>
+
+
+<body>
+<h1>MindMeld JavaScript SDK Hello World</h1>
+<table width="100%">
+    <tr>
+
+        <td class='controlPanel'>
+            <div class='btnarea'><span class='label'>Appid: </span><input type="text" name="appid" size="60" id="appid"></div>
+            <div class='btnarea'><span class='label'>Appsecret: </span><input type="text" name="appsecret" size="60" id="appsecret"></div>
+            <div class='btnarea'><span class='label'>Step 1: </span><span class='requestAdminToken btn'>Request an Admin Token</span></div>
+            <div class='btnarea'><span class='label'>Step 2: </span><span class='postDocument btn'>Post a New Document</span></div>
+            <div class='btnarea'><span class='label'>Step 3: </span><span class='requestUserToken btn'>Request a User Token</span></div>
+            <div class='btnarea'><span class='label'>Step 4: </span><span class='createSession btn'>Create a New Session</span></div>
+            <div class='btnarea'><span class='label'>Step 5: </span><span class='postTextEntry btn'>Post a New Text Entry</span></div>
+            <div class='btnarea'><span class='label'>Step 6: </span><span class='getDocuments btn'>Get Documents</span></div>
+            <div class='btnarea'><span class='label'>Step 7: </span><span class='getEntities btn'>Get Entities</span></div>
+            <div class='btnarea'><span class='label'>Step 8: </span><span class='publishUserEvent btn'>Publish Custom User Event</span></div>
+            <div class='btnarea'><span class='label'>Step 9: </span><span class='publishSessionEvent btn'>Publish Custom Session Event</span></div>
+        </td>
+
+        <td rowspan="2" width="100%">
+            <div class='label'>JSON DATA:</div>
+            <div id='json'></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class='label'>STATUS LOG:</div>
+            <div id='log'></div>
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

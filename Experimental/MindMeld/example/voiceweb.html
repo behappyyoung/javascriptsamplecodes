@@ -1,0 +1,203 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Voice Application</title>
+    <style>
+        body { padding: 50px; }
+
+        /* Mic Styling */
+        #microphone { width: 38px; }
+        #microphone svg { fill: black; }
+        #microphone svg:hover { fill: tomato; cursor: pointer; }
+        @-webkit-keyframes pulsate {
+            0% { opacity: 0.1;}
+            100% {opacity: 1;}
+        }
+        #microphone.active {
+            -webkit-animation: pulsate ease-in-out 0.6s infinite alternate;;
+            -webkit-animation-iteration-count: infinite;
+        }
+        #microphone.active svg { fill: tomato; }
+
+        /* Text box styling */
+        #textBox { border: 2px rgba(0,0,0,0.3) solid; padding: 15px; }
+        #textBox #pending { opacity: 0.5; }
+    </style>
+</head>
+<body>
+<h1>Sample Voice-Driven Application</h1>
+<h2>Microphone</h2>
+<div id="microphone">
+    <svg width="38" height="38" viewBox="0 0 512 512">
+        <path d="M 240.00,352.00c 44.183,0.00, 80.00-35.817, 80.00-80.00L 320.00,80.00 c0.00-44.183-35.817-80.00-80.00-80.00s-80.00,35.817-80.00,80.00l0.00,192.00 C 160.00,316.183, 195.818,352.00, 240.00,352.00zM 352.00,224.00l0.00,48.00 c0.00,61.855-50.145,112.00-112.00,112.00c-61.856,0.00-112.00-50.145-112.00-112.00l0.00-48.00 L 96.00,224.00 l0.00,48.00 c0.00,74.119, 56.002,135.15, 128.00,143.11L 224.00,480.00 l-64.00,0.00 l0.00,32.00 l 64.00,0.00 l 32.00,0.00 l 64.00,0.00 l0.00-32.00 l-64.00,0.00 l0.00-64.89 c 71.997-7.96, 128.00-68.991, 128.00-143.11l0.00-48.00 L 352.00,224.00 z" ></path>
+    </svg>
+</div>
+
+<h2>Transcript</h2>
+<div id="textBox">
+    <span id="confirmed"></span>
+    <span id="pending">voice transcript</span>
+</div>
+
+<h2>Documents</h2>
+<ul id="documentsList">
+    <li>No results yet</li>
+</ul>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://developer.expectlabs.com/public/sdks/mindmeld.js"></script>
+<script type="text/javascript">
+    (function ($, MM) {
+
+        // Enter your app ID and secret from your developer console here
+        var APP_ID = 'db14e594d16baff563951cb9c3e636fbee543fbb';
+        var APP_SECRET = 'a7314583aa871e38cdf85b5ecb27cce4ea46101d';
+
+        var config  = {
+            appid: APP_ID,
+            onInit: onInit
+        };
+        // Initialize the SdK with your configuration parameters
+        MM.init(config);
+
+        function onInit () {
+            // Get a simple user token using simple user credentials
+            // To learn more about authentication with the SDK, see
+            // https://developer.expectlabs.com/docs/sdks/js/referenceDocs/MM.html#getToken
+            var simpleUserCredentials = {
+                appsecret: APP_SECRET,
+                simple: {
+                    userid: 'youngpark',
+                    name: 'young park'
+                }
+            };
+            MM.getToken(simpleUserCredentials,
+                    // This callback is invoked after successfully obtaining
+                    // a token from the MindMeld API
+                    function onGetToken () {
+                        // Once we have a token, create a new private session
+                        // called 'Voice Sample Session'. A session is an object
+                        // in the MindMeld API used for capturing text input
+                        // and finding content relevant to the text
+                        var sessionConfig = {
+                            name: 'Voice Sample Session',
+                            privacymode: 'inviteonly'
+                        };
+                        MM.activeUser.sessions.post(sessionConfig,
+                                // This callback is invoked after successfully creating a new
+                                // session. We use MM.setActiveSessionID to tell the SDK that
+                                // this is the session we want to use going forward
+                                function onCreateSession (response) {
+                                    var sessionID = response.data.sessionid;
+                                    MM.setActiveSessionID(sessionID);
+                                    onStart();
+                                }
+                        );
+                    },
+                    function onTokenError (error) {
+                        console.log('error fetching token, make sure your app ID and app secret are set correctly');
+                    }
+            );
+        }
+
+        // We now have a valid token and session
+        function onStart () {
+            console.log('successfully initialized session');
+            setUpMicrophone();
+
+            // Subscribe to the documentsUpdate push event
+            MM.activeSession.documents.onUpdate(onDocumentsUpdated);
+        }
+
+        function setUpMicrophone () {
+            // Configuration parameters for MindMeld listener
+            // Documentation: https://developer.expectlabs.com/docs/sdks/js/referenceDocs/global.html#ListenerConfig
+            var listenerConfig = {
+
+                // When continuous is set to false, the listener will
+                // automatically stop listening when there is a sufficient pause
+                continuous: false,
+
+                // Determines whether the listener returns results as the speaker talks in real-time. This
+                // allows the speaker to see that the microphone is listening and that the speech
+                // recognition is working in real-time
+                interimResults: true,
+
+                // This callback is invoked every time the listener has a result. onVoiceResult is a ListenerResultCallback
+                // as documented here: https://developer.expectlabs.com/docs/sdks/js/referenceDocs/global.html#ListenerResultCallback
+                onResult: onVoiceResult,
+                onStart: onStartListening,
+                onEnd: onEndListening
+            };
+            MM.activeSession.setListenerConfig(listenerConfig);
+
+            // Use jQuery to start / stop the listener when you click the microphone icon
+            $('#microphone').click(
+                    function onMicrophoneClick () {
+                        if (MM.activeSession.listener.listening) {
+                            MM.activeSession.listener.stop();
+                        } else {
+                            MM.activeSession.listener.start();
+                        }
+                    }
+            );
+
+            // This callback is invoked every time that the listener has a result. The result parameter is
+            // an object with two properties; 1) transcript, the text of the speech that was processed,
+            // and 2) final, a boolean indicating whether the result was final or interim
+            function onVoiceResult (result) {
+                var transcript = result.transcript;
+                if (result.final) {
+                    // Display the final, confirmed transcript in the #confirmed <span>
+                    $('#confirmed').append('<span>' + transcript + '</span>');
+                    $('#pending').empty();
+
+                } else {
+                    // Display the interim transcript in the #pending <span>. Interim results
+                    // appear in real-time and update as the speech recognizer becomes more
+                    // confident in the results
+                    $('#pending').text(transcript);
+                }
+            }
+
+            // This callback is invoked when the listener starts listening. We use it here to update the UI
+            // to show the user we are listening
+            function onStartListening () {
+                $('#confirmed,#pending').empty();
+                $('#pending').text('...');
+                $('#microphone').addClass('active');
+            }
+
+            // This callback is invoked when the listener stops listening. We use it to update the UI to
+            // show the user we have stopped listening
+            function onEndListening () {
+                $('#microphone').removeClass('active');
+            }
+        }
+
+        // This callback is triggered via push events when the documents collection updates
+        function onDocumentsUpdated () {
+            // This gets a JSON array of documents returned by the MindMeld API
+            var documents = MM.activeSession.documents.json();
+
+            // Display the documents in the #documentsList <ul>
+            var documentsList = $('#documentsList').empty();
+            if (documents.length > 0) {
+                documents.forEach(
+                        function addDocumentToView (document) {
+                            // Display only the document title as a list item. Documents can contain any kind of data
+                            // as documented here: https://developer.expectlabs.com/docs/endpointApp#postDocuments
+                            console.log(document);
+                            documentsList.append('<li>' + document.title + '</li><li> <img src="' + document.image.url + '" /></li>');
+                        }
+                );
+            } else {
+                documentsList.append('<li>No documents returned</li>');
+            }
+        }
+
+    })($, MM);
+</script>
+</body>
+</html>
