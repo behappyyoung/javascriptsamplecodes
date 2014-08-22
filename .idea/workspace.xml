@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Algorithm/maxheap.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithm/sort_maxheap.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/sort_maxheap.html" afterPath="$PROJECT_DIR$/Algorithm/maxheap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/maxheap.html" afterPath="$PROJECT_DIR$/Algorithm/maxheap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/maxheap.js" afterPath="$PROJECT_DIR$/Algorithm/maxheap.js" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,9 +79,11 @@
       <file leaf-file-name="maxheap.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Algorithm/maxheap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17471737" vertical-offset="0" max-vertical-offset="1088">
-              <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
-              <folding />
+            <state vertical-scroll-proportion="-0.12230216" vertical-offset="510" max-vertical-offset="1581">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+              <folding>
+                <marker date="1408665852232" expanded="true" signature="809:819" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AngularJS/route/templates/show_orders.html" />
         <option value="$PROJECT_DIR$/test/test.json" />
         <option value="$PROJECT_DIR$/QUnit/TestExamples.js" />
         <option value="$PROJECT_DIR$/QUnit/index.html" />
@@ -196,6 +195,7 @@
         <option value="$PROJECT_DIR$/SVG/path_animation.html" />
         <option value="$PROJECT_DIR$/Algorithm/sort_maxheap.js" />
         <option value="$PROJECT_DIR$/Algorithm/sort_maxheap.html" />
+        <option value="$PROJECT_DIR$/Algorithm/maxheap.html" />
         <option value="$PROJECT_DIR$/Algorithm/maxheap.js" />
       </list>
     </option>
@@ -854,14 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/maxheap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="425">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/sort_merge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
@@ -870,11 +862,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/maxheap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="425">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/maxheap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17471737" vertical-offset="0" max-vertical-offset="1088">
-          <caret line="10" column="81" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
-          <folding />
+        <state vertical-scroll-proportion="-0.12230216" vertical-offset="510" max-vertical-offset="1581">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <marker date="1408665852232" expanded="true" signature="809:819" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
