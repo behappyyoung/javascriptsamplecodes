@@ -30,7 +30,9 @@
             height: 135px;
             padding: 0;
             background-size: initial;   /* for safari */
-
+        }
+        .header .user-nav li.sign-in:hover{
+            background-position:0 -136px;
         }
 
         .header .user-nav li.register{
@@ -56,6 +58,7 @@
             font-size: 20px;
             padding: 10px;
         }
+
         .header .user-nav li.register a{
             position: relative;
             color: white;
@@ -80,13 +83,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('li.sign-in a')
-                    .mouseleave(function(){
-                        $(this).parent().css('background-position', '0 0');
-                    })
-                    .mouseenter(function(){
-                        $(this).parent().css('background-position', '0 -136px');
-                    });
             $('li.register a')
                     .mouseleave(function(){
                         $(this).parent().css('background-position', '-232px 0');
