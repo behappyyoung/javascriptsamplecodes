@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/maxheap.js" afterPath="$PROJECT_DIR$/Algorithm/maxheap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/menu.html" afterPath="$PROJECT_DIR$/test/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;" />
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -112,8 +108,8 @@
       <file leaf-file-name="maxheap_improved_topbottom.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Algorithm/maxheap_improved_topbottom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72469634" vertical-offset="661" max-vertical-offset="2091">
-              <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.19129555" vertical-offset="661" max-vertical-offset="2091">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <marker date="1409171263520" expanded="true" signature="832:859" placeholder="..." />
                 <marker date="1409171263520" expanded="true" signature="947:958" placeholder="..." />
@@ -855,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/maxheap_improved_topbottom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72469634" vertical-offset="661" max-vertical-offset="2091">
-          <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.19129555" vertical-offset="661" max-vertical-offset="2091">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <marker date="1409171263520" expanded="true" signature="832:859" placeholder="..." />
             <marker date="1409171263520" expanded="true" signature="947:958" placeholder="..." />
