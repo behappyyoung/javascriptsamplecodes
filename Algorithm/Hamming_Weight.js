@@ -4,7 +4,6 @@ var m2  = 0x33333333; //binary: 00110011..
 var m4  = 0x0f0f0f0f; //binary:  4 zeros,  4 ones ...
 var m8  = 0x00ff00ff; //binary:  8 zeros,  8 ones ...
 var m16 = 0x0000ffff; //binary: 16 zeros, 16 ones ...
-var m32 = 0x00000000ffffffff; //binary: 32 zeros, 32 ones  // for 64 bits
 var hff = 0xffffffff; //binary: all ones
 var h01 = 0x01010101; //the sum of 256 to the power of 0,1,2,3...
 
@@ -29,9 +28,13 @@ function popcount_1(x) {
     ============== */
     return x;
 }
-var resultText = '/* upto  32 bits */<br /> var m1  = 0x55555555; //binary: 0101... <br /> var m2  = 0x33333333; //binary: 00110011..<br /> var m4  = 0x0f0f0f0f; //binary:  4 zeros,  4 ones ...<br />var m8  = 0x00ff00ff; //binary:  8 zeros,  8 ones ...<br />var m16 = 0x0000ffff; //binary: 16 zeros, 16 ones ...<br /><br />';
+var resultText = '/* upto  32 bits */<br /> var m1  = 0x55555555; //binary: .. ' + parseInt('0x55555555').toString(2)+
+    '<br /> var m2  = 0x33333333; //binary: 00110011..' + parseInt('0x33333333').toString(2)+
+    '<br /> var m4  = 0x0f0f0f0f; //binary:  4 zeros,  4 ones ...' + parseInt('0x0f0f0f0f').toString(2)+
+    '<br />var m8  = 0x00ff00ff; //binary:  8 zeros,  8 ones ...' + parseInt('0x00ff00ff').toString(2)+
+    '<br />var m16 = 0x0000ffff; //binary: 16 zeros, 16 ones ... '+ parseInt('0x0000ffff').toString(2)+ '<br /><br />';
 var result = 0;
-var testintArray = [5645646, 32, 1, 59445959, 2147483647];
+var testintArray = [5645646, 32, 1, 59445959, 2147483647, 1125899906842623];
 for(i=0; i<testintArray.length; i++){
     resultText += 'test int : ' + testintArray[i] + ' == ' + testintArray[i].toString(2) + '<br /><br />';
     result = popcount_1(testintArray[i]);
