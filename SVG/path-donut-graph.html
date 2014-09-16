@@ -2,23 +2,20 @@
 <html>
 <head>
     <title></title>
-    
+
     <style>
-        .content{
-            width: 1400px;
-        }
         .chartbox {
             width: 200px;
             height: 200px;
-    	    border : solid;
+            border : solid;
             display: inline-block;
         }
         .logbox{
-            width: 430px;
+            width: 500px;
         }
         .activity{
             display: inline-block;
-            margin: 4px;
+            margin: 20px;
         }
         .content{
             clear: both;
@@ -32,46 +29,41 @@
 <div class="content">
 
 
-    
+
     <div class="activity">
-        <h2> 150 /200 </h2>
+        <h2> Title </h2>
 
         <div class="chartbox">
-            <div class="chart">
-                <span class="progress" id="progress_1" ></span>
-            </div> <br />
-            <span id="actual_1" class="actual"></span> %
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <path d="M10,80 A70,70 0 1,0  10,79.999"   fill="none" stroke="#DFDFDF" stroke-width="10" /> </svg>
         </div>
 
     </div>
 
-    <div class="activity">
-        <h2> Log </h2>
-        <div class="logbox">
-            <span id="pathlog_1" class="actual"></span>
-        </div>
-
-    </div>
 
     <div class="activity">
-        <h2> 80/200 </h2>
+        <h2> Title </h2>
 
         <div class="chartbox">
-            <div class="chart">
-                <span class="progress" id="progress_2" ></span>
-            </div> <br />
-            <span id="actual_2" class="actual"></span> %
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <path d="M80,10 A70,70,0,1,1,10,80"   fill="none" stroke="#ffff00" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>
         </div>
 
     </div>
+
+
+
 
     <div class="activity">
-        <h2> Path Log </h2>
-        <div class="logbox">
-            <span id="pathlog_2" class="actual"></span>
+        <h2> Title </h2>
+
+        <div class="chartbox">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <path d="M80,20 A60,60 0 1,1 79.99,20" fill='#ff4444' stroke="#DFDFDF" stroke-width="20"  stroke-linejoin="round"   /> </svg>
         </div>
 
     </div>
+
 
 
 </div>

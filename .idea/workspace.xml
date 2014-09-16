@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Concept/HanoiTower/hanoitower.html" afterPath="$PROJECT_DIR$/Algorithm/HanoiTower/hanoitower.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Concept/HanoiTower/hanoitower.js" afterPath="$PROJECT_DIR$/Algorithm/HanoiTower/hanoitower.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Concept/HanoiTower/index.php" afterPath="$PROJECT_DIR$/Algorithm/HanoiTower/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Concept/HanoiTowerWithGraphic/hanoitower.html" afterPath="$PROJECT_DIR$/Algorithm/HanoiTowerWithGraphic/hanoitower.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Concept/HanoiTowerWithGraphic/hanoitower.js" afterPath="$PROJECT_DIR$/Algorithm/HanoiTowerWithGraphic/hanoitower.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Concept/HanoiTowerWithGraphic/index.php" afterPath="$PROJECT_DIR$/Algorithm/HanoiTowerWithGraphic/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/Double_linked_list.js" afterPath="$PROJECT_DIR$/Algorithm/Double_linked_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SVG/path-graph.html" afterPath="$PROJECT_DIR$/SVG/path-graph.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SVG/path-graph.js" afterPath="$PROJECT_DIR$/SVG/path-graph.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SVG/path_animation.html" afterPath="$PROJECT_DIR$/SVG/path_animation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SVG/path-donut-graph-animation.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SVG/path-donut-graph.js" afterPath="$PROJECT_DIR$/SVG/path-donut-graph-animation.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SVG/path-graph.html" afterPath="$PROJECT_DIR$/SVG/path-donut-graph.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SVG/path-graph.js" afterPath="$PROJECT_DIR$/SVG/path-donut-graph.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
@@ -35,41 +29,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="path-donut-graph-animation.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph-animation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1819">
+              <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="path-donut-graph-animation.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph-animation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="255" max-vertical-offset="1649">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="path-donut-graph.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.742132" vertical-offset="306" max-vertical-offset="1360">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="path-donut-graph.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="553" max-vertical-offset="1819">
-              <caret line="52" column="81" selection-start-line="52" selection-start-column="81" selection-end-line="52" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="path-graph.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SVG/path-graph.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="859" max-vertical-offset="1870">
-              <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="path-graph.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SVG/path-graph.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5230461" vertical-offset="73" max-vertical-offset="1547">
-              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="path-donut-graph.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.884615" vertical-offset="357" max-vertical-offset="1496">
-              <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Concept/object_prototype.html" />
         <option value="$PROJECT_DIR$/Concept/object_array_prototype.html" />
         <option value="$PROJECT_DIR$/Concept/static_method.html" />
         <option value="$PROJECT_DIR$/Concept/closure.html" />
@@ -142,8 +135,9 @@
         <option value="$PROJECT_DIR$/Algorithm/LinkedList.js" />
         <option value="$PROJECT_DIR$/SVG/path-graph.js" />
         <option value="$PROJECT_DIR$/SVG/path-graph.html" />
-        <option value="$PROJECT_DIR$/SVG/path-donut-graph.html" />
+        <option value="$PROJECT_DIR$/SVG/path-donut-graph-animate.html" />
         <option value="$PROJECT_DIR$/SVG/path-donut-graph.js" />
+        <option value="$PROJECT_DIR$/SVG/path-donut-graph.html" />
       </list>
     </option>
   </component>
@@ -727,34 +721,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVG/path-graph.js">
+    <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph-animation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="859" max-vertical-offset="1870">
-          <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="255" max-vertical-offset="1649">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph.html">
+    <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph-animation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.884615" vertical-offset="357" max-vertical-offset="1496">
-          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1819">
+          <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="553" max-vertical-offset="1819">
-          <caret line="52" column="81" selection-start-line="52" selection-start-column="81" selection-end-line="52" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1024">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVG/path-graph.html">
+    <entry file="file://$PROJECT_DIR$/SVG/path-donut-graph.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5230461" vertical-offset="73" max-vertical-offset="1547">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.742132" vertical-offset="306" max-vertical-offset="1360">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
