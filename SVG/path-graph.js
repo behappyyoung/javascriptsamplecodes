@@ -1,143 +1,105 @@
-        function calcPath (value, total, R) {
-            var center;
-            var alpha = 180 / total * value,
-                    a = (90 - alpha) * Math.PI / 180,
-                     x = 70 + R * Math.cos(a),
-                    y = 70 - R * Math.sin(a),
-                    path;
-            if (total == value) {
-                path = "M"+ 70 +","+ (70 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
-            } else {
-                if(alpha > 180) {
-                    center = 1;
-                } else {
-                    center = 0;
-                }
-                path = "M"+ 70+","+ (70 - R) +" A"+ R+","+ R+","+ 0+"," + center +","+ 1+","+ x+","+ y;
-            }
-
-            return path;
+function calcPath (value, total, R) {
+    var center;
+    var alpha = 360 / total * value,
+        a = (90 - alpha) * Math.PI / 180,
+        x = 80 + R * Math.cos(a),
+        y = 80 - R * Math.sin(a),
+        path;
+    if (total == value) {
+        path = "M"+ 70 +","+ (90 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
+    } else {
+        if(alpha > 180) {
+            center = 1;
+        } else {
+            center = 0;
         }
+        path = "M"+ 80+","+ (80 - R) +" A"+ R+","+ R+","+ 0+"," + center +","+ 1+","+ x+","+ y;
+    }
 
-        
-        function calcPath2 (value, total, R) {
-            var center;
-            var alpha = 180 / total * value,
-                    a = (90 - alpha) * Math.PI / 180,
-                     x = 70 + R * Math.cos(a),
-                    y = 70 - R * Math.sin(a),
-                    path;
-            if (total == value) {
-                path = "M"+ 70 +","+ (70 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
-            } else {
-                if(alpha > 180) {
-                    center = 1;
-                } else {
-                    center = 0;
-                }
-                path = "M"+ 70+","+ (70 - R) +" A"+ R+","+ R+","+ 0+"," + center +","+ 1+","+ x+","+ y;
-            }
+    return path;
+}
 
-            return path;
-        
+function calcPath3 (value, total, R) {
+    var center;
+    var alpha = 360 / total * value,
+        a = (90 - alpha) * Math.PI / 180,
+        x = 80 + R * Math.cos(a),
+        y = 80 - R * Math.sin(a),
+        path;
+    if (total == value) {
+        path = "M"+ 70 +","+ (90 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
+    } else {
+        if(alpha > 180) {
+            center = 1;
+        } else {
+            center = 0;
         }
+        path = "M"+ 80+","+ (80 - R) +" A"+ R+","+ R+","+ 0+"," + center +","+ 1+","+ x+","+ y;
+    }
+    return path;
+}
 
-        function updatePath(progress_id,  value, total, color){
-            if(value<total){
-                path = calcPath(value, total, 60);
-            }else{
-                path = calcPath(total-0.1, total, 60);
-            }
-            $('#'+progress_id+'_progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M70,20 A60,60,0,1,1,66.86047402353434,20.098663578586425"   fill="none" stroke="#DFDFDF" stroke-width="10" /> <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
-            $('#'+progress_id+'_actual').html(value);
 
+function updatePath(progress_id,  value, total, color){
+    if(value<total){
+        path = calcPath(value, total, 70);
+    }else{
+        path = calcPath(total-0.1, total, 70);
+    }
+    $('#progress_'+progress_id).html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+        '<path d="M10,80 A70,70 0 1,0  10,79.999"   fill="none" stroke="#DFDFDF" stroke-width="10" /> ' +
+        '<path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
+    $('#actual_'+progress_id).html(value);
+
+}
+
+
+function updatePath3(progress_id,  value, total, color){
+    if(value<total){
+        path = calcPath3(value, total, 70);
+    }else{
+        path = calcPath3(total-0.1, total, 70);
+    }
+    $('#progress_'+progress_id).html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+        '<path d="M10,80 A70,70 0 1,0  10,79.999"   fill="none" stroke="#DFDFDF" stroke-width="10" />' +
+        ' <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
+
+    $('#pathlog').html($('#pathlog').html() + '<br /> '+ path);
+    $('#actual_'+progress_id).html(Number(value/total * 100).toFixed(0));
+
+}
+
+
+
+jQuery(document).ready(function() {
+
+    var my_value=0;
+    var my_value2=0;
+    var actual_1 = 150;
+    var actual_2 = 80;
+    var my_intvar = setInterval(myUpdate, 20);
+    var my_intvar2 = setInterval(myUpdate2, 200);
+
+    function myUpdate(){
+        my_value = my_value +1;
+        updatePath(1, Number(my_value).toFixed(2), 200, '#FF7DC0');
+        if(my_value>actual_1){
+            clearInterval(my_intvar);
+            updatePath(1, actual_1, 200, '#007DC0');
         }
-        
-        function updatePath2(progress_id,  value, total, color){
-            if(value<total){
-                path = calcPath2(value, total, 60);
-            }else{
-                path = calcPath2(total-0.1, total, 60);
-            }
-            $('#'+progress_id+'_progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M70,10 A60,60,0,1,1,67,10"   fill="none" stroke="#DFDFDF" stroke-width="10" /> <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
-            $('#'+progress_id+'_actual').html(value);
+    }
 
+    function myUpdate2(){
+        my_value2 = my_value2 +5;
+        updatePath3(2, Number(my_value2).toFixed(2), 200, '#FF7DC0');
+        if(my_value2>actual_2){
+            clearInterval(my_intvar2);
+            updatePath3(1, actual_2, 200, '#007DC0');
         }
+    }
 
+    $('#progress_3').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+        '<path d="M10,80 A70,70 0 1,0  10,79.999"   fill="none" stroke="#DFDFDF" stroke-width="10" />' +
+        ' </svg>');
 
-        function calcPath3 (value, total, R) {
-            var center;
-            var alpha = 360 / total * value,
-                a = (90 - alpha) * Math.PI / 180,
-                x = 80 + R * Math.cos(a),
-                y = 80 - R * Math.sin(a),
-                path;
-            if (total == value) {
-                path = "M"+ 70 +","+ (90 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
-            } else {
-                if(alpha > 180) {
-                    center = 1;
-                } else {
-                    center = 0;
-                }
-                path = "M"+ 80+","+ (80 - R) +" A"+ R+","+ R+","+ 0+"," + center +","+ 1+","+ x+","+ y;
-            }
-
-            return path;
-        }
-
-        // bigger radius
-
-        function updatePath3(progress_id,  value, total, color){
-            if(value<total){
-                path = calcPath3(value, total, 70);
-            }else{
-                path = calcPath3(total-0.1, total, 70);
-            }
-            $('#'+progress_id+'_progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M10,80 A70,70 0 1,0  10,79.999"   fill="none" stroke="#DFDFDF" stroke-width="10" /> <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
-            $('#'+progress_id+'_actual').html(Number(value/total * 100).toFixed(0));
-
-        }
-
-
-
-        jQuery(document).ready(function() {
-            var distance_value=0;
-            var distance_actual = 32;
-            var distance_intvar = setInterval(distanceUpdate, 10);
-
-            function distanceUpdate(){
-                distance_value = distance_value +1;
-                updatePath('distance', Number(distance_value).toFixed(2), 50, '#007DC0');
-                if(distance_value>distance_actual){
-                    clearInterval(distance_intvar);
-                    updatePath('distance', distance_actual, 50, '#007DC0');
-                }
-            }
-            
-            var my_value=0;
-            var my_actual = 100;
-            var my_intvar = setInterval(myUpdate, 20);
-
-            function myUpdate(){
-                my_value = my_value +1;
-                updatePath2('my', Number(my_value).toFixed(2), 100, '#FF7DC0');
-                if(my_value>my_actual){
-                    clearInterval(my_intvar);
-                    updatePath2('my', my_actual, 100, '#007DC0');
-                }
-            }
-
-            var value = 0;
-            var myvalue = 80;
-            var myint = setInterval(updateGraph, 5);
-            function updateGraph(){
-                value++;
-                if(value>myvalue){
-                    clearInterval(myint);
-                }
-                updatePath3('overall',  value, 100, 'blue');
-            }
-
-
-        });
+});

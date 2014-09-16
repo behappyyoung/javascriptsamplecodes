@@ -2,31 +2,26 @@
  * Created by young on 5/27/14.
  */
 
-function DoublyLinkedList() {
+function LinkedList() {
     this._length = 0;
     this._head = null;
-    this._tail = null;
 
     this.add= function (data){
 
         //create a new item object, place data in
         var node = {
             data: data,
-            next: null,
-            prev: null
+            next: null
         };
 
         //special case: no items in the list yet
         if (this._length === 0) {
             this._head = node;
-            this._tail = node;
         } else {
             //attach to the tail node
-            this._tail.next = node;
-            node.prev = this._tail;
-            this._tail = node;
+            node.next = this._head.next;
+            this._head.next = node;
         }
-
         //don't forget to update the count
         this._length++;
 
