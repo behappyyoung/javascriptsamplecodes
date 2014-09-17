@@ -3,7 +3,7 @@
 
 if ($handle = opendir('.')) {
     while (false !== ($entry = readdir($handle))) {
-        if (($entry != ".") && ($entry != "..") &&(stripos($entry, 'php')===false)) {
+        if (($entry != ".")  &&(stripos($entry, 'php')===false)) {
             if(is_dir($entry)){
                 $text1[] =  "<a href='./$entry/' > $entry / </a> " ;
             }else{
