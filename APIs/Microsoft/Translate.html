@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://www.microsoftTranslator.com/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**" type="text/javascript"></script>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState == 'complete') {
+                Microsoft.Translator.Widget.Translate('en', 'ko', onProgress, onError, onComplete, onRestoreOriginal, 2000);
+            }
+        }
+        //You can use Microsoft.Translator.Widget.GetLanguagesForTranslate to map the language code with the language name
+        function onProgress(value) {
+            document.getElementById('counter').innerHTML = Math.round(value);
+        }
+
+        function onError(error) {
+            alert("Translation Error: " + error);
+        }
+
+        function onComplete() {
+            document.getElementById('counter').style.color = 'green';
+        }
+        //fires when the user clicks on the exit box of the floating widget
+        function onRestoreOriginal() {
+            alert("The page was reverted to the original language. This message is not part of the widget.");
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+<!-- The attribute: translate="no" tells the widget not to translate this block of text -->
+<div style="text-align: right" >
+    <span>Translation Progress </span><span id="counter" style="color: red">0</span><span>%</span>
+    <div>
+        The page will display an error message box if the widget takes more than two seconds to finish
+        translation.
+    </div>
+</div>
+<br />
+<div style="text-align: center" >
+    The widget will translate this text. The widget will translate this text. The widget will translate this text.
+</div>
+<div style="text-align: center" >
+    this is the other test
+</div>
+</body>
+</html>

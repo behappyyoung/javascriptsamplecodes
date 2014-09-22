@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Microsoft Widget API Sample</title>
+    <script src="http://microsofttranslator.com/ajax/v3/widgetv3.ashx" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        //This script should wait for the API's library to load and for the page to complete to be able to change DOM elements
+        document.onreadystatechange = function() {
+            if (document.readyState == 'complete') {
+                fillTable(Microsoft.Translator.Widget.GetLanguagesForTranslateLocalized());
+                fillList(Microsoft.Translator.Widget.GetLanguagesForTranslateLocalized());
+            }
+        };
+
+        function fillList(listOfLanguages)
+        {
+            var ddlLangs = document.getElementById('langs');
+            for (var key in listOfLanguages)
+            {
+                var optLang = document.createElement('option');
+                //Language name is in .Name property
+                optLang.innerHTML = listOfLanguages[key].Name;
+                //Langauge code is .Code property
+                optLang.value = listOfLanguages[key].Code;
+                ddlLangs.appendChild(optLang);
+            }
+        }
+
+        function fillTable(listOfLanguages)
+        {
+            var tbl = document.getElementById('tbleLangs').children[0];
+
+            for (var key in listOfLanguages)
+            {
+                var row = document.createElement('tr');
+                var c1 = document.createElement('td');
+                c1.innerHTML =  listOfLanguages[key].Code;
+                var c2 = document.createElement('td');
+                c2.innerHTML = listOfLanguages[key].Name;
+                row.appendChild(c1);
+                row.appendChild(c2);
+                tbl.appendChild(row);
+            }
+        }
+
+
+    </script>
+    <style type="text/css">
+        div { margin: 7px; }
+        table, th, td
+        {
+            border: 1px solid;
+            border-collapse: collapse;
+            min-width: 100px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span>List of languages: </span>
+    <select id="langs">
+    </select>
+</div>
+
+<div>
+    <span>Table of codes and localized names</span>
+    <table id="tbleLangs">
+        <tbody>
+        <tr>
+            <th>
+                Code
+            </th>
+            <th>
+                Localized Name
+            </th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
