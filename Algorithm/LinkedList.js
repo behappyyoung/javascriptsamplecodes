@@ -30,7 +30,6 @@ function myLinkedList() {
         if (index > -1 && index < this._length){
             var current = this._head,
                 i = 0;
-
             //special case: removing first item
             if (index === 0){
                 this._head = current.next;
