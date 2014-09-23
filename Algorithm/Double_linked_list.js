@@ -1,5 +1,6 @@
 /**
  * Created by young on 5/27/14.
+ * * double linked list implementation
  */
 
 function DoublyLinkedList() {
