@@ -2,62 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIs/MindMeld/index.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Experimental/index.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.html" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.js" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/Problems/index.php" afterPath="$PROJECT_DIR$/APIs/MindMeld/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.js" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array_test.js" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array_test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/LICENSE" afterPath="$PROJECT_DIR$/APIs/MindMeld/LICENSE" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/CustomEventHandlers.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/CustomEventHandlers.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.Listener.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.Listener.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.activities.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.activities.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.articles.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.articles.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.documents.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.documents.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.entities.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.entities.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.invitedusers.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.invitedusers.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.liveusers.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.liveusers.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.textentries.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.textentries.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeUser.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeUser.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeUser.sessions.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeUser.sessions.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.documents.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.documents.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.support.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.support.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.voiceNavigator.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.voiceNavigator.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/global.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/global.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/index.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/bootstrap.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/jquery.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/jquery.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/jquery.min.map" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/jquery.min.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/linenumber.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/linenumber.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/main.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/prettify/Apache-License-2.0.txt" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/prettify/Apache-License-2.0.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/prettify/lang-css.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/prettify/lang-css.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/prettify/prettify.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/prettify/prettify.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/underscore-min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/underscore-min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/underscore-min.map" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/underscore-min.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/styles/bootstrap.min.css" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/styles/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/styles/jaguar.css" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/styles/jaguar.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/styles/prettify-jsdoc.css" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/styles/prettify-jsdoc.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/styles/prettify-tomorrow.css" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/styles/prettify-tomorrow.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/example.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/example.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/example/sdk/helloWorld/index.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/example/sdk/helloWorld/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/example/sdk/mindmeld.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/example/sdk/mindmeld.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/example/voiceweb.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/example/voiceweb.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/exmaple.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/exmaple.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/index.php" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/mindmeld-2.5.6.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/mindmeld-2.5.6.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/mindmeld-2.5.6.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/mindmeld-2.5.6.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/mindmeld-js-sdk-2.5.6.zip" afterPath="$PROJECT_DIR$/APIs/MindMeld/mindmeld-js-sdk-2.5.6.zip" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/mindmeld.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/mindmeld.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Amy_Jones.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Amy_Jones.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Amy_Jones50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Amy_Jones50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Eugene_Lee.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Eugene_Lee.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Eugene_Lee50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Eugene_Lee50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Gary_Donovan.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Gary_Donovan.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Gary_Donovan50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Gary_Donovan50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/James_King.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/James_King.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/James_King50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/James_King50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/John_Williams.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/John_Williams.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/John_Williams50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/John_Williams50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Julie_Taylor.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Julie_Taylor.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Julie_Taylor50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Julie_Taylor50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Kathleen_Byrne.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Kathleen_Byrne.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Kathleen_Byrne50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Kathleen_Byrne50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Lisa_Wong.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Lisa_Wong.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Lisa_Wong50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Lisa_Wong50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Paul_Jones.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Paul_Jones.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Paul_Jones50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Paul_Jones50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Paula_Gates.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Paula_Gates.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Paula_Gates50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Paula_Gates50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Ray_Moore.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Ray_Moore.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Ray_Moore50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Ray_Moore50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Steven_Wells.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Steven_Wells.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Steven_Wells50.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/pics/Steven_Wells50.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/img/blog.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/img/blog.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/i/cartman.png" afterPath="$PROJECT_DIR$/UIrelated/southpark/i/cartman.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/i/characters-sprite.png" afterPath="$PROJECT_DIR$/UIrelated/southpark/i/characters-sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/img/github.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/img/github.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/img/glyphicons-halflings-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/img/glyphicons-halflings.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/i/ike.png" afterPath="$PROJECT_DIR$/UIrelated/southpark/i/ike.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/i/kenny.png" afterPath="$PROJECT_DIR$/UIrelated/southpark/i/kenny.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/i/kyle.png" afterPath="$PROJECT_DIR$/UIrelated/southpark/i/kyle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/img/logo.png" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/img/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/i/stan.png" afterPath="$PROJECT_DIR$/UIrelated/southpark/i/stan.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/i/tweak.png" afterPath="$PROJECT_DIR$/UIrelated/southpark/i/tweak.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/img/twitter.jpg" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/img/twitter.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/i/wendy.png" afterPath="$PROJECT_DIR$/UIrelated/southpark/i/wendy.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Samples/data/Analyze.json" afterPath="$PROJECT_DIR$/3D/Samples/data/Analyze.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Samples/data/Arbor Press.json" afterPath="$PROJECT_DIR$/3D/Samples/data/Arbor Press.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/ContactView.html" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/ContactView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Samples/data/Cylinder Clamp.json" afterPath="$PROJECT_DIR$/3D/Samples/data/Cylinder Clamp.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/EmployeeListItemView.html" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/EmployeeListItemView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/EmployeeSummaryView.html" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/EmployeeSummaryView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/EmployeeView.html" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/EmployeeView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/HomeView.html" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/HomeView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/ShellView.html" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/tpl/ShellView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Samples/data/Suspension Fork.json" afterPath="$PROJECT_DIR$/3D/Samples/data/Suspension Fork.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/app.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/JavaScripts/backbone-min.js" afterPath="$PROJECT_DIR$/BackboneJS/JavaScripts/backbone-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/lib/backbone-min.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/lib/backbone-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/backbone.js-sample.html" afterPath="$PROJECT_DIR$/BackboneJS/backbone.js-sample.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/css/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/css/bootstrap-responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/css/bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/css/bootstrap-responsive.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/bootstrap/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/contact.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/contact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/employeedetails.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/employeedetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/employeelist.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/employeelist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/home.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/index.html" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/lib/jquery-1.9.1.min.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/lib/jquery-1.9.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/js/jquery-1.9.1.min.js" afterPath="$PROJECT_DIR$/UIrelated/southpark/js/jquery-1.9.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/models/model-in-memory.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/models/model-in-memory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/models/model-parse-com.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/models/model-parse-com.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/models/model-rest-jsonp.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/models/model-rest-jsonp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/models/model-rest.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/models/model-rest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/lib/parse-1.2.2.min.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/lib/parse-1.2.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/part1.html" afterPath="$PROJECT_DIR$/UIrelated/southpark/part1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/part2.html" afterPath="$PROJECT_DIR$/UIrelated/southpark/part2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIrelated/southpark/part3.html" afterPath="$PROJECT_DIR$/UIrelated/southpark/part3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/readme.md" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/shell.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/js/views/shell.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/css/styles.css" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Samples/js/three.js" afterPath="$PROJECT_DIR$/3D/Samples/js/three.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/JavaScripts/underscore-min.js" afterPath="$PROJECT_DIR$/BackboneJS/JavaScripts/underscore-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/lib/underscore-min.js" afterPath="$PROJECT_DIR$/BackboneJS/ccoenraets-directory-backbone-bootstrap-0ef04ec/lib/underscore-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Samples/webviewer.html" afterPath="$PROJECT_DIR$/3D/Samples/webviewer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3D/Threejs/webviewer.html" afterPath="$PROJECT_DIR$/3D/Threejs/webviewer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/JavaScripts/zepto.min.js" afterPath="$PROJECT_DIR$/BackboneJS/JavaScripts/zepto.min.js" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,8 +132,8 @@
       <file leaf-file-name="recursive_getmin_rotated_array.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="578">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="578">
+              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -113,8 +142,8 @@
       <file leaf-file-name="Remove_Duplicate.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="374">
-              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="561">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -140,11 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Remove_Duplicate.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Remove_Duplicate.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.34764826" vertical-offset="0" max-vertical-offset="978">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -160,21 +189,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recursive_getmin_rotated_array_test.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="recursive_getmin_rotated_array_test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="978">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="languageExample.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/APIs/Microsoft/languageExample.html">
+      <file leaf-file-name="Remove_Duplicate_test.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="470" max-vertical-offset="1513">
-              <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="10" column="141" selection-start-line="10" selection-start-column="141" selection-end-line="10" selection-end-column="141" />
               <folding />
             </state>
           </provider>
@@ -198,9 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AngularJS/form.html" />
-        <option value="$PROJECT_DIR$/Concept/apply_vs_call.js" />
-        <option value="$PROJECT_DIR$/Concept/apply_vs_call.html" />
         <option value="$PROJECT_DIR$/showJs.js" />
         <option value="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.js" />
         <option value="$PROJECT_DIR$/Algorithm/md5.js" />
@@ -249,6 +275,9 @@
         <option value="$PROJECT_DIR$/Algorithm/Hamming_Weight.js" />
         <option value="$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.html" />
         <option value="$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.js" />
+        <option value="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html" />
+        <option value="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate_test.js" />
+        <option value="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js" />
       </list>
     </option>
   </component>
@@ -429,11 +458,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Algorithm/Problem-Solutions" />
       <recent name="$PROJECT_DIR$/Algorithm/Problems" />
       <recent name="$PROJECT_DIR$/APIs/Microsoft" />
       <recent name="$PROJECT_DIR$/APIs/Google" />
       <recent name="$PROJECT_DIR$/APIs" />
-      <recent name="$PROJECT_DIR$/SVG" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -501,14 +530,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="76" y="52" width="1660" height="1148" extended-state="4" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28554216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28554216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -567,13 +596,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SVG/curve_text.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -906,24 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="578">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="374">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="578">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -931,7 +937,31 @@
     <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array_test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="561">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="10" column="141" selection-start-line="10" selection-start-column="141" selection-end-line="10" selection-end-column="141" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34764826" vertical-offset="0" max-vertical-offset="978">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding />
         </state>
       </provider>
