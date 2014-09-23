@@ -13,9 +13,9 @@ function removeDuplicates(arr) {
     return out;
 }
 
-
+var displayText = '<br /> ';
 var myarr = ['ee', 'rr', 'tt', 'tt', 'yy'];
-
+displayText += 'original : ' + myarr.toString() + '<br />';
 var result = removeDuplicates(myarr);
-
-document.write(result);
+displayText += 'result : ' + result.toString() + '<br />';
+document.getElementById('display').innerHTML = displayText;

@@ -2,19 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/column-chart.html" afterPath="$PROJECT_DIR$/APIs/Google/column-chart.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/column-chart.js" afterPath="$PROJECT_DIR$/APIs/Google/column-chart.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/gauge-chart.html" afterPath="$PROJECT_DIR$/APIs/Google/gauge-chart.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/gauge-chart.js" afterPath="$PROJECT_DIR$/APIs/Google/gauge-chart.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/images/map-car.png" afterPath="$PROJECT_DIR$/APIs/Google/images/map-car.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/index.php" afterPath="$PROJECT_DIR$/APIs/Google/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/line-chart" afterPath="$PROJECT_DIR$/APIs/Google/line-chart" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/line-chart-one-with-different-color.html" afterPath="$PROJECT_DIR$/APIs/Google/line-chart-one-with-different-color.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/map_svg.html" afterPath="$PROJECT_DIR$/APIs/Google/map_svg.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/sampledata.json" afterPath="$PROJECT_DIR$/APIs/Google/sampledata.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/search.html" afterPath="$PROJECT_DIR$/APIs/Google/search.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/googleapi/timeline-chart.html" afterPath="$PROJECT_DIR$/APIs/Google/timeline-chart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/Hamming_Weight.js" afterPath="$PROJECT_DIR$/Algorithm/Hamming_Weight.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIs/MindMeld/index.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Experimental/index.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.html" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.js" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/Problems/index.php" afterPath="$PROJECT_DIR$/APIs/MindMeld/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.js" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array_test.js" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array_test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/LICENSE" afterPath="$PROJECT_DIR$/APIs/MindMeld/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/CustomEventHandlers.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/CustomEventHandlers.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.Listener.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.Listener.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.activities.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.activities.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.articles.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.articles.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.documents.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.documents.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.entities.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.entities.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.invitedusers.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.invitedusers.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.liveusers.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.liveusers.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeSession.textentries.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeSession.textentries.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeUser.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeUser.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.activeUser.sessions.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.activeUser.sessions.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.documents.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.documents.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.support.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.support.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/MM.voiceNavigator.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/MM.voiceNavigator.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/global.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/global.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/index.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/bootstrap.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/jquery.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/jquery.min.map" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/jquery.min.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/linenumber.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/linenumber.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/main.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/prettify/Apache-License-2.0.txt" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/prettify/Apache-License-2.0.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/prettify/lang-css.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/prettify/lang-css.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/prettify/prettify.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/prettify/prettify.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/underscore-min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/underscore-min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/scripts/underscore-min.map" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/scripts/underscore-min.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/styles/bootstrap.min.css" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/styles/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/styles/jaguar.css" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/styles/jaguar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/styles/prettify-jsdoc.css" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/styles/prettify-jsdoc.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/docs/styles/prettify-tomorrow.css" afterPath="$PROJECT_DIR$/APIs/MindMeld/docs/styles/prettify-tomorrow.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/example.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/example.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/example/sdk/helloWorld/index.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/example/sdk/helloWorld/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/example/sdk/mindmeld.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/example/sdk/mindmeld.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/example/voiceweb.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/example/voiceweb.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/exmaple.html" afterPath="$PROJECT_DIR$/APIs/MindMeld/exmaple.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/index.php" afterPath="$PROJECT_DIR$/Algorithm/Problem-Solutions/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/mindmeld-2.5.6.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/mindmeld-2.5.6.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/mindmeld-2.5.6.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/mindmeld-2.5.6.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/mindmeld-js-sdk-2.5.6.zip" afterPath="$PROJECT_DIR$/APIs/MindMeld/mindmeld-js-sdk-2.5.6.zip" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Experimental/MindMeld/mindmeld.min.js" afterPath="$PROJECT_DIR$/APIs/MindMeld/mindmeld.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
@@ -38,37 +80,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/footer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="analytics.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analytics.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="272">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Translate.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APIs/Microsoft/Translate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="986">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="986">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,49 +101,69 @@
         </entry>
       </file>
       <file leaf-file-name="recursive_getmin_rotated_array.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html">
+        <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="578">
-              <caret line="17" column="40" selection-start-line="16" selection-start-column="4" selection-end-line="17" selection-end-column="40" />
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="578">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Remove_Duplicate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.html">
+        <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="306">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="374">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Remove_Duplicate.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.js">
+      <file leaf-file-name="maxheap.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Algorithm/maxheap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35664335" vertical-offset="0" max-vertical-offset="1001">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="425">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maxheap_improved_topbottom.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Algorithm/maxheap_improved_topbottom.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="425">
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Remove_Duplicate.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="recursive_getmin_rotated_array.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.js">
+        <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="646">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recursive_getmin_rotated_array_test.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array_test.js">
+      <file leaf-file-name="recursive_getmin_rotated_array_test.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="978">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -224,7 +261,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="76" />
     <option name="y" value="52" />
-    <option name="width" value="1670" />
+    <option name="width" value="1660" />
     <option name="height" value="1148" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -340,6 +377,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="APIs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascriptsamplecodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Algorithm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -358,7 +409,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Problems" />
+              <option name="myItemId" value="Problem-Solutions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,22 +436,14 @@
       <recent name="$PROJECT_DIR$/SVG" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/APIs" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/APIs" />
+      <recent name="$PROJECT_DIR$/Algorithm/Problems" />
       <recent name="$PROJECT_DIR$/Algorithm" />
       <recent name="$PROJECT_DIR$/3D/Threejs" />
-      <recent name="$PROJECT_DIR$/Nodejs/Algorithm" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -411,14 +454,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -426,6 +467,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -449,15 +500,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="76" y="52" width="1670" height="1148" extended-state="4" />
-    <editor active="true" />
+    <frame x="76" y="52" width="1660" height="1148" extended-state="4" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28562874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28554216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -466,12 +517,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33037037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -491,9 +542,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -516,13 +567,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SVG/def_use.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SVG/curve_text.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -544,42 +588,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Experimental/MindMeld/mindmeld.min.js">
+    <entry file="file://$PROJECT_DIR$/APIs/MindMeld/mindmeld.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Experimental/MindMeld/exmaple.html">
+    <entry file="file://$PROJECT_DIR$/APIs/MindMeld/exmaple.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Experimental/MindMeld/example.js">
+    <entry file="file://$PROJECT_DIR$/APIs/MindMeld/example.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Experimental/MindMeld/example/sdk/mindmeld.min.js">
+    <entry file="file://$PROJECT_DIR$/APIs/MindMeld/example/sdk/mindmeld.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Experimental/MindMeld/example/sdk/helloWorld/index.html">
+    <entry file="file://$PROJECT_DIR$/APIs/MindMeld/example/sdk/helloWorld/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Experimental/MindMeld/example/voiceweb.html">
+    <entry file="file://$PROJECT_DIR$/APIs/MindMeld/example/voiceweb.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -601,13 +645,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/sort_heap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/maxheap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -765,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1024">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1360">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1649">
           <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1819">
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,9 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <marker date="1401216684547" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,9 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <marker date="1400802282411" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -839,14 +866,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/APIs/Microsoft/Translate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="986">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="986">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -858,7 +880,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.js">
+    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
@@ -866,34 +888,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array_test.js">
+    <entry file="file://$PROJECT_DIR$/Algorithm/maxheap_improved_topbottom.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="425">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/maxheap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="425">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/recursive_getmin_rotated_array.html">
+    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="578">
-          <caret line="17" column="40" selection-start-line="16" selection-start-column="4" selection-end-line="17" selection-end-column="40" />
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="578">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.html">
+    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="306">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="374">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/Problems/Remove_Duplicate.js">
+    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35664335" vertical-offset="0" max-vertical-offset="1001">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/Problem-Solutions/recursive_getmin_rotated_array_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
