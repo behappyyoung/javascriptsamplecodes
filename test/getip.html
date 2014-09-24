@@ -7,27 +7,34 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(document).ready( function() {
+        var divText ='' ;
         $.ajax({
             url : 'http://api.hostip.info/get_html.php',
             success: function(data){
-                console.log('done');
-                console.log(data);
+                //console.log(data);
+                divText += data;
                 hostipInfo = data.split("\n");
-                var ipaddress;
                 for (i=0; hostipInfo.length > i; i++) {
                     ipAddress = hostipInfo[i].split(":");
                     if ( ipAddress[0] == "IP" ) {
-                        console.log('ipaddress : ' + ipAddress[1]);
-                        ipaddress = ipAddress[1];
+                        if(ipAddress[1].match(/216.98.113./)){
+                            divText += '<br /> good ipaddress : ' + ipAddress[1];
+                        }else{
+                            divText += '<br /> bad ipaddress : ' + ipAddress[1];
+                        }
+
                         break;
                     }
                 }
 
+                $('#display').html(divText);
             }
         });
     });
 </script>
 <body>
+<div id="display">
 
+</div>
 </body>
-</html>
+</html
