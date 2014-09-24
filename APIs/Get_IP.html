@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready( function() {
+        var divText ='' ;
+        $.ajax({
+            url : 'http://api.hostip.info/get_html.php',
+            success: function(data){
+                //console.log(data);
+                divText += data;
+                hostipInfo = data.split("\n");
+                for (i=0; hostipInfo.length > i; i++) {
+                    ipAddress = hostipInfo[i].split(":");
+                    if ( ipAddress[0] == "IP" ) {
+                        divText += '<br /> ipaddress : ' + ipAddress[1];
+                        break;
+                    }
+                }
+
+                $('#display').html(divText);
+            }
+        });
+    });
+</script>
+<body>
+<div id="display">
+
+</div>
+</body>
+</html>

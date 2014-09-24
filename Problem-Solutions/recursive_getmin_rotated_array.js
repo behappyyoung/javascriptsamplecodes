@@ -25,7 +25,7 @@ window.onload = function(){
 var myresult = document.getElementById('result');
 
 var inputarray = [3, 4, 5,6,7,8,9,1,2 ];
-var resultText = 'input = '+ inputarray.toString();
+var resultText = 'input = '+ inputarray;
 resultText += '<br /> min = '+ getMin(inputarray, 0, inputarray.length-1);
 
 myresult.innerHTML = resultText;
