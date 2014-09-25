@@ -31,26 +31,26 @@ function bubble(list) {
 }
 
  function getTopIndex(thing) {
-var currentIndex = 0,
-value = thing[thing.length-1][0],
-i = thing.length -2;
+    var currentIndex = 0,
+    value = thing[thing.length-1][0],
+    i = thing.length -2;
 
-while(i != -1) {
-if(!thing[i].length % 2 && currentIndex > 0) {
-currentIndex--;
-}
+    while(i != -1) {
+    if(!thing[i].length % 2 && currentIndex > 0) {
+    currentIndex--;
+    }
 
-if(thing[i][currentIndex + 1] == value) {
-currentIndex++;
-currentIndex = i ? currentIndex << 1 : currentIndex;
-} else if(currentIndex) {
-currentIndex = i ? currentIndex << 1 : currentIndex;
+    if(thing[i][currentIndex + 1] == value) {
+    currentIndex++;
+    currentIndex = i ? currentIndex << 1 : currentIndex;
+    } else if(currentIndex) {
+    currentIndex = i ? currentIndex << 1 : currentIndex;
 
-}
-i--;
-}
+    }
+    i--;
+    }
 
-return currentIndex;
+    return currentIndex;
 }
 
  function heapSort(list) {
@@ -66,12 +66,11 @@ return sortedList;
 }
 
  window.onload = function(){
+    var inputarray = [3, 2, 11,5,6,7,8,9,1,4,10 ];
+    var resultText = 'input Array : '+ inputarray.toString();
+    var resultarray =  heapSort(inputarray);
 
-var inputarray = [3, 2, 11,5,6,7,8,9,1,4,10 ];
-var resultText = 'input Array : '+ inputarray.toString();
-var resultarray =  heapSort(inputarray);
-
-resultText += '<br /> sorted Array : '+ resultarray;
-processText = '<br /> process :  <br />' + processText;
-document.getElementById('result').innerHTML = resultText + processText;
+    resultText += '<br /> sorted Array : '+ resultarray;
+    processText = '<br /> process :  <br />' + processText;
+    document.getElementById('result').innerHTML = resultText + processText;
 };
