@@ -3,8 +3,17 @@
  */
 
 var processText ='';
-var processCount = 0;
+var processCount = 1;
 
+function showArray(preArray, ci, cj){
+    var arrayString = preArray.toString();
+    console.log(arrayString + ci + cj);
+    arrayString = arrayString.replace(ci, '<span style="color:blue;font-weight: bold;">'+ci+'</span>');
+    arrayString = arrayString.replace(cj, '<span style="color:red;font-weight: bold;">'+cj+'</span>');
+    console.log(arrayString);
+    window.arrayString = arrayString;
+    return arrayString;
+}
 function bubbleSort(preArray){
     var length = preArray.length;
     var i, sw;
@@ -17,9 +26,9 @@ function bubbleSort(preArray){
                 preArray[i] = preArray[i-1];
                 preArray[i-1] = sw;
                 swapped = true;
-                processText += '<br /> step '+(processCount++)+' - swap  :   ' + preArray[i-1] +  ' ... ' + preArray[i] + ' /  new array => ' + preArray + '<br />';
+                processText += '<br /> step '+(processCount++)+' - swap  :   ' + preArray[i-1] +  ' ... ' + preArray[i] + ' /  new array => ' + showArray(preArray, preArray[i-1], preArray[i]) + '<br />';
             }else{
-                processText += '<br /> step '+(processCount++)+' - no swap  :   ' + preArray[i-1] +  ' ... ' + preArray[i] + ' /  array => ' + preArray + '<br />';
+                processText += '<br /> step '+(processCount++)+' - no swap  :   ' + preArray[i-1] +  ' ... ' + preArray[i] + ' /  array => ' + showArray(preArray, preArray[i-1], preArray[i]) + '<br />';
             }
         }
         length--;
