@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Registration Page</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/mainstyle.css" />
+</head>
+<body>
+<!-- registration page -->
+<h1>Register Your Child</h1>
+<p>This page allows you to enter your child's information in relation to the Two Hands preschool. </p>
+<form action="" id="frmReg" novalidate>
+    <fieldset>
+        <legend class="fsheader">Identification</legend>
+        <p>Enter name and date of birth of the child that will be enrolling in the upcoming year. </p>
+        <div>
+            <label for="firstName">First Name: </label><input type="text" name="firstName" id="firstName" required />
+        </div>
+
+        <div>
+            <label for="lastName">Last Name: </label><input type="text" name="lastName" id="lastName" required />
+        </div>
+        <div>
+            <label for="dob">Birth Date: </label><input type="text" name="dob" id="dob" placeholder="mm/dd/yyyy" required />&nbsp;&nbsp;<span id="errMsg"></span>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend class="fsheader">Placement</legend>
+        <div>
+            <h2><label for="daysAttend">Days Attending: </label></h2>
+            <p>Which days will the child be attending preschool? </p>
+            <p>
+                <input type="checkbox" name="monday" id="monday" value="monday" />Monday <br />
+                <input type="checkbox" name="tuesday" id="tuesday" value="tuesday" />Tuesday <br />
+                <input type="checkbox" name="wednesday" id="wednesday" value="wednesday" />Wednesday <br />
+                <input type="checkbox" name="thursday" id="thursday" value="thursday" />Thursday <br />
+                <input type="checkbox" name="friday" id="friday" value="friday" />Friday <br />
+            </p>
+        </div>
+        <div>
+            <h2><label for="sched">Schedule Type: </label></h2>
+            <p>Which portion of the day will the child be attending? </p>
+            <select name="sched" id="sched">
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="FullDay">Both Morning and Afternoon</option>
+            </select>
+        </div>
+
+        <div>
+            <p />
+            <label for="register"></label><input type="submit" value="Register" id="submit" />
+        </div>
+    </fieldset>
+</form>
+<script>
+    function setText(elementId, message)
+    {
+        'use strict';
+
+        if ((typeof elementId == 'string') && (typeof message == 'string'))
+        {
+            var output = document.getElementById(elementId);
+
+            if (output.textContent !== undefined)
+            {
+                output.textContent = message;
+            }
+            else // using IE
+            {
+                output.innerText = message;
+            }
+        }
+    }
+
+
+    function process()
+    {
+        'use strict';
+
+        var dob;     // retrieve dob value from HTML
+        var msg;     // output error message
+        var dobDate; // convert dob to date type
+
+        dob = document.getElementById('dob');
+        msg = '';
+
+        if (dob && dob.value)
+        {
+            dobDate = new Date(dob.value);
+            if (dobDate.getTime())
+            {
+            }
+            else // invalid date or invalid input
+            {
+                msg = 'Invalid date!';
+                setText('errMsg', msg);
+            }
+        } // end if
+    }  // end process()
+
+
+    function init()
+    {
+        'use strict';
+        document.getElementById('frmReg').onsubmit = process;
+    }
+
+
+    window.onload = init;
+</script>
+</body>
+</html>

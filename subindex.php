@@ -5,16 +5,17 @@ if ($handle = opendir('.')) {
     while (false !== ($entry = readdir($handle))) {
         if (($entry != ".")  &&(stripos($entry, 'php')===false)) {
             if(is_dir($entry)){
-                $text1[] =  "<a href='./$entry/' > $entry / </a> " ;
-            }else{
+                $text1[] =  "<a href='./$entry/' > $entry  </a> " ;
+            }else if((stripos($entry, 'html')!==false)||(stripos($entry, 'js')!==false)){
                 $text2[] = "<a href='./$entry' > $entry </a> " ;
+            }else{
+	    	$title = ' [ ' . $entry. ' ] ';
             }
-
         }
     }
     sort($text1);
     sort($text2);
-    echo implode('<br />', $text1).' <br />======== <br />'.implode('<br />', $text2);
+    echo $title.' <br /> <br />'.implode('<br />', $text1).'<br />   <br />======== <br />'.implode('<br />', $text2);
     closedir($handle);
 }
 
