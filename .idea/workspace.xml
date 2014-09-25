@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/Sort_Bubble.js" afterPath="$PROJECT_DIR$/Algorithm/Sort_Bubble.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithm/sort_quick.js" afterPath="$PROJECT_DIR$/Algorithm/sort_quick.js" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
@@ -49,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/Algorithm/sort_quick.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <caret line="27" column="146" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="146" />
               <folding />
             </state>
           </provider>
@@ -58,8 +59,8 @@
       <file leaf-file-name="Sort_Bubble.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Algorithm/Sort_Bubble.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35664335" vertical-offset="0" max-vertical-offset="1001">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.51619434" vertical-offset="0" max-vertical-offset="988">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -192,8 +193,8 @@
         <option value="$PROJECT_DIR$/Algorithm/Problem-Solutions/Remove_Duplicate.js" />
         <option value="$PROJECT_DIR$/APIs/Get_Ip.html" />
         <option value="$PROJECT_DIR$/test/getip.html" />
-        <option value="$PROJECT_DIR$/Algorithm/Sort_Bubble.js" />
         <option value="$PROJECT_DIR$/Algorithm/sort_quick.js" />
+        <option value="$PROJECT_DIR$/Algorithm/Sort_Bubble.js" />
       </list>
     </option>
   </component>
@@ -666,6 +667,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="425">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -704,6 +706,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33128205" vertical-offset="0" max-vertical-offset="975">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -860,15 +863,15 @@
     <entry file="file://$PROJECT_DIR$/Algorithm/sort_quick.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <caret line="27" column="146" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="146" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/Sort_Bubble.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35664335" vertical-offset="0" max-vertical-offset="1001">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.51619434" vertical-offset="0" max-vertical-offset="988">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
           <folding />
         </state>
       </provider>

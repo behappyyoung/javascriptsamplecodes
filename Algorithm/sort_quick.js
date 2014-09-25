@@ -11,7 +11,7 @@ function  quickSort(arr, left, right) {
     var swapl, swapr;
     pivotidx = (left + right) / 2;
     var pivotval = parseInt(arr[pivotidx.toFixed()]);
-    processText += '<br /> ' + arr.toString() +' / left : right  => '+left +' : '+ right+' /  pivot : ' + pivotval + '<br />';
+    processText += '<br /> ' + arr +' / left : right  => '+left +' : '+ right+' /  pivot : ' + pivotval + '<br />';
     /* partition */
     while (i <= j) {
         while (parseInt(arr[i]) < pivotval)
@@ -25,7 +25,7 @@ function  quickSort(arr, left, right) {
             arr[j] = swapl;
             i++;
             j--;
-            processText += '<br /> step '+(processCount++)+' - swap l, r  :   ' + swapl +  ' ... ' + swapr + ' /  new array => ' + arr.toString() + '<br />';
+            processText += '<br /> step '+(processCount++)+' - swap l, r  :   ' + swapl +  ' ... ' + swapr + ' /  new array => ' + arr + '<br />';
         }
     }
 
@@ -41,7 +41,7 @@ function  quickSort(arr, left, right) {
 
 window.onload = function(){
     var inputarray = [3, 2, 11,5,6,7,8,9,1,4,10 ];
-    var resultText = 'input Array : '+ inputarray.toString();
+    var resultText = 'input Array : '+ inputarray;
     var resultarray =  quickSort(inputarray, 0, inputarray.length -1);
 
     resultText += '<br /> sorted Array : '+ resultarray;
