@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Margin Collapse Example </title>
+    <style>
+        div{
+            width: 200px;
+        }
+        div.margin {
+            margin : 20px;
+            border : 1px solid
+        }
+
+        div.padding {
+            padding : 20px;
+            margin:0;
+            border : 1px solid
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="margin blue">  margin1  </div>
+    <div class="margin red">    margin2  </div>
+    <div class="padding blue">
+        <div class="green">padding1</div>
+    </div>
+    <div class="padding red">
+        <div class="green">padding2</div>
+    </div>
+
+    <div class="margin blue">
+        <div class="green">margin3</div>
+    </div>
+    <div class="padding red">
+        <div class="green">padding3</div>
+    </div>
+    <div class="margin blue">
+        <div class="green">margin4</div>
+    </div>
+
+    <script src="../showHtml.js"></script>
+
+</body>
+</html>

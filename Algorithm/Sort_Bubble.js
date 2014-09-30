@@ -26,7 +26,7 @@ function bubbleSort(preArray){
                 preArray[i] = preArray[i-1];
                 preArray[i-1] = sw;
                 swapped = true;
-                processText += '<br /> step '+(processCount++)+' - swap  :   ' + preArray[i-1] +  ' ... ' + preArray[i] + ' /  new array => ' + showArray(preArray, preArray[i-1], preArray[i]) + '<br />';
+                processText += '<br /> step '+(processCount++)+' - SWAP  :   ' + preArray[i-1] +  ' ... ' + preArray[i] + ' /  new array => ' + showArray(preArray, preArray[i-1], preArray[i]) + '<br />';
             }else{
                 processText += '<br /> step '+(processCount++)+' - no swap  :   ' + preArray[i-1] +  ' ... ' + preArray[i] + ' /  array => ' + showArray(preArray, preArray[i-1], preArray[i]) + '<br />';
             }
