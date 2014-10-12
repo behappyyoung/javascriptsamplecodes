@@ -1,0 +1,21 @@
+* Found bundle for host api.sendhub.com: 0x7f399c659a80
+* Re-using existing connection! (#3) with host api.sendhub.com
+* Connected to api.sendhub.com (54.85.134.173) port 443 (#3)
+> POST /v1/messages/?username=4088444583&api_key=1f29e48aa10de68cbcc80f16814b5092c7cab879 HTTP/1.1
+Host: api.sendhub.com
+Accept: */*
+Content-type: application/json
+Content-Length: 40
+
+* upload completely sent off: 40 out of 40 bytes
+< HTTP/1.1 400 BAD REQUEST
+* Server nginx/1.1.19 is not blacklisted
+< Server: nginx/1.1.19
+< Date: Sun, 12 Oct 2014 08:29:53 GMT
+< Content-Type: application/json; charset=utf-8
+< Transfer-Encoding: chunked
+< Vary: Host, Cookie
+< P3P: policyref="https://www.sendhub.com/w3c/p3p.xml", CP="NON DSP COR CURa ADMa DEVa PSAa PSDa IVAa IVDa CONa TELa OUR STP PHY ONL COM NAV INT DEM CNT PRE"
+< Set-Cookie: sessionid="eyJfYXV0aF91c2VyX2lkIjoxMTEyNzUwNDI4MTg0OTIwNDd9:1XdEXJ:9fWaR4QR11DObsmoQVTE2oPhB88"; Domain=.sendhub.com; expires=Tue, 11-Nov-2014 08:29:53 GMT; httponly; Max-Age=2592000; Path=/
+< 
+* Connection #3 to host api.sendhub.com left intact
