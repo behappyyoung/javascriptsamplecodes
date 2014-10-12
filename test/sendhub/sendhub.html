@@ -2,85 +2,7 @@
 <html ng-app>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
-    <script>
-        function contactCtrl($scope , $http) {
-            $scope.contacts = [];
-
-            $scope.addContact = function() {
-
-                $http({
-                    method: "POST",
-                    url : 'addcontact.php',
-                    data: { "name" :$scope.name, "number" : $scope.phone},
-                    headers: { "Content-Type": "application/json"}
-                })
-                        .success(function(data, status) {
-                            switch (data.httpcode){
-                                case 201 :
-                                    alert('Contact Added');
-                                    var body = JSON.parse(data.body);
-                                    $scope.contacts.push({name:$scope.name, phone:$scope.phone, id:body.id});
-                                    break;
-                                case 400 :
-                                    var body = JSON.parse(data.body);
-                                    alert(body);
-                                    break;
-                                default :
-                                    var body = JSON.parse(data.body);
-                                    alert(body);
-                                    break;
-                            }
-                        })
-                        .error(function(data, status) {
-                            alert('Incorrect Setting. ');
-                        });
-            };
-
-
-            $scope.select = function(item){
-                $scope.selected = item;
-            };
-
-            $scope.sendMessage = function(){
-                if($scope.selected == undefined){
-                  alert('Choose Contact Please');
-                  return true;
-                }
-                if(($scope.message == "")||($scope.message == undefined)){
-                    alert('Type Message Please');
-                    return true;
-                }
-                $http({
-                            method: "POST",
-                            url : 'sendhub.php',
-                            data: { "contacts" :["+"+$scope.selected.phone], "text" : $scope.message},
-                            headers: { "Content-Type": "application/json"}
-                      })
-                      .success(function(data, status) {
-                            switch (data.httpcode){
-                                case 201 :
-                                    alert('Message has been sent');
-                                    break;
-                                case 400 :
-                                    var body = JSON.parse(data.body);
-                                    alert(body);
-                                    break;
-                                default :
-                                    var body = JSON.parse(data.body);
-                                    alert(body);
-                                    break;
-                            }
-
-                      })
-                      .error(function(data, status) {
-                            alert('Incorrect Setting. ');
-                     });
-            }
-
-
-        }
-
-    </script>
+    <script src="sendhub.js"></script>
     <style>
 
         .contactForm, .messageForm{
@@ -107,7 +29,7 @@
         }
         .citem {
             width: 300px;
-            position: relative;
+            position: absolute;
             left: 350px;
             top:20px;
         }
@@ -120,7 +42,7 @@
     <div  class="contactForm">
         <form >
             <input type="text" ng-model="name"  size="30"  placeholder="Name">
-            <input type="text" ng-model="phone"  size="30"  placeholder="Phone Number">
+            <input type="text" ng-model="number"  size="30"  placeholder="Phone Number">
             <button ng-click="addContact()">SAVE</button>
         </form>
     </div>
@@ -133,12 +55,17 @@
     </div>
 
 
-    <div class="lists">
+    <div class="lists" >
         <div ng-repeat="contact in contacts" class="items" ng-click="select(contact);">{{contact.name}}</div>
         <div class="citem" id="citem">
+            <form class="editForm">
+                <button ng-click="editContact()">Edit</button>
+                <button ng-click="deleteContact()">Delete</button>
+            </form>
             <div> Name : {{selected.name}} </div>
-            <div>Phone Number : {{selected.phone}}</div>
-            <div>Message : {{message}}</div>
+            <div> ID : {{selected.id}} </div>
+            <div> Phone Number : {{selected.phone}}</div>
+
         </div>
     </div>
 

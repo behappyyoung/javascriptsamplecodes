@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/sendhub/sendhub.html" afterPath="$PROJECT_DIR$/test/sendhub/sendhub.html" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,15 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="53" selection-start="1264" selection-end="1310" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="690">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="todo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularJS/todo.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,7 +37,16 @@
       <file leaf-file-name="sendhub.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/sendhub/sendhub.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="48" selection-start="3018" selection-end="3018" vertical-scroll-proportion="1.1815069" vertical-offset="0" max-vertical-offset="2295">
+            <state line="62" column="40" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.82191783" vertical-offset="210" max-vertical-offset="1200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sendhub.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/sendhub/sendhub.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="0" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1695">
               <folding />
             </state>
           </provider>
@@ -90,6 +90,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="getcontacts.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/sendhub/getcontacts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="35" selection-start="320" selection-end="320" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="test.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,15 +112,6 @@
         <entry file="file://$PROJECT_DIR$/AngularJS/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="4" column="0" selection-start="92" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="480">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todo.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/todo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -135,8 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/UIrelated/rightclick.js" />
-        <option value="$PROJECT_DIR$/jQuery/rightclick.html" />
         <option value="$PROJECT_DIR$/jQuery/rightclick.js" />
         <option value="$PROJECT_DIR$/Algorithm/Hamming_Weight.html" />
         <option value="$PROJECT_DIR$/SVG/path_animation.html" />
@@ -185,6 +183,8 @@
         <option value="$PROJECT_DIR$/test/sendhub.html" />
         <option value="$PROJECT_DIR$/test/addcontact.php" />
         <option value="$PROJECT_DIR$/test/sendhub/addcontact.php" />
+        <option value="$PROJECT_DIR$/test/sendhub/getcontacts.php" />
+        <option value="$PROJECT_DIR$/test/sendhub/sendhub.js" />
         <option value="$PROJECT_DIR$/test/sendhub/sendhub.html" />
       </list>
     </option>
@@ -325,11 +325,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/sendhub" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/Concept" />
       <recent name="$PROJECT_DIR$/Algorithm" />
       <recent name="$PROJECT_DIR$/APIs" />
-      <recent name="$PROJECT_DIR$/Algorithm/Problem-Solutions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/sendhub" />
@@ -432,16 +432,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Algorithm/md5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/LinkedList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/LinkedList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -712,9 +702,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/sendhub/getcontacts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="320" selection-end="320" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sendhub/sendhub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/sendhub/sendhub.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="48" selection-start="3018" selection-end="3018" vertical-scroll-proportion="1.1815069" vertical-offset="0" max-vertical-offset="2295">
+        <state line="62" column="40" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.82191783" vertical-offset="210" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
