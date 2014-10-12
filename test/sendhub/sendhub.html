@@ -33,6 +33,11 @@
             left: 350px;
             top:20px;
         }
+        .selected{
+            background-color: blue;
+            color: #ffffff;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -56,19 +61,19 @@
 
 
     <div class="lists" >
-        <div ng-repeat="contact in contacts" class="items" ng-click="select(contact);">{{contact.name}}</div>
+        <div ng-repeat="contact in contacts" class="items" ng-click="select(contact);" ng-class="{selected:contact==selected}">{{contact.name}}</div>
         <div class="citem" id="citem">
             <form class="editForm">
+                <div> ID : {{selected.id}} </div>
+                <input type="text" ng-model=selected.name size="30"  placeholder="Name">
+                <input type="text" ng-model="selected.number"  size="30"  placeholder="Phone Number">
                 <button ng-click="editContact()">Edit</button>
                 <button ng-click="deleteContact()">Delete</button>
             </form>
-            <div> Name : {{selected.name}} </div>
-            <div> ID : {{selected.id}} </div>
-            <div> Phone Number : {{selected.phone}}</div>
+
 
         </div>
     </div>
-
 </div>
 </body>
 </html>

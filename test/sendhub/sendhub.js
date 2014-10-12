@@ -13,7 +13,6 @@ function contactCtrl($scope , $http) {
                 switch (data.httpcode){
                     case 200 :
                         var body = JSON.parse(data.body);
-//                        $scope.contacts.push({name:$scope.name, phone:$scope.phone, id:body.id});
                         $scope.contacts = body.objects;
                         break;
                     case 400 :
@@ -45,9 +44,54 @@ function contactCtrl($scope , $http) {
                         var body = JSON.parse(data.body);
                         $scope.contacts.push({name:$scope.name, number:$scope.number, id:body.id});
                         break;
-                    case 400 :
+                    default :
+                        alert(data.body);
+                        break;
+                }
+            })
+            .error(function(data, status) {
+                alert('Incorrect Setting. ');
+            });
+    };
+
+    $scope.editContact = function() {
+
+        $http({
+            method: "POST",
+            url : 'editcontact.php',
+            data: $scope.selected,
+            headers: { "Content-Type": "application/json"}
+        })
+            .success(function(data, status) {
+                console.log(data);
+                switch (data.httpcode){
+                    case 202 :
+                        alert('Contact Updated');
+                        var body = JSON.parse(data.body);
+                        $scope.contacts.splice( $scope.contacts.indexOf($scope.selected), 1 , $scope.selected);
+                        break;
+                    default :
                         var body = JSON.parse(data.body);
                         alert(body);
+                        break;
+                }
+            })
+            .error(function(data, status) {
+                alert('Incorrect Setting. ');
+            });
+    };
+    $scope.deleteContact = function() {
+
+        $http({
+            method: "POST",
+            url : 'deletecontact.php',
+            data: { "contactid" :$scope.selected.id}
+        })
+            .success(function(data, status) {
+                switch (data.httpcode){
+                    case 204 :
+                        alert('Contact Deleted');
+                        $scope.contacts.splice( $scope.contacts.indexOf($scope.selected), 1 );
                         break;
                     default :
                         var body = JSON.parse(data.body);
@@ -76,18 +120,14 @@ function contactCtrl($scope , $http) {
         }
         $http({
             method: "POST",
-            url : 'sendhub.php',
-            data: { "contacts" :["+"+$scope.selected.number], "text" : $scope.message},
+            url : 'sendmessage.php',
+            data: { "contacts" :[$scope.selected.number], "text" : $scope.message},
             headers: { "Content-Type": "application/json"}
         })
             .success(function(data, status) {
                 switch (data.httpcode){
                     case 201 :
                         alert('Message has been sent');
-                        break;
-                    case 400 :
-                        var body = JSON.parse(data.body);
-                        alert(body);
                         break;
                     default :
                         var body = JSON.parse(data.body);
