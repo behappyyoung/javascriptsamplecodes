@@ -27,6 +27,20 @@ function foo2(x) {               <br />
 var bar2 = foo2(2); // bar is now a closure.               <br />
 
 ============================================                <br />
+ Create Dynamic new functions using Closure                <br />
+                <br />
+
+function multiple(x) {                  <br />
+    return function(y) {              <br />
+        return y * x;              <br />
+    };              <br />
+}              <br />
+<br />
+var mul10 = multiple(10);              <br />
+var mul5 = multiple(5);              <br />
+var mul100 = multiple(100);              <br />
+
+============================================                <br />
 
 <script src="closure.js"> </script>
 <script src="../showFile.js"> </script>

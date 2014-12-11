@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML5 - Video /Audio </title>
+
+    <style>
+        video, img, canvas {
+            width: 307px;
+            height: 250px;
+            background: rgba(255,255,255,0.5);
+            border: 1px solid #ccc;
+        }
+        .grayscale {
+        +filter: grayscale(1);
+        }
+        .sepia {
+        +filter: sepia(1);
+        }
+        .blur {
+        +filter: blur(3px);
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<video autoplay></video>
+<br />
+<img src="" />
+
+<canvas></canvas>
+
+
+<script>
+    var video = document.querySelector('video');
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+    var localMediaStream = null;
+
+    // check if get user media is available.
+    function hasGetUserMedia() {
+        return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||navigator.mozGetUserMedia || navigator.msGetUserMedia);
+    }
+
+    var errorCallback = function(e) {
+        console.log('Reeeejected!', e);
+    };
+
+    if (hasGetUserMedia()) {
+        // Good to go!
+        navigator.getUserMedia  = navigator.getUserMedia ||
+                navigator.webkitGetUserMedia ||
+                navigator.mozGetUserMedia ||
+                navigator.msGetUserMedia;
+        navigator.getUserMedia({video: true, audio: true}, function(stream) {
+            video.src = window.URL.createObjectURL(stream);
+            localMediaStream = stream;
+        }, errorCallback);
+
+
+    } else {
+        alert('getUserMedia() is not supported in your browser');
+    }
+
+    function snapshot() {
+        if (localMediaStream) {
+            ctx.drawImage(video, 0, 0);
+            // "image/webp" works in Chrome.
+            // Other browsers will fall back to image/png.
+            document.querySelector('img').src = canvas.toDataURL('image/png');
+        }
+    }
+
+    video.addEventListener('click', snapshot, false);
+
+</script>
+
+
+<form method="post" enctype="multipart/form-data"  action="recording.php">
+    <input type="file" name="file" />
+    <input type="submit">
+</form>
+
+<form action="server.cgi" method="post" enctype="multipart/form-data">
+    <input type="file" accept="audio/*;capture=microphone">
+    <input type="submit" value="Upload">
+</form>
+
+
+
+</body>
+</html>

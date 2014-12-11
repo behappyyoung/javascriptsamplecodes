@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Hoist </title>
+
+</head>
+<body>
+<div>
+
+    function mymethod() {               <br />
+        for (var i = 0; i < 10; i++) {             <br />
+            var myvar = 5;             <br />
+            }             <br />
+        return myvar;   <br />
+    }             <br />
+Hoist ===>             <br />
+    function mymethod() {             <br />
+        var myvar;             <br />
+        for (var i = 0; i < 10; i++) {             <br />
+            myvar = 5;             <br />
+        }             <br />
+        return myvar;   <br />
+    }             <br />
+    <br />
+</div>
+<div id="div"> </div>
+<script src="Hoist.js"> </script>
+<script src="../showHtml.js"> </script>
+<script src="../showJs.js"> </script>
+</body>
+</html>
