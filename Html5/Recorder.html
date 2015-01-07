@@ -105,9 +105,9 @@
     var recIndex = 0;
 
     function saveAudio() {
-        audioRecorder.exportWAV( doneEncoding );
+        //audioRecorder.exportWAV( doneEncoding );
         // could get mono instead by saying
-        // audioRecorder.exportMonoWAV( doneEncoding );
+         audioRecorder.exportMonoWAV( doneEncoding );// mono young
     }
 
     function gotBuffers( buffers ) {
@@ -228,6 +228,7 @@
         zeroGain.gain.value = 0.0;
         inputPoint.connect( zeroGain );
         zeroGain.connect( audioContext.destination );
+console.log(audioContext);
         updateAnalysers();
     }
 

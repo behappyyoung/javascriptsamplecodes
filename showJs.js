@@ -23,6 +23,7 @@
     xmlhttp2.open('GET', jsfile, true);
     xmlhttp2.onreadystatechange=function(){
         var mydata = xmlhttp2.response;
+        //mydata = mydata.replace(/document.write(.*;)/g, '--');
         mydata = mydata.replace(/</g, '&lt;');
         mydata = mydata.replace(/\n/g, '<br /> ');
         mydata = mydata.replace(/ /g, ' &nbsp;');
