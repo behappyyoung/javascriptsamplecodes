@@ -7,27 +7,6 @@
 </head>
 <body>
 <div id="div">
-    -------------------------- Scope test ------------------------ <br />
-    function boo() { <br />
-    this.tmp = 3;                   // can access from outside <br />
-    var tmp2 = 3;                   // internal <br />
-    gtemp = 4;                      // global <br />
-    this.gettmp = function(){ <br />
-    return ++(this.tmp); <br />
-    } <br />
-    this.gettmp2 = function(){ <br />
-    return ++tmp2; <br />
-    } <br />
-    gettmp3 = function(){ <br />
-    return this.tmp; <br />
-    } <br />
-    this.getgtemp = function(){ <br />
-    return ++gtemp; <br />
-    } <br />
-    } <br />
-    var bar = new boo(); <br />
-
-    --------------------------------------------------------------- <br />
 </div>
 
 <script src="Scope.js"> </script>

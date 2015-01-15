@@ -1,3 +1,14 @@
+/////// global , local scope test /////////////////////
+a = b = 3;
+
+(function() {
+    var a = b = 5;      // a : local,  b : global
+})();
+
+document.write(' a : '  + a + '<br />');
+document.write(' b : ' + b+ '<br />');
+
+/////////////// function scope access test ///////////////////////
 function boo() {
     this.tmp = 3;                   // can access from outside
     var tmp2 = 3;                   // internal
