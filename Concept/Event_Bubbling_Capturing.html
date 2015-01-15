@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Event Bubbling / Capturing </title>
+<style>
+    div {
+        border: 1px solid red;
+        padding: 20px;
+        min-height: 10px;
+    }
+</style>
+</head>
+<body>
+
+
+
+<div>1
+    <div>2
+        <div>3
+            <div>4
+                <div>  click anywhere </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br/>
+<div id="bubble">   </div>
+<div id="capture">  </div>
+
+
+<section id="log"></section>
+
+<script src="Event_Bubbling_Capturing.js"> </script>
+<script src="../showHtml.js"> </script>
+<script src="../showJs.js"> </script>
+</body>
+</html>
