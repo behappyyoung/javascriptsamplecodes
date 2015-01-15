@@ -1,5 +1,5 @@
 /////// global , local scope test /////////////////////
-a = b = 3;
+var a = b = 3;
 
 (function() {
     var a = b = 5;      // a : local,  b : global
