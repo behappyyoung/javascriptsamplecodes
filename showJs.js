@@ -27,7 +27,7 @@
         mydata = mydata.replace(/</g, '&lt;');
         mydata = mydata.replace(/\n/g, '<br /> ');
         mydata = mydata.replace(/ /g, ' &nbsp;');
-        document.getElementById('js-sourceText').innerHTML = '====== javascript content start ======<br />' + mydata + ' <br /><br />====== javascript content end ======<br /><br /><br />';
+        document.getElementById('js-sourceText').innerHTML = '====== javascript content start ======<br /><br />' + mydata + ' <br /><br />====== javascript content end ======<br /><br /><br />';
     };
     xmlhttp2.send();
 
