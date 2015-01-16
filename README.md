@@ -8,5 +8,5 @@ Free to copy and use
 
 URL of usage examples. 
 
-http://dev.ypark.org/JavaScript/
+http://javascript.ypark.org/
 
