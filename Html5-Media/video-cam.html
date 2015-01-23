@@ -56,6 +56,7 @@
                 navigator.mozGetUserMedia ||
                 navigator.msGetUserMedia;
         navigator.getUserMedia({video: true}, function(stream) {
+            console.log(stream);
             video.src = window.URL.createObjectURL(stream);
             localMediaStream = stream;
         }, errorCallback);

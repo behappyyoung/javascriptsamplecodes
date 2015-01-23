@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+    <title>Record Web Cam using whammy.js </title>
+    <style>
+        ::selection {
+            color: #eee;
+            background: darkred;
+        }
+        body ::-webkit-scrollbar {
+            height: 16px;
+            overflow: visible;
+            width: 16px;
+        }
+        body ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, .1);
+            background-clip: padding-box;
+            border: solid transparent;
+            min-height: 28px;
+            padding: 100px 0 0;
+            box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+            border-width: 1px 1px 1px 6px;
+        }
+        body ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        body ::-webkit-scrollbar-button {
+            height: 0;
+            width: 0;
+        }
+        ::-webkit-scrollbar-track {
+            background-clip: padding-box;
+            border: solid transparent;
+            border-width: 0 0 0 4px;
+        }
+        body ::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #222;
+            font-family: 'Open Sans', arial, sans-serif;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+        a {
+            color: navy;
+        }
+        details {
+            position: absolute;
+            top: 0;
+            left: 1em;
+            margin: 1em 0;
+            padding: 10px;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 5px;
+            max-width: 600px;
+            font-size: 10pt;
+            z-index: 100;
+            background: #F7F7F7;
+        }
+        details > div {
+            margin: 10px 0;
+        }
+        details > summary {
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        button {
+            display: inline-block;
+            background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#F9F9F9), to(#E3E3E3));
+            background: -webkit-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+            background: -moz-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+            background: -ms-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+            background: -o-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+            background: linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+            border: 1px solid #999;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font-weight: 700;
+            font-size: 10pt;
+        }
+        button:not(:disabled):hover,
+        button:not(:disabled).active {
+            border-color: black;
+        }
+        button:not(:disabled):active,
+        button:not(:disabled).active {
+            background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#E3E3E3), to(#F9F9F9));
+            background: -webkit-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+            background: -moz-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+            background: -ms-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+            background: -o-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+            background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+        }
+        input[type="range"]{
+            -webkit-appearance: none !important;
+            background-color: #555;
+            box-shadow: 0 -1px 1px rgba(255,255,255,0.5) inset;
+            border-radius: 10px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none !important;
+            width: 20px;
+            height: 8px;
+            box-shadow: 1px 1px 5px rgba(0,0,0,1);
+            cursor: pointer;
+            border-top: 1px solid #fff;
+            background: #ccc -webkit-linear-gradient(top, rgb(240, 240, 240), rgb(210, 210, 210));
+        }
+        h2 {
+            margin: 0;
+            font-weight: 300;
+        }
+        a[download] {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        h4 {
+            padding: 15px;
+            background: black;
+            color: white;
+            margin: 10px 0 10px 0;
+            border-radius: 100px 0 100px 0;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+        section > div {
+            text-align: center;
+            display: inline-block;
+            margin: 0 15px;
+            min-width: 400px;
+        }
+        #video-preview {
+            height: 300px;
+        }
+        button.recording {
+            color: darkred;
+            border-color: red;
+        }
+        section {
+            margin-top: 2em;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+<h2>Recording .webm video from a <code>getUserMedia()</code> using whammy.js </h2>
+
+<section>
+    <div style="float:left;">
+        <button id="camera-me">1. Turn on camera</button>
+        <h4><code>getUserMedia()</code> feed</h4>
+        <video autoplay></video>
+    </div>
+    <div id="video-preview">
+        <button id="record-me" disabled>2. Record<!--⚫--></button>
+        <button id="stop-me" disabled>◼</button>
+        <!--<button id="play-me" disabled>►</button>-->
+        <span id="elasped-time"></span>
+        <h4>.webm recording (no audio yet)</h4>
+    </div>
+</section>
+
+<script src="js/whammy.min.js"></script>
+<script>
+    (function(exports) {
+
+        exports.URL = exports.URL || exports.webkitURL;
+
+        exports.requestAnimationFrame = exports.requestAnimationFrame ||
+        exports.webkitRequestAnimationFrame || exports.mozRequestAnimationFrame ||
+        exports.msRequestAnimationFrame || exports.oRequestAnimationFrame;
+
+        exports.cancelAnimationFrame = exports.cancelAnimationFrame ||
+        exports.webkitCancelAnimationFrame || exports.mozCancelAnimationFrame ||
+        exports.msCancelAnimationFrame || exports.oCancelAnimationFrame;
+
+        navigator.getUserMedia = navigator.getUserMedia ||
+        navigator.webkitGetUserMedia || navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia;
+
+        var ORIGINAL_DOC_TITLE = document.title;
+        var video = $('video');
+        var canvas = document.createElement('canvas'); // offscreen canvas.
+        var rafId = null;
+        var startTime = null;
+        var endTime = null;
+        var frames = [];
+
+        function $(selector) {
+            return document.querySelector(selector) || null;
+        }
+
+        function toggleActivateRecordButton() {
+            var b = $('#record-me');
+            b.textContent = b.disabled ? 'Record' : 'Recording...';
+            b.classList.toggle('recording');
+            b.disabled = !b.disabled;
+        }
+
+        function turnOnCamera(e) {
+            e.target.disabled = true;
+            $('#record-me').disabled = false;
+
+            video.controls = false;
+
+            var finishVideoSetup_ = function() {
+                // Note: video.onloadedmetadata doesn't fire in Chrome when using getUserMedia so
+                // we have to use setTimeout. See crbug.com/110938.
+                setTimeout(function() {
+                    video.width = 320;//video.clientWidth;
+                    video.height = 240;// video.clientHeight;
+                    // Canvas is 1/2 for performance. Otherwise, getImageData() readback is
+                    // awful 100ms+ as 640x480.
+                    canvas.width = video.width;
+                    canvas.height = video.height;
+                }, 1000);
+            };
+
+            navigator.getUserMedia({video: true, audio: true}, function(stream) {
+                video.src = window.URL.createObjectURL(stream);
+                finishVideoSetup_();
+            }, function(e) {
+                alert('Fine, you get a movie instead of your beautiful face ;)');
+
+                video.src = 'video/preview.mp4';
+                finishVideoSetup_();
+            });
+        };
+
+        function record() {
+            var elapsedTime = $('#elasped-time');
+            var ctx = canvas.getContext('2d');
+            var CANVAS_HEIGHT = canvas.height;
+            var CANVAS_WIDTH = canvas.width;
+
+            frames = []; // clear existing frames;
+            startTime = Date.now();
+
+            toggleActivateRecordButton();
+            $('#stop-me').disabled = false;
+
+            function drawVideoFrame_(time) {
+                rafId = requestAnimationFrame(drawVideoFrame_);
+
+                ctx.drawImage(video, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+                document.title = 'Recording...' + Math.round((Date.now() - startTime) / 1000) + 's';
+
+                // Read back canvas as webp.
+                //console.time('canvas.dataURL() took');
+                var url = canvas.toDataURL('image/webp', 1); // image/jpeg is way faster :(
+                //console.log(url);
+                //console.timeEnd('canvas.dataURL() took');
+                frames.push(url);
+
+                // UInt8ClampedArray (for Worker).
+                //frames.push(ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT).data);
+
+                // ImageData
+                //frames.push(ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT));
+            };
+
+            rafId = requestAnimationFrame(drawVideoFrame_);
+        };
+
+        function stop() {
+            cancelAnimationFrame(rafId);
+            endTime = Date.now();
+            $('#stop-me').disabled = true;
+            document.title = ORIGINAL_DOC_TITLE;
+
+            toggleActivateRecordButton();
+
+            console.log('frames captured: ' + frames.length + ' => ' +  ((endTime - startTime) / 1000) + 's video');
+
+            embedVideoPreview();
+        };
+
+        function embedVideoPreview(opt_url) {
+            var url = opt_url || null;
+            var video = $('#video-preview video') || null;
+            var downloadLink = $('#video-preview a[download]') || null;
+
+            if (!video) {
+                video = document.createElement('video');
+                video.autoplay = true;
+                video.controls = true;
+                video.loop = true;
+                video.style.width = canvas.width + 'px';
+                video.style.height = canvas.height + 'px';
+                $('#video-preview').appendChild(video);
+
+                downloadLink = document.createElement('a');
+                downloadLink.download = 'capture.webm';
+                downloadLink.textContent = '[ download video ]';
+                downloadLink.title = 'Download your .webm video';
+                var p = document.createElement('p');
+                p.appendChild(downloadLink);
+
+                $('#video-preview').appendChild(p);
+
+            } else {
+                window.URL.revokeObjectURL(video.src);
+            }
+
+
+            if (!url) {
+                var webmBlob = Whammy.fromImageArray(frames, 50);
+                url = window.URL.createObjectURL(webmBlob);
+            }
+
+            video.src = url;
+            downloadLink.href = url;
+        }
+
+        function initEvents() {
+            $('#camera-me').addEventListener('click', turnOnCamera);
+            $('#record-me').addEventListener('click', record);
+            $('#stop-me').addEventListener('click', stop);
+        }
+
+        initEvents();
+
+        exports.$ = $;
+
+    })(window);
+
+</script>
+
+<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+<script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
