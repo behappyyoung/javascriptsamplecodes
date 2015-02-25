@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <title>HTML5 - Video Stream </title>
 
-
 </head>
-<body>
+<body >
+<div ng-controller="myController">
+    <video width="600" id="myVideo" controls autoplay loop preload="auto" >
 
-<video width="600"  controls autoplay loop preload="auto" >
+        <source src="video/preview.mp4" type="video/mp4" />
 
-    <source src="video/preview.mp4" type="video/mp4" />
+        <em>Sorry, your browser doesn't support HTML5 video.</em>
 
-    <em>Sorry, your browser doesn't support HTML5 video.</em>
+    </video>
+    <div>  Current Frame Time : <span id="curtime"> </span> </div>
 
-</video>
+</div>
+<script>
+    (function(){
+        var v = document.getElementById("myVideo");
+        v.addEventListener('timeupdate', function(){
+            document.getElementById('curtime').innerHTML = v.currentTime;
+console.log(v.currentTime);
+            if(v.currentTime > 4){
+                v.pause();
+            }
+        }, false);
+    })();
+
+</script>
 
 <script type="text/javascript" src="../showFile.js"> </script>
+
+
 </body>
 </html>
