@@ -65,7 +65,9 @@
         		linecount = (linecount + 1) % linesize;
         		marker.setPosition(lineCoordinates[linecount]);
 
-			$('#progress').css('width', percentage);
+
+
+            $('#progress').css('width', percentage);
 			$('#log-time').html(timeCoordinates[trackcount][1]);
 			$('#log-screen').html(trackcount + ' ' + linecount + lineCoordinates[linecount]+timeCoordinates[trackcount][1]);
 			

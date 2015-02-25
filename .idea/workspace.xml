@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIs/Google/map_svg.html" afterPath="$PROJECT_DIR$/APIs/Google/map_svg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Html5-Media/video-stream.html" afterPath="$PROJECT_DIR$/Html5-Media/video-stream.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIs/Google/map_moving.html" afterPath="$PROJECT_DIR$/APIs/Google/map_moving.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
@@ -61,8 +60,8 @@
       <file leaf-file-name="map_moving.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APIs/Google/map_moving.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7534984" vertical-offset="2190" max-vertical-offset="4301">
-              <caret line="170" column="10" selection-start-line="170" selection-start-column="10" selection-end-line="170" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.7900969" vertical-offset="1323" max-vertical-offset="4335">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -852,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/APIs/Google/map_moving.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7534984" vertical-offset="2190" max-vertical-offset="4301">
-          <caret line="170" column="10" selection-start-line="170" selection-start-column="10" selection-end-line="170" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.7900969" vertical-offset="1323" max-vertical-offset="4335">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding />
         </state>
       </provider>
