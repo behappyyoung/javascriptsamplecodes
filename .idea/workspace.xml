@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIs/Google/map_moving.html" afterPath="$PROJECT_DIR$/APIs/Google/map_moving.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,8 +59,8 @@
       <file leaf-file-name="map_moving.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APIs/Google/map_moving.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7900969" vertical-offset="1323" max-vertical-offset="4335">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4790097" vertical-offset="660" max-vertical-offset="4250">
+              <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -200,8 +199,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP5.3" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="75" />
-    <option name="y" value="77" />
+    <option name="x" value="98" />
+    <option name="y" value="78" />
     <option name="width" value="1399" />
     <option name="height" value="1121" />
   </component>
@@ -417,7 +416,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="77" width="1399" height="1121" extended-state="0" />
+    <frame x="98" y="78" width="1399" height="1121" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -851,8 +850,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/APIs/Google/map_moving.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7900969" vertical-offset="1323" max-vertical-offset="4335">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4790097" vertical-offset="660" max-vertical-offset="4250">
+          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
           <folding />
         </state>
       </provider>

@@ -63,9 +63,9 @@
             
         		linecount = (linecount + 1) % linesize;
         		linecount = (linecount + 1) % linesize;
-        		marker.setPosition(lineCoordinates[linecount]);
-
-
+            
+        	// move marker to next position
+            marker.setPosition(lineCoordinates[linecount]);
 
             $('#progress').css('width', percentage);
 			$('#log-time').html(timeCoordinates[trackcount][1]);
@@ -88,11 +88,6 @@
         
         var myinterval = null;
         function initialize() {
-
-            console.log('here');
-            console.log(lineCoordinates);
-            console.log(linecount);
-            console.log(latcenter +'/'+ longcenter);
 
             var mapOptions = {
                 center: new google.maps.LatLng(latcenter, longcenter),
