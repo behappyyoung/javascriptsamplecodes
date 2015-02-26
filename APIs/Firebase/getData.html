@@ -14,8 +14,12 @@
     //CREATE A FIREBASE
     var fb = new Firebase("https://intense-torch-6195.firebaseio.com");
 
+    fb.on("value", function(dataSnapshot){
+                console.log(dataSnapshot.val());
+            }
+    );
     //LISTEN FOR REALTIME CHANGES
-    fb.child('Testing').child('jstesting').on("value", function(data) {
+    fb.child('Testing/jstesting').on("value", function(data) {
         var name = data.val() ? data.val().name : "";
         document.getElementById('name').innerHTML = name;
         var company = data.val() ? data.val().company : "";

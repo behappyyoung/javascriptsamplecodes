@@ -21,7 +21,7 @@
         var company = document.getElementById('company').value;
 
         //SAVE DATA
-        fb.child('Testing').set({'jstesting': { name: name, company: company }});
+        fb.child('Testing/jstesting').set({ name: name, company: company });
     }
 
 
