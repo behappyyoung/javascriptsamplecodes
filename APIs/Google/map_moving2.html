@@ -22,7 +22,10 @@
     box-shadow: 2px 2px 5px #333333;
 
 }
-
+.panel-body{
+    width: 70%;
+    margin: auto;
+}
 .shadowbox{
     -moz-box-shadow:    inset 0 0 15px #57686d;
     -webkit-box-shadow: inset 0 0 15px #57686d;
@@ -61,11 +64,29 @@
         	trackcount = (trackcount + 1) % tracksize;
             var percentage = (trackcount / tracksize)*100 + '%';
             
-        		linecount = (linecount + 1) % linesize;
-        		linecount = (linecount + 1) % linesize;
+        		linecount = (linecount + 2) % linesize;
 
         	// move marker to next position
             marker.setPosition(lineCoordinates[linecount]);
+
+            // Create the polyline and add the symbol to it via the 'icons' property.
+            var currentcoord = lineCoordinates.slice(0, linecount-1);
+
+
+            if(linecount > 300){
+                stopAnimation();
+                exit();
+            }
+            line = new google.maps.Polyline({
+                path: currentcoord,
+                icons: [{
+                    offset: '100%'
+                }],
+                strokeColor: 'blue',
+                map: map
+            });
+
+            console.log(linecount +  currentcoord.length +'/'+ lineCoordinates.length);
 
             $('#progress').css('width', percentage);
 			$('#log-time').html(timeCoordinates[trackcount][1]);
@@ -95,7 +116,7 @@
                 mapTypeId: google.maps.MapTypeId.TERRAIN
             };
 
-            var map = new google.maps.Map(document.getElementById('map-canvas'),
+            map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
 
             marker = new google.maps.Marker({
@@ -111,7 +132,7 @@
                 icons: [{
                     offset: '100%'
                 }],
-                strokeColor: 'blue',
+                strokeColor: 'red',
                 map: map
             });
 
@@ -152,6 +173,7 @@
 
         function stopAnimation(){
             window.clearInterval(myinterval);
+            initialize();
             myinterval=null;
         }
 
@@ -224,7 +246,7 @@
 <script>
 
 $('#starttracking').on('click', function(e){
-	animateCircle(200);
+	animateCircle(100);
     $(this).removeClass('shadow');
     $(this).addClass('shadowbox');
     $('#stoptracking').removeClass('shadowbox');
