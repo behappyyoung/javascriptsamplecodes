@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIs/Google/map_moving.html" afterPath="$PROJECT_DIR$/APIs/Google/map_moving.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;" />
     <ignored path="javascriptsamplecodes.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -372,8 +369,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/APIs/Firebase" />
       <recent name="$PROJECT_DIR$/APIs/PubNub" />
+      <recent name="$PROJECT_DIR$/APIs/Firebase" />
       <recent name="$PROJECT_DIR$/APIs/Google" />
       <recent name="$PROJECT_DIR$/Concept" />
       <recent name="$PROJECT_DIR$/APIs" />
