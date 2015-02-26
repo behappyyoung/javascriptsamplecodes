@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js" ></script>
+
+</head>
+<body >
+    <div >
+        <label> Name </label> <input id="name" /><label>  Company  </label> <input id="company" />
+        <button onclick="publish()" > publish </button>
+    </div>
+</body>
+<script>
+    //CREATE A FIREBASE
+    var fb = new Firebase("https://intense-torch-6195.firebaseio.com");
+
+    function publish(){
+        var name = document.getElementById('name').value;
+        var company = document.getElementById('company').value;
+
+        //SAVE DATA
+        fb.child('Testing').set({'jstesting': { name: name, company: company }});
+    }
+
+
+</script>
+
+
+
+</html>

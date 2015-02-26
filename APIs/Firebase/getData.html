@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js" ></script>
+
+</head>
+<body >
+    <div > Name : <span id="name"></span>       </div>
+    <div > Comapany : <span id="company"></span>       </div>
+</body>
+<script>
+    //CREATE A FIREBASE
+    var fb = new Firebase("https://intense-torch-6195.firebaseio.com");
+
+    //LISTEN FOR REALTIME CHANGES
+    fb.child('Testing').child('jstesting').on("value", function(data) {
+        var name = data.val() ? data.val().name : "";
+        document.getElementById('name').innerHTML = name;
+        var company = data.val() ? data.val().company : "";
+        document.getElementById('company').innerHTML = company;
+    });
+
+</script>
+
+
+
+</html>

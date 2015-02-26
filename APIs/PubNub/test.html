@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Getting Started With PubNub</title>
+</head>
+<body>
+<script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+<script charset="utf-8">
+
+        var PUBNUB_demo = PUBNUB.init({
+            publish_key: 'pub-c-6c6b1294-7fdd-4f33-aec4-41217a6d0b6c',
+            subscribe_key: 'sub-c-cf0e18e6-bd43-11e4-861a-0619f8945a4f'
+        });
+
+        PUBNUB_demo.subscribe({
+            channel: 'demo_tutorial',
+            message: function(m){console.log(m)},
+            connect : publish
+        });
+
+        function publish() {
+            PUBNUB_demo.publish({
+                channel: 'demo_tutorial',
+                message: {"text":"test Hey!"}
+            });
+        }
+
+
+</script>
+</body>
+</html>
