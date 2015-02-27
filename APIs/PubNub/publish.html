@@ -11,21 +11,24 @@
             subscribe_key: 'sub-c-cf0e18e6-bd43-11e4-861a-0619f8945a4f'
         });
 
-        function publish() {
-            var sendText = document.getElementById('text').value;
+        function publish(dom) {
+            var sendText = dom.value;
             console.log(sendText);
 
             PUBNUB_demo.publish({
                 channel: 'my_channel',
-                message: {"text":sendText}
+                message:  sendText
             });
         }
 
 
 </script>
-</body>
-<input name="text" id="text" />
-<button onclick="publish()" > publish </button>
+
+Publish Text : <input name="text" id="text"  style="width:500px;"/>
+<button onclick="publish(this)" > publish </button> <br /> <br />
+
+Live Publish Text : <input name="ltext" onchange="publish(this)" style="width:90%;" />
 
 <script type="text/javascript" src="../../showHtml.js"> </script>
+</body>
 </html>

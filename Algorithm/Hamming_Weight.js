@@ -36,7 +36,7 @@ function shiftroop(x){
         resultText += ' count : ' + count +' - x : '+ x.toString(2) +'<br />';
     }
 
-    return count;
+    return count-1;
 }
 
 /* 64 bits not working with javascript ...
@@ -78,12 +78,13 @@ function popcount_8(x) {
 var resultText = '<br /><br />';
 
 var result = 0;
-var testintArray = [1 , 32, 55 ,5645646, 59445959, 2147483647, 68719476735];
+var testintArray = [1 , 32, 55 ,5645646, 59445959, 2147483647, 3147483647, 4294967295, 4294967296];
 
 for(var i=0; i<testintArray.length; i++){
     resultText += 'test int : ' + testintArray[i] + ' == ' + testintArray[i].toString(2) + '<br /><br />';
     if(testintArray[i] > 2147483647){
         result = shiftroop(testintArray[i]);
+        result = popcount_64(testintArray[i]);
     }else{
         result = shiftroop(testintArray[i]);
         result = popcount_32(testintArray[i]);
