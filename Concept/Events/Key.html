@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+Press any Key  <p />
+<div>keyup :  <span id="output-keyup"> </span> </div>
+<div>keydown :  <span id="output-keydown"> </span> </div>
+<div>keypress :  <span id="output-keypress"> </span> </div>
+<script>
+
+    function GetChar (event){
+        var output = document.getElementById('output-'+event.type);
+        output.innerHTML =  "event : "+event.type+" / key which : " +event.which +" / The key code is: " + event.keyCode ;
+    }
+
+    window.onkeydown = GetChar;
+    window.onkeyup = GetChar;
+    window.onkeypress = GetChar;
+
+</script>
+
+</body>
+</html>
