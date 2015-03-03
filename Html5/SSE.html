@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Server Sent Events [SSE] Test </title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    var source = new EventSource("sse_test.php");
+    source.onmessage = function(event) {
+        document.getElementById("result").innerHTML += event.data + "<br>";
+    };
+</script>
+
+<script type="text/javascript" src="../showHtml.js"> </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+CACHE MANIFEST
+main.css
+main.jpg
+
+FALLBACK:
+/html/ offline.html

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Web Workers</title>
+</head>
+<body>
+
+<p> From workers :  <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+
+<script>
+    var w;
+
+    function startWorker() {
+        if(typeof(Worker) !== "undefined") {
+            if(typeof(w) == "undefined") {
+                w = new Worker("Web_Worker.js");
+            }
+            w.onmessage = function(event) {
+                document.getElementById("result").innerHTML = event.data;
+            };
+        } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+        }
+    }
+
+    function stopWorker() {
+        w.terminate();
+        w = undefined;
+    }
+</script>
+
+<script type="text/javascript" src="../showHtml.js"> </script>
+<script type="text/javascript" src="../showJs.js"> </script>
+
+</body>
+</html>
