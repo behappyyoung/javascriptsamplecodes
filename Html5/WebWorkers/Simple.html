@@ -12,14 +12,14 @@
 
 
 <script>
-    var w;
+    var myworkerw;
 
     function startWorker() {
         if(typeof(Worker) !== "undefined") {
-            if(typeof(w) == "undefined") {
-                w = new Worker("Web_Worker.js");
+            if(typeof(myworkerw) == "undefined") {
+                myworkerw = new Worker("Simple.js");
             }
-            w.onmessage = function(event) {
+            myworkerw.onmessage = function(event) {
                 document.getElementById("result").innerHTML = event.data;
             };
         } else {
@@ -28,13 +28,13 @@
     }
 
     function stopWorker() {
-        w.terminate();
-        w = undefined;
+        myworkerw.terminate();
+        myworkerw = undefined;
     }
 </script>
 
-<script type="text/javascript" src="../showHtml.js"> </script>
-<script type="text/javascript" src="../showJs.js"> </script>
+<script type="text/javascript" src="../../showHtml.js"> </script>
+<script type="text/javascript" src="../../showJs.js"> </script>
 
 </body>
 </html>

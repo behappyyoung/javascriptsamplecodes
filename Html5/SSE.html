@@ -13,18 +13,20 @@
 <button onclick="killSource();">Kill</button>
 <script>
 
-    var source = new EventSource("sse_test.php");
+    var source = new EventSource("sse_test.php?test=test");
 
     function showMessage(data) {
-        document.getElementById("result").innerHTML += data + "<br>";
+        document.getElementById("result").innerHTML += data+"<br>";
     }
 
     source.onopen = function(event){
         document.getElementById("status").innerHTML = 'started';
+        window.testevent = event;
     };
 
     source.onmessage = function(event) {
-        showMessage(event.data)
+        showMessage(event.data);
+
     };
 
     source.onerror = function(event){

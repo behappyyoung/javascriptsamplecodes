@@ -13,7 +13,7 @@
 <button onclick="killSource();">Kill</button>
 <script>
 
-    var source = new EventSource("sse_test.php");   // auto open ?
+    var source = new EventSource("sse_test.php?test=test");   // auto open ?
 
     function showMessage(data) {
         document.getElementById("result").innerHTML += data + "<br>";
