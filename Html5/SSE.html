@@ -5,13 +5,49 @@
     <title>Server Sent Events [SSE] Test </title>
 </head>
 <body>
+<div id="status"></div>
 <div id="result"></div>
+
+<button onclick="startSource();">Start</button>
+<button onclick="stopSource();">Pause</button>
+<button onclick="killSource();">Kill</button>
 <script>
+
     var source = new EventSource("sse_test.php");
-    source.onmessage = function(event) {
-        document.getElementById("result").innerHTML += event.data + "<br>";
+
+    function showMessage(data) {
+        document.getElementById("result").innerHTML += data + "<br>";
+    }
+
+    source.onopen = function(event){
+        document.getElementById("status").innerHTML = 'started';
     };
+
+    source.onmessage = function(event) {
+        showMessage(event.data)
+    };
+
+    source.onerror = function(event){
+//        document.getElementById("status").innerHTML = 'error';
+    };
+
+
+    function stopSource(){
+        source.onmessage = null;
+        document.getElementById("status").innerHTML = 'stopped';
+    };
+    function startSource(){
+        source.onmessage = function(event) {
+            showMessage(event.data)
+        };
+    };
+    function killSource(){
+        source.close();
+        document.getElementById("status").innerHTML = 'killed';
+    }
+
 </script>
+
 
 <script type="text/javascript" src="../showHtml.js"> </script>
 

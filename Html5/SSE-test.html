@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Server Sent Events [SSE] Test </title>
+</head>
+<body>
+<div id="status"></div>
+<div id="result"></div>
+
+<button onclick="startSource();">Start</button>
+<button onclick="stopSource();">Pause</button>
+<button onclick="killSource();">Kill</button>
+<script>
+
+    var source = new EventSource("sse_test.php");   // auto open ?
+
+    function showMessage(data) {
+        document.getElementById("result").innerHTML += data + "<br>";
+    }
+
+
+</script>
+
+
+<script type="text/javascript" src="../showHtml.js"> </script>
+
+</body>
+</html>
