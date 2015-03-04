@@ -20,6 +20,7 @@ function processData(input) {
             return;
         }
         result =  ( mask32 ^ curint)>>>0 ;                  // make unsigned integer...
+        //result = ( (curint * -1)-1 ) >>> 0;           // same result
         console.log( (result).toString());
     }
 
