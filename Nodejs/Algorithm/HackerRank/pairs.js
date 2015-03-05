@@ -37,8 +37,7 @@ function processDatawithSort(input) {                   // faster & save time  i
     var NK = lines.shift().split(' ');                       // Testing Numbers and  difference
     var N = parseInt(NK.shift());
     var K = parseInt(NK.shift());
-    var numberArray = lines.shift().split(' ').splice(0, N).map(parse_fun).sort(sortNumber);
-    console.log(numberArray);
+    var numberArray = lines.shift().split(' ').splice(0, N).map(parse_fun).sort(sortNumber);    // number array make it integer and sorted
     var count = 0;
     var diff;
     for(var i=0; i<N-1; i++){
