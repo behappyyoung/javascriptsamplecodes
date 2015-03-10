@@ -26,7 +26,23 @@ Chat Output
 </div>
 
 <script>(function(){
-    var box = PUBNUB.$('box'), input = PUBNUB.$('input'), channel = 'youngpark-chat';
+    var box = PUBNUB.$('box'), input = PUBNUB.$('input'), channel = 'youngpark-personal-chat';
+
+
+    PUBNUB.history({
+        channel: channel,
+        count: '3',
+        callback: function(history){
+            var preObj = history[0];
+            var preMessage='<br />';
+            var curMessage = '';
+            for(var i=2 ; i>=0; i--){
+                curMessage = (preObj[i]!=undefined) ? preObj[i] : ' - ';
+                preMessage += curMessage + '<br />';
+            }
+            box.innerHTML = preMessage;
+        }
+    });
 
     PUBNUB.subscribe({
         channel : channel,

@@ -12,7 +12,7 @@
         });
 
         function publish(dom) {
-            var sendText = dom.value;
+            var sendText = dom.value + ' / on  ' + Date();
             console.log(sendText);
 
             PUBNUB_demo.publish({

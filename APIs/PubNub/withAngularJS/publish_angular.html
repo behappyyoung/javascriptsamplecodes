@@ -1,18 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title> PubNub with AngularJs </title>
-    <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="bower_components/pubnub-angular/lib/pubnub-angular.js"></script>
+<html ng-app="myApp">
+<head>
+    <title>Getting Started With PubNub</title>
 </head>
-<body ng-app="PubNubAngularApp">
-<div ng-controller="JoinCtrl">
+<body ng-controller="myController">
+<script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
-</div>
 
-<script src="app.js"></script>
+
+Live Publish Text : <input ng-model="pText" ng-change="ngpublish()" style="width:90%;" />
+<h1>{{pText}}</h1>
 </body>
+
+<script charset="utf-8">
+
+    var PUBNUB_demo = PUBNUB.init({
+        publish_key: 'pub-c-6c6b1294-7fdd-4f33-aec4-41217a6d0b6c',
+        subscribe_key: 'sub-c-cf0e18e6-bd43-11e4-861a-0619f8945a4f'
+    });
+
+    angular.module('myApp', []).controller('myController', function($scope){
+        $scope.ngpublish = function(){
+            if($scope.pText){
+                console.log($scope.pText);
+                PUBNUB_demo.publish({
+                    channel: 'my_channel',
+                    message:  $scope.pText
+                });
+            }
+        }
+
+
+    });
+
+</script>
+<script type="text/javascript" src="../../showHtml.js"> </script>
+
+
 
 </html>
