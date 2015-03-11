@@ -11,10 +11,18 @@
 
         PUBNUB_my.history({
             channel: 'my_channel',
-            count: '3',
+            count: '10',
             reverse: true,
             callback: function(history){
-                document.getElementById('my_channel').innerHTML = JSON.stringify(history);
+                console.log(history);
+                var preObj = history[0];
+                var preMessage='<br />';
+                var curMessage = '';
+                for(var i=9 ; i>=0; i--){
+                    curMessage = (preObj[i]!=undefined) ? preObj[i] : ' - ';
+                    preMessage += '   ' + i + ' /  ' + curMessage + '<br />';
+                }
+                document.getElementById('my_channel').innerHTML = preMessage;
             }
         });
 
