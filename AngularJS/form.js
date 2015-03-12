@@ -1,4 +1,5 @@
-function myController($scope) {
+angular.module('formApp', [])
+    .controller('myController', function($scope) {
     $scope.master = {};
 
     $scope.update = function(user) {
@@ -10,4 +11,4 @@ function myController($scope) {
     };
 
     $scope.reset();
-}
+});

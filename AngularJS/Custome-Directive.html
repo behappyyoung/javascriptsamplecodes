@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+    <title>Custom Directive</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="Controller">
+        <div>Custom Direcitve test</div>
+        <div custom-directive></div>
+        <div data-cust-directive></div>
+    </div>
+<script>
+    angular.module('myApp', [])
+            .controller('Controller', ['$scope', function($scope) {
+                $scope.customer = {
+                    name: 'Young',
+                    address: '375 Grendale'
+                };
+            }])
+            .directive('customDirective', function() {
+                return {
+                    template: 'Name: {{customer.name}} Address: {{customer.address}}'
+                };
+            })
+            .directive('custDirective', function() {
+                return {
+                    template: 'other Directive : Again Name: {{customer.name}} Address: {{customer.address}}'
+                };
+            });
+</script>
+</body>
+</html>
