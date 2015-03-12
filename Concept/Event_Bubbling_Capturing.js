@@ -13,5 +13,5 @@ function bubble() {
 
 for (var i = 0; i < divs.length; i++) {
     divs[i].addEventListener('click', capture, true);
-    divs[i].addEventListener('click', bubble, false);
+    divs[i].addEventListener('click', bubble, false);   // == divs[i].addEventListener('click', bubble); default
 }
