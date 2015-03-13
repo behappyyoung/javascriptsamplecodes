@@ -1,8 +1,8 @@
 /**
  * Created by young on 5/30/14.
  */
-angular.module('myApp', [])
-    .controller('myController', function($scope) {
+angular.module('bindApp', [])
+    .controller('bindController', function($scope) {
         $scope.yourName = 'young';
         var updateClock = function() {
             $scope.clock = new Date();

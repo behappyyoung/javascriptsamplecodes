@@ -1,5 +1,5 @@
 angular.module('formApp', [])
-    .controller('myController', function($scope) {
+    .controller('formController', function($scope) {
     $scope.master = {};
 
     $scope.update = function(user) {
