@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb44b07d-3d18-4a2e-8afc-81b2d4e31813" name="Default" comment="update&#10;">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularJS/Custome-Directive.html" afterPath="$PROJECT_DIR$/AngularJS/Directives/Custome-Directive.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularJS/DirectiveCollections.html" afterPath="$PROJECT_DIR$/AngularJS/Directives/DirectiveCollections.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularJS/basics_ngBind.html" afterPath="$PROJECT_DIR$/AngularJS/Directives/basics_ngBind.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularJS/basics_ngBind.js" afterPath="$PROJECT_DIR$/AngularJS/Directives/basics_ngBind.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularJS/ngClick-ngClass.html" afterPath="$PROJECT_DIR$/AngularJS/Directives/ngClick-ngClass.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularJS/ngGrid.html" afterPath="$PROJECT_DIR$/AngularJS/Directives/ngGrid.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularJS/ngRepeat.html" afterPath="$PROJECT_DIR$/AngularJS/Directives/ngRepeat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularJS/Directives/ngBind.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularJS/Directives/basics_ngBind.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularJS/Directives/basics_ngBind.html" afterPath="$PROJECT_DIR$/AngularJS/Directives/ngBind.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIs/PubNub/examples/videosync" afterPath="$PROJECT_DIR$/APIs/PubNub/examples/videosync" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.html" afterPath="$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.js" afterPath="$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJS/Directives/DirectiveCollections.html" afterPath="$PROJECT_DIR$/AngularJS/Directives/DirectiveCollections.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javascriptsamplecodes.iws" />
@@ -39,8 +34,28 @@
       <file leaf-file-name="DirectiveCollections.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularJS/Directives/DirectiveCollections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="884">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="935">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Services.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AngularJS/Services.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25551102" vertical-offset="0" max-vertical-offset="998">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ngCookies.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/ngCookies.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="969">
+              <caret line="3" column="87" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -56,11 +71,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event_Bubbling_Capturing.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Event_Bubbling_Capturing.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13627255" vertical-offset="0" max-vertical-offset="998">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="850">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ngBind.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/Directives/ngBind.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="459">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ngBind.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularJS/Directives/ngBind.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -96,46 +131,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/route/routes.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1207">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/ajax.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="680">
-              <caret line="3" column="96" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="96" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ngCookies.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/ngCookies.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="969">
-              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ngView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/route/ngView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-              <caret line="6" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -154,11 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Html5/Snake_example.js" />
-        <option value="$PROJECT_DIR$/APIs/PubNub/examples/videosync/index.html" />
-        <option value="$PROJECT_DIR$/Nodejs/showfiles.js" />
-        <option value="$PROJECT_DIR$/Html5/Web_Worker.js" />
-        <option value="$PROJECT_DIR$/Html5/Application_Cashe.html" />
         <option value="$PROJECT_DIR$/Html5/test.appcache" />
         <option value="$PROJECT_DIR$/Html5/offline.html" />
         <option value="$PROJECT_DIR$/Html5/Application_Cache/main.css" />
@@ -202,9 +192,14 @@
         <option value="$PROJECT_DIR$/AngularJS/ngCookies.html" />
         <option value="$PROJECT_DIR$/AngularJS/DirectiveCollections.html" />
         <option value="$PROJECT_DIR$/AngularJS/Custome-Directive.html" />
-        <option value="$PROJECT_DIR$/AngularJS/Directives/DirectiveCollections.html" />
         <option value="$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.js" />
         <option value="$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.html" />
+        <option value="$PROJECT_DIR$/AngularJS/Directives/basics_ngBind.html" />
+        <option value="$PROJECT_DIR$/AngularJS/Directives/basics_ngBind.js" />
+        <option value="$PROJECT_DIR$/AngularJS/Directives/ngBind.js" />
+        <option value="$PROJECT_DIR$/AngularJS/Directives/ngBind.html" />
+        <option value="$PROJECT_DIR$/AngularJS/Directives/DirectiveCollections.html" />
+        <option value="$PROJECT_DIR$/AngularJS/Services.html" />
       </list>
     </option>
   </component>
@@ -651,20 +646,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Nodejs/Algorithm/HackerRank/Knapsack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24707031" vertical-offset="291" max-vertical-offset="1343">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nodejs/Algorithm/HackerRank/Max-SubArray.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5683594" vertical-offset="64" max-vertical-offset="1088">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Nodejs/Algorithm/HackerRank/pairs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48535156" vertical-offset="81" max-vertical-offset="1105">
@@ -914,14 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/Directives/basics_ngBind.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1024">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/todo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1024">
@@ -964,26 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/ngCookies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="969">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/ajax.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="680">
           <caret line="3" column="96" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/Directives/Custome-Directive.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="663">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1020,14 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/Directives/DirectiveCollections.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="884">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
@@ -1038,8 +987,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Concept/Event_Bubbling_Capturing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13627255" vertical-offset="0" max-vertical-offset="998">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="850">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/Directives/ngBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/Directives/ngBind.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="459">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/Directives/Custome-Directive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="663">
+          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/Directives/DirectiveCollections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="935">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/ngCookies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="969">
+          <caret line="3" column="87" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/Services.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25551102" vertical-offset="0" max-vertical-offset="998">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>

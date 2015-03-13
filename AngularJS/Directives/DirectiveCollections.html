@@ -3,7 +3,7 @@
 <head>
     <script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
     <style>
-        .main > div { width: 300px;
+        .main > div { width: 400px;
                 height: 50px;
         margin: 10px;}
         .red {
@@ -27,7 +27,10 @@
 <body>
 
 <div ng-controller="myController" class="main">
-    <div ng-init="index=0; " ng-class="classes[index]">Test 1 2 3.    ng-class[index] : {{classes[index]}}</div>
+    <input ng-model="left" placeholder="left" />
+    <input ng-model="right" placeholder="right" />
+    <div> expression | filter  <span  ng-non-bindable> {{ left * right | currency }} </span> : {{ left * right | currency }} </div>
+    <div ng-init="index=0;left=10;right=3.3 " ng-class="classes[index]">Test 1 2 3.    ng-class[index] : {{classes[index]}}</div>
 
 
     <button ng-click="index = (index + 1) % 3;total = total +1" class=""> click to change color [ng-click] </button>

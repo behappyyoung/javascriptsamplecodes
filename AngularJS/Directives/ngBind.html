@@ -1,16 +1,19 @@
 <!doctype html>
-<html ng-app>
+<html >
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
   </head>
-  <body>
-    <div data-ng-controller="Controller">
+  <body ng-app="myApp">
+    <div data-ng-controller="myController">
       <label>Name:</label>
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
       <hr>
       <h1>Hello <span ng-bind="yourName"></span>!</h1>
+
+      <div> <h3>{{clock}}</h3> </div>
     </div>
-    <script src="basics_ngBind.js"></script>
+
+    <script src="ngBind.js"></script>
     <script src="../../showHtml.js"></script>
     <script src="../../showJs.js"></script>
 
