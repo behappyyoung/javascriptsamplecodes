@@ -12,7 +12,7 @@
         PUBNUB_my.history({
             channel: 'my_channel',
             count: '10',
-            reverse: true,
+            reverse: false,
             callback: function(history){
                 console.log(history);
                 var preObj = history[0];

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> PubNub integration with AngularJS Routes </title>
+    <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+    <script src="bower_components/pubnub-angular/lib/pubnub-angular.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav">
+                <li><a href="#Subscribe">Subscribe </a></li>
+                <li><a href="#Publish"> Publish </a></li>
+                <li><a href="#History"> Show History </a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div ng-view></div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    //Define an angular module for our app
+    var myApp = angular.module('myApp', ['ngRoute', 'pubnub.angular.service']);
+    var PUBNUB_my = PUBNUB.init({
+        publish_key: 'pub-c-6c6b1294-7fdd-4f33-aec4-41217a6d0b6c',
+        subscribe_key: 'sub-c-cf0e18e6-bd43-11e4-861a-0619f8945a4f'
+    });
+
+    myApp.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider
+                    .when('/Subscribe', {
+                        templateUrl: 'templates/subscribe.html',
+                        controller: 'subscribeController'
+                    })
+                    .when('/Publish', {
+                        templateUrl: 'templates/publish.html',
+                        controller: 'publishController'
+                    })
+                    .when('/History', {
+                        templateUrl: 'templates/history.html',
+                        controller: 'historyController'
+                    })
+                    .when('/History/:id', {
+                        templateUrl: 'templates/history.html',
+                        controller: 'historyController'
+                    })
+                    .otherwise({
+                        redirectTo: '/History'
+                    });
+        }]);
+
+
+    myApp.controller('subscribeController', function($scope) {
+
+            PUBNUB_my.subscribe({
+                channel: 'my_channel',
+                message : function(m){
+                    console.log(m);
+                    document.getElementById('my_channel').innerHTML = JSON.stringify(m);
+                },
+                presence : function(e){
+                    console.log(e)
+                },
+
+                state : {
+                    name :'young subscriber',
+                    timestamp : new Date()
+                }
+            });
+
+
+    });
+
+
+    myApp.controller('publishController', ['$scope' , function($scope) {
+
+        $scope.ngpublish = function(){
+            if($scope.pText){
+                console.log($scope.pText);
+                PUBNUB_my.publish({
+                    channel: 'my_channel',
+                    message:  $scope.pText
+                });
+            }
+        }
+
+
+    }]);
+
+
+    myApp.controller('historyController', ['$scope' , function($scope) {
+
+
+        PUBNUB_my.history({
+            channel: 'my_channel',
+            count: '10',
+            reverse: false,
+            callback: function(history){
+                console.log(history);
+                var preObj = history[0];
+                var preMessage='<br />';
+                var curMessage = '';
+                for(var i=9 ; i>=0; i--){
+                    curMessage = (preObj[i]!=undefined) ? preObj[i] : ' - ';
+                    preMessage += '   ' + i + ' /  ' + curMessage + '<br />';
+                }
+                document.getElementById('history').innerHTML = preMessage;
+            }
+        });
+
+    }]);
+</script>
+
+</body>
+</html>
