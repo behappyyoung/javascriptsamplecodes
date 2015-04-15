@@ -8,6 +8,9 @@
 <div id="status"></div>
 <div id="result"></div>
 
+<div id="second"Second></div>
+<div id="result2"></div>
+
 <button onclick="startSource();">Start</button>
 <button onclick="stopSource();">Pause</button>
 <button onclick="killSource();">Kill</button>
@@ -16,7 +19,7 @@
     var source = new EventSource("sse_test.php?test=test");
 
     function showMessage(data) {
-        document.getElementById("result").innerHTML += data+"<br>";
+        document.getElementById("result").innerHTML = data+"<br>";
     }
 
     source.onopen = function(event){
@@ -25,7 +28,7 @@
     };
 
     source.onmessage = function(event) {
-        showMessage(event.data);
+        document.getElementById("result").innerHTML = event.data+"<br>";
 
     };
 
@@ -48,6 +51,12 @@
         document.getElementById("status").innerHTML = 'killed';
     }
 
+
+    var source2 = new EventSource("sse_test2.php?test=second");
+
+    source2.onmessage = function(event) {
+        document.getElementById("result2").innerHTML = event.data+"<br>";
+    };
 </script>
 
 

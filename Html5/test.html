@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Server Sent Events [SSE] Test </title>
+</head>
+<body>
+<div id="status"></div>
+<div id="result"></div>
+
+<script>
+
+    var source = new EventSource("test.php?test=test");
+
+    source.onopen = function(event){
+        document.getElementById("status").innerHTML = 'started';
+        window.testevent = event;
+    };
+
+    source.onmessage = function(event) {
+        document.getElementById("result").innerHTML = event.data+"<br>";
+        console.log(event);
+
+    };
+
+    source.onerror = function(event){
+//        document.getElementById("status").innerHTML = 'error';
+    };
+
+</script>
+
+
+</body>
+</html>
