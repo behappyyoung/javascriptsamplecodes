@@ -55,7 +55,7 @@ function showMaze(currentmaze){
 
 
 function solveMaze(x, y){
-    if (x == endx && y == endy) {                       // reached end
+    if (x == endx && y == endy) {                                    // reached end
         console.log('end');
         pathmaze[y][x] = '*';
         return true;
