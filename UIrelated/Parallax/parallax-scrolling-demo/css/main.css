@@ -126,10 +126,10 @@ hr {
 
 nav#primary {
 	z-index: 5;
-	position: fixed;
-	top: 50%;
+	position: absolute;
+	
 	right: 16px;
-	margin-top: -40px;
+	
 }
 nav#primary li {
 	position: relative;
@@ -320,10 +320,10 @@ nav.next-prev {
 
 .slide--1, .slide--2, .slide--3, .slide--4{
     position: absolute;
+    opacity: 0.8;
 }
-
-.slide--2{
-    left: 500px;
+.slide--1 .moving-text, .slide--2 .moving-text, .slide--3 .moving-text, .slide--4 .moving-text{
+    display: none;
 }
 
 .slide--1 .slide__title, .slide--2 .slide__title {
@@ -367,29 +367,80 @@ body.viewing-slide-10.going-down .cip__cloud-divider {
     animation: slide-right-to-right 500ms;
 }
 
-/* young */
-.slide--1, .slide--2, .slide--3, .slide--4 {
-    opacity: 0.3;
-
+.slide--1{
+    background-color: #3BB0C9;
+}
+.slide--1.active, .slide--2.active, .slide--3.active{
+    opacity: 1;
+    z-index: 10;
 }
 
-.slide--1.active{
+.slide--1.active, .slide--2.active, .slide--3.active{
     opacity: 1;
+    z-index: 10;
+}
+
+.slide--1.active .moving-text{
+
     -webkit-animation: pull-in-slide-1 500ms;
     animation: pull-in-slide-1 500ms;
+ 
+ }
+
+.slide--1 #users-circle{
+    fill: #C8C8C8;
 }
-.slide--2.active{
-    opacity: 1;
+.slide--1 #users{
+    fill: #36A1B7;
+}
+
+.slide--1.active .moving-svg{
+     transition: 1s ease-in-out;
+  -webkit-transform: scale(2) translate(3.3em,5.3em);
+    -moz-transform:scale(2) translate(3.3em,5.3em);
+    -o-transform: scale(2) translate(3.3em,5.3em);
+    -ms-transform:scale(2) translate(3.3em,5.3em);
+    transform: scale(2) translate(3.3em,5.3em);
+ 
+ }
+
+.slide--2.active .moving-text{
+    display: block;
     -webkit-animation: pull-in-slide-2 500ms;
     animation: pull-in-slide-2 500ms;
+ 
+ }
+
+.slide--2.deactive #devices-circle{
+    fill: #C8C8C8;
 }
-.slide--3.active{
-    opacity: 1;
-    -webkit-animation: slide-right-to-right 500ms;
-    animation: slide-right-to-right 500ms;
+.slide--2 #devices-circle{
+    fill: #3BB0C9;
 }
 
 /* animation */
+@-webkit-keyframes make-big {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 100%);
+        transform: translate3d(0, 0, 100%);
+    }
+}
+
+@keyframes make-big {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 200%);
+        transform: translate3d(0, 0, 200%);
+    }
+}
+
 
 @-webkit-keyframes pull-in-slide-1 {
     0% {
@@ -423,8 +474,9 @@ body.viewing-slide-10.going-down .cip__cloud-divider {
     }
 }
 @keyframes push-out-slide-1 {
+    
     0% {
-        -webkit-transform: translate3d(0, 0, 0);
+     -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
     100% {
@@ -435,8 +487,8 @@ body.viewing-slide-10.going-down .cip__cloud-divider {
 
 @-webkit-keyframes pull-in-slide-2 {
     0% {
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(200%, 0, 0);
+        transform: translate3d(200%, 0, 0);
     }
     100% {
         -webkit-transform: translate3d(0, 0, 0);
@@ -446,8 +498,8 @@ body.viewing-slide-10.going-down .cip__cloud-divider {
 
 @keyframes pull-in-slide-2 {
     0% {
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(200%, 0, 0);
+        transform: translate3d(200%, 0, 0);
     }
     100% {
         -webkit-transform: translate3d(0, 0, 0);
@@ -501,3 +553,52 @@ body.viewing-slide-10.going-down .cip__cloud-divider {
         opacity: 0;
     }
 }
+
+                    .before, .parallax-content {
+                        height: 300px;
+                    }
+                    .parallax-main{
+                        border: solid 1px black;
+
+
+                    }
+                    #test{
+                        position: fixed;
+                        top:0;
+                    }
+                    #test2{
+                        position: fixed;
+                        top:0;
+                        left:200px; 
+                    }
+                    .svg-content{
+                         -ms-transform: scale(0.7, 0.7); /* IE 9 */
+                         -webkit-transform: scale(0.7,0.7); /* Safari */
+                        transform: scale(0.7, 0.7);
+                        width: 500px;
+                        height: 500px;
+                        position: absolute;
+                    }
+                    .static-content{
+                          position: relative;
+                            left: 360px;
+                            top: 150px;
+                     }
+                    .svg-content.big-circle{
+                         transform: scale(1.6, 1.6);
+                    }
+                    .svg-user{
+
+                        left: 300px;     
+                    }                   
+                    .svg-devices{
+
+                       left: 200px;
+                        top: 150px;   
+                    }  
+
+                      .svg-apps{
+
+                       left: 400px;
+                        top: 150px;   
+                    }  

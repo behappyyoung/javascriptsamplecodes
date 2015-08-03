@@ -1,9 +1,8 @@
 ﻿<!DOCTYPE html>
-
 <html>
 	
 	<head>
-		<title>The history of aeronautics</title>
+		<title>Parallax</title>
 
 		<meta charset="utf-8" />
 		<meta name="description" content="A parallax scrolling experiment using jQuery" />
@@ -12,21 +11,197 @@
 
 		<script src="js/modernizr.custom.37797.js"></script> 
 		<!-- Grab Google CDN's jQuery. fall back to local if necessary --> 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> 
-		<script>!window.jQuery && document.write('<script src="/js/jquery-1.6.1.min.js"><\/script>')</script>
-		<script src="js/parallax-young.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+
+		<script src="js/jQuery_mousewheel_plugin.js"></script>
+                <script src="js/parallax-young.js"></script>
+                
+                <style>
+
+                </style>
 	</head>
 
 	<body>
+            <svg style="height: 0;width: 0;position: absolute;visiblity: hidden;">
+              
+           <symbol id="shape-users">
+                    <title>users</title>
+                    
+                    <g id="users-all">
+                        <g id="users-circle">
+                              <circle cx="180" cy="180" r="169.6"/>
+                        </g>
+                        
+                          <g id="users">
+                                  <path fill="#36A1B7" d="M179.8,93.1c-32.8,0-59.6,26.7-59.6,59.5s26.7,59.5,59.6,59.5s59.5-26.7,59.5-59.5S212.7,93.1,179.8,93.1z
+                                          "/>
+                                  <g>
+                                          <path fill="#FFFFFF" d="M180.1,153.4c8.3,0,15.5-4.6,19.4-11.3v-2.2c0-1.3-0.9-2.5-2.1-2.8l0,0l-12-3.6v-2.4
+                                                  c1.4-1.3,2.3-3.1,2.5-5.1c1.5-0.3,2.6-1.6,2.6-3.2c0-0.9-0.4-1.7-1-2.3c0.1-0.6,0.2-1.1,0.2-1.7c0-5.4-4.3-9.7-9.7-9.7v0
+                                                  c0,0,0,0,0,0s0,0,0,0v0c-5.4,0-9.7,4.4-9.7,9.7c0,0.6,0.1,1.1,0.2,1.7c-0.6,0.6-1,1.4-1,2.3c0,1.6,1.1,2.9,2.6,3.2
+                                                  c0.2,2,1.1,3.8,2.6,5.1v2.4l-12,3.6l0,0c-1.2,0.4-2.1,1.5-2.1,2.8v1.7C164.3,148.6,171.6,153.4,180.1,153.4z"/>
+                                          <path fill="#FFFFFF" d="M148.7,187c8.3,0,15.5-4.6,19.4-11.3v-2.2c0-1.3-0.9-2.5-2.1-2.8l0,0l-12-3.6v-2.4
+                                                  c1.4-1.3,2.3-3.1,2.5-5.1c1.5-0.3,2.6-1.6,2.6-3.2c0-0.9-0.4-1.7-1-2.3c0.1-0.6,0.2-1.1,0.2-1.7c0-5.4-4.3-9.7-9.7-9.7v0
+                                                  c0,0,0,0,0,0s0,0,0,0v0c-5.4,0-9.7,4.4-9.7,9.7c0,0.6,0.1,1.1,0.2,1.7c-0.6,0.6-1,1.4-1,2.3c0,1.6,1.1,2.9,2.6,3.2
+                                                  c0.2,2,1.1,3.8,2.6,5.1v2.4l-12,3.6l0,0c-1.2,0.4-2.1,1.5-2.1,2.8v1.7C132.8,182.3,140.2,187,148.7,187z"/>
+                                          <path fill="#FFFFFF" d="M211.6,187c8.3,0,15.5-4.6,19.4-11.3v-2.2c0-1.3-0.9-2.5-2.1-2.8l0,0l-12-3.6v-2.4
+                                                  c1.4-1.3,2.3-3.1,2.5-5.1c1.5-0.3,2.6-1.6,2.6-3.2c0-0.9-0.4-1.7-1-2.3c0.1-0.6,0.2-1.1,0.2-1.7c0-5.4-4.3-9.7-9.7-9.7v0
+                                                  c0,0,0,0,0,0s0,0,0,0v0c-5.4,0-9.7,4.4-9.7,9.7c0,0.6,0.1,1.1,0.2,1.7c-0.6,0.6-1,1.4-1,2.3c0,1.6,1.1,2.9,2.6,3.2
+                                                  c0.2,2,1.1,3.8,2.6,5.1v2.4l-12,3.6l0,0c-1.2,0.4-2.1,1.5-2.1,2.8v1.7C195.7,182.3,203.1,187,211.6,187z"/>
+                                  </g>
+                          </g>
+                      </g>
+           </symbol>
+        <symbol>
+            <title>devices</title>
+                <g id="devices-circle">  <circle cx="180" cy="180" r="169.6"/></g>
+                <g id="devices">
+                  
+                        <g>
+                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="100.4802" y1="137.3972" x2="100.4802" y2="230.7335">
+                                        <stop  offset="0" style="stop-color:#3E3A35"/>
+                                        <stop  offset="1" style="stop-color:#1A1612"/>
+                                </linearGradient>
+                                <path fill="url(#SVGID_1_)" d="M68.6,142.4v83.3c0,2.8,2.2,5,5,5h53.3h0.5c2.8,0,5-2.2,5-5v-0.1v-83.3v0.1c0-2.8-2.2-5-5-5H73.6
+                                        C70.8,137.4,68.6,139.6,68.6,142.4z"/>
+                                <path fill="#36A1B7" d="M72.3,147.9v69.4h56.3v-69.4H72.3z"/>
+                                <path opacity="0.3" fill="#FFFFFF" d="M125.3,147.9H72.3v68.9c0,0.2,0,0.5,0.1,0.6C77.4,187.6,102.3,153.3,125.3,147.9z"/>
+                                <path fill="#DBD9D6" d="M108.1,222.1c-1,0-1.9,0.8-1.9,1.9c0,1.1,0.9,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9
+                                        C109.9,222.9,109.1,222.1,108.1,222.1z M92.9,222.1c-1,0-1.9,0.8-1.9,1.9c0,1.1,0.9,1.9,1.9,1.9c1.1,0,1.9-0.8,1.9-1.9
+                                        C94.8,222.9,94,222.1,92.9,222.1z M100.5,221.4c-1.4,0-2.6,1.2-2.6,2.6c0,1.5,1.2,2.6,2.6,2.6c1.4,0,2.6-1.1,2.6-2.6
+                                        C103.1,222.6,101.9,221.4,100.5,221.4z"/>
+                                <path fill="#B6BD00" d="M100.5,144.4c0.7,0,1.3-0.6,1.3-1.3c0-0.7-0.6-1.3-1.3-1.3c-0.7,0-1.3,0.6-1.3,1.3
+                                        C99.2,143.9,99.8,144.4,100.5,144.4z"/>
+                        </g>
+                        <g>
+                                <g id="Layer_1_8_">
 
+                                                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="180.1764" y1="77.6176" x2="180.1764" y2="207.889" gradientTransform="matrix(1 0 0 -1 0 362)">
+                                                <stop  offset="0" style="stop-color:#717377"/>
+                                                <stop  offset="1.200000e-02" style="stop-color:#F3F5F5"/>
+                                                <stop  offset="7.400000e-02" style="stop-color:#DBDCDE"/>
+                                                <stop  offset="0.255" style="stop-color:#CECCCB"/>
+                                                <stop  offset="0.454" style="stop-color:#F3F3F3"/>
+                                                <stop  offset="0.834" style="stop-color:#C1C1C2"/>
+                                                <stop  offset="0.939" style="stop-color:#DEDEDD"/>
+                                                <stop  offset="0.985" style="stop-color:#F1F0F2"/>
+                                                <stop  offset="1" style="stop-color:#75767A"/>
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_2_)" d="M121.4,169.2c-3.4,0-6.1,2.7-6.1,6.1l0,0v78.7c0,3.4,2.7,6.1,6.1,6.1l0,0H239
+                                                c3.4,0,6.1-2.7,6.1-6.1l0,0v-78.7c0-3.4-2.7-6.1-6.1-6.1l0,0H121.4z"/>
+
+                                                <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="180.2006" y1="227.5233" x2="180.2006" y2="89.3107" gradientTransform="matrix(1 0 0 -1 0 362)">
+                                                <stop  offset="0" style="stop-color:#C7C7C8"/>
+                                                <stop  offset="1" style="stop-color:#E4E4E4"/>
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_3_)" d="M121,168.8c-3.4,0-6.2,2.8-6.2,6.2l0,0v79.3c0,3.4,2.8,6.2,6.2,6.2l0,0h118.4
+                                                c3.4,0,6.2-2.8,6.2-6.2l0,0V175c0-3.4-2.8-6.2-6.2-6.2l0,0H121z"/>
+                                        <g>
+                                                <path fill="#010101" fill-opacity="0" stroke="#D6D5D5" stroke-width="0.3275" d="M239.4,168.8c3.4,0,6.2,2.8,6.2,6.2v79.3
+                                                        c0,3.4-2.8,6.2-6.2,6.2H121c-3.4,0-6.2-2.8-6.2-6.2V175c0-3.4,2.8-6.2,6.2-6.2H239.4z"/>
+                                                <path fill="#3E3E3D" d="M238.7,251.4l0-77.4H120.6v77.4H238.7z M239.1,173.7v78.1h-119v-78.1H239.1z"/>
+                                                <path fill="#4FB7CB" d="M238.7,174l0,77.4H120.6V174H238.7z"/>
+                                        </g>
+                                        <path fill="#B6BD00" d="M182.5,171.7c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S182.5,171.1,182.5,171.7"/>
+                                        <path fill="#DCD9D6" d="M93.5,259.5h174.2V257H93.5V259.5z"/>
+
+                                                <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="180.6047" y1="102.4539" x2="180.6047" y2="100.3684" gradientTransform="matrix(1 0 0 -1 0 362)">
+                                                <stop  offset="0" style="stop-color:#98999E"/>
+                                                <stop  offset="1" style="stop-color:#6D6D70"/>
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_4_)" d="M93.5,259.5c0,0,3,2,7.4,2l0,0h159c4.1,0,7.8-2,7.8-2l0,0H93.5z"/>
+                                </g>
+                                <path opacity="0.2" fill="#FFFFFF" d="M239.2,173.7H121.1c-0.5,0-0.9,0.5-0.9,1v76.4c0,0.3,0.1,0.5,0.3,0.7
+                                        C142.4,205.4,187.3,173.7,239.2,173.7z"/>
+                        </g>
+                        <g>
+                                <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="219.3131" y1="219.4563" x2="219.3131" y2="289.6996">
+                                        <stop  offset="0" style="stop-color:#3E3A35"/>
+                                        <stop  offset="1" style="stop-color:#1A1612"/>
+                                </linearGradient>
+                                <path fill="url(#SVGID_5_)" d="M232.5,219.5h-26.3c-1.9,0-3.4,1.5-3.4,3.4v63.3c0,0,0,0,0,0c0,1.9,1.5,3.4,3.4,3.4H232l0,0
+                                        c0.2,0,0.3,0,0.5,0c1.9,0,3.4-1.5,3.4-3.4l0,0h0v-63.4C235.9,221,234.3,219.5,232.5,219.5z"/>
+                                <path fill="#A5C6D2" d="M204.8,228.4v50.8h29v-50.8H204.8z"/>
+                                <path opacity="0.3" fill="#FFFFFF" d="M233.8,228.4h-29v50.8C204.8,279.2,213,238.1,233.8,228.4z"/>
+                                <g>
+                                        <g>
+                                                <path fill="#B6BD00" d="M216.7,225.5c0.4,0,0.7-0.3,0.7-0.7c0-0.4-0.3-0.7-0.7-0.7c-0.4,0-0.7,0.3-0.7,0.7
+                                                        C216,225.2,216.3,225.5,216.7,225.5z"/>
+                                        </g>
+                                        <path fill="#B5BE34" d="M221.9,224.1h-3c-0.4,0-0.7,0.3-0.7,0.7c0,0.4,0.3,0.7,0.7,0.7h3c0.4,0,0.7-0.3,0.7-0.7
+                                                C222.6,224.5,222.3,224.1,221.9,224.1z"/>
+                                </g>
+                                <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="219.3131" y1="281.7159" x2="219.3131" y2="287.3664">
+                                        <stop  offset="0" style="stop-color:#65666A"/>
+                                        <stop  offset="1" style="stop-color:#505155"/>
+                                </linearGradient>
+                                <circle fill="url(#SVGID_6_)" cx="219.3" cy="284.5" r="2.8"/>
+                        </g>
+                    
+                </g>
+                <circle fill="none" stroke="#343434" stroke-width="3.0563" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="0.4366,10.9155" cx="179.8" cy="180.3" r="168.8"/>               
+
+        </symbol>
+                        <symbol>
+                        <title>apps</title>
+                        <g id="apps">
+                        <circle fill="#B5BE34" cx="180" cy="180" r="169.6"/>
+                        <path fill="#65666A" d="M156.9,216.2c0,4.9-4,8.9-8.9,8.9h-36.7c-4.9,0-8.9-4-8.9-8.9v-36.7c0-4.9,4-8.9,8.9-8.9H148
+	                        c4.9,0,8.9,4,8.9,8.9V216.2z"/>
+                        <path fill="#65666A" d="M219.9,216.2c0,4.9-4,8.9-8.9,8.9h-36.7c-4.9,0-8.9-4-8.9-8.9v-36.7c0-4.9,4-8.9,8.9-8.9H211
+	                        c4.9,0,8.9,4,8.9,8.9V216.2z"/>
+                        <path fill="#65666A" d="M282.8,216.2c0,4.9-4,8.9-8.9,8.9h-36.7c-4.9,0-8.9-4-8.9-8.9v-36.7c0-4.9,4-8.9,8.9-8.9h36.7
+	                        c4.9,0,8.9,4,8.9,8.9V216.2z"/>
+	                        <g>
+		                        <path fill="#FFFFFF" d="M255,218.6c-11.7,0-21.2-9.5-21.2-21.2c0-11.7,9.5-21.2,21.2-21.2c11.7,0,21.2,9.5,21.2,21.2
+			                        C276.1,209.1,266.7,218.6,255,218.6z M255,181c-9.1,0-16.5,7.4-16.5,16.5c0,9.1,7.4,16.5,16.5,16.5c9.1,0,16.5-7.4,16.5-16.5
+			                        C271.5,188.4,264.1,181,255,181z"/>
+		                        <path fill="#FFFFFF" d="M261.2,206.1c-0.5,0-1-0.2-1.5-0.5l-8.2-6.6v-12.7c0-1.3,1-2.3,2.3-2.3c1.3,0,2.3,1,2.3,2.3v10.5l6.4,5.2
+			                        c1,0.8,1.2,2.3,0.4,3.3C262.6,205.8,261.9,206.1,261.2,206.1z"/>
+	                        </g>
+	                        <path fill="#FFFFFF" d="M191.9,178c-7.7,0-13.9,6.2-13.9,13.9c0,2.6,0.8,5.1,2,7.2l-0.1,0.2l12,15.1l9.9-12.7c2.5-2.5,4-6,4-9.8
+		                        C205.8,184.3,199.6,178,191.9,178z M191.9,197.8c-3.8,0-6.9-3.1-6.9-6.9c0-3.8,3.1-6.9,6.9-6.9c3.8,0,6.9,3.1,6.9,6.9
+		                        C198.8,194.7,195.7,197.8,191.9,197.8z"/>
+	                        <path fill="#FFFFFF" d="M129.6,180.6c-11.4,0-20.6,6.9-20.6,15.5c0,4.2,2.2,8,5.8,10.8l0,0v9.1c0,0,1.8-3.3,4.4-4.4
+		                        c2.6-1.1,5.1-0.5,5.1-0.5l0,0c1.7,0.3,3.5,0.5,5.3,0.5c11.4,0,20.6-6.9,20.6-15.5S140.9,180.6,129.6,180.6z M119.1,198.2
+		                        c-1.5,0-2.7-1.2-2.7-2.7s1.2-2.7,2.7-2.7s2.7,1.2,2.7,2.7S120.6,198.2,119.1,198.2z M129.6,198.2c-1.5,0-2.7-1.2-2.7-2.7
+		                        s1.2-2.7,2.7-2.7c1.5,0,2.7,1.2,2.7,2.7S131,198.2,129.6,198.2z M140,198.2c-1.5,0-2.7-1.2-2.7-2.7s1.2-2.7,2.7-2.7
+		                        s2.7,1.2,2.7,2.7S141.5,198.2,140,198.2z"/>
+                        </g>
+                        <circle fill="none" stroke="#343434" stroke-width="3.0563" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="0.4366,10.9155" cx="179.8" cy="180.3" r="168.8"/>
+
+                            </symbol>
+                <symbol>
+                    <title> circle </title>
+                    <g id="dot-circle">
+                         <circle fill="none" stroke="#343434" stroke-width="3.0563" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="0.4366,10.9155" cx="179.8" cy="180.3" r="168.8"/>
+                    </g>
+                </symbol>
+                <symbol>
+                    <title> big circle </title>
+                    <g id="big-circle">
+                                 <circle fill="none" stroke="#AD1F23" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="0.2,5" cx="180" cy="180" r="169.6"/>
+                    </g>
+                </symbol>        
+
+            </svg>
 		<div id="wrapper">
 			
 			<header id="branding">
 				<h1>Parallax</h1>
 			</header>
-			
-			<nav id="primary">
+			  <div id="test" class="test"></div><div id="test2"></div>
+
+                    <div class="before">
+                        test
+                    </div>		
+            <div id="parallax-main" class="parallax-main">
+                			<nav id="primary">
 				<ul>
+                                        <li>
+						<h1></h1>
+						<a class="slide0" href="#slide0">View</a>
+					</li>
 					<li>
 						<h1></h1>
 						<a class="slide1" href="#slide1">View</a>
@@ -45,77 +220,63 @@
 					</li>
 				</ul>
 			</nav>
-			
-			<div id="content">
-                <article class="slide--1">
+                <div class="static-content">
+                    <div>
+                            <svg class="svg-content big-circle" id="big-circle">
+                                <use xlink:href="#big-circle" />
+                            </svg> 
+                    </div>
+
+                </div>
+                <div class="parallax-content  slide--1 ">
                     <div class="slide__content">
-                        <div class="slide__super-title-container"><span class="slide__super-title cip__accent--end-users">End Users</span>
-                        </div>
-                        <div class="slide__title-container"><span class="slide__title">App single sign-on, provisioning and device management</span>
-                        </div>
-                        <ul class="slide__list slide__list--end-user">
-                            <li class="slide__list-item">A single username and password across all apps —
-                                <br>on-premises or cloud</li>
-                            <li class="slide__list-item">Automated user account provisioning across apps</li>
-                            <li class="slide__list-item">Manage mobile devices — phone, tablet and Mac</li>
-                        </ul>
+                           
+                            <svg class="svg-content svg-user" id="users-circle">
+                                <use xlink:href="#users-circle" />
+                            </svg>
+                          <svg class="svg-content svg-user moving-svg">
+                                <use xlink:href="#users" />
+                            </svg>
+                            <svg class="svg-content svg-user dot-circle" >
+                                <use xlink:href="#dot-circle" />
+                            </svg>
                     </div>
-                </article>
-                <article class="slide--2">
+                </div>
+                <div class="parallax-content slide--2 ">
                     <div class="slide__content">
-                        <div class="slide__super-title-container"><span class="slide__super-title cip__accent--privileged-users">Privileged Users</span>
-                        </div>
-                        <div class="slide__title-container"><span class="slide__title">Cloud-based password and access management</span>
-                        </div>
-                        <ul class="slide__list slide__list--privileged-user">
-                            <li class="slide__list-item">Centralized control over privileged account credentials</li>
-                            <li class="slide__list-item">Secure remote access to infrastructure without a VPN</li>
-                            <li class="slide__list-item">Privileged session monitoring for compliance</li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="slide--3">
-                    <div class="slide__side slide__side--end-users">
-                        <div class="slide__content">
-                            <div class="slide__sub-title-container"><span class="slide__sub-title cip__accent--end-users">For End Users</span>
+                            <svg class="svg-content svg-devices" id="devices-circle">
+                                <use xlink:href="#devices-circle" />
+                            </svg>
+                            <svg class="svg-content svg-devices" id="svg-devices">
+                                <use xlink:href="#devices" />
+                            </svg>
+                             <svg class="svg-content svg-devices dot-circle" >
+                                <use xlink:href="#dot-circle" />
+                            </svg>
+                            <div class="moving-text">
+                                this is moving text
                             </div>
-                            <p class="slide__intro-container"><span class="slide__intro">Secure single-sign-on to cloud, mobile, and on-premises apps, with integrated mobility management</span>
-                            </p>
-                        </div>
                     </div>
-                    <div class="slide__side slide__side--privileged-users">
+
+                </div>
+                <div class="parallax-content slide--3 ">
                         <div class="slide__content">
-                            <div class="slide__sub-title-container"><span class="slide__sub-title cip__accent--privileged-users">For Privileged Users</span>
-                            </div>
-                            <p class="slide__intro-container"><span class="slide__intro">Secure access to critical IT infrastructure with shared account password management and session monitoring</span>
-                            </p>
+                            <svg class="svg-content svg-apps" id="svg-apps">
+                                <use xlink:href="#apps" />
+                            </svg>
+                            <svg class="svg-content svg-apps dot-circle" >
+                                <use xlink:href="#dot-circle" />
+                            </svg>
                         </div>
-                    </div>
-                    <footer class="slide__footer">
-                        <p class="slide__outtro-container"><span class="slide__outtro">Leveraging the industry’s only end-to-end cloud identity platform</span>
-                        </p>
-                    </footer>
-                </article>
-                <article class="slide--4">
-                    <div class="slide__side slide__side--end-users">
+
+                </div>
+                <div class="parallax-content slide--4">
+
                         <div class="slide__content">
-                            <div class="slide__sub-title-container"><span class="slide__sub-title cip__accent--end-users">For End Users</span>
-                            </div>
-                            <p class="slide__intro"><a href="/products/identity-service/" class="button button--large">Learn More</a>
-                            </p>
-                        </div>
-                        <footer class="slide__footer">
-                        </footer>
+                                slide 4
                     </div>
-                    <div class="slide__side slide__side--privileged-users">
-                        <div class="slide__content">
-                            <div class="slide__sub-title-container"><span class="slide__sub-title cip__accent--privileged-users">For Privileged Users</span>
-                            </div>
-                            <p class="slide__intro"><a href="/products/privileged-users/" class="button button--large">Learn More</a>
-                            </p>
-                        </div>
-                    </div>
-                </article>
+
+                </div>
 
             </div>
 			
