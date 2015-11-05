@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Responsive Table</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #responsibe-table table tr{
+                border-bottom: 1px solid #ccc;
+                }
+                #responsibe-table table tr td{
+                        height:70px;
+                }
+
+                #responsibe-table 	tbody tr:nth-of-type(odd) { 
+                                background: #eee; 
+                        }
+                @media screen and (max-width: 760px){
+                                        /* Force table to not be like tables anymore */
+                                #responsibe-table table, thead, tbody, th, td, tr {
+                                        display: block;
+                                }
+
+                                /* Hide table headers (but not display: none;, for accessibility) */
+                                #responsibe-table thead tr {
+                                        display:none;
+                                }
+
+                        #responsibe-table td {
+                                        /* Behave  like a "row" */
+                                        border: none;
+                                        border-bottom: 1px solid #eee;
+                                        position: relative;
+                                        padding-left: 30%;
+                                        padding-top: 5px;
+                                }
+
+                                #responsibe-table td:before {
+                                        /* Now like a table header */
+                                        position: absolute;
+                                        /* Top/left values mimic padding */
+                                        top: 6px;
+                                        left: 6px;
+                                        width: 45%;
+                                        padding-right: 10px;
+                                        white-space: nowrap;
+                                font-weight: bold;
+                                }
+                                #responsibe-table	td:nth-of-type(1):before { content: "City & State"; }
+                                #responsibe-table td:nth-of-type(2):before { content: "Date & Time"; }
+                                #responsibe-table td:nth-of-type(3):before { content: "Location"; }
+                                #responsibe-table td:nth-of-type(4):before { content: ""; }
+
+                }
+
+        </style>
+    </head>
+    <body>
+        <div>Responsive Table</div>
+
+<table border="0" width="100%" id="responsibe-table">
+<thead>
+<tr>
+<td width="20%"><strong>City &amp; State</strong></td>
+<td width="20%"><strong>Date &amp; Time</strong></td>
+<td width="45%"><strong>Location</strong></td>
+<td width="15%"> what ? </td>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Cupertino, CA</td>
+        <td>December 25, 2015<br />11:30am – 3:00pm PDT</td>
+        <td>Cupertino park</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Cupertino, CA</td>
+        <td>December 25, 2015<br />11:30am – 3:00pm PDT</td>
+        <td>my house</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>santa clara, CA</td>
+        <td>December 25, 2015<br />11:30am – 3:00pm PDT</td>
+        <td>everywhere</td>
+        <td></td>
+    </tr>    
+</tbody>
+</table>
+        
+<script src="../showHtml.js"></script>
+    </body>
+</html>
