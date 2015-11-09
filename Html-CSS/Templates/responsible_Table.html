@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Responsible Table</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
@@ -53,10 +53,8 @@ and open the template in the editor.
 				white-space: nowrap;
 			font-weight: bold;
 			}
-			#starwas-table	td:nth-of-type(1):before { content: "City & State"; }
-			#starwas-table td:nth-of-type(2):before { content: "Date & Time"; }
-			#starwas-table td:nth-of-type(3):before { content: "Location"; }
-			#starwas-table td:nth-of-type(4):before { content: "Registration"; }
+			#starwas-table	td:before { content:  attr(data-title); }
+			
 	
 	}
 	@media screen and (max-width: 480px){
@@ -94,9 +92,9 @@ and open the template in the editor.
 </thead>
 <tbody>
 <tr>
-<td>Atlanta, GA</td>
-<td>December 17, 2015 <br />6:30pm – 10:00pm</td>
-<td>Regal Medlock 18<br />9700 Medlock Bridge Road Suite 170</td>
+<td data-title="City & State">Atlanta, GA</td>
+<td data-title="Date & Time">December 17, 2015 <br />6:30pm – 10:00pm</td>
+<td data-title="Location">Regal Medlock 18<br />9700 Medlock Bridge Road Suite 170</td>
 <td><a href="http://www2.corus360.com/l/17882/2015-11-02/31lr2d" target="_new"> Sign Up Now </a></td>
 </tr>
 <tr>
