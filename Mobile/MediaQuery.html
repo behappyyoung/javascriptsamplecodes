@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Media Query </title>
+</head>
+<body>
+<div id="status"></div>
+<div id="status2"></div>
+
+<script src="../jQuery/inc/jquery-2.1.0.min.js"></script>
+<script>
+  var mqs = window.matchMedia( "(max-width: 480px)" );
+  var mq = window.matchMedia( "(max-width: 768px)" );
+  
+  if (mq.matches) {
+    $('#status').html('width smaller than 768px;');
+      if (mqs.matches) {
+	    $('#status2').html('width smaller than 480px;');
+  	   }else{
+   		$('#status2').html('width bigger than 480px;');
+ 	   }
+  }else{
+  	$('#status').html('width bigger than 768px;');
+  }
+$( window ).resize(function() {
+  if (mq.matches) {
+    $('#status').html('width smaller than 768px;');
+          if (mqs.matches) {
+	    $('#status2').html('width smaller than 480px;');
+  	   }else{
+   		$('#status2').html('width bigger than 480px;');
+ 	   }
+  }else{
+   $('#status').html('width bigger than 768px;');
+  }
+});
+
+</script>
+
+
+<script type="text/javascript" src="../showHtml.js"> </script>
+
+</body>
+</html>
