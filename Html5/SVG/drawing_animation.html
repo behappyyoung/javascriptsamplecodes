@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        SVG - Drawing Animation
+    </title>
+    <style>
+        #ss3 {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: dash 5s linear forwards;
+        }
+
+        @keyframes dash {
+          to {
+            stroke-dashoffset: 0;
+          }
+        }
+
+</style>
+</head>
+
+<body>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="700" height="450">
+    <defs>
+        
+        <path id = "ss3" d = "M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60" fill = "none" stroke = "green" stroke-width = "10"/>
+
+        </defs>
+
+
+    <use x = "30" y = "30" xlink:href = "#ss3"/>
+
+
+</svg>
+<script src="../showHtml.js"></script>
+
+</body>
+</html>
