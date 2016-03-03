@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head>
+<script src="http://rawgit.com/jasonmayes/Twitter-Post-Fetcher/master/js/twitterFetcher_min.js">
+</script>
+<script>
+var config1 = {
+  "id": '705470648580050945',
+  "domId": 'tweets',
+  "maxTweets": 5,
+  "enableLinks": true
+};
+twitterFetcher.fetch(config1);
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</head>
+<body>
+<div> using Twitter widget </div>
+<a class="twitter-timeline" href="https://twitter.com/YoungParkX" data-widget-id="705470648580050945">Tweets by @YoungParkX</a>
+
+
+
+<div> using twitter Fetcher </div>
+<div id='tweets'></div>
+
+</body>
+</html>
+
