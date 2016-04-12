@@ -4,13 +4,6 @@ var textresult = '<br />';
 
 
 
-function mymethod() {
-    for (var i = 0; i < 10; i++) {
-        var myvar = 5;
-    }
-    return myvar;
-}
-
 
 
 /* ================================== */
