@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js " >
+
+    </script>
+    <style type="text/css">
+
+    </style>
+
+</head>
+<body>
+
+<div id="svg">
+
+
+
+</div>
+<script>
+    var myString = '';
+    for(var i=0; i<2000; i++){
+            myString += '<svg width="30" height="30"><rect width="20" height="20" style="fill:rgb('+i+',0,255);stroke-width:3;stroke:rgb(0,0,0)" /></svg>';
+    }
+
+
+    $('#svg').html(myString);
+</script>
+</body>
+</html>
