@@ -8,7 +8,21 @@
 <body>
 <div>
 
-  
+    var myvar = 'my value'; <br />
+    (function() {<br />
+    console.log(myvar); // my value<br />
+    })();<br />
+    <br />
+    (function() {<br />
+    var myvar = 'local value';<br />
+    console.log(myvar); // local value<br />
+    })();<br />
+    <br />
+    (function() {<br />
+    console.log(myvar); // undefined<br />
+    var myvar = 'local value';<br />
+    })();<br />
+
 </div>
 <div id="div"> </div>
 <script src="Hoist.js"> </script>

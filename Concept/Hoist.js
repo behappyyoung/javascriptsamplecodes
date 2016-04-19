@@ -3,8 +3,21 @@ var maindiv = document.getElementById('div');
 var textresult = '<br />';
 
 
+var myvar = 'my value';
 
+(function() {
+    console.log(myvar); // my value
+})();
 
+(function() {
+    var myvar = 'local value';
+    console.log(myvar); // local value
+})();
+
+(function() {
+    console.log(myvar); // undefined
+    var myvar = 'local value';
+})();
 
 /* ================================== */
 var varout = 3;
@@ -40,5 +53,4 @@ function Hoisttest() {
     }
 }
 Hoisttest();
-
 maindiv.innerHTML = textresult;
