@@ -3,25 +3,31 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title> Hoist </title>
-
+    <style>
+        div {
+            white-space: pre;
+        }
+    </style>
 </head>
 <body>
 <div>
+    var myvar = 'my value';
+    (function() {
+        console.log(myvar);      // my value
+    })();
 
-    var myvar = 'my value'; <br />
-    (function() {<br />
-    console.log(myvar); // my value<br />
-    })();<br />
-    <br />
-    (function() {<br />
-    var myvar = 'local value';<br />
-    console.log(myvar); // local value<br />
-    })();<br />
-    <br />
-    (function() {<br />
-    console.log(myvar); // undefined<br />
-    var myvar = 'local value';<br />
-    })();<br />
+    (function() {
+        var myvar = 'local value';
+        console.log(myvar);     // local value
+    })();
+
+    (function() {
+        console.log(myvar);      // undefined
+        var myvar = 'local value';
+    })();
+
+</div>
+<div id="result">
 
 </div>
 <div id="div"> </div>

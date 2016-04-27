@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title> Let Vs var function </title>
+<style>
+  div {
+    white-space: pre;
+  }
+</style>
+
+</head>
+<body>
+  <div id="div" >
+    function LetvsVar() {
+        //letYoung is *not* visible out here
+        for( let letYoung = 0; letYoung < 5; letYoung++ ) {
+             //letYoung is only visible in here (and in the for() parentheses)
+             document.write('in for - letYoung : ' + letYoung);
+        };
+        for( var varYoung = 0; varYoung < 5; varYoung++ ) {
+             //varYoung visible in here
+            document.write('in for - varYoung : '+ varYoung);
+        };
+        //letYoung is *not* visible out here
+        //varYoung visible in here
+        try{
+             document.write('out for - letYoung : ' + letYoung);
+        }
+        catch(e){
+             document.write(' error : '+ e.message);
+        }
+        try{
+             document.write('out for - varYoung :' +  varYoung);
+        }
+        catch(e){
+              document.write(' error : ' + e.message);
+        }
+
+    };
+
+  </div>
+
+
+  <script type="text/javascript"  src="let_vs_var.js"> </script>
+
+<script type="text/javascript" src="../showFile.js"> </script>
+  <script type="text/javascript" src="../showJs.js"> </script>
+</body>
+</html>
