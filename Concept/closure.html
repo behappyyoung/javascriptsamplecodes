@@ -4,44 +4,48 @@
 <meta name="description" content="closure" />
 <meta charset=utf-8 />
 <title>closure</title>
-
+    <style>
+        div {
+            white-space: pre;
+        }
+    </style>
 </head>
 <body>
 
+<div>
+function foo() {                           
+    var tmp = 3;                          
+    return function () {              
+    return ++tmp;              
+    };              
+}              
+var bar = foo(); // bar is now a closure.              
 
-function foo() {                            <br />
-    var tmp = 3;                           <br />
-    return function () {               <br />
-    return ++tmp;               <br />
-    };               <br />
-}               <br />
-var bar = foo(); // bar is now a closure.               <br />
-<br />
 
-function foo2(x) {               <br />
-    var tmp = 3;               <br />
-    return function (y) {               <br />
-    return x + y + (++tmp);               <br />
-    };               <br />
-}               <br />
-var bar2 = foo2(2); // bar is now a closure.               <br />
+function foo2(x) {              
+    var tmp = 3;              
+    return function (y) {              
+    return x + y + (++tmp);              
+    };              
+}              
+var bar2 = foo2(2); // bar is now a closure.              
 
-============================================                <br />
- Create Dynamic new functions using Closure                <br />
-                <br />
+============================================               
+ Create Dynamic new functions using Closure               
+               
 
-function multiple(x) {                  <br />
-    return function(y) {              <br />
-        return y * x;              <br />
-    };              <br />
-}              <br />
-<br />
-var mul10 = multiple(10);              <br />
-var mul5 = multiple(5);              <br />
-var mul100 = multiple(100);              <br />
+function multiple(x) {                 
+    return function(y) {             
+        return y * x;             
+    };             
+}             
 
-============================================                <br />
+var mul10 = multiple(10);             
+var mul5 = multiple(5);             
+var mul100 = multiple(100);             
 
+============================================
+</div>
 <script src="closure.js"> </script>
 <script src="../showFile.js"> </script>
 <script src="../showJs.js"> </script>
