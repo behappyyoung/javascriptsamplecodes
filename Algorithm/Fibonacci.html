@@ -4,33 +4,79 @@
 <meta name="description" content="Fibonacci" />
 <meta charset=utf-8 />
 <title>Fibonacci</title>
-
+    <style>
+        div {
+            white-space: pre;
+        }
+        div.js {
+            white-space: pre;
+            width:330px;
+            height: 500px;
+            float:left;
+            border-left: dashed 2px;
+            position: relative;
+        }
+        div.result{
+            margin-left: 40px;
+            position: absolute;
+            bottom: 50px;
+        }
+    </style>
 </head>
 <body>
-<div>
-    window.addEventListener("resize", throttle(callback, 100));
-    // Allow callback to run on each resize event
-    window.addEventListener("resize", callback2);
-
-    function callback ()  { console.count("Throttled");     }
-    function callback2 () { console.count("Not Throttled"); }
-
-    function throttle (callback, limit) {
-    var wait = false;                  // Initially, we're not waiting
-    return function () {               // We return a throttled function
-    if (!wait) {                   // If we're not waiting
-    callback.call();           // Execute users function
-    wait = true;               // Prevent future invocations
-    setTimeout(function () {   // After a period of time
-    wait = false;          // And allow future invocations
-    }, limit);
-    }
-    }
-    }
+<div class="js" id="loop">
+    // loop
+    var loopCount = 0;
+    var loopFab = function (n) {
+        var a = 0, b = 1, f = 1;
+        if (n <= 2){
+           return 1;
+        }else{
+            for(var i=2;i<=n;i++){
+                loopCount++;
+                f = a+b;
+                a = b;
+                b = f;
+            }
+            return f;
+        }
+    };
+    <div class="result"></div>
 </div>
-<div id="result">
-
+<div class="js" id="recursive">
+    // recursive
+    var count = 0;
+    var myFab = function (n) {
+        count++;
+        if (x <= 2){
+            return 1;
+        } else{
+            return myFab(x - 1) + myFab(x - 2);
+        }
+    };
+    <div class="result"></div>
 </div>
+<div class="js" id="improve">
+    // recursive improve
+    var count = 0;
+    var myFab = function (n) {
+        var prev = {};
+        var getFab = function(x) {
+            if(prev[x]) return prev[x];
+            count++;
+            if (x <= 2){
+              prev[x] = 1;
+            } else{
+              prev[x] = getFab(x - 1) + getFab(x - 2);
+            }
+            return prev[x];
+        };
+        return getFab(n);
+    };
+    <div class="result"></div>
+</div>
+<div style="clear: both;"></div>
+
 <script src="Fibonacci.js"> </script>
 
 
