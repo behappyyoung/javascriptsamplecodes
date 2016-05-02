@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="description" content="Double Linked List" />
+<meta name="description" content=" Linked List" />
 <meta charset=utf-8 />
 <title> Linked List</title>
+    <link rel="stylesheet" type="text/css" href="../common.css" />
+
 
 </head>
 <body>
+<div>
 
+function myLinkedList() {
+    this._length = 0;
+    this._head = null;
+
+    this.add= function (data){
+        var node = {       //create a new item object, place data in
+            data: data,
+            next: null
+            };
+        if (this._length === 0) {   //special case: no items in the list yet
+            this._head = node;
+        } else {            //replace the head node
+            node.next = this._head;
+            this._head = node;
+        }
+        this._length++;         //update the count
+    };
+
+    this.removeIndex= function(index){
+        if (index > -1 && index < this._length){    //check for out-of-bounds values
+            var current = this._head,
+            i = 0;
+            //special case: removing first item
+            if (index === 0){
+                this._head =  this._head.next;
+            } else {
+                //find the right location
+                while(i++ < index-1){
+                  current = current.next;
+                }
+                //skip over the item to remove
+                current.next = current.next.next;
+            }
+            this._length--;         //decrement the length
+            return current.data;    //return the value
+        } else {
+            return null;
+        }
+    };
+
+    this.delete= function(data){
+        if( this._head.data ==data){
+        }
+    if (index > -1 && index < this._length){    //check for out-of-bounds values
+    var current = this._head,
+    i = 0;
+    //special case: removing first item
+    if (index === 0){
+    this._head = current.next;
+    } else {
+    //find the right location
+    while(i++ < index-1){
+    current = current.next;
+    }
+    //skip over the item to remove
+    current.next = current.next.next;
+    }
+    this._length--;         //decrement the length
+    return current.data;    //return the value
+    } else {
+    return null;
+    }
+    };
+
+}
+</div>
 <div id="display">
 
 </div>
