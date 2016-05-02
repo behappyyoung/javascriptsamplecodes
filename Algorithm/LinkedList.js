@@ -25,7 +25,7 @@ function myLinkedList() {
         this._length++;
     };
 
-    this.remove= function(index){
+    this.removeIndex= function(index){
         //check for out-of-bounds values
         if (index > -1 && index < this._length){
             var current = this._head,
@@ -50,31 +50,64 @@ function myLinkedList() {
         }
     };
 
+    this.delete = function(data){
+        if(this._head == null ) return new Error('no data');
+        var current = this._head;
+        if( current.data == data){     // head == data
+            this._head = current.next;
+            this._length--;
+        }
+        while(current.next !=null){
+            if(current.next.data == data){
+                current.next = current.next.next;
+                this._length--;
+            }
+            current = current.next;
+        }
+
+    }
+
     this.showList =function(){
-        var showText = ' => ';
+        var showText = '   ';
         var current = this._head;
         while(current!=null){
             showText +=  current.data + '  ->  ' ;
             current = current.next;
         }
-        return showText+ "<== ";
+        return showText;
     }
 }
 
 var mylink = new myLinkedList();
-var divText = '';
+
+var divText = ' <br /> ------------------------------- <br />';
 divText += 'start length : ' + mylink._length +  ' --- List : ' + mylink.showList() + '<br />';
+console.log('init', mylink);
 mylink.add('first');
-divText += 'add first [mylink.add("first") ]- length: ' + mylink._length + ' --- List : ' + mylink.showList() + '<br />';
+console.log('mylink.add("first")', mylink);
+divText += 'add first [mylink.add("first") ] <br /> length: ' + mylink._length + ' --- List : ' + mylink.showList() + '<br />';
 mylink.add('second');
-divText += 'add second [mylink.add("second") ]- length: ' + mylink._length + ' --- List : ' + mylink.showList() + '<br />';
+console.log('mylink.add("second")', mylink);
+divText += 'add second [mylink.add("second") ]<br /> length: ' + mylink._length + ' --- List : ' + mylink.showList() + '<br />';
 mylink.add('third');
-divText += 'add third  [mylink.add("third") ]- length: ' + mylink._length + ' --- List : ' + mylink.showList() + '<br />';
+console.log('mylink.add("third")', mylink);
+divText += 'add third  [mylink.add("third") ]<br /> length: ' + mylink._length + ' --- List : ' + mylink.showList() + '<br />';
 divText += 'head =>  : ' + mylink._head.data + '<br />';
 divText += 'head . next  => : ' + mylink._head.next.data + '<br />';
-mylink.remove(1);
-divText += 'remove(index) [mylink.remove(1)]   :  --- List : ' + mylink.showList() + '<br />';
+mylink.removeIndex(1);
+console.log('mylink.removeIndex(1);', mylink);
+
+divText += 'removeIndex(index) [mylink.removeIndex(1)]   :  --- List : ' + mylink.showList() + '<br />';
 divText += 'head =>  : ' + mylink._head.data + '<br />';
 divText += 'head . next  => : ' + mylink._head.next.data + '<br />';
 
-document.getElementById('display').innerHTML = divText;
+mylink.add('forth');
+console.log('mylink.add("forth")', mylink);
+mylink.delete('third');
+console.log('mylink.delete("third"");' , mylink);
+mylink.add('fifth');
+console.log('mylink.add("fifth")', JSON.stringify(mylink));
+
+if (typeof window !== 'undefined') {
+    document.getElementById('display').innerHTML = divText;
+}

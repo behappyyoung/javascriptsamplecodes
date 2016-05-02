@@ -16,65 +16,74 @@ function myLinkedList() {
     this._head = null;
 
     this.add= function (data){
-        var node = {       //create a new item object, place data in
-            data: data,
-            next: null
-            };
-        if (this._length === 0) {   //special case: no items in the list yet
-            this._head = node;
-        } else {            //replace the head node
+        //create a new item object, place data in
+        var node = {
+        data: data,
+        next: null
+        };
+        //special case: no items in the list yet
+        if (this._length === 0) {
+          this._head = node;
+        } else {
+            //replace the head node
             node.next = this._head;
             this._head = node;
         }
-        this._length++;         //update the count
+        //update the count
+        this._length++;
     };
 
     this.removeIndex= function(index){
-        if (index > -1 && index < this._length){    //check for out-of-bounds values
+        //check for out-of-bounds values
+        if (index > -1 && index < this._length){
             var current = this._head,
             i = 0;
             //special case: removing first item
             if (index === 0){
-                this._head =  this._head.next;
+                this._head = current.next;
             } else {
                 //find the right location
                 while(i++ < index-1){
-                  current = current.next;
+                current = current.next;
                 }
                 //skip over the item to remove
                 current.next = current.next.next;
             }
-            this._length--;         //decrement the length
-            return current.data;    //return the value
+            //decrement the length
+            this._length--;
+            //return the value
+            return current.data;
         } else {
-            return null;
+          return null;
         }
     };
 
-    this.delete= function(data){
-        if( this._head.data ==data){
+    this.delete = function(data){
+        if(this._head == null ) return new Error('no data');
+        var current = this._head;
+        if( current.data == data){     // head == data
+        this._head = current.next;
+        this._length--;
         }
-    if (index > -1 && index < this._length){    //check for out-of-bounds values
-    var current = this._head,
-    i = 0;
-    //special case: removing first item
-    if (index === 0){
-    this._head = current.next;
-    } else {
-    //find the right location
-    while(i++ < index-1){
-    current = current.next;
-    }
-    //skip over the item to remove
-    current.next = current.next.next;
-    }
-    this._length--;         //decrement the length
-    return current.data;    //return the value
-    } else {
-    return null;
-    }
-    };
+        while(current.next !=null){
+            if(current.next.data == data){
+                current.next = current.next.next;
+                this._length--;
+            }
+            current = current.next;
+        }
 
+    }
+
+    this.showList =function(){
+        var showText = '   ';
+        var current = this._head;
+        while(current!=null){
+            showText +=  current.data + '  ->  ' ;
+            current = current.next;
+        }
+        return showText;
+    }
 }
 </div>
 <div id="display">
