@@ -20,4 +20,8 @@ var myarr2 = [1, 4, 6, 88, 99];
 displayText += 'original : ' + myarr2+ '<br />';
 var result2 = checkDuplicates(myarr2);
 displayText += 'result : ' + result2 + '<br />';
-document.getElementById('display').innerHTML = displayText;
+if (typeof window !== 'undefined') {
+    document.getElementById('display').innerHTML = displayText;
+}else{
+    console.log(displayText);
+}

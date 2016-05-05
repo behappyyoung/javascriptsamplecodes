@@ -2,32 +2,38 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Check Duplicate from Array </title>
+    <title>Swap without Temp buffer </title>
     <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.16.0.css" type="text/css" media="screen">
     <script type="text/javascript" src="//code.jquery.com/qunit/qunit-1.15.0.js"></script>
     <link rel="stylesheet" type="text/css" href="../common.css" />
 </head>
 <body>
 <div class="function">
-    function checkDuplicates(arr) {
-        var i, out=[], obj={};
-
-        for (i=0;i < arr.length;i++) {
-            if(obj[arr[i]]==0){
-               return true;
-            }
-            obj[arr[i]]=0;
-        }
-        return false;
+    function swapNumber(a, b){
+        console.log('before swap: ','a: ', a, 'b: ', b);
+        b = b -a;
+        a = a+ b;
+        b = a-b;
+        console.log('after swap: ','a: ', a, 'b: ', b);
     }
+
+    function swapNumber2(a, b){
+        console.log("a: " + a + " and b: " + b);
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        console.log("a: " + a + " and b: " + b);
+    }
+
 
 </div>
 <div id="display">
 
 </div>
 
-<script src="Check_Duplicate.js"></script>
-<script src="Check_Duplicate_test.js"></script>
+<script src="Swap_Number_Without_Tempbuffer.js"></script>
+<script src="Swap_Number_Without_Tempbuffer_Test.js"></script>
+
 
 <script src="../showHtml.js"></script>
 <script src="../showJs.js"></script>
