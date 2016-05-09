@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Find Min Number of Squares to match number </title>
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.16.0.css" type="text/css" media="screen">
+    <script type="text/javascript" src="//code.jquery.com/qunit/qunit-1.15.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="../common.css" />
+</head>
+<body>
+<div class="function">
+
+    // To find min number of squares to match number
+    // noprotect
+var getNumber = function(n){
+    this.minSumMap = {};
+    function getMinSquareSum(n){
+        if(typeof minSumMap[n] !== 'undefined'){
+          return minSumMap[n];
+        }
+        if(n<=3){
+          minSumMap[n] = n;
+          return n;
+        }
+
+        var minSum = n; // initial - max number of squares ( 1+1+..)
+        var tempSquare;
+        for(var i=1;i<=n;i++){
+            tempSquare = i *i;
+
+            if(tempSquare > n){
+              break;
+            }else{
+              minSum = Math.min(minSum, 1+ getMinSquareSum(n-tempSquare));
+              minSumMap[n] = minSum;
+            }
+        }
+        return minSum;
+    }
+
+    return getMinSquareSum(n);
+};
+
+
+    for(var i=4;i<=30;i++){
+    console.log(i + "==>" + getNumber(i));
+    }
+    // minSumMap display
+    console.log(minSumMap);
+    var minSumMapKeys = Object.keys(minSumMap);
+    minSumMapKeys.sort(function(a, b){ return a - b;});
+
+    for(var k=0; k<minSumMapKeys.length;k++){
+    console.log( minSumMapKeys[k] + '=>'+ minSumMap[minSumMapKeys[k]]);
+    }
+
+
+</div>
+<div id="display">
+
+</div>
+
+<script src="Find_Min_Number_Of_Squares.js"></script>
+<script src="Find_Min_Number_Of_Squares_test.js"></script>
+
+<script src="../showHtml.js"></script>
+<script src="../showJs.js"></script>
+
+<!-- QUnit Part -->
+<h1 id="qunit-header">Check with QUnit Test Suite</h1>
+<h2 id="qunit-banner"></h2>
+<div id="qunit-testrunner-toolbar"></div>
+<h2 id="qunit-userAgent"></h2>
+<ol id="qunit-tests"></ol>
+<!-- QUnit Part -->
+
+</body>
+</html>
