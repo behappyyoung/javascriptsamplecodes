@@ -18,3 +18,16 @@ function throttle (callback, limit) {
         }
     }
 }
+
+var throttleCount = 0;
+function throtttleCallback() {
+
+    document.getElementById('throttle').innerHTML=  throttleCount++;;
+}
+var  nonthrotttleCount=0;
+function nonthrotttleCallback() {
+
+    document.getElementById('nonthrottle').innerHTML=  nonthrotttleCount++;
+}
+document.getElementById('board').addEventListener('mousemove',  throttle(throtttleCallback, 100));
+document.getElementById('board').addEventListener('mousemove',  nonthrotttleCallback);
