@@ -4,11 +4,16 @@
 var divs = document.getElementsByTagName('div');
 
 function capture() {
+
     document.getElementById('capture').innerHTML='capturing => ' + this.firstChild.nodeValue.trim();
 }
 
-function bubble() {
+function bubble(e) {
+
     document.getElementById('bubble').innerHTML='bubbling => ' + this.firstChild.nodeValue.trim();
+    window.ee = e; window.thiss = this;
+    console.log('bubble' ,e.target, this);
+
 }
 
 for (var i = 0; i < divs.length; i++) {

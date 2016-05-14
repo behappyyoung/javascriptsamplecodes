@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Object.keys vs Object.getOwnPropertyNames </title>
+
+    <link type="text/css" rel="stylesheet" media="all" href="../common.css"/>
+</head>
+<body>
+<div>
+   Object.getOwnPropertyNames(a) returns all own properties of the object a.
+   Object.keys(a) returns all <mark>enumerable</mark> own properties.
+
+</div>
+<div class="script">
+    var a ={one:'one',two: 'two'};
+
+
+    console.log(a); //{ one: 'one', two: 'two' }
+    console.log(Object.keys(a)); // ["one", "two"]
+    console.log(Object.getOwnPropertyNames(a)); // ["one", "two"]
+
+    Object.defineProperties(a, {
+    one: {enumerable: true},
+    two: {enumerable: false}
+    });
+
+    console.log(a);//{ one: 'one' }
+    console.log(Object.keys(a)); // ["one"]
+    console.log(Object.getOwnPropertyNames(a)); // ["one", "two"]
+</div>
+<script src="Object.key_vs_Object.getOwnPropertyNames.js"> </script>
+<script src="../showJs.js"> </script>
+
+</body>
+</html>
