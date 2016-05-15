@@ -4,10 +4,8 @@
 <meta name="description" content="Fibonacci" />
 <meta charset=utf-8 />
 <title>Fibonacci</title>
+    <link type="text/css" rel="stylesheet" media="all" href="../common.css"/>
     <style>
-        div {
-            white-space: pre;
-        }
         div.js {
             white-space: pre;
             width:330px;
@@ -21,10 +19,11 @@
             position: absolute;
             bottom: 50px;
         }
+
     </style>
 </head>
 <body>
-<div class="js" id="loop">
+<div class="js script" id="loop">
     // loop
     var loopCount = 0;
     var loopFab = function (n) {
@@ -43,7 +42,7 @@
     };
     <div class="result"></div>
 </div>
-<div class="js" id="recursive">
+<div class="js script" id="recursive">
     // recursive
     var count = 0;
     var myFab = function (n) {
@@ -56,7 +55,7 @@
     };
     <div class="result"></div>
 </div>
-<div class="js" id="improve">
+<div class="js script" id="improve">
     // recursive improve
     var count = 0;
     var myFab = function (n) {

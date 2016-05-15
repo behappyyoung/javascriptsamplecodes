@@ -1,16 +1,4 @@
-div {
+
+div.script {
     white-space: pre;
-}
-div.js {
-    white-space: pre;
-    width:330px;
-    height: 500px;
-    float:left;
-    border-left: dashed 2px;
-    position: relative;
-}
-div.result{
-    margin-left: 40px;
-    position: absolute;
-    bottom: 50px;
 }

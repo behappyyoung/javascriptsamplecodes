@@ -40,7 +40,7 @@ function secondSolution(myArray){
     for(i=0; i<length; i++){
         var inmax = MaxArray[i]-MinArray[i];
         max = (max < inmax)? inmax : max;
-        printText += ++step + '/ ';
+        printText += ++step + '| ';
     }
 
     printText += '<br /> MinArray : '+ MinArray.toString() +' /  MaxArray : ' + MaxArray.toString()+ '<br />';
@@ -49,7 +49,7 @@ function secondSolution(myArray){
 
 }
 
-var testArray = [4, 50, 10, 30, 7, 8, 1, 44, 9, 15, 20];
+var testArray = [4, 50, 10, 30,60, 7, 8, 1, 44, 9, 15, 20, 33, 55];
 var printText=' Test Array : [ ' + testArray.toString() + ' ]<br /> steps : <br />';
 var result = firstSolution(testArray);
 
