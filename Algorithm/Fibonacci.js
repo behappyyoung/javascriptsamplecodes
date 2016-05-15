@@ -44,6 +44,14 @@ var myFab2 = function (n) {
     return getFab(n);
 };
 
-document.getElementById('loop').getElementsByClassName( 'result' )[0].innerHTML= 'loopFab(30) : ' + loopFab(30) +' <br /> loopCount : '+ loopCount;
-document.getElementById('recursive').getElementsByClassName( 'result' )[0].innerHTML= 'myFab(30) : ' + myFab(30) +' <br /> recCount : '+ recCount;
-document.getElementById('improve').getElementsByClassName( 'result' )[0].innerHTML= 'myFab2(30) : ' + myFab2(30) +' <br /> recCount : '+ recCount;
+
+if(typeof window !== 'undefined'){
+    document.getElementById('loop').getElementsByClassName( 'result' )[0].innerHTML= 'loopFab(30) : ' + loopFab(30) +' <br /> loopCount : '+ loopCount;
+    document.getElementById('recursive').getElementsByClassName( 'result' )[0].innerHTML= 'myFab(30) : ' + myFab(30) +' <br /> recCount : '+ recCount;
+    document.getElementById('improve').getElementsByClassName( 'result' )[0].innerHTML= 'myFab2(30) : ' + myFab2(30) +' <br /> recCount : '+ recCount;
+
+}
+console.log('loopFab(30) :' + loopFab(30));
+console.log('myFab(30) :'+myFab(30));
+console.log('myFab2(30) :'+myFab2(30));
+
