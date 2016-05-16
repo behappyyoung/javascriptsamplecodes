@@ -95,12 +95,12 @@ BinarySearchTree.prototype.traverse = function(process, order){
             //call the process method on this node
             process.call(this, node);
             //traverse the left subtree
-            if (node.right !== null){
-                preOrder(node.right);
-            }
-            //traverse the right subtree
             if (node.left !== null){
                 preOrder(node.left);
+            }
+            //traverse the right subtree
+            if (node.right !== null){
+                preOrder(node.right);
             }
         }
     }
@@ -128,21 +128,21 @@ BinarySearchTree.prototype.traverse = function(process, order){
     }
 };
 
-BinarySearchTree.prototype.size = function(){
+BinarySearchTree.prototype.size = function(order){
     var length = 0;
 
     this.traverse(function(node){
         length++;
-    });
+    }, order);
 
     return length;
 };
-BinarySearchTree.prototype.toArray = function(){
+BinarySearchTree.prototype.toArray = function(order){
     var result = [];
 
     this.traverse(function(node){
         result.push(node.value);
-    });
+    }, order);
 
     return result;
 };
