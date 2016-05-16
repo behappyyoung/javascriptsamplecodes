@@ -1,6 +1,4 @@
-/**
- * Created by youngsug on 5/12/2016.
- */
+
 /**
  * Created by youngsug on 5/11/2016.
  */
