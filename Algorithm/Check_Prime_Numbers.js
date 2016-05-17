@@ -23,7 +23,7 @@ function primes(x)
 }
 
 var primeArr = primes(100);
-console.log(primeArr.toSource(), primeArr.length);
+console.log(primeArr, primeArr.length);
 
 console.log ( 'type number : ');
 process.stdin.resume();
