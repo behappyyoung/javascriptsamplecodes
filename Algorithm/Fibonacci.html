@@ -25,14 +25,12 @@
 <body>
 <div class="js script" id="loop">
     // loop
-    var loopCount = 0;
     var loopFab = function (n) {
         var a = 0, b = 1, f = 1;
         if (n <= 2){
            return 1;
         }else{
             for(var i=2;i<=n;i++){
-                loopCount++;
                 f = a+b;
                 a = b;
                 b = f;
@@ -46,7 +44,6 @@
     // recursive
     var count = 0;
     var myFab = function (n) {
-        count++;
         if (x <= 2){
             return 1;
         } else{
@@ -57,12 +54,10 @@
 </div>
 <div class="js script" id="improve">
     // recursive improve
-    var count = 0;
     var myFab = function (n) {
         var prev = {};
         var getFab = function(x) {
             if(prev[x]) return prev[x];
-            count++;
             if (x <= 2){
               prev[x] = 1;
             } else{
@@ -76,13 +71,11 @@
 </div>
 <div class="js script" id="dynamic">
 // Dynamic
-var dpCount = 0;
 var dpFab = function (n) {
     var fib = [];
     fib[0] = 0;
     fib[1] = 1;
     for (var i = 2; i < n + 1; i++) {
-        dpCount++;
         fib[i] = fib[i - 1] + fib[i - 2];
     }
     return fib[n];
