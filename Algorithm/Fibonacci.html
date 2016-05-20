@@ -74,6 +74,22 @@
     };
     <div class="result"></div>
 </div>
+<div class="js script" id="dynamic">
+// Dynamic
+var dpCount = 0;
+var dpFab = function (n) {
+    var fib = [];
+    fib[0] = 0;
+    fib[1] = 1;
+    for (var i = 2; i < n + 1; i++) {
+        dpCount++;
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+    return fib[n];
+};
+    <div class="result"></div>
+</div>
+
 <div style="clear: both;"></div>
 
 <script src="Fibonacci.js"> </script>
