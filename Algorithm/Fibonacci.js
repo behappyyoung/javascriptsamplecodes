@@ -59,6 +59,7 @@ var dpFab = function (n) {
 
 
 if(typeof window !== 'undefined'){
+    loopCount = recCount = memCount = dpCount = 0;
     document.getElementById('loop').getElementsByClassName( 'result' )[0].innerHTML= 'loopFab(30) : ' + loopFab(30) +' <br /> loopCount : '+ loopCount;
     document.getElementById('recursive').getElementsByClassName( 'result' )[0].innerHTML= 'myFab(30) : ' + myFab(30) +' <br /> recCount : '+ recCount;
     document.getElementById('improve').getElementsByClassName( 'result' )[0].innerHTML= 'myFab2(30) : ' + myFab2(30) +' <br /> memCount : '+ memCount;
