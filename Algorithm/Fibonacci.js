@@ -51,9 +51,7 @@ var dpFab = function (n) {
     fib[0] = 0;
     fib[1] = 1;
     for (var i = 2; i < n + 1; i++) {
-        console.log(dpCount);
         dpCount++;
-
         fib[i] = fib[i - 1] + fib[i - 2];
     }
     return fib[n];
