@@ -26,8 +26,8 @@ function countSquareV(row, col){
 //size 2 : (R-1) * (C-1)
 //size 3 : (R-2) * (C-2)
 //..
-// size m : (R-m+1) * ( C-m+1)
-//count = size1 + size2 + sizem
+// size m : (R-m+1) * ( C-m+1) ( m = (row<col)? row : col )
+//count = size 1 + size 2 + .. + + size m
 
 
 function countSquareS(row, col){
