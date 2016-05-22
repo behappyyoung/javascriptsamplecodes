@@ -4,31 +4,27 @@
 
 function processData(input) {
     //Enter your code here
-    var inputArray = input.split('\n');
-    console.log(inputArray);
-    var output=[];
-    var testCase = parseInt(inputArray[0]);
+    var lines = input.split('\n');
+    var testCase = parseInt(lines[0]);
 
-    
-    console.log(output);
 
+
+
+/* output to text for comparison
+    var fs = require('fs');
+    var stream = fs.createWriteStream("my_file.txt");
+    stream.once('open', function(fd) {
+        stream.write(output.toString()+'\n');
+        stream.end();
+    });
+*/
 }
 
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
 _input = "";
 process.stdin.on("data", function (input) {
-
     var testinput ='';
-    processData(testinput);
-    /*
-    _input += input;
-    if(input.match(';')){                           // for testing on  windows
-        console.log(_input);
-        processData(_input.slice(0, _input.indexOf(';')));
-        _input = '';
-    }
-*/
 });
 
 process.stdin.on("end", function () {

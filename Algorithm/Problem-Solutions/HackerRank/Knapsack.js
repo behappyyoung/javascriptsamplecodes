@@ -9,61 +9,53 @@ function processData(input) {
     };
 
     var lines = input.split('\n');
+console.log(lines);
     var T = parseInt(lines.shift());                                            // Testing cases
     var NKArray = [], N;                                // array of count of input numbers(N) and expected sum(K)
-    var numberArray =[];
+    var totalSumArray=[];
+    var testCases = [], caseInput, caseMax, numbers, caseArray =[];
     for(var i=0; i<T; i++){
-        NKArray[i] = lines.shift().split(' ').map(parse_fun);       // array of count of input numbers(N) and expected sum(K)
-        N =NKArray[i][0];         // input numbers(N)
-        numberArray[i] = lines.shift().split(' ').splice(0, N).map(parse_fun).sort(sortNumber);   // input numbers
-        //numberArray[i] = lines.shift().split(' ').splice(0, N).map(parse_fun);   // input numbers
+        NKArray = lines.shift().split(' ').map(parse_fun);       // array of count of input numbers(N) and expected sum(K)
+        caseInput = NKArray[0];
+        caseMax = NKArray[1];
+        numbers = lines.shift().split(' ').map(parse_fun).sort(sortNumber);   // input numbers
+        
+        caseArray.push(caseInput, caseMax,numbers);
+        testCases.push(caseArray);
     }
 
-
-    var getCloseExpectedSum = function(currentArray, expected){
-console.log(currentArray);
-        var length = currentArray.length;
-        var bestExpect=0, currentExpect=  expected, currentValue, myexpect = 0, tempbest;
-        var subExpect ;
-        for(var j=0; j<length; j++) {
-
-            for (var i = j; i < length; i++) {
-
-                currentValue = currentArray[i];
-                if(currentValue==currentArray[i-1]){
-                    break;
-                }else if(currentValue > currentExpect){
-                    break;
-                }
-
-                subExpect = currentExpect - currentValue;
-console.log(i + '/ current value : ' + currentValue + ' / sub :   ' + subExpect + ' / current Ex  ' + currentExpect + ' / ' + expected);
-
-                if (subExpect > 0) {
-                    myexpect = getCloseExpectedSum(currentArray, subExpect);
-                    //console.log(bestExpect);
-                    if (myexpect == subExpect) {
-                        return  currentValue + myexpect;
-                    } else if(myexpect < subExpect){
-                        // update currentExpect
-                        tempbest = currentValue + myexpect;
-                        currentExpect = currentExpect - myexpect;
-                    }
-                } else if (subExpect == 0) {
-                    tempbest = currentExpect;
-                    break;
-                }
-            }
-
-            bestExpect = (tempbest>bestExpect)? tempbest : bestExpect;
+    console.log(testCases);
+    for(i = 0; i<testCases.length;i++){
+        var testCase = testCases[i];
+        caseInput = testCase[0];
+        caseMax = testCase[1];
+        numbers = testCase[2];
+        var maxTable=[];
+        for(var n=0; n<=numbers.length; n++){               // init
+            maxTable[n] = [];
+            for ( var m=0; m<=caseMax; m++)
+                maxTable[n][m] = 0;
         }
 
-        return bestExpect;
-    };
-
-    for(i=0; i<T; i++){
-        console.log( getCloseExpectedSum(numberArray[i], NKArray[i][1]));
+        for(n=1; n<=numbers.length; n++){               // init
+            
+            for(m=1; m<=caseMax;m++) {
+                if( n==0 || m==0){
+                    maxTable[n][m] = 0;
+                }else if(numbers[n-1] <= m){
+                    maxTable[n][m] = Math.max(maxTable[n-1][m], numbers[n-1]+maxTable[n-1][m-numbers[n-1]]);
+                }else{
+                    maxTable[n][m] = maxTable[n-1][m];
+                }
+            }
+        }
+        console.log(testCase, testCase.length, caseMax );
+        console.log(maxTable);
     }
+
+//  for(i=0; i<T; i++){
+//        console.log( getCloseExpectedSum(numberArray[i], NKArray[i][1]));
+//    }
 
 }
 

@@ -41,6 +41,7 @@ function countSquareS(row, col){
 console.log('4, 6 : ' , countSquareV(4 , 6));
 console.log('5, 6 : ' , countSquareV(5 , 6));
 
+console.log('4, 4 : ' , countSquareS(4 , 4));
 console.log('4, 6 : ' , countSquareS(4 , 6));
 console.log('5, 6 : ' , countSquareS(5 , 6));
 
