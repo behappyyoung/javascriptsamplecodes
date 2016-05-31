@@ -11,7 +11,8 @@ jQuery(function($) {
     });
     function spinReel(){                        // spinning the reel by updating classes
         var t = setTimeout(function(){ $( "#bar" ).removeClass('pull');}, 1000);
-        $('#maker').addClass('down');
+        $('#maker').addClass('fastdown');
+        $('#filter').addClass('down');
     }
 
 

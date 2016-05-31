@@ -67,7 +67,7 @@
     height: 240px;
     float: left;
     border: 3px solid blue;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 .inner-reel{
     width: 100px;
@@ -78,8 +78,10 @@
 
 }
 .inner-reel.down{
-    animation-duration: 1s;
-    animation-name: down;
+    animation: down 2s infinite;
+}
+.inner-reel.fastdown{
+    animation: down 500ms infinite;
 }
 /* reel animations */
 @-webkit-keyframes down {
@@ -91,8 +93,8 @@
     to { -moz-transform:translateY(180px)}
 }
 @keyframes down {
-    from {transform: translateY(0px)}                 /* chrome  */
-    to { transform:translateY(180px)}
+    from {transform: translateY(-180px)}                 /* chrome  */
+    to { transform:translateY(80px)}
 }
 
 
