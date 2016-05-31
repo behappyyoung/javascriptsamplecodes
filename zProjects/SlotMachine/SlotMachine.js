@@ -10,12 +10,15 @@ jQuery(function($) {
         }
     });
     function spinReel(){                        // spinning the reel by updating classes
-
         var t = setTimeout(function(){ $( "#bar" ).removeClass('pull');}, 1000);
+        $('#maker').addClass('down');
     }
+
+
+    /*
     for(var i=-160; i<80; i++){
         console.log(i);
-        (function(x){setTimeout(function(){ $('#maker').css('top', x+'px');}, 1000)})(i);
+     //   $('#maker').css('top', i+'px');
     }
-
+*/
 }); 

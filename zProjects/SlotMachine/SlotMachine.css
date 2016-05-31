@@ -74,8 +74,28 @@
     height: 300px;
     margin: auto;
     position: relative;
-    /*top:-80px;*/
+    top:-80px;
+
 }
+.inner-reel.down{
+    animation-duration: 1s;
+    animation-name: down;
+}
+/* reel animations */
+@-webkit-keyframes down {
+    from {-webkit-transform: translateY(0px)}           /* safari */
+    to { -webkit-transform:translateY(180px)}
+}
+@-moz-keyframes down {
+    from {-moz-transform: translateY(0px)}              /* FF */
+    to { -moz-transform:translateY(180px)}
+}
+@keyframes down {
+    from {transform: translateY(0px)}                 /* chrome  */
+    to { transform:translateY(180px)}
+}
+
+
 .turn-block{
     width: 100px;
     height: 80px;
