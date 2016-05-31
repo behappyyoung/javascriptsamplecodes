@@ -1,0 +1,104 @@
+/* ----- wrapper ------ */
+.machine{
+    width:80%;
+    min-width: 480px;
+    height: 300px;
+    margin: 100px auto;
+    float: left;
+}
+/* ----- lever ------ */
+.lever{
+    float: left;
+    margin: 100px auto;
+}
+.lever #lever{
+
+    height: 220px;
+    min-width: 50px;
+  /*  background-color: #00b7ff;
+    border: 3px solid blue;*/
+    overflow: hidden;
+}
+.lever #bar-top{
+    height: 20px;
+    width: 100%;
+    background-color: blue;
+}
+.lever  #bar {
+    height: 400px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 5px 5px 0 0;
+    margin: 0 auto;
+}
+.lever #lever-bottom{
+    height: 30px;
+    width: 100%;
+    background-color: blue;
+    position: relative;
+    top:-10px;
+}
+
+.lever #bar.pull{
+    animation-duration: 1s;
+    animation-name: pull;
+}
+/* lever animations */
+@-webkit-keyframes pull {
+    from {-webkit-transform: rotate(0deg);}
+    to { -webkit-transform:rotate(30deg)}
+}
+@-moz-keyframes pull {
+    from {-moz-transform: rotate(0deg);}
+    to { -moz-transform: rotate(30deg)}
+}
+@keyframes pull {
+    from {transform: rotateZ(0deg);}
+    to { transform: rotateZ(30deg)}
+}
+
+.lever .text{
+
+}
+/* ----- reels ----- */
+.reel {
+    margin:0 1%;
+    width: 30%;
+    height: 240px;
+    float: left;
+    border: 3px solid blue;
+    /*overflow: hidden;*/
+}
+.inner-reel{
+    width: 100px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    /*top:-80px;*/
+}
+.turn-block{
+    width: 100px;
+    height: 80px;
+    background-color: #0e90d2;
+    margin:5px auto;
+}
+.turn-block.maker-coffee{
+    background-image: url("images/coffee-machine.jpg");
+    background-size: cover;
+}
+.turn-block.center{
+    background-color: #00A000;
+    opacity: 1;
+}
+/* reel animations */
+/*
+.turn-block.up {
+    -webkit-transform: rotateX( 45deg );
+    -moz-transform: rotateX( 45deg );
+    -o-transform: rotateX( 45deg );
+    transform: rotateX( 45deg );
+}
+.turn-block.down {
+transform: rotateX( -45deg );
+}
+*/

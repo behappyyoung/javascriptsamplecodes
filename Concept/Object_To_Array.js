@@ -1,4 +1,6 @@
-var myobject ={ // array-like collection
+
+
+var myobject ={ // array-like collection with length // ex) arguments
     length: 4,
     '0': 'zero',
     '1': 'one',
@@ -12,7 +14,7 @@ var myarray = Array.prototype.slice.call(myobject); // returns myobject as a tru
 var myarray2 = Array.prototype.slice.call(myobject, 1) ;// returns ["one", "two", "three"]
 var myarray3 = [].slice.call(myobject); // returns myobject as a true array: ["zero", "one", "two", "three"]
 
-// every thing to array
+// every thing to array  // with any Array - with / without length. 
 var myarray4 = Object.keys(myobject).map(function (key) {return myobject[key]}); // returns ["zero", "one", "two", "three", 4, "test"]
 
 

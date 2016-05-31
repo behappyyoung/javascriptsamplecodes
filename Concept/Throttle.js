@@ -9,13 +9,13 @@ function callback2 () { console.count("Not Throttled"); }
 */
 
 function throttle (callback, limit) {
-    var wait = false;                  // Initially, we're not waiting
+    var noWait = true;                  // Initially, we're not waiting
     return function () {               // We return a throttled function
-        if (!wait) {                   // If we're not waiting
+        if (noWait) {                   // If we're not waiting
             callback.call();           // Execute users function
-            wait = true;               // Prevent future invocations
+            noWait = false;               // Prevent future invocations
             setTimeout(function () {   // After a period of time
-                wait = false;          // And allow future invocations
+                noWait = true;          // And allow future invocations
             }, limit||500);
         }
     }
@@ -24,31 +24,10 @@ function throttle (callback, limit) {
 var debounce = function(func, wait) {
     var timeout;
     return function() {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
+        clearTimeout(timeout);                      // keep killing prev if there is an event..
+        timeout = setTimeout(function() {           // put current one..    => will fire if there is no event
             func.call();
         }, wait || 500);
-    };
-};
-
-
-var debounceImm = function(func, wait, immediate) {     //
-    var timeout;
-    return function() {
-        var context = this,
-            args = arguments;
-        var later = function() {
-            timeout = null;
-            if ( !immediate ) {
-                func.apply(context, args);
-            }
-        };
-       var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait || 200);
-        if ( callNow ) {
-            func.apply(context, args);
-        }
     };
 };
 
@@ -60,11 +39,31 @@ var  nonthrotttleCount=0;
 function nonthrotttleCallback() {
     document.getElementById('nonthrottle').innerHTML=  nonthrotttleCount++;
 }
-document.getElementById('board').addEventListener('mousemove',  throttle(throtttleCallback, 500)); // Allow callback to run at most 1 time per 500ms
-document.getElementById('board').addEventListener('mousemove',  nonthrotttleCallback);
 
 var debounceCount=0;
 function debounceCallback() {
     document.getElementById('debounce').innerHTML=  debounceCount++;
 }
+
+document.getElementById('board').addEventListener('mousemove',  throttle(throtttleCallback, 1000)); // Allow callback to run at most 1 time per 1000ms
+document.getElementById('board').addEventListener('mousemove',  nonthrotttleCallback);
 document.getElementById('board').addEventListener('mousemove',  debounce(debounceCallback, 500)); // Allow callback to run after 500ms
+
+function throtttleInputCallback() {
+    var text = document.getElementById('throttle-input').innerHTML;
+    document.getElementById('throttle-input').innerHTML = text +' / '+ document.getElementById('inputText').value;
+}
+
+function nonthrotttleInputCallback() {
+    var text = document.getElementById('nonthrottle-input').innerHTML;
+    document.getElementById('nonthrottle-input').innerHTML = text +' / '+ document.getElementById('inputText').value;
+}
+
+function debounceInputCallback() {
+    var text = document.getElementById('debounce-input').innerHTML;
+    document.getElementById('debounce-input').innerHTML = text +' / '+ document.getElementById('inputText').value;
+}
+
+document.getElementById('inputText').addEventListener('keyup',  throttle(throtttleInputCallback, 1000)); // Allow callback to run at most 1 time per 1000ms
+document.getElementById('inputText').addEventListener('keyup',  nonthrotttleInputCallback);
+document.getElementById('inputText').addEventListener('keyup',  debounce(debounceInputCallback, 500)); // Allow callback to run after 500ms

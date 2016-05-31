@@ -13,8 +13,9 @@ console.log(lines);
     var T = parseInt(lines.shift());                                            // Testing cases
     var NKArray = [], N;                                // array of count of input numbers(N) and expected sum(K)
     var totalSumArray=[];
-    var testCases = [], caseInput, caseMax, numbers, caseArray =[];
-    for(var i=0; i<T; i++){
+    var testCases = [], caseInput, caseMax, numbers;
+    while(lines.length >0){
+        var  caseArray =[];
         NKArray = lines.shift().split(' ').map(parse_fun);       // array of count of input numbers(N) and expected sum(K)
         caseInput = NKArray[0];
         caseMax = NKArray[1];
@@ -24,35 +25,45 @@ console.log(lines);
         testCases.push(caseArray);
     }
 
-    console.log(testCases);
-    for(i = 0; i<testCases.length;i++){
+    //console.log('testcases' , testCases);
+    var output=[];
+    function removeDuplicates(arr) {
+        var i, out=[], obj={};
+
+        for (i=0;i<arr.length;i++) {
+            obj[arr[i]]=0;
+        }
+        for (i in obj) {
+            out.push(i);
+        }
+        return out;
+    }
+
+    for(var i = 0; i<testCases.length;i++){
         var testCase = testCases[i];
         caseInput = testCase[0];
         caseMax = testCase[1];
+        //numbers = removeDuplicates(testCase[2]);
         numbers = testCase[2];
-        var maxTable=[];
-        for(var n=0; n<=numbers.length; n++){               // init
-            maxTable[n] = [];
-            for ( var m=0; m<=caseMax; m++)
-                maxTable[n][m] = 0;
-        }
-
-        for(n=1; n<=numbers.length; n++){               // init
-            
-            for(m=1; m<=caseMax;m++) {
-                if( n==0 || m==0){
-                    maxTable[n][m] = 0;
-                }else if(numbers[n-1] <= m){
-                    maxTable[n][m] = Math.max(maxTable[n-1][m], numbers[n-1]+maxTable[n-1][m-numbers[n-1]]);
-                }else{
-                    maxTable[n][m] = maxTable[n-1][m];
+        var maxTable = new Array(caseMax+1);
+        maxTable.fill(0);
+        //var min = Array.from(Array(sum+1).keys());
+        for(var s =1; s<=caseMax ; s++){
+            for(var n =1; n<=numbers.length ; n++) {
+             //   console.log(s, n, numbers[n-1], maxTable[s], numbers[n-1] );
+                if(numbers[n-1] <=s){
+                    maxTable[s] = Math.max(maxTable[s], maxTable[s -  numbers[n-1]] +  numbers[n-1]);
                 }
+
             }
         }
-        console.log(testCase, testCase.length, caseMax );
+
+    //    console.log(testCase, testCase.length, caseMax );
         console.log(maxTable);
+        output.push(maxTable[caseMax]);
     }
 
+    console.log(output.join('\n'));
 //  for(i=0; i<T; i++){
 //        console.log( getCloseExpectedSum(numberArray[i], NKArray[i][1]));
 //    }

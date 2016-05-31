@@ -31,10 +31,27 @@ var getNumber = function(n){
 };
 
 
-for(var i=4;i<=30;i++){
-    console.log(i + "==>" + getNumber(i));
+function getMinSquareSum_DP(sum){
+    //var min = new Array(sum+1);                            //
+    //min.fill(0);
+    var min = Array.from(Array(sum+1).keys());
+    for(var s =1; s<=sum ; s++){
+        for(var n =1; n*n<=s ; n++) {
+            console.log(s, n, min[s]);
+            min[s] = ( min[s] > 0) ? Math.min(min[s], min[s - n * n] + 1) : min[s - n * n] + 1;
+        }
+    }
+    return min[sum];
 }
+
+console.log( "9 dp ==>" + getMinSquareSum_DP(9));
+
+for(var i=4;i<=40;i++){
+    //console.log(i + "   recursion ==>" + getNumber(i) +" dp ==>" + getMinSquareSum_DP(i));
+}
+
 // minSumMap display
+/*
 console.log(minSumMap);
 var minSumMapKeys = Object.keys(minSumMap);
 minSumMapKeys.sort(function(a, b){ return a - b;});
@@ -42,3 +59,4 @@ minSumMapKeys.sort(function(a, b){ return a - b;});
 for(var k=0; k<minSumMapKeys.length;k++){
     console.log( minSumMapKeys[k] + '=>'+ minSumMap[minSumMapKeys[k]]);
 }
+*/

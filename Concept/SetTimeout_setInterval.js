@@ -1,14 +1,14 @@
-var mydiv = document.getElementById('div');
+
 
 function callLater(paramA, paramB, paramC){
     return (function(){
-        mydiv.innerHTML = mydiv.innerHTML + paramA + paramB + paramC + '<br />';
+        console.log(paramA +' ' +  paramB+' ' +  paramC);
 
     });
 
 }
 function callnow(paramA, paramB, paramC){
-    mydiv.innerHTML = mydiv.innerHTML + paramA + paramB + paramC + '<br />';
+    console.log(paramA +' ' +  paramB+' ' +  paramC);
 }
 
 
@@ -22,3 +22,15 @@ nowsetnew=setTimeout(functRef, 3000);
 nowsetnew2=setTimeout(function(){callnow('test10', 'test11', 'test12')}, 3000);
 
 
+function getLiveTemp(){
+    var t =  setInterval(function(){returnFunction(1)}, 1000);
+}
+function returnFunction(a){
+    console.log(a+'test');
+}
+getLiveTemp();
+
+function timeTest(){
+    var t = setTimeout(console.log('test'), 1000);
+}
+timeTest();

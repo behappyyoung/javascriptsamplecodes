@@ -5,7 +5,7 @@
 <meta charset=utf-8 />
 <title>Throttle</title>
     <style>
-        div.body {
+        div.board {
             white-space: pre;
             float: left;
             border: solid 2px;
@@ -13,18 +13,18 @@
             width: 300px;
             margin-left: 50px;
         }
-        div#board {
-
+        div.board.wide {
+            width: 500px;
 
         }
     </style>
 </head>
 <body>
 
-<div id="board" class="body">
+<div id="board" class="board">
     move mouse inside
 </div>
-<div class="body">
+<div class="board wide">
     <div> non - Throttle : <span id="nonthrottle"></span>
         <span> normal - fire on all event </span>
     </div>
@@ -35,6 +35,27 @@
         <span> fire event after stopping event and pass "centain" time  </span>
     </div>
 </div>
+
+<div id="board" class="board">
+    type  text fast - ex)google
+    <form>
+        <input type="text" name="search" id="inputText" >
+    </form>
+</div>
+
+<div class="board wide">
+    <div> non - Throttle : <span id="nonthrottle-input"></span>
+        <span> normal - fire on all event </span>
+    </div>
+    <div> Throttle   : <span id="throttle-input"></span>
+        <span> fire event once every "centain" time  </span>
+    </div>
+    <div> Debounce   : <span id="debounce-input"></span>
+        <span> fire event after stopping event and pass "centain" time  </span>
+    </div>
+</div>
+
+
 <div style="clear: both;"></div>
 <script src="Throttle.js"> </script>
 <script src="../showFile.js"> </script>

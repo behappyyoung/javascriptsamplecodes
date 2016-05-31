@@ -4,12 +4,87 @@
 
 function processData(input) {
     //Enter your code here
+    var parse_fun = function (s) {
+        return parseInt(s, 10);
+    };
+
+    function print() {  // A quick and dirty way to display output.
+        for(arg in arguments){
+            console.log(arguments[arg]);
+        }
+    }
 
 
     var lines = input.split('\n');
-    var testCase = parseInt(lines[0]);
-    console.log(lines);
+    var testCase = parseInt(lines.shift());
+    //console.log(lines);
 
+    while(lines.length>0){
+        var VL = lines.shift().split(' ');
+        var V = VL[0];
+        var L = VL[1];
+        var myGraph = new Graph();
+
+        for(var i=0; i<L; i++){
+            myGraph.add(lines.shift());
+        }
+        var startV = parseInt(lines.shift(), 10);
+        console.log(myGraph, myGraph.vertices);
+        //solve
+        bfs(myGraph, startV);
+    }
+
+    function Graph() {
+        var vertices = this.vertices = {};
+        this.add = function(inputline){
+            var input = inputline.split(' ').map(parse_fun);
+            var vertex = input[0];
+            var line = input[1];
+
+            if(typeof vertices[vertex] === 'undefined'){
+                vertices[vertex] = [line];
+
+            }else{
+                console.log('vertex', vertices[vertex]);
+                vertices[vertex].push(line);
+            }
+        }
+    }
+
+    function bfs(graph, source) {
+        var queue = [ { vertex: source, count: 0 } ],
+            visited = { },
+            tail = 0;
+            visited[source]= true;
+        while (tail < queue.length) {
+            print('s' , queue, visited, tail);
+            var cv = queue[tail].vertex,             // cv = current vertex ( start = source )
+                count = queue[tail].count;         // Pop a vertex off the queue.
+            tail++;
+        print('n' , queue, cv, tail, graph.vertices[cv]);
+            print('distance from ' + source + ' to ' + cv + ': ' + count);
+
+            for(var i=0; i<graph.vertices[cv].length; i++){
+     //           print(graph.vertices[cv][i]);
+                if (!visited[cv]) {
+                    visited[cv] = true;
+                    queue.push({ vertex: cv, count: count + 1 });
+                }
+            }
+            /*
+            graph.vertices[cv].forEach(function (v) {
+                print('v' , cv, v);
+                if (!visited[v]) {
+                    visited[v] = true;
+                    queue.push({ vertex: v, count: count + 1 });
+                }
+            });
+            */
+
+        }
+    }
+
+    /*
     var index = 1;
     for (var i = 0; i < testCase; i++) {
         var N = parseInt(lines[index].split(' ')[0]);
@@ -19,6 +94,7 @@ function processData(input) {
         var S = parseInt(lines[index]);
         index += 1;
         var graph = buildGraphFromInput(N, graphInput);
+        console.log(graph);
       //  console.log(findShortestReach(graph, S));
         
     }
@@ -67,7 +143,7 @@ function processData(input) {
 
         return output.join(' ');
     }
-
+*/
 }
 
 process.stdin.resume();
