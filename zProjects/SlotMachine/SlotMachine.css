@@ -1,46 +1,44 @@
 /* ----- wrapper ------ */
 .machine{
-    width:80%;
-    min-width: 480px;
+    position: relative;
+    width: 480px;
     height: 300px;
     margin: 100px auto;
-    float: left;
 }
 /* ----- lever ------ */
 .lever{
     float: left;
-    margin: 100px auto;
+    margin: 0 0 0 50px ;
 }
-.lever #lever{
 
-    height: 220px;
-    min-width: 50px;
-  /*  background-color: #00b7ff;
-    border: 3px solid blue;*/
-    overflow: hidden;
-}
-.lever #bar-top{
-    height: 20px;
-    width: 100%;
-    background-color: blue;
-}
-.lever  #bar {
+.lever #bar {
     height: 400px;
-    width: 20px;
-    background-color: blue;
-    border-radius: 5px 5px 0 0;
     margin: 0 auto;
 }
-.lever #lever-bottom{
-    height: 30px;
+.lever #bar #bar-top{
+    height: 20px;
     width: 100%;
-    background-color: blue;
+    background-color: red;
+    border-radius: 30px;
+}
+.lever #bar #bar-upper{
+    background-color: #A02D2D;
+    border-radius: 5px 5px;
+    width: 20px;
+    height: 50%;
+    margin: auto;
+
+}
+.lever #lever-bottom{
+    height: 20px;
+    width: 100%;
+    background-color: grey;
     position: relative;
     top:-10px;
 }
 
 .lever #bar.pull{
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-name: pull;
 }
 /* lever animations */
@@ -57,70 +55,53 @@
     to { transform: rotateZ(30deg)}
 }
 
-.lever .text{
-
-}
 /* ----- reels ----- */
 .reel {
-    margin:0 1%;
-    width: 30%;
-    height: 240px;
+    width: 110px;
+    height: 200px;
     float: left;
-    border: 3px solid blue;
+    border: 3px solid black;
     overflow: hidden;
+    margin: 10px 5px;
+    border-radius: 10px;
 }
 .inner-reel{
     width: 100px;
-    height: 300px;
     margin: auto;
+    height: 100%;
     position: relative;
-    top:-80px;
-
 }
-.inner-reel.down{
-    animation: down 2s infinite;
+.inner-reel#maker{
+    background: url("images/maker.jpg") 0 50px;
 }
-.inner-reel.fastdown{
-    animation: down 500ms infinite;
+.inner-reel#filter{
+    background: url("images/filter.jpg") 0 50px;
 }
-/* reel animations */
-@-webkit-keyframes down {
-    from {-webkit-transform: translateY(0px)}           /* safari */
-    to { -webkit-transform:translateY(180px)}
-}
-@-moz-keyframes down {
-    from {-moz-transform: translateY(0px)}              /* FF */
-    to { -moz-transform:translateY(180px)}
-}
-@keyframes down {
-    from {transform: translateY(-180px)}                 /* chrome  */
-    to { transform:translateY(80px)}
+.inner-reel#ground{
+    background: url("images/beans.jpg") 0 50px;
 }
 
-
-.turn-block{
+/* -------- message --------------  */
+.message {
+    display: none;
+    position: absolute;
+    left: 100px;
+    top:50px;
+    right: 100px;
+    width: 200px;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid blue;
+}
+.message .text{
+    margin: auto;
+    padding: 20px;
+}
+.message .image{
     width: 100px;
-    height: 80px;
-    background-color: #0e90d2;
-    margin:5px auto;
+    margin: auto;
 }
-.turn-block.maker-coffee{
-    background-image: url("images/coffee-machine.jpg");
-    background-size: cover;
+.message .image img{
+    width: 100px;
+    height: 100px;
 }
-.turn-block.center{
-    background-color: #00A000;
-    opacity: 1;
-}
-/* reel animations */
-/*
-.turn-block.up {
-    -webkit-transform: rotateX( 45deg );
-    -moz-transform: rotateX( 45deg );
-    -o-transform: rotateX( 45deg );
-    transform: rotateX( 45deg );
-}
-.turn-block.down {
-transform: rotateX( -45deg );
-}
-*/

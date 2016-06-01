@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Slot Machine</title>
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="inc/jquery-2.2.4.min.js"></script>
     <script src="SlotMachine.js"></script>
     <link rel="stylesheet" href="SlotMachine.css" />
 </head>
@@ -12,71 +12,35 @@
 <div class="machine">
     <div class="reel">
         <div class="inner-reel " id="maker">
-            <div class="turn-block up-hidden" id="maker-0" >
-
-            </div>
-            <div class="turn-block up" id="maker-1" >
-
-            </div>
-            <div class="turn-block center" id="maker-2">
-
-            </div>
-            <div class="turn-block down" id="maker-3 ">
-
-            </div>
-            <div class="turn-block down-hidden" id="maker-4">
-
-            </div>
-            <div class="turn-block down-hidden" id="maker-5">
-
-            </div>
         </div>
 
     </div>
     <div class="reel">
-        <div class="inner-reel filter" id="filter">
-            <div class="turn-block up-hidden" id="maker-0" >
+        <div class="inner-reel" id="filter">
 
-            </div>
-            <div class="turn-block up" id="maker-1" >
-
-            </div>
-            <div class="turn-block center" id="maker-2">
-
-            </div>
-            <div class="turn-block down" id="maker-3 ">
-
-            </div>
-            <div class="turn-block down-hidden" id="maker-4">
-
-            </div>
-            <div class="turn-block down-hidden" id="maker-5">
-
-            </div>
         </div>
 
     </div>
-    <div class="reel" id="ground">
-        <div class="inner-reel" id="ground-coffee">
+    <div class="reel">
+        <div class="inner-reel" id="ground">
 
         </div>
-        <div class="inner-reel center" id="ground-tea">
+    </div>
 
+    <div class="lever">
+        <div id="lever">
+            <div id="bar">
+                <div id="bar-top"></div>
+                <div id="bar-upper"></div>
+                <div id="bar-lower"></div>
+            </div>
         </div>
-        <div class="inner-reel" id="ground-espresso ">
-
-        </div>
+    </div>
+    <div class="message">
+        <div class="text"> test</div>
+        <div class="image"><img src="" /></div>
     </div>
 </div>
 
-<div class="lever">
-    <div id="lever">
-        <div id="bar-top"></div>
-        <div id="bar"></div>
-
-        <div class="text"> Click </div>
-    </div>
-    <div id="lever-bottom"></div>
-</div>
 </body>
 </html>
