@@ -28,9 +28,6 @@ jQuery(function($) {
 
     function initReel(){
         turnSpeed = 3;
-        makerPosition = 50;
-        filterPosition = 50;
-        groundPosition= 50;
         randomMaker = 0;
         randomGround = 0;
         randomFilter = 0;

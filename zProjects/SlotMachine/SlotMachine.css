@@ -51,8 +51,8 @@
     to { -moz-transform: rotate(30deg)}
 }
 @keyframes pull {
-    from {transform: rotateZ(0deg);}
-    to { transform: rotateZ(30deg)}
+    from {transform: rotate(0deg);}
+    to { transform: rotate(30deg)}
 }
 
 /* ----- reels ----- */
@@ -78,7 +78,7 @@
     background: url("images/filter.jpg") 0 50px;
 }
 .inner-reel#ground{
-    background: url("images/beans.jpg") 0 50px;
+    background: url("images/grounds.jpg") 0 50px;
 }
 
 /* -------- message --------------  */
@@ -86,7 +86,7 @@
     display: none;
     position: absolute;
     left: 100px;
-    top:50px;
+    top:40px;
     right: 100px;
     width: 200px;
     background-color: white;
