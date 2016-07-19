@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Print Screen </title>
+    <style>
+            @page
+        {
+            size: auto;   /* auto is the current printer page size */
+            margin: 0mm;  /* this affects the margin in the printer settings */
+        }
+    html
+    {
+        background-color: #FFFFFF;
+        margin: 0px;  /* this affects the margin on the html before sending to printer */
+    }
+        body
+        {
+            background-color:#FFFFFF;
+            margin: 0px;  /* the margin on the content before printing */
+       }
+
+        div#myDiv {
+            height: 50px;
+            width: 300px;
+            background-color: #808080;
+        }
+        div#printDiv{
+            height: 50px;
+            width: 300px;
+            background-color: #808000;
+            padding:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="" id="myDiv">
+        Click here to print Whole page
+    </div>
+
+    <div class="" id="printDiv">
+        Click here  to print only this
+        this is for printing
+    </div>
+    
+
+
+    <script src="print.js"></script>
+    <script src="../showHtml.js"></script>
+</body>
+</html>
