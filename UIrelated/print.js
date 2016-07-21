@@ -7,29 +7,10 @@ document.getElementById('myDiv').addEventListener('click', function(e) {
 
 document.getElementById('printDiv').addEventListener('click', function(e) {
 	
-	
-// 	 var mywindow = window.open('', 'my div', 'height=595,width=842');	// A4 size
-// 	 var str = this.innerHTML;
-// 		 mywindow.document.write('<html><head>');
-//         mywindow.document.write('<style>@page{ size: auto;   margin: 0mm;  }');
-//     mywindow.document.write('html    {        background-color: #FFFFFF;   margin: 0px; }');
-//     mywindow.document.write(' body        {background-color:#FFFFFF;   margin: 0px;  }');
-//     	mywindow.document.write('div#printDiv{    height: 50px;  width: 300px;');
-//             mywindow.document.write('background-color: #808000;padding:50px; }</style>');
-
-//         mywindow.document.write('</head><body >');
-//         mywindow.document.write(str);
-//         console.log(str);
-//         mywindow.document.write(encodeURI(str));
-//         mywindow.document.write('</body></html>');
-// //        mywindow.document.close(); // necessary for IE >= 10
-// //        mywindow.focus(); // necessary for IE >= 10
-
-//         mywindow.print();
-// //        mywindow.close();
 
         var title = document.title;
         var divElements = document.getElementById('printDiv').innerHTML;
+        //var printWindow = window.open("", "_blank", 'height=842,width=595');
         var printWindow = window.open("", "_blank", 'height=595,width=842');
         //open the window
         printWindow.document.open();
