@@ -15,7 +15,7 @@ document.getElementById('printDiv').addEventListener('click', function(e) {
         //open the window
         printWindow.document.open();
         //write the html to the new window, link to css file
-        printWindow.document.write('<html><head><title>' + title + '</title><link rel="stylesheet" type="text/css" href="/print.css"></head><body><div id="printingDiv">');
+        printWindow.document.write('<html><head><title>' + title + '</title><link rel="stylesheet" type="text/css" href="/print.css?v2"></head><body><div id="printingDiv">');
         printWindow.document.write(divElements);
         printWindow.document.write('</div></body></html>');
         printWindow.document.close();

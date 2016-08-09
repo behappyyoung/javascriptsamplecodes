@@ -3,11 +3,15 @@
 <head>
     <title> Print Screen </title>
     <style>
-            @page
+        @page
         {
-            size: auto;   /* auto is the current printer page size */
-            margin: 0mm;  /* this affects the margin in the printer settings */
+            width:29.7cm;
+            height:20.9cm;
+            margin: 0;  /* this affects the margin in the printer settings */
+            padding:10mm;
+            size: landscape;
         }
+
     html
     {
         background-color: #FFFFFF;
@@ -18,7 +22,24 @@
             background-color:#FFFFFF;
             margin: 0px;  /* the margin on the content before printing */
        }
+        @media print{
+            @page {
+                size: landscape;
+                webkit-transform: rotate(-90deg); -moz-transform:rotate(-90deg);
+                filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
+            }
+                    body
+        {
+            background-image: url('print.png');
+            background-size: cover;
+            margin: 0px;  /* the margin on the content before printing */
+                      padding: 10px 0 0 20px;  /* the margin on the content before printing */
+            width:29.7cm;
+            height:21cm;
+       }
+
+        }
         div#myDiv {
             height: 50px;
             width: 300px;
