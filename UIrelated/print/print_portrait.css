@@ -1,0 +1,34 @@
+        @page
+        {
+            width:21cm;
+            height:29.7cm;
+            margin: 0;  /* this affects the margin in the printer settings */
+            padding:10mm;
+            size: portrait;
+        }
+        @media print{
+            @page {
+                size: portrait;
+            }
+        }
+    html
+    {
+        background-color: #FFFFFF;
+        margin: 0px;  /* this affects the margin on the html before sending to printer */
+    }
+        body
+        {
+            background-image: url('print.png');
+            background-size: cover;
+            margin: 0px;  /* the margin on the content before printing */
+       }
+
+
+        div#printingDiv{
+            position: absolute;;
+            top: 400px;
+            height: 50px;
+            width: 300px;
+            background-image: url('print.png');
+            padding:50px;
+        }

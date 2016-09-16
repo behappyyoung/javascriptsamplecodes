@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Print Screen </title>
+    <style>
+        @page
+        {
+            width:29.7cm;
+            height:21cm;
+            margin: 0;  /* this affects the margin in the printer settings */
+            padding:10mm;
+            size: landscape;
+        }
+
+    html
+    {
+        background-color: #FFFFFF;
+        margin: 0px;  /* this affects the margin on the html before sending to printer */
+    }
+
+        body
+        {
+            background-image: url('print.png');
+            background-size: cover;
+            margin: 0px;  /* the margin on the content before printing */
+            padding: 10px 0 0 20px;  /* the margin on the content before printing */
+            width:29.7cm;
+            height:21cm;
+       }
+
+
+        div#myDiv {
+            height: 50px;
+            width: 300px;
+            background-color: #808080;
+        }
+        div#printDiv, div#nonprintDiv{
+            height: 300px;
+            width: 300px;
+            background-image: url('print.png');
+            background-size: cover;
+            margin:50px auto;
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+    <div class="" id="myDiv">
+        Click here to print Whole page
+    </div>
+
+    <div class="" id="printDiv">
+        Click here  to print only this
+        this is for printing
+    </div>
+        
+    <div class="" id="nonprintDiv">
+        this is non print div
+    </div>
+    
+    <div class="" id="nonprintDiv">
+        this is non print div
+    </div>
+
+
+    <script src="print_landscape.js"></script>
+    <script src="../../showHtml.js"></script>
+</body>
+</html>
