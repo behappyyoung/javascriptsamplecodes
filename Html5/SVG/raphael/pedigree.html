@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Raphaël - Pedigree </title>
+        <link rel='stylesheet' type='text/css' href='font-awesome.min.css'/>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="raphael.min.js"></script>
+        <style media="screen">
+            body {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            .no-display{
+                display: none;
+            }
+            #paper {
+                width: 1000px;
+                height: 1000px;
+                border: 1px solid;
+                background: #fff;
+                margin: 100px 100px;
+            }
+            .view-controls {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                opacity: 0.8;
+                z-index: 100000;
+                padding: 4px;
+            }
+            .info{
+                position: absolute;
+                display: none;
+            }
+        </style>
+        <script>
+         var paper;
+
+         window.onload = function() {
+
+
+            /** Event handler for mouse wheel event.
+                 */
+                paper         = new Raphael(document.getElementById('paper'), 1000, 1000);
+                //paper.setViewBox(0,0,paper.width,paper.height);
+                var rSize = 20;
+                var sSize = 5;
+                var vLegnth = 70;
+                var currentX, currentY;
+                function showInfo(id){
+                    paper.getById(id+'-shadow-topLine').attr('class', 'display');
+                    paper.getById(id+'-shadow-leftLine').attr('class', 'display');
+                    paper.getById(id+'-shadow-topSelect').attr('class', 'display');
+                    paper.getById(id+'-shadow-leftSelect').attr('class', 'display');
+
+                }
+                function hideInfo(id) {
+                    paper.getById(id+'-shadow-topLine').attr('class', 'no-display');
+                    paper.getById(id+'-shadow-leftLine').attr('class', 'no-display');
+                    paper.getById(id+'-shadow-topSelect').attr('class', 'no-display');
+                    paper.getById(id+'-shadow-leftSelect').attr('class', 'no-display');
+                    $('.info').css({'display': 'none'});
+                }
+                function showDetails(id) {
+                    var postionX = paper.getById(id).getBBox().x2;
+                    var postionY = paper.getById(id).getBBox().y2;
+                    $('#current_id').html(id + '/'+ postionX + '/'+ postionY+'/'+currentX+'/'+currentY);
+                    $('.info').css({'display': 'block', 'left': currentX, 'top':currentY});
+                }
+                function getPset(type) {
+                    var cShape;
+                    if(type=='male'){
+                        cShape = paper.rect(0, 0, 12,12);
+                    }else if(type=='female'){
+                        cShape = paper.circle(60,60,6);
+                    }
+                    var pset = paper.set();
+                    pset.push(
+                    	cShape
+                    );
+                    return pset;
+
+                }
+                function createPath(startx, endx, starty, endy){
+                    var line = paper.path("M"+startx+","+starty+"L"+endx+","+endy);
+                    return line;
+                }
+
+                function createShadow(px, py, id) {
+                    var sSet = paper.set();
+                    var mainShadow = paper.rect(px-2*rSize, py-2*rSize, 4*rSize, 4*rSize).attr({fill: '#008000', stroke:'none', "fill-opacity": "0"})
+                    .hover(function () {
+                        this.attr({fill: '#008000', "fill-opacity": "0.5"});
+                        showInfo(id);
+                        this.toBack();
+
+                    }, function () {
+                        this.attr({"fill-opacity": "0"});
+                        hideInfo(id);
+                    });
+                    mainShadow.id = id+'-shadow-mainShadow';
+                    var topLine = paper.path('M'+px+','+ (py-1.5*rSize)+'L'+ px+','+ (py-rSize)+'M'+ px+','+ (py-1.5*rSize)+'L'+ (px+1.5*rSize)+','+(py-1.5*rSize)+'M'+ (px+1.5*rSize)+','+(py-1.5*rSize)+'L'+ (px+1.5*rSize)+','+(py-rSize) )
+                        .attr({fill: '#008000', stroke: '#008000','stroke-width': '2',  class:'no-display'});
+                    topLine.id = id+'-shadow-topLine';
+                    var topSelect = paper.rect((px+1.5*rSize-sSize/2), (py-rSize), sSize, sSize ).transform("r45")
+                        .attr({fill: '#008000',stroke:'none', class:'no-display'})
+                        .click(function () {mousedown = false;alert(this.id);});
+                    topSelect.id = id+'-shadow-topSelect';
+                    var leftLine = paper.path('M'+(px-rSize)+','+py+'L'+(px-1.5*rSize)+','+py).attr({fill: '#008000', stroke: '#008000', 'stroke-width': '2', class:'no-display'});
+                    leftLine.id = id+'-shadow-leftLine';
+                    var leftSelect = paper.rect((px-1.5*rSize-sSize), (py-sSize/2), sSize, sSize).transform("r45").attr({fill: '#008000',stroke:'none', class:'no-display'});
+                    leftSelect.id = id+'-shadow-leftSelect';
+                    sSet.push(
+                            mainShadow,
+                            topLine,
+                            topSelect,
+                            leftLine,
+                            leftSelect
+                    )
+                    return sSet;
+                }
+                function createPedigree(px, py, gen, id) {
+                    px = (typeof px === 'undefined') ? 500 : px;
+                    py = (typeof py === 'undefined') ? 500 : py;
+                    var pset = paper.set();
+                    var centerP = paper.circle(px,py,sSize).attr({fill: 'red'})
+                        .click(function () {mousedown = false;alert(this.id);})
+                        .hover(function () {this.attr({"fill": "#E3E3E3"})}, function () {this.attr({"fill": "red"})});
+                    centerP.id = ( typeof id === 'undefined' ) ? '0' : id ;
+                    var leftX = px-vLegnth-rSize;
+                    var rightX = px + vLegnth +rSize;
+                    var leftP = paper.rect(leftX-rSize, py-rSize, 2*rSize, 2*rSize)
+                        .click(function () {mousedown = false;alert(this.id);})
+                         .hover(function () {this.attr({"fill": "#E3E3E3"})}, function () {this.attr({"fill": "none"})});
+                    leftP.id = centerP.id + '-leftP';
+                    var rightP = paper.circle(rightX,py, rSize).attr({"fill": "none"})
+                        .click(function () {mousedown = false;alert(this.id);})
+                        .hover(function () {this.attr({"fill": "#E3E3E3"})}, function () {this.attr({"fill": "none"})});
+                    rightP.id = centerP.id + '-rightP';
+
+                    var leftS = createShadow(leftX, py, leftP.id);
+                    leftS.id = leftP.id+'-shadow';
+                    var rightS = createShadow(rightX, py, rightP.id);
+                    rightS.id = rightP.id+'-shadow';
+                    pset.push(
+                            centerP,
+                            leftP,
+                            leftS,
+                            rightP,
+                            rightS,
+                            paper.path("M"+(px-vLegnth)+","+py+"L"+(px-sSize)+","+py),
+                            paper.path("M"+(px+sSize)+","+py+"L"+(px+vLegnth)+","+py),
+                            paper.path("M"+px+","+(py+sSize)+"L"+px+","+(py+2*vLegnth))
+                    );
+                    if(gen=='none' || typeof gen ==='undefined'){
+
+                    }else{
+                        var bottomY = py+2*vLegnth+rSize;
+                        if(gen=='m'){
+                            var centerC = paper.rect(px-rSize, bottomY-rSize, 2*rSize, 2*rSize);
+
+                        }else{
+                            var centerC = paper.circle(px, bottomY, rSize);
+                        }
+                        centerC.id = centerP.id + '-centerC';
+                        var centerS = createShadow(px, bottomY, centerP.id);
+                        pset.push(centerC, centerS);
+                    }
+
+                    return pset;
+                }
+              //  var mset = getPset('male');
+              //  var fset = getPset('female');
+
+//                var pedset = paper.set();
+//                pedset.push(
+//                    paper.circle(60, 6, 6),
+//                    mset,
+//                    fset,
+//                    paper.path("M12,6L54,6")
+//                );
+
+//            pedset.translate((paper.width / 2) , (paper.height / 2) );    // to center
+//            pedset.attr({fill:"#cccccc", stroke:"#000"})
+//
+                var basePed = createPedigree(500, 500, 'f', 'self');
+                var parentPed = createPedigree(100,100, 'm', 'p');
+                var mParent = createPedigree(500+vLegnth+rSize, 500-2*vLegnth-rSize, 'none', 'mp');
+
+                // paper.setViewBox(400, 400, 200, 200);
+                window.basePed = basePed;
+                window.parentPed = parentPed;
+
+
+            var viewBoxWidth  = paper.width;
+            var viewBoxHeight = paper.height;
+            var canvasID      = "#paper";
+            var startX,startY;
+            var mousedown     = false;
+            var dX,dY;
+            var oX            = 0, oY = 0, oWidth = viewBoxWidth, oHeight = viewBoxHeight;
+            var viewBox       = paper.setViewBox(oX, oY, viewBoxWidth, viewBoxHeight);
+            viewBox.X         = oX;
+            viewBox.Y         = oY;
+            var vB            = paper.rect(viewBox.X,viewBox.Y,viewBoxWidth,viewBoxHeight);
+            vB.attr({stroke: "#009", "stroke-width": 5});
+            /** This is high-level function.
+             * It must react to delta being more/less than zero.
+             */
+            function handle(delta) {
+                vBHo = viewBoxHeight;
+                vBWo = viewBoxWidth;
+                if(delta < 0){
+                    viewBoxWidth  *= 0.95;
+                    viewBoxHeight *= 0.95;
+                }else{
+                    viewBoxWidth  *= 1.05;
+                    viewBoxHeight *= 1.05;
+                }
+                /*
+                 vB.attr({
+                 x: viewBox.X,
+                 y: viewBox.Y,
+                 width: viewBoxWidth,
+                 height: viewBoxHeight
+                 });
+                 */
+                viewBox.X -= (viewBoxWidth - vBWo) / 2;
+                viewBox.Y -= (viewBoxHeight - vBHo) / 2;
+                paper.setViewBox(viewBox.X,viewBox.Y,viewBoxWidth,viewBoxHeight);
+            }
+
+            function wheel(event){
+                var delta = 0;
+                if(!event){ /* For IE. */
+                    event = window.event;
+                }
+                if(event.wheelDelta){ /* IE/Opera. */
+                    delta = event.wheelDelta/120;
+                } else if (event.detail) { /** Mozilla case. */
+                    /** In Mozilla, sign of delta is different than in IE.
+                     * Also, delta is multiple of 3.
+                     */
+                    delta = -event.detail/3;
+                }
+                /** If delta is nonzero, handle it.
+                 * Basically, delta is now positive if wheel was scrolled up,
+                 * and negative, if wheel was scrolled down.
+                 */
+                if(delta){
+                    handle(delta);
+                }
+                /** Prevent default actions caused by mouse wheel.
+                 * That might be ugly, but we handle scrolls somehow
+                 * anyway, so don't bother here..
+                 */
+                if(event.preventDefault){
+                    event.preventDefault();
+                }
+                event.returnValue = false;
+            }
+            /** Initialization code.
+             * If you use your own event management code, change it as required.
+             */
+            if (window.addEventListener)
+                /** DOMMouseScroll is for mozilla. */
+                //window.addEventListener('DOMMouseScroll', wheel, false);
+                document.getElementById('paper').addEventListener('DOMMouseScroll', wheel, false);
+            /** IE/Opera. */
+            //window.onmousewheel = document.onmousewheel = wheel;
+            document.getElementById('paper').onmousewheel = wheel;
+            //Pan
+            $(canvasID).mousedown(function(e){
+                if (paper.getElementByPoint( e.pageX, e.pageY ) !== null){
+                    return;
+                }
+                mousedown = true;
+                startX = e.pageX;
+                startY = e.pageY;
+            });
+            $(canvasID).mousemove(function(e){
+                if (mousedown === false) {currentX = e.pageX; currentY = e.pageY; return;}
+                dX  = startX - e.pageX;
+                dY  = startY - e.pageY;
+                x   = viewBoxWidth / paper.width;
+                y   = viewBoxHeight / paper.height;
+                dX *= x;
+                dY *= y;
+                //alert(viewBoxWidth +" "+ paper.width );
+                console.log( viewBox.X , dX );
+                paper.setViewBox(viewBox.X + dX, viewBox.Y + dY, viewBoxWidth, viewBoxHeight);
+            });
+            $(canvasID).mouseup(function(e){
+                if ( mousedown === false ) return;
+                viewBox.X += dX;
+                viewBox.Y += dY;
+                mousedown = false;
+            });
+
+            $('.zoom-out').on('click', function () {
+                handle(10);
+            });
+             $('.zoom-in').on('click', function () {
+                 handle(-10);
+             });
+        };
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="paper">
+                <div class="info">
+                    <div id="current_id"></div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="view-controls">
+                <div class="view-controls-pan field-no-user-select" title="Pan">
+                    <span class="view-control-pan pan-up fa fa-fw fa-arrow-up" title="Pan up"></span><span class="view-control-pan pan-right fa fa-fw fa-arrow-right" title="Pan right"></span><span class="view-control-pan pan-down fa fa-fw fa-arrow-down" title="Pan down"></span><span class="view-control-pan pan-left fa fa-fw fa-arrow-left" title="Pan left"></span><span class="view-control-pan pan-home fa fa-fw fa-user" title="Pan home"></span>
+                </div>
+                <div class="view-controls-zoom field-no-user-select" title="Zoom">
+                    <div class="field-no-user-select zoom-button zoom-in fa fa-fw fa-search-plus" title="Zoom in"></div>
+                    <div class="field-no-user-select zoom-track" style="height: 200px;">
+                        <div class="field-no-user-select zoom-handle selected" title="Drag to zoom" style="top: 169px; position: relative;"></div>
+                    </div>
+                    <div class="field-no-user-select zoom-button zoom-out fa fa-fw fa-search-minus" title="Zoom out"></div>
+                    <div class="field-no-user-select zoom-crt-value"></div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+
