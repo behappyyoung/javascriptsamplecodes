@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="raphael.min.js"></script>
+	<script type="text/javascript">
+		var R, black, blue, red;
+		window.onload = function() {
+			R = Raphael("holder", 100, 100);
+			blue = R.rect(0, 0, 75, 75).attr({fill: "blue"});
+			red = R.rect(25, 25, 75, 75).attr({fill: "red"});
+		};
+
+		var blueToFront = function() {
+			blue.toFront();
+		};
+
+		var redToFront = function() {
+			red.toFront();
+		};
+
+		var blueToBack = function() {
+			blue.toBack();
+		};
+
+		var redToBack = function() {
+			red.toBack();
+		};
+
+		var titleToBlue = function() {
+			blue.attr({title: "Title for blue."});
+		};
+
+	</script>
+	<title>Raphael.js Bug - Cannot bring element to front after adding title.</title>
+</head>
+
+<body>
+<div id="holder"></div>
+<ol>
+	<li>Front: <a href="javascript:blueToFront();">Blue</a>, <a href="javascript:redToFront();">Red</a></li>
+	<li>Back: <a href="javascript:blueToBack();">Blue</a>, <a href="javascript:redToBack();">Red</a></li>
+	<li><a href="javascript:titleToBlue();">Add title to blue</a></li>
+</ol>
+</body>
+</html>
