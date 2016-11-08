@@ -5,7 +5,13 @@
         <title> Raphaël - Pedigree </title>
         <link rel='stylesheet' type='text/css' href='font-awesome.min.css'/>
         <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script
+                src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+                integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="raphael.min.js"></script>
+        <script src="pedigree.js"></script>
         <style media="screen">
             body {
                 margin: 0;
@@ -21,6 +27,7 @@
                 border: 1px solid;
                 background: #fff;
                 margin: 100px 100px;
+                z-index: 10;
             }
             .view-controls {
                 position: absolute;
@@ -32,391 +39,47 @@
             }
             .info{
                 position: absolute;
-                display: none;
+                background-color: #00A000;
+                min-width: 300px;
+                min-height: 500px;
+                z-index: 100;
+                /*display: none;*/
             }
         </style>
-        <script>
-            var testPed = [{id:'1', name: 'proband', father:'2', mother:'3', sex:'male'}, {id:'2', name:'father', father:'4', sex:'male'},{id:'4', name:'grandfather',father:'5', sex:'male'},{id:'5', name:'grandgrandfather', sex:'male'}];
-//            var testPedObj = JSON.parse(testPed);
-console.log(testPed);
-            window.testPed = testPed;
-            var paper, viewBox;
 
-         window.onload = function() {
-
-
-            /** Event handler for mouse wheel event.
-                 */
-                paper         = new Raphael(document.getElementById('paper'), 1000, 1000);
-                viewBox = paper.setViewBox(0,0,paper.width,paper.height);
-                var rSize = 20;
-                var sSize = 5;
-                var vLegnth = 70;
-                var currentX, currentY;
-                var viewStartX=0;
-                var viewStartY=0;
-                var tid;
-                function hideLines(what){
-                    var cElement = $('.'+what);
-                    for(var i=0;i<cElement.length;i++){
-                        var classes = cElement[i].getAttribute('class').split(' ');
-                        if( classes[1] == 'display'){
-                            paper.getById(classes[0]).attr('class', classes[0] + ' no-display '+what);
-                        }
-
-                    }
-                }
-                function showInfo(id){
-                    hideLines('topselect');
-                    hideLines('topline');
-                    hideLines('leftline');
-                    hideLines('leftselect');
-                    paper.getById(id+'-shadow-topLine').attr('class', id + '-shadow-topLine display topline');
-                    paper.getById(id+'-shadow-leftLine').attr('class', id + '-shadow-leftLine display leftline ');
-                    paper.getById(id+'-shadow-topSelect').attr('class', id+'-shadow-topSelect display topselect');
-                    paper.getById(id+'-shadow-leftSelect').attr('class', id + '-shadow-leftSelect display leftselect');
-
-                }
-
-                function showDetails(id) {
-                    var postionX = paper.getById(id).getBBox().x2;
-                    var postionY = paper.getById(id).getBBox().y2;
-                    $('#current_id').html(id + '/'+ postionX + '/'+ postionY+'/'+currentX+'/'+currentY);
-                    $('.info').css({'display': 'block', 'left': currentX, 'top':currentY});
-                }
-                function getMenuSet() {
-                    var firstMenu = paper.rect(0, 0, 50, 50).attr({fill:'#ffffff', stroke:'#000000', 'stroke-width': '2'});
-                    var secondMenu = paper.rect(52, 0, 50, 50).attr({fill:'#ffffff', stroke:'#000000', 'stroke-width': '2'});
-                    var menuSet = paper.set();
-                    menuSet.push(
-                            firstMenu,
-                            secondMenu
-                    )
-                    return menuSet;
-                }
-                function getPset(type) {
-                    var cShape;
-                    if(type=='male'){
-                        cShape = paper.rect(0, 0, 12,12);
-                    }else if(type=='female'){
-                        cShape = paper.circle(60,60,6);
-                    }
-                    var pset = paper.set();
-                    pset.push(
-                    	cShape
-                    );
-                    return pset;
-
-                }
-                function createPath(startx, endx, starty, endy){
-                    var line = paper.path("M"+startx+","+starty+"L"+endx+","+endy);
-                    return line;
-                }
-
-                function createShadow(px, py, id) {
-                    var sSet = paper.set();
-                    var mainShadow = paper.rect(px-2*rSize, py-2*rSize, 4*rSize, 4*rSize).attr({fill: '#008000', stroke:'none', "fill-opacity": "0"})
-                    .hover(function () {
-                        this.attr({fill: '#008000', "fill-opacity": "0.5"});
-                        this.toBack();
-                        console.log(id);
-
-                    }, function () {
-                        this.attr({"fill-opacity": "0"});
-
-                    })
-                    .mouseover(function (e) {
-                        showInfo(id);
-                    });
-
-                    mainShadow.id = id+'-shadow-mainShadow';
-                    tid =  id+'-shadow-topLine';
-                    var topLine = paper.path('M'+px+','+ (py-1.5*rSize)+'L'+ px+','+ (py-rSize)+'M'+ px+','+ (py-1.5*rSize)+'L'+ (px+1.5*rSize)+','+(py-1.5*rSize)+'M'+ (px+1.5*rSize)+','+(py-1.5*rSize)+'L'+ (px+1.5*rSize)+','+(py-rSize) )
-                        .attr({fill: '#008000', stroke: '#008000','stroke-width': '2',  class:tid + ' no-display topline', id:tid});
-                    topLine.id = tid;
-                    tid = id+'-shadow-topSelect';
-                    var topSelect = paper.rect((px+1.5*rSize-sSize/2), (py-rSize), sSize, sSize ).transform("r45")
-                        .attr({fill: '#0000ff',stroke:'none', class: tid +' no-display topselect', 'data-tid':tid, id:tid})
-                        .hover(function () {
-                            this.attr({fill:'red'})
-                        }, function () {
-                            this.attr({fill:'blue'});
-//                            hideInfo(id);
-                        })
-                        .click(function () {
-                            mousedown = false;
-                            console.log(this, this.getBBox());
-                            myMenu.transform(0, 0);// need reset
-                            myMenu.attr({'class':'display'});
-                            myMenu.translate(this.getBBox().x2, this.getBBox().y2);
-                            myMenu.toFront();
-
-                        });
-                    topSelect.id = tid;
-                    tid = id+'-shadow-leftLine';
-                    var leftLine = paper.path('M'+(px-rSize)+','+py+'L'+(px-1.5*rSize)+','+py)
-                        .attr({fill: '#008000', stroke: '#008000', 'stroke-width': '2', class:tid + ' no-display leftline'});
-                    leftLine.id = tid;
-                    tid = id+'-shadow-leftSelect';
-                    var leftSelect = paper.rect((px-1.5*rSize-sSize), (py-sSize/2), sSize, sSize).transform("r45")
-                        .attr({fill: '#0000ff',stroke:'none', class:tid +  ' no-display leftselect'})
-                        .click(function () {
-                            console.log(this, this.getBBox());
-                        })
-                        .hover(function () {
-                            this.attr({fill:'red'})
-                        }, function () {
-                            this.attr({fill:'blue'});
-                        });
-                    leftSelect.id = tid;
-                    mainShadow.toBack();
-                    topSelect.toFront();
-                    sSet.push(
-                            mainShadow,
-                            topLine,
-                            topSelect,
-                            leftLine,
-                            leftSelect
-                    )
-                    return sSet;
-                }
-                function createPedigree(px, py, gen, id, pid, mid) {
-
-                    px = (typeof px === 'undefined') ? 500 : px;
-                    py = (typeof py === 'undefined') ? 500 : py;
-                    var pset = paper.set();
-                    var centerP = paper.circle(px,py,sSize).attr({fill: 'red'})
-                        .click(function () {mousedown = false;alert(this.id);})
-                        .hover(function () {this.attr({"fill": "#E3E3E3"})}, function () {this.attr({"fill": "red"})});
-                    centerP.id = ( typeof id === 'undefined' ) ? '0' : id ;
-                    var leftX = px-vLegnth-rSize;
-                    var rightX = px + vLegnth +rSize;
-                    tid = centerP.id+'-leftS';
-                    var leftS = createShadow(leftX, py, tid);
-                    leftS.id = tid;
-                    tid = centerP.id+'-rightS';
-                    var rightS = createShadow(rightX, py, tid);
-                    rightS.id = tid;
-                    tid = (typeof pid === 'undefined' )? centerP.id + '-leftP' : pid;
-                    var leftP = paper.rect(leftX-rSize, py-rSize, 2*rSize, 2*rSize)
-                        .click(function () {
-                            mousedown = false;
-                            console.log(this, this.getBBox());
-                        })
-                         .hover(function () {this.attr({"fill": "#E3E3E3"})}, function () {this.attr({"fill": "none"})});
-                    leftP.id = tid;
-                    tid = ( typeof mid === 'undefined')? centerP.id + '-rightP' : mid;
-                    var rightP = paper.circle(rightX,py, rSize).attr({"fill": "none"})
-                        .click(function () {
-                            mousedown = false;
-                            console.log(this, this.getBBox());
-                        })
-                        .hover(function () {this.attr({"fill": "#E3E3E3"})}, function () {this.attr({"fill": "none"})});
-                    rightP.id = tid;
-
-                    pset.push(
-                            leftS,
-                            rightS,
-                            rightP,
-                            centerP,
-                            leftP,
-                            paper.path("M"+(px-vLegnth)+","+py+"L"+(px-sSize)+","+py),
-                            paper.path("M"+(px+sSize)+","+py+"L"+(px+vLegnth)+","+py),
-                            paper.path("M"+px+","+(py+sSize)+"L"+px+","+(py+2*vLegnth))
-                    );
-                    if(gen=='none' || typeof gen ==='undefined'){
-
-                    }else{
-                        var bottomY = py+2*vLegnth+rSize;
-                        tid = centerP.id+'-centerS';
-                        var centerS = createShadow(px, bottomY, tid);
-                        centerS.id = tid;
-                        if(gen=='male'){
-                            var centerC = paper.rect(px-rSize, bottomY-rSize, 2*rSize, 2*rSize).attr({'id':tid});
-
-                        }else{
-                            var centerC = paper.circle(px, bottomY, rSize).attr({'id':tid});
-                        }
-                        centerC.click(function () {
-                            mousedown = false;
-                            console.log(this, this.getBBox());
-                        })
-                                .hover(function () {this.attr({"fill": "#E3E3E3"})}, function () {this.attr({"fill": "none"})});
-                        centerC.id = (typeof id === 'undefined' )? centerP.id + '-centerC' : 'c'+id ;
-//                        centerC.toFront();
-                        pset.push(centerC, centerS);
-                    }
-
-                    return pset;
-                }
-
-
-            var viewBoxWidth  = paper.width;
-            var viewBoxHeight = paper.height;
-            var canvasID      = "#paper";
-            var startX,startY;
-            var mousedown     = false;
-            var dX,dY;
-//            var oX            = 0, oY = 0; //oWidth = viewBoxWidth, oHeight = viewBoxHeight;
-//            var viewBox       = paper.setViewBox(0, 0, viewBoxWidth, viewBoxHeight);
-//            viewBox.X         = 0;
-//            viewBox.Y         = 0;
-            var vB            = paper.rect(viewStartX,viewStartY,viewBoxWidth,viewBoxHeight);
-            vB.attr({stroke: "#009", "stroke-width": 5});
-            /** This is high-level function.
-             * It must react to delta being more/less than zero.
-             */
-            function handle(delta) {
-                vBHo = viewBoxHeight;
-                vBWo = viewBoxWidth;
-                if(delta < 0){
-                    viewBoxWidth  *= 0.95;
-                    viewBoxHeight *= 0.95;
-                }else{
-                    viewBoxWidth  *= 1.05;
-                    viewBoxHeight *= 1.05;
-                }
-                /*
-                 vB.attr({
-                 x: viewBox.X,
-                 y: viewBox.Y,
-                 width: viewBoxWidth,
-                 height: viewBoxHeight
-                 });
-                 */
-                console.log(viewStartX, viewBoxWidth, vBWo);
-                viewStartX -= (viewBoxWidth - vBWo) / 2;
-                viewStartY -= (viewBoxHeight - vBHo) / 2;
-                paper.setViewBox(viewStartX,viewStartY,viewBoxWidth,viewBoxHeight);
-            }
-
-            function wheel(event){
-                var delta = 0;
-                if(!event){ /* For IE. */
-                    event = window.event;
-                }
-                if(event.wheelDelta){ /* IE/Opera. */
-                    delta = event.wheelDelta/120;
-                } else if (event.detail) { /** Mozilla case. */
-                    /** In Mozilla, sign of delta is different than in IE.
-                     * Also, delta is multiple of 3.
-                     */
-                    delta = -event.detail/3;
-                }
-                /** If delta is nonzero, handle it.
-                 * Basically, delta is now positive if wheel was scrolled up,
-                 * and negative, if wheel was scrolled down.
-                 */
-                if(delta){
-                    handle(delta);
-                }
-                /** Prevent default actions caused by mouse wheel.
-                 * That might be ugly, but we handle scrolls somehow
-                 * anyway, so don't bother here..
-                 */
-                if(event.preventDefault){
-                    event.preventDefault();
-                }
-                event.returnValue = false;
-            }
-            /** Initialization code.
-             * If you use your own event management code, change it as required.
-             */
-            if (window.addEventListener)
-                /** DOMMouseScroll is for mozilla. */
-                //window.addEventListener('DOMMouseScroll', wheel, false);
-                document.getElementById('paper').addEventListener('DOMMouseScroll', wheel, false);
-            /** IE/Opera. */
-            //window.onmousewheel = document.onmousewheel = wheel;
-            document.getElementById('paper').onmousewheel = wheel;
-            //Pan
-            $(canvasID).mousedown(function(e){
-                console.log('mouse down', mousedown);
-                if (paper.getElementByPoint( e.pageX, e.pageY ) !== null){
-                    return;
-                }
-                mousedown = true;
-                startX = e.pageX;
-                startY = e.pageY;
-            });
-            $(canvasID).mousemove(function(e){
-                if (mousedown === false) {currentX = e.pageX; currentY = e.pageY; return;}
-                dX  = startX - e.pageX;
-                dY  = startY - e.pageY;
-                x   = viewBoxWidth / paper.width;
-                y   = viewBoxHeight / paper.height;
-                dX *= x;
-                dY *= y;
-                //alert(viewBoxWidth +" "+ paper.width );
-                console.log( viewStartX , dX );
-                paper.setViewBox(viewStartX + dX, viewStartY + dY, viewBoxWidth, viewBoxHeight);
-            });
-            $(canvasID).mouseup(function(e){
-                if ( mousedown === false ) return;
-                viewBox.X += dX;
-                viewBox.Y += dY;
-                mousedown = false;
-            });
-
-            $('.zoom-out').on('click', function () {
-                handle(10);
-            });
-             $('.zoom-in').on('click', function () {
-                 handle(-10);
-             });
-             var myMenu = getMenuSet();
-             myMenu.attr({'class':'no-display'});
-             window.myMenu = myMenu;
-
-             function getParent(pid) {
-                 return jQuery.map(testPed, function(obj){if(obj.id===pid) return obj; });
-             }
-             var total_ped = 0;
-             function setUpPed(obj, posx, posy) {
-                 total_ped++;
-                    obj[obj.id+'-ped'] = createPedigree(posx, posy, obj.sex, obj.id, obj.father, obj.mother);
-                    console.log(obj, obj.id, obj.father, obj.mother);
-                    if(typeof obj.father !== 'undefined'){
-                        var father = getParent(obj.father)[0];
-                        if(typeof father !== 'undefined'){
-                            if(typeof father.father !== 'undefined' || typeof father.mother !== 'undefined'){
-                                setUpPed(father, posx-rSize-vLegnth, posy-rSize-2*vLegnth, 'none', father.id, father.father, father.mother );
-                            }
-                        }
-
-
-                    }
-                    if(typeof obj.mother !== 'undefined'){
-                        var mother = getParent(obj.mother)[0];
-                        if(typeof mother !== 'undefined') {
-                            if (typeof mother.father !== 'undefined' || typeof mother.mother !== 'undefined') {
-                                setUpPed(mother, posx + rSize + vLegnth, posy - rSize - 2 * vLegnth, 'none', mother.id, mother.father, mother.mother);
-                            }
-                        }
-                     }
-//                var parentPed = createPedigree(100,100, 'm', 'p');
-//                    var mParent = createPedigree(500+vLegnth+rSize, 500-2*vLegnth-rSize, 'none', 'mp');
-window.ped = obj;
-
-             }
-
-
-             setUpPed(testPed[0], 500, 500);
-             console.log(total_ped);
-             if(total_ped>=3){
-                 handle(10);
-             }
-
-        };
-
-        </script>
     </head>
     <body>
         <div class="container">
             <div id="paper">
                 <div class="info">
-                    <div id="current_id"></div>
-                    <div>
+                    <div class="tabs" id="tabs">
+                        <ul>
+                            <li>
+                                <a href="#personal" class="personal"> Personal </a>
+                            </li>
+                            <li>
+                                <a href="#clinical" class="clinical"> Clinical </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab" id="personal">
+                            <div class="id" id="info_id" ></div>
+                            <div class="name"></div>
+                            <div class="relation" id="info_relation"></div>
+                        </div>
+                        <div class="tab" id="clinical">
+                            <input type="radio" name="carrier" value="">
+                            UnKnown
+                            <input type="radio" name="carrier" value="notaffected">
+                            Not affected
+                            <input type="radio" name="carrier" value="uncertain">
+                            UnCertain
+                            <input type="radio" name="carrier" value="carrier">
+                            Carrier
+                            <input type="radio" name="carrier" value="affected">
+                            Affected
+                        </div>
+
 
                     </div>
                 </div>
