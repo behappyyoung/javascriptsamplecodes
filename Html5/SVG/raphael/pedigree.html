@@ -32,7 +32,7 @@
             .view-controls {
                 position: absolute;
                 left: 10px;
-                top: 10px;
+                top: 100px;
                 opacity: 0.8;
                 z-index: 100000;
                 padding: 4px;
@@ -45,11 +45,31 @@
                 z-index: 100;
                 /*display: none;*/
             }
+            #personal div{
+                margin: 10px auto;
+            }
+            #clinical input{
+                margin: 10px auto;
+            }
         </style>
 
+        <script>
+            (jQuery(document).ready(function() {
+
+                $('#info_save').on('click', function () {
+                    var current_pid = $('#info_id').html().trim();
+                    var name = $('#name').val();
+                    console.log(updatedPed[current_pid], name);
+                    updatedPed[current_pid]['name'] = name;
+                })
+            }));
+        </script>
     </head>
     <body>
         <div class="container">
+            <div class="command">
+                <div class="save"> <button class="button btn-primary"> Save </button>  </div>
+            </div>
             <div id="paper">
                 <div class="info">
                     <div class="tabs" id="tabs">
@@ -62,10 +82,17 @@
                             </li>
                         </ul>
 
-                        <div class="tab" id="personal">
-                            <div class="id" id="info_id" ></div>
-                            <div class="name"></div>
+                        <div class="tab" id="personal" class="personal">
+                            <div  >
+                                <label> ID </label>
+                                <span class="id" id="info_id" > </span>
+                            </div>
+                            <div class="name">
+                                <label> Name </label>
+                                <input class="name" id="name"  />
+                            </div>
                             <div class="relation" id="info_relation"></div>
+                            <div> <button class="button btn-default" id="info_save" >Save </button> </div>
                         </div>
                         <div class="tab" id="clinical">
                             <input type="radio" name="carrier" value="">
