@@ -2,6 +2,7 @@
             var JsonPed = [{id:'1', name: 'proband', father:'2', mother:'3', sex:'male', carrierStatus: 'affected'},
                 {id:'2', name:'father', father:'4', sex:'male', carrierStatus: 'carrier'},
                 {id:'3', name:'mother', father:'6', sex:'female', carrierStatus: 'carrier'},
+                {id:'7', name: 'siblings', father:'2', mother:'3', sex:'female', carrierStatus: 'affected'},
                 {id:'4', name:'grandfather',father:'5', sex:'male'},{id:'5', name:'grandgrandfather', sex:'male'}];
             var updatedPed = [];
             var maxID  = 0;
@@ -141,78 +142,96 @@ window.paperLocations = paperLocations;
                     current_ped = updatedPed[current_pid];
                     var cx = current_ped.px;
                     var cy = current_ped.py;
-
+	                var newID = maxID++;
                     var siblings, pathString;
                     if(newNodeType=='sibling'){
                         if(cNodeType == 'child'){
-                            if(typeof current_ped.father !== 'undefined'){
-                                siblings = updatedPed[current_ped.father]['children'];
-                            }else if(typeof current_ped.mother !== 'undefined'){
-                                siblings = updatedPed[current_ped.mother]['children'];
-                            }else{
-                                siblings = [];
-                            }
-                            console.log('add siblings', siblings);
-                            if(siblings.length == 1){
-                                var moveX =  hLength+rSize;
-                                moveNode(current_pid, 'S', -moveX, 0);
-                                // var startm = paper.getById(current_pid+'-cPath').attr('path')[0].toString();
-                                // var sx = paper.getById(current_pid+'-cPath').attr('path')[0][1];
-                                // var sy = paper.getById(current_pid+'-cPath').attr('path')[0][2];
-                                // var ey = paper.getById(current_pid+'-cPath').attr('path')[1][2];
-                                // var midy = sy + (ey-sy)/2;
-                                // paper.getById(current_pid+'-cPath')
-                                // .attr('path', startm+'L'+sx+','+midy+'M'+sx+','+midy+'L'+(sx-moveX)+','+midy+'M'+(sx-moveX)+','+midy+'L'+(sx-moveX)+','+ey+'M'+sx+','+midy+'L'+(sx+moveX)+','+midy+'M'+(sx+moveX)+','+midy+'L'+(sx+moveX)+','+ey ) ;
-                                pathString = getPathString(paperLocations['c-'+current_pid].px, paperLocations['c-'+current_pid].py, paperLocations['c-'+current_pid].px-moveX, current_ped.py, true);
-                                console.log('pathstring', pathString);
-                                paper.getById(current_pid+'-cPath').attr('path', pathString);
-
-                            }else{
-                                var moveX =  hLength+rSize;
-                                for(var i=0;i<siblings.length;i++){
-                                    moveNode(siblings[i], 'S', -moveX, 0);
-                                }
-
-                            }
-                            if(sex =='male'){
-                                var newNode = paper.rect(cx+moveX-rSize, cy-rSize, 2*rSize, 2*rSize ).attr({fill:'white'});
-                            }else{
-                                var newNode = paper.circle(cx+moveX, cy, rSize).attr({fill:'white'});
-                            }
-                            newNode.id = maxID++;
-                            newNode.click(function () {
-                                nodeClick(this.id);
-                            });
-                            var newNodeText = paper.text(cx+moveX, cy, ' ').attr({'font-size':16 });
-                            newNodeText.id = newNode.id+'-text';
-                            var newS = createShadow(cx+moveX, cy, newNode.id + '-S', true);
-                            newS.id = newNode.id + '-S';
-
-                            ///////////// add children to father, mother
-                            updatedPed[newNode.id]= {sex:sex, id:newNode.id, carrierStatus:'unknown', children:[], father:current_ped.father, mother:current_ped.mother, px:cx+moveX, py:cy };
-                            updatedPed[current_ped.father].children.push(newNode.id);
-                            updatedPed[current_ped.mother].children.push(newNode.id);
-
+	                        updatedPed[newID]= {sex:sex, id:newID, carrierStatus:'unknown', children:[], father:current_ped.father, mother:current_ped.mother};
+                            addSiblings(newID);
                         }
                     }else if(newNodeType=='child'){
-                        console.log('add child', newNodeType, cNodeType, current_pid);
+                        // console.log('add child', newNodeType, cNodeType, current_pid);
                         if(cNodeType == 'child'){
-                            createChild(sex);
+                            var children = current_ped['children'];
+                            if(children.length >0){
+                                current_pid = children[children.length-1];
+	                            updatedPed[newID]= {sex:sex, id:newID, carrierStatus:'unknown', children:[], father:current_ped.father, mother:current_ped.mother};
+                                addSiblings(newID);
+                            }else{
+                                addChild(sex);
+                            }
+
                         }
                     }
                     myMenu.attr({'class':'no-display'});
                 }
+                function addSiblings(id) {
+                    current_ped = updatedPed[current_pid];
+	                var newSibling = updatedPed[id];
 
-                function createChild(sex) {
+                    var siblings, pathString;
+                    if(typeof current_ped.father !== 'undefined'){
+                        siblings = updatedPed[current_ped.father]['children'];
+                    }else if(typeof current_ped.mother !== 'undefined'){
+                        siblings = updatedPed[current_ped.mother]['children'];
+                    }else{
+                        siblings = [];
+                    }
+                    // console.log('add siblings', siblings);
+                    var firstSibling = siblings[0];
+                    var startPathx = paperLocations['c-'+firstSibling].px;
+                    var startPathy = paperLocations['c-'+firstSibling].py+sSize;
+                    var moveX =  hLength+rSize;
+                    if(siblings.length == 2){
+                        moveNode(current_pid, 'S', -moveX, 0);
+                        pathString = getPathString(startPathx, startPathy, current_ped.px, current_ped.py, true);
+                        paper.getById(current_pid+'-cPath').attr('path', pathString);
+	                    moveX += moveX;
+
+                    }else{
+                        current_ped = updatedPed[siblings[siblings.length-2]];
+                        moveX += moveX;
+
+                    }
+	                var cx = current_ped.px;
+	                var cy = current_ped.py;
+
+                    if(newSibling.sex =='male'){
+                        var newNode = paper.rect(cx+moveX-rSize, cy-rSize, 2*rSize, 2*rSize ).attr({fill:'white'});
+                    }else{
+                        var newNode = paper.circle(cx+moveX, cy, rSize).attr({fill:'white'});
+                    }
+                    newNode.id = id;
+                    newNode.click(function () {
+                        nodeClick(this.id);
+                    });
+                    var newNodeText = paper.text(cx+moveX, cy, ' ').attr({'font-size':16 });
+                    newNodeText.id = id+'-text';
+                    var newS = createShadow(cx+moveX, cy, newNode.id + '-S', true);
+                    newS.id = id + '-S';
+                    pathString = getPathString(paperLocations['c-'+firstSibling].px, paperLocations['c-'+firstSibling].py+sSize, cx+moveX, cy, true);
+                    // console.log('pathstring', pathString);
+                    var cPath = paper.path(pathString);
+                    cPath.id = id+'-cPath';
+                    cPath.toBack();
+                    ///////////// add children to father, mother
+                    // updatedPed[newNode.id]= {sex:sex, id:newID, carrierStatus:'unknown', children:[], father:current_ped.father, mother:current_ped.mother, px:cx+moveX, py:cy };
+	                newSibling.px = cx+moveX;
+	                newSibling.py = cy;
+                    updatedPed[current_ped.father].children.push(id);
+                    updatedPed[current_ped.mother].children.push(id);
+                }
+
+                function addChild(sex) {
                     current_ped = updatedPed[current_pid];
                     var newID = maxID++;
                     current_ped['children'].push(newID);
                     updatedPed[newID]= {sex:sex, id:newID, carrierStatus:'unknown', children:[], father:current_pid };
 
                     if(current_ped.sex =='male'){
-                        createPedigree(current_ped.px+hLength+rSize, current_ped.py, sex, newID , 'none', null);
+                        createPedigree(current_ped.px+hLength+rSize, current_ped.py, sex, newID , 'none', null, current_ped.id);
                     }else if(current_ped.sex =='female'){
-                        createPedigree(current_ped.px-hLength-rSize, current_ped.py, sex, newID , null , 'none');
+                        createPedigree(current_ped.px-hLength-rSize, current_ped.py, sex, newID , null , 'none', current_ped.id);
                     }
                 }
 
@@ -249,15 +268,35 @@ window.paperLocations = paperLocations;
                         }
                     }
 
-                    console.log(current_ped, child, spouse, pathString);
+                    // console.log(current_ped, child, spouse, pathString);
                 }
-                var moveNode = function(id, type, mx, my) {
-                     paper.getById(id).translate(mx, my);
+                var moveObjects = function (obj_id) {
+                    console.log('move obj', obj_id);
 
-                     var toptop = paper.getById(id+'-shadow-topTop');
-                     if( typeof toptop !== 'undefined' && toptop != null ){
+                }
+
+                var moveNode = function(id, type, mx, my) {
+	                paper.getById(id).translate(mx, my);
+	                var temp;
+	                if(type==''){
+		                temp = paper.getById(id+'-S-mainShadow');
+		                if(temp ==null){
+			                temp = paper.getById(id+'-FS-mainShadow');
+			                if(temp ==null){
+				                type='MS';
+			                }else{
+				                type = 'FS';
+			                }
+		                }else{
+		                	type = 'S';
+		                }
+
+	                 }
+
+	                var toptop = paper.getById(id+'-'+type+'--shadow-topTop');
+	                if( typeof toptop !== 'undefined' && toptop != null ){
                          toptop.translate(mx, my);
-                     }
+	                }
 
                      paper.getById(id+'-text').translate(mx, my);
                      paper.getById(id+'-'+type+'-mainShadow').translate(mx, my);
@@ -291,10 +330,11 @@ window.paperLocations = paperLocations;
 
                          paper.getById(child.id +'-mPath').attr('path', pathString);
                      }
+
                      updatedPed[id].px = updatedPed[id].px+mx;
                      updatedPed[id].py = updatedPed[id].py+my;
              }
-             window.moveNode = moveNode;
+window.moveNode = moveNode;
 
                 function showMenu(cx, cy, paperid) {
                     myMenu.transform(0, 0);// need reset
@@ -482,12 +522,13 @@ window.paperLocations = paperLocations;
 
                 }
 
-                function createPedigree(px, py, gen, id, f_id, m_id) {
+                function createPedigree(px, py, gen, id, f_id, m_id, base_id) {
                     var cped;
                     var fid = f_id;
                     var mid = m_id;
                     var fsid = fid + '-FS';
                     var msid = mid + '-MS';
+	                var temp1, temp2;
 
                     if(typeof fid === 'undefined' || fid==null ){
                         fid = maxID++;
@@ -504,28 +545,51 @@ window.paperLocations = paperLocations;
                     px = (typeof px === 'undefined') ? 500 : px;
                     py = (typeof py === 'undefined') ? 500 : py;
 
-                    var leftX = px-hLength-rSize;
-                    temp = getObjectByPosition(leftX, py);
-                    if(f_id=="none" || typeof temp === 'undefined' || temp === null || temp.length <=0 ){
+	                if(f_id!='none'){
+	                    var leftX = px-hLength-rSize;
+	                    temp1 = getObjectByPosition(leftX, py);
+		                temp2 = getObjectByPosition(px, py);
+	                    if( temp1.length <= 0 && temp2.length <= 0) {
 
-                    }else{                          // need to be updated
-                        console.log(temp, id, updatedPed[id]);
-                        if(updatedPed[id].children.length > 0){
-                            moveNode(id, 'MS', hLength+rSize, 0);
-                        }else{
-                            moveNode(id, 'S', hLength+rSize, 0);
-                        }
-                        //moveNode(id, 'S', hLength, 0);
-                        px = px + hLength+rSize;
-                        leftX = px-hLength-rSize;
-                    }
-                    var rightX = px + hLength +rSize;
-                    temp = getObjectByPosition(leftX, py);
-                    if(m_id=="none" ||typeof temp === 'undefined' || temp === null){
+	                    }else{
+		                    px = px + hLength+rSize;
+		                    leftX = px-hLength-rSize;
+		                    if(m_id=='none'){
+			                    moveNode(base_id, '', hLength+rSize, 0);
+		                    }else{
+			                    moveNode(id, '', hLength+rSize, 0);
+		                    }
 
-                    }else{
-                        console.log(temp);
-                    }
+	                    }
+	                }
+
+	                if(m_id!='none') {
+		                var rightX = px + hLength + rSize;
+
+		                temp1 = getObjectByPosition(rightX, py);
+		                temp2 = getObjectByPosition(px, py);
+		                if (  temp1.length <= 0 && temp2.length <= 0) {
+
+		                } else {
+		                	var moveX = hLength + rSize;
+			                if(temp2.length>0){
+				                moveX +=  hLength + rSize;
+			                }
+			                px = px - moveX;
+			                rightX = px + hLength + rSize;
+			                if (f_id == 'none') {
+				                moveNode(base_id, '', -(moveX), 0);
+			                } else {
+				                moveNode(id, '', -(moveX), 0);
+			                }
+		                }
+	                }
+
+                    // if(m_id=="none" ||typeof temp === 'undefined' || temp === null){
+                    //
+                    // }else{
+                    //     console.log(temp);
+                    // }
 
                     var pset = paper.set();
                     var centerP = paper.circle(px,py,sSize).attr({fill: 'red'})
@@ -863,11 +927,18 @@ window.paperLocations = paperLocations;
 
              // with updatedPed
 
+	         function getSiblings(fid, mid) {
+		             var children = [];
+		             jQuery.map(JsonPed, function(obj){if(obj.father===fid&&obj.mother===mid) children.push(obj); });
+		             return children;
+		         }
+
              function setUpPed(obj, posx, posy, childDraw) {
                  total_ped++;
                  var gen = (childDraw)? obj.sex : 'none';
                  obj[obj.id+'-ped'] = createPedigree(posx, posy, gen, obj.id, obj.father, obj.mother);
                  // console.log(obj, obj.id, obj.father, obj.mother);
+
                  if(typeof obj.father !== 'undefined'){
                      var father = updatedPed[obj.father];
                      if(typeof father !== 'undefined'){
@@ -877,13 +948,21 @@ window.paperLocations = paperLocations;
                      }
                  }
                  if(typeof obj.mother !== 'undefined'){
-                     var mother = updatedPed[obj.mother];;
+                     var mother = updatedPed[obj.mother];
                      if(typeof mother !== 'undefined') {
                          if (typeof mother.father !== 'undefined' || typeof mother.mother !== 'undefined') {
                              setUpPed(mother, posx + rSize + hLength, posy - rSize -  vLength , false);
                          }
                      }
                  }
+
+	             if(typeof obj.father !== 'undefined' && typeof obj.mother !== 'undefined') {
+		             var siblings = getSiblings(obj.father, obj.mother);
+		             current_pid = obj.id;
+		             for(var i=1;i<siblings.length;i++){
+		             	addSiblings( siblings[i].id );
+		             }
+	             }
 
              }
              setUpPed(JsonPed[0], 500, 500, true);
