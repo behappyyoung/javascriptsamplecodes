@@ -61,6 +61,16 @@
                     var name = $('#name').val();
                     console.log(updatedPed[current_pid], name);
                     updatedPed[current_pid]['name'] = name;
+                });
+                $('#save_pedigree').on('click', function () {
+                    var savedPed=[];
+                    console.log('updateped', updatedPed);
+                    for(ped in updatedPed){
+                        if(ped != 'undefined'){
+                            savedPed.push({id:updatedPed[ped].id, name: updatedPed[ped].name, father:updatedPed[ped].father, mother:updatedPed[ped].mother, sex:updatedPed[ped].sex, carrierStatus: updatedPed[ped].carrierStatus});
+                        }
+                    }
+                    console.log(updatedPed, savedPed, JSON.stringify(savedPed));
                 })
             }));
         </script>
@@ -68,7 +78,7 @@
     <body>
         <div class="container">
             <div class="command">
-                <div class="save"> <button class="button btn-primary"> Save </button>  </div>
+                <div class="save"> <button class="button btn-primary" id="save_pedigree"> Save </button>  </div>
             </div>
             <div id="paper">
                 <div class="info">

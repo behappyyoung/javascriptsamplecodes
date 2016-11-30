@@ -1,9 +1,10 @@
 
-            var JsonPed = [{id:'asn1', name: 'proband', father:'asn2', mother:'3', sex:'male', carrierStatus: 'affected'},
-                {id:'asn2', name:'father', father:'4', sex:'male', carrierStatus: 'carrier'},
-                {id:'3', name:'mother', father:'6', sex:'female', carrierStatus: 'carrier'},
-                {id:'7', name: 'siblings', father:'asn2', mother:'3', sex:'female', carrierStatus: 'affected'},
-                {id:'4', name:'grandfather',father:'5', sex:'male'},{id:'5', name:'grand grand father', sex:'male'}];
+            // var JsonPed = [{id:'asn1', name: 'proband', father:'asn2', mother:'3', sex:'male', carrierStatus: 'affected'},
+            //     {id:'asn2', name:'father', father:'4', sex:'male', carrierStatus: 'carrier'},
+            //     {id:'3', name:'mother', father:'6', sex:'female', carrierStatus: 'carrier'},
+            //     {id:'7', name: 'siblings', father:'asn2', mother:'3', sex:'female', carrierStatus: 'affected'},
+            //     {id:'4', name:'grandfather',father:'5', sex:'male'},{id:'5', name:'grand grand father', sex:'male'}];
+            var JsonPed = [{"sex":"male","id":"1234567891","name":"John Doe"},{"mother":"1234567892","sex":"female","id":"1234567898","name":"Jane Fox"},{"mother":"1234567892","sex":"female","id":"1234567896","name":"Jane Smith"},{"sex":"female","id":"1234567894","name":"Jane Smith"},{"mother":"1234567894","sex":"female","father":"1234567891","id":"1234567892","name":"Jane Doe"}];
             var updatedPed = [];
             var maxID  = 0;
             for( var i=0; i < JsonPed.length;i++){
@@ -182,8 +183,11 @@ console.log('createnewnode', newNodeType, cNodeType);
                     }
                     myMenu.attr({'class':'no-display'});
                 }
-                function addSiblings(new_id) {
+                function addSiblings(new_id, existing) {
                     var current_ped = updatedPed[current_pid];           // last sibling
+	                if(existing){
+
+	                }
 	                var newSibling = updatedPed[new_id];
 
                     var siblings, pathString;
@@ -280,17 +284,30 @@ console.log(temp, temp2);
 
                 }
 
-                function addChild(sex) {
+                function addChild(sex, withid) {
                     current_ped = updatedPed[current_pid];
-                    var newID = maxID++;
-                    current_ped['children'].push(newID);
-                    updatedPed[newID]= {sex:sex, id:newID, carrierStatus:'unknown', children:[], father:current_pid };
+	                if(typeof withid !== 'undefined'){
+	                	var newID = withid;
+		                if(typeof updatedPed[newID].father === 'undefined' ){
+			                createPedigree(current_ped.px-hLength-rSize, current_ped.py, sex, newID , null , 'none', current_ped.id);
+		                }else if(typeof updatedPed[newID].mother === 'undefined'){
+			                createPedigree(current_ped.px+hLength+rSize, current_ped.py, sex, newID , 'none', null, current_ped.id);
+		                }else{
+			                createPedigree(current_ped.px+hLength+rSize, current_ped.py, sex, newID , 'none', 'none', current_ped.id);
+		                }
+	                }else{
+		                var newID = maxID++ ;
+		                current_ped['children'].push(newID);
+		                if(current_ped.sex =='male'){
+			                createPedigree(current_ped.px+hLength+rSize, current_ped.py, sex, newID , 'none', null, current_ped.id);
+			                updatedPed[newID]= {sex:sex, id:newID, carrierStatus:'unknown', children:[], father:current_pid };
+		                }else if(current_ped.sex =='female'){
+			                createPedigree(current_ped.px-hLength-rSize, current_ped.py, sex, newID , null , 'none', current_ped.id);
+			                updatedPed[newID]= {sex:sex, id:newID, carrierStatus:'unknown', children:[], mother:current_pid };
+		                }
+	                }
 
-                    if(current_ped.sex =='male'){
-                        createPedigree(current_ped.px+hLength+rSize, current_ped.py, sex, newID , 'none', null, current_ped.id);
-                    }else if(current_ped.sex =='female'){
-                        createPedigree(current_ped.px-hLength-rSize, current_ped.py, sex, newID , null , 'none', current_ped.id);
-                    }
+
                 }
 
                 function createParents(id) {
@@ -983,27 +1000,48 @@ window.moveNode = moveNode;
 
 
              var getObjectByPosition = function(posx, posy){
-                 return jQuery.map(updatedPed, function(obj){
-                     if(typeof obj !== 'undefined'){
-                         if(obj.px===posx && obj.py ===posy )
-                             return obj;
-                     }
+                 // return jQuery.map(updatedPed, function(obj){
+                 //     if(typeof obj !== 'undefined'){
+                 //         if(obj.px===posx && obj.py ===posy )
+                 //             return obj;
+                 //     }
+                 //
+                 // });
+	             for (obj in updatedPed) {
+	             	if(obj !== 'undefined'){
+		                if (updatedPed[obj].px == posx && updatedPed[obj].py == posy) {
+			                return obj;
+		                }
+	                }
 
-                 });
+	             }
+	             return '';
              }
-             // window.getObjectByPosition = getObjectByPosition;
+window.getObjectByPosition = getObjectByPosition;
 
              var total_ped = 0;
 
              // with updatedPed
 
+	         function getChildren(id) {
+		         var children = [];
+		         jQuery.map(JsonPed, function(obj){if(obj.father===id || obj.mother=== id) children.push(obj); });
+		         return children;
+	         }
 	         function getSiblings(fid, mid) {
-		             var children = [];
-		             jQuery.map(JsonPed, function(obj){if(obj.father===fid&&obj.mother===mid) children.push(obj); });
-		             return children;
+		             var siblings = [];
+		             jQuery.map(JsonPed, function(obj){if(obj.father===fid && obj.mother===mid) siblings.push(obj); });
+		             return siblings;
 		         }
+	         function findBottomChild(obj) {
+		         jQuery.map(JsonPed, function(obj){if(typeof obj.father !=='undefined' && typeof obj.mother !== 'undefined') children.push(obj); });
 
+	         }
+
+	         var drawed={};
              function setUpPed(obj, posx, posy, childDraw) {
+	             drawed[obj.id] = true;
+	             console.log('drawed', drawed, obj.id);
                  total_ped++;
                  var gen = (childDraw)? obj.sex : 'none';
                  obj[obj.id+'-ped'] = createPedigree(posx, posy, gen, obj.id, obj.father, obj.mother);
@@ -1013,7 +1051,9 @@ window.moveNode = moveNode;
                      var father = updatedPed[obj.father];
                      if(typeof father !== 'undefined'){
                          if(typeof father.father !== 'undefined' || typeof father.mother !== 'undefined'){
-                             setUpPed(father, posx-rSize-hLength, posy-rSize-vLength, false );
+	                         if( ! drawed[father.id] ) {
+		                         setUpPed(father, posx - rSize - hLength, posy - rSize - vLength, false);
+	                         }
                          }
                      }
                  }
@@ -1021,7 +1061,9 @@ window.moveNode = moveNode;
                      var mother = updatedPed[obj.mother];
                      if(typeof mother !== 'undefined') {
                          if (typeof mother.father !== 'undefined' || typeof mother.mother !== 'undefined') {
-                             setUpPed(mother, posx + rSize + hLength, posy - rSize -  vLength , false);
+	                         if( ! drawed[mother.id] ) {
+		                         setUpPed(mother, posx + rSize + hLength, posy - rSize - vLength, false);
+	                         }
                          }
                      }
                  }
@@ -1030,12 +1072,44 @@ window.moveNode = moveNode;
 		             var siblings = getSiblings(obj.father, obj.mother);
 		             current_pid = obj.id;
 		             for(var i=1;i<siblings.length;i++){
-		             	addSiblings( siblings[i].id );
+		             	if( ! drawed[siblings[i].id] ){
+			                addSiblings( siblings[i].id );
+			                drawed[siblings[i].id] = true;
+			                console.log('drawed siblings', drawed, obj.id);
+		                }
+
 		             }
 	             }
 
+	             var children = getChildren(obj.id);
+	             console.log('children', children);
+	             if(children.length >0 ){
+	             	current_pid = obj.id;
+		             addChild(children[0].sex, children[0].id);
+		             var child_father = updatedPed[children[0].id].father;
+		             var child_mother = updatedPed[children[0].id].mother;
+
+		             current_pid =  children[0].id;
+	             	for(var i=1; i<children.length;i++){
+						if(typeof updatedPed[children[i].id].father === 'undefined'){
+							updatedPed[children[i].id].father = child_father;
+						}else if(typeof updatedPed[children[i].id].mother === 'undefined'){
+							updatedPed[children[i].id].mother = child_mother;
+						}
+						updatedPed[child_father].children.push(children[i].id);
+		                updatedPed[child_mother].children.push(children[i].id);
+		                addSiblings(children[i].id, true); // need to fix this Young
+	                }
+	             	if( ! drawed[children[0].id] ){
+		                //setUpPed(children[0]);
+		                //console.log(children[0].id, 'draw');
+		             }
+	             }
+
+
              }
-             setUpPed(JsonPed[0], 500, 500, true);
+
+             setUpPed(JsonPed[JsonPed.length-1], 500, 600, true);
              if(total_ped>5){
                  handle(10);
              }
