@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+	body {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		width: 960px;
+		height: 500px;
+		position: relative;
+	}
+	path.slice{
+		stroke-width:2px;
+	}
+	polyline{
+		opacity: .3;
+		stroke: black;
+		stroke-width: 2px;
+		fill: none;
+	}
+	svg text.percent{
+		fill:white;
+		text-anchor:middle;
+		font-size:12px;
+	}
+
+</style>
+<body ng-app="myApp">
+<!--<button onClick="changeData()">Change Data</button>-->
+<script src="../../Library/D3/d3.v3.min.js"></script>
+<script src="../../AngularJS/inc/angular.min.js"></script>
+<script src="Donut3D.js"></script>
+<script>
+
+	var svg = d3.select("body").append("svg").attr("width",700).attr("height",300);
+
+	svg.append("g").attr("id","salesDonut");
+//	Donut3D.draw("salesDonut", randomData(), 150, 150, 130, 100, 30, 0.4);
+
+
+	var myApp = angular.module('myApp', []);
+	var controllers = {};
+	controllers.Controller =  function($scope){
+		$scope.salesData = [
+			{label:"Basic", value: 300, color:"#3366CC"},
+			{label:"Plus",  value: 200, color:"#DC3912"},
+			{label:"Lite",  value: 100, color:"#FF9900"},
+			{label:"Elite",  value: 400, color:"#109618"},
+			{label:"Delux",  value: 200, color:"#990099"}
+		];
+		$scope.total_value =0;
+		$scope.salesData.map(function(d){ $scope.total_value += d.value;  });
+		$scope.ngchangeData = function(){
+			$scope.total_value =0;
+			$scope.salesData.map(function(d){ d.value = 100*Math.random(); $scope.total_value += d.value;  });
+
+			Donut3D.transition("salesDonut", $scope.salesData, 130, 100, 30, 0.4);
+
+		}
+		window.salesData = $scope.salesData;
+		Donut3D.draw("salesDonut", $scope.salesData, 150, 150, 130, 100, 30, 0.4);
+	}
+	myApp.controller(controllers);
+
+</script>
+<div data-ng-controller="Controller" >
+	<div ng-repeat="s in salesData "  >
+		<div style="color:{{s.color}};"> [{{$index + 1}}] {{s.label | uppercase }} | {{s.color}}
+			| {{s.value}}|{{total_value}}| {{ (( s.value / total_value ) * 100).toFixed(2) }} %</div>
+	</div>
+	<button ng-click="ngchangeData()">Change Data</button>
+</div>
+</body>
