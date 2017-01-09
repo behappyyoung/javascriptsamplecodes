@@ -77,7 +77,7 @@
             return function(t) { return 0.6*rx*Math.sin(0.5*(i(t).startAngle+i(t).endAngle));  };
         }
 
-        var _data = d3.layout.pie().sort(null).value(function(d) {return d.value;})(data);
+        var _data = d3.pie().sort(null).value(function(d) {return d.value;})(data);
 
         d3.select("#"+id).selectAll(".innerSlice").data(_data)
             .transition().duration(750).attrTween("d", arcTweenInner);
@@ -95,7 +95,7 @@
     Donut3D.draw=function(id, data, x /*center x*/, y/*center y*/,
                           rx/*radius x*/, ry/*radius y*/, h/*height*/, ir/*inner radius*/){
 
-        var _data = d3.layout.pie().sort(null).value(function(d) {return d.value;})(data);
+        var _data = d3.pie().sort(null).value(function(d) {return d.value;})(data);
 
         var slices = d3.select("#"+id).append("g").attr("transform", "translate(" + x + "," + y + ")")
             .attr("class", "slices");
