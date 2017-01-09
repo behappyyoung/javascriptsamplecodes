@@ -56,7 +56,8 @@
 
 		}
 		window.salesData = $scope.salesData;
-		Donut3D.draw("salesDonut", $scope.salesData, 150, 150, 130, 100, 30, 0.4);
+		Donut3D.draw3d("salesDonut", $scope.salesData, 150, 150, 130, 100, 30, 0.4);
+		Donut3D.draw2d("salesDonut", $scope.salesData, 450, 150, 130, 130, 30, 0.4);
 	}
 	myApp.controller(controllers);
 

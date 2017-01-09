@@ -92,7 +92,7 @@
             .attrTween("x",textTweenX).attrTween("y",textTweenY).text(getPercent);
     }
 
-    Donut3D.draw=function(id, data, x /*center x*/, y/*center y*/,
+    Donut3D.draw3d=function(id, data, x /*center x*/, y/*center y*/,
                           rx/*radius x*/, ry/*radius y*/, h/*height*/, ir/*inner radius*/){
 
         var _data = d3.pie().sort(null).value(function(d) {return d.value;})(data);
@@ -120,6 +120,27 @@
             .attr("x",function(d){ return 0.6*rx*Math.cos(0.5*(d.startAngle+d.endAngle));})
             .attr("y",function(d){ return 0.6*ry*Math.sin(0.5*(d.startAngle+d.endAngle));})
             .text(getPercent).each(function(d){this._current=d;});
+    }
+
+    Donut3D.draw2d=function(id, data, x /*center x*/, y/*center y*/,
+                          rx/*radius x*/, ry/*radius y*/, h/*height*/, ir/*inner radius*/) {
+
+        var _data = d3.pie().sort(null).value(function (d) {
+            return d.value;
+        })(data);
+
+        var slices = d3.select("#" + id).append("g").attr("transform", "translate(" + x + "," + y + ")")
+        .attr("class", "slices");
+
+        slices.selectAll(".topSlice").data(_data).enter().append("path").attr("class", "topSlice")
+        .style("fill", function(d) { return d.data.color; })
+        .style("stroke", function(d) { return d.data.color; })
+        .attr("d",function(d){ return pieTop(d, rx, ry, ir);})
+        .each(function(d){this._current=d;});
+        slices.selectAll(".percent").data(_data).enter().append("text").attr("class", "percent")
+        .attr("x",function(d){ return 0.6*rx*Math.cos(0.5*(d.startAngle+d.endAngle));})
+        .attr("y",function(d){ return 0.6*ry*Math.sin(0.5*(d.startAngle+d.endAngle));})
+        .text(getPercent).each(function(d){this._current=d;});
     }
 
     this.Donut3D = Donut3D;
