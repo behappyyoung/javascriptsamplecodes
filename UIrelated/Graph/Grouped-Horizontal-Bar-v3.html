@@ -43,20 +43,121 @@
 <script src="../../Library/D3/d3.v3.min.js"></script>
 <script>
 
+	var categories = [];
+	var total_day_values = [];
+	var total_time_values = [];
+	var category_type='';
+
+	if('SENDOUT' == 'type'){
+		category_type = '{&#39;count&#39;: 1L, &#39;a_time&#39;: 7.0, &#39;a_day&#39;: 0.0, &#39;days&#39;: 0.0, &#39;times&#39;: 7.0}';
+	}else{
+		categories.push('SENDOUT');
+		total_day_values.push(parseInt('0.0'));
+		total_time_values.push(parseInt('7.0') /60 );
+	}
+
+
+	if('REVIEW' == 'type'){
+		category_type = '{&#39;count&#39;: 1L, &#39;a_time&#39;: 9.0, &#39;days&#39;: 0.0, &#39;times&#39;: 9.0}';
+	}else{
+		categories.push('REVIEW');
+		total_day_values.push(parseInt(''));
+		total_time_values.push(parseInt('9.0') /60 );
+	}
+
+
+	if('type' == 'type'){
+		category_type = 'times';
+	}else{
+		categories.push('type');
+		total_day_values.push(parseInt(''));
+		total_time_values.push(parseInt('') /60 );
+	}
+
+
+	if('APPROVED' == 'type'){
+		category_type = '{&#39;count&#39;: 3L, &#39;a_time&#39;: 12964.333333333334, &#39;days&#39;: 5.0, &#39;times&#39;: 38893.0}';
+	}else{
+		categories.push('APPROVED');
+		total_day_values.push(parseInt(''));
+		total_time_values.push(parseInt('12964.3333333') /60 );
+	}
+
+
+	if('LAB' == 'type'){
+		category_type = '{&#39;count&#39;: 0L, &#39;a_time&#39;: 0, &#39;a_day&#39;: 0, &#39;days&#39;: 0.0, &#39;times&#39;: 0.0}';
+	}else{
+		categories.push('LAB');
+		total_day_values.push(parseInt('0'));
+		total_time_values.push(parseInt('0') /60 );
+	}
+
+
+	if ( category_type == 'days' ){
+		var total_values = total_day_values;
+	}else{
+		var total_values = total_time_values;
+	}
+
+	var period_values =[];
+
+	if('SENDOUT' != 'type'){
+		if ( category_type == 'days' ){
+			period_values.push( parseInt('0.0') );
+		}else{
+			period_values.push( parseInt('7.0')/60 );
+		}
+	}
+
+
+	if('REVIEW' != 'type'){
+		if ( category_type == 'days' ){
+			period_values.push( parseInt('') );
+		}else{
+			period_values.push( parseInt('9.0')/60 );
+		}
+	}
+
+
+	if('type' != 'type'){
+		if ( category_type == 'days' ){
+			period_values.push( parseInt('') );
+		}else{
+			period_values.push( parseInt('')/60 );
+		}
+	}
+
+
+	if('APPROVED' != 'type'){
+		if ( category_type == 'days' ){
+			period_values.push( parseInt('') );
+		}else{
+			period_values.push( parseInt('12964.3333333')/60 );
+		}
+	}
+
+
+	if('LAB' != 'type'){
+		if ( category_type == 'days' ){
+			period_values.push( parseInt('0') );
+		}else{
+			period_values.push( parseInt('0')/60 );
+		}
+	}
+
+
+
 	var data = {
-		labels: [
-			'resilience', 'maintainability', 'accessibility',
-			'uptime', 'functionality', 'impact'
-		],
+		labels: categories,
 		series: [
 			{
-				label: '2012',
-				values: [4, 8, 15, 16, 23, 42]
+				label: 'total',
+				values: total_values
 			},
 
 			{
-				label: '2014',
-				values: [31, 28, 14, 8, 15, 21]
+				label: 'Period',
+				values: period_values
 			},]
 	};
 

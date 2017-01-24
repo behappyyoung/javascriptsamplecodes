@@ -42,25 +42,239 @@
 <svg class="chart"></svg>
 <script src="../../Library/D3/d3.v4.min.js"></script>
 <script>
+	var categories = [];
+	var total_values = [];
+	var total_values_text = [];
+	var period_values =[];
+	var period_values_text =[];
+	var temp_str = '';
+	var temp_arr;
 
+	categories.push('SENDOUT');
+	total_values.push(parseInt('7.0'));
+	if(parseInt('7.0') >= 86400){
+		temp_arr = '0:00:07'.split(', ');
+		temp_str = temp_arr[0];
+		temp_arr = temp_str[1].split(':');
+	}else{
+		temp_arr = '0:00:07'.split(':');
+	}
+
+
+	if ( parseInt(temp_arr[0]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[0]) + ' Hour ';
+	}
+
+	if ( parseInt(temp_arr[1]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[1]) + ' Min ';
+	}
+
+	if ( parseInt(temp_arr[2]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[2]) + ' Second ';
+	}
+
+	total_values_text.push(temp_str);
+	temp_str = '';
+
+	categories.push('REVIEW');
+	total_values.push(parseInt('9.0'));
+	if(parseInt('9.0') >= 86400){
+		temp_arr = '0:00:09'.split(', ');
+		temp_str = temp_arr[0];
+		temp_arr = temp_str[1].split(':');
+	}else{
+		temp_arr = '0:00:09'.split(':');
+	}
+
+
+	if ( parseInt(temp_arr[0]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[0]) + ' Hour ';
+	}
+
+	if ( parseInt(temp_arr[1]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[1]) + ' Min ';
+	}
+
+	if ( parseInt(temp_arr[2]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[2]) + ' Second ';
+	}
+
+	total_values_text.push(temp_str);
+	temp_str = '';
+
+	categories.push('APPROVED');
+	total_values.push(parseInt('12964.3333333'));
+	if(parseInt('12964.3333333') >= 86400){
+		temp_arr = '3:36:04.333333'.split(', ');
+		temp_str = temp_arr[0];
+		temp_arr = temp_str[1].split(':');
+	}else{
+		temp_arr = '3:36:04.333333'.split(':');
+	}
+
+
+	if ( parseInt(temp_arr[0]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[0]) + ' Hour ';
+	}
+
+	if ( parseInt(temp_arr[1]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[1]) + ' Min ';
+	}
+
+	if ( parseInt(temp_arr[2]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[2]) + ' Second ';
+	}
+
+	total_values_text.push(temp_str);
+	temp_str = '';
+
+	categories.push('LAB');
+	total_values.push(parseInt('0'));
+	if(parseInt('0') >= 86400){
+		temp_arr = '0:00:00'.split(', ');
+		temp_str = temp_arr[0];
+		temp_arr = temp_str[1].split(':');
+	}else{
+		temp_arr = '0:00:00'.split(':');
+	}
+
+
+	if ( parseInt(temp_arr[0]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[0]) + ' Hour ';
+	}
+
+	if ( parseInt(temp_arr[1]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[1]) + ' Min ';
+	}
+
+	if ( parseInt(temp_arr[2]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[2]) + ' Second ';
+	}
+
+	total_values_text.push(temp_str);
+	temp_str = '';
+
+
+
+
+	period_values.push( parseInt('7.0'));
+
+	if(parseInt('7.0') >= 86400){
+		temp_arr = '0:00:07'.split(', ');
+		temp_str = temp_arr[0];
+		temp_arr = temp_str[1].split(':');
+	}else{
+		temp_arr = '0:00:07'.split(':');
+	}
+
+	if ( parseInt(temp_arr[0]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[0]) + ' Hour ';
+	}
+
+	if ( parseInt(temp_arr[1]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[1]) + ' Min ';
+	}
+
+	if ( parseInt(temp_arr[2]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[2]) + ' Second ';
+	}
+
+	period_values_text.push(temp_str);
+	temp_str = '';
+
+	period_values.push( parseInt('9.0'));
+
+	if(parseInt('9.0') >= 86400){
+		temp_arr = '0:00:09'.split(', ');
+		temp_str = temp_arr[0];
+		temp_arr = temp_str[1].split(':');
+	}else{
+		temp_arr = '0:00:09'.split(':');
+	}
+
+	if ( parseInt(temp_arr[0]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[0]) + ' Hour ';
+	}
+
+	if ( parseInt(temp_arr[1]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[1]) + ' Min ';
+	}
+
+	if ( parseInt(temp_arr[2]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[2]) + ' Second ';
+	}
+
+	period_values_text.push(temp_str);
+	temp_str = '';
+
+	period_values.push( parseInt('12964.3333333'));
+
+	if(parseInt('12964.3333333') >= 86400){
+		temp_arr = '3:36:04.333333'.split(', ');
+		temp_str = temp_arr[0];
+		temp_arr = temp_str[1].split(':');
+	}else{
+		temp_arr = '3:36:04.333333'.split(':');
+	}
+
+	if ( parseInt(temp_arr[0]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[0]) + ' Hour ';
+	}
+
+	if ( parseInt(temp_arr[1]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[1]) + ' Min ';
+	}
+
+	if ( parseInt(temp_arr[2]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[2]) + ' Second ';
+	}
+
+	period_values_text.push(temp_str);
+	temp_str = '';
+
+	period_values.push( parseInt('0'));
+
+	if(parseInt('0') >= 86400){
+		temp_arr = '0:00:00'.split(', ');
+		temp_str = temp_arr[0];
+		temp_arr = temp_str[1].split(':');
+	}else{
+		temp_arr = '0:00:00'.split(':');
+	}
+
+	if ( parseInt(temp_arr[0]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[0]) + ' Hour ';
+	}
+
+	if ( parseInt(temp_arr[1]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[1]) + ' Min ';
+	}
+
+	if ( parseInt(temp_arr[2]) > 0 ){
+		temp_str += " " + parseInt(temp_arr[2]) + ' Second ';
+	}
+
+	period_values_text.push(temp_str);
+	temp_str = '';
+
+
+
+console.log(period_values, period_values_text);
 	var data = {
-		labels: [
-			'resilience', 'maintainability', 'accessibility',
-			'uptime', 'functionality', 'impact'
-		],
+		labels: categories,
 		series: [
 			{
-				label: '2012',
-				values: [4, 8, 15, 16, 23, 42]
+				label: 'Total Average Time',
+				values: total_values
 			},
 
 			{
-				label: '2014',
-				values: [31, 28, 14, 8, 15, 21]
+				label: 'Period Ave Time',
+				values: period_values
 			},]
 	};
 
-	var chartWidth       = 300,
+	var chartWidth       = 400,
 			barHeight        = 20,
 			groupHeight      = barHeight * data.series.length,
 			gapBetweenGroups = 10,
@@ -76,7 +290,7 @@
 	}
 
 	// Color scale
-	var color = d3.scaleOrdinal(d3.schemeCategory20);;
+	var color = d3.scaleOrdinal(d3.schemeCategory10);
 	var chartHeight = barHeight * zippedData.length + gapBetweenGroups * data.labels.length;
 
 	var x = d3.scaleLinear()
@@ -86,12 +300,14 @@
 	var y = d3.scaleLinear()
 	.range([chartHeight + gapBetweenGroups, 0]);
 
-//	var yAxis = d3.svg.axis()
-//	.scale(y)
-//	.tickFormat('')
-//	.tickSize(0)
-//	.orient("left");
-	var yAxis = d3.axisLeft(y);
+	var xAxis = d3.axisBottom(x)
+	.tickSize(1)
+	.tickFormat('');
+
+	var yAxis = d3.axisLeft(y)
+	.tickSize(0)
+	.tickFormat('');
+
 	// Specify the chart area and dimensions
 	var chart = d3.select(".chart")
 	.attr("width", spaceForLabels + chartWidth + spaceForLegend)
@@ -107,9 +323,11 @@
 
 	// Create rectangles of the correct width
 	bar.append("rect")
-	.attr("fill", function(d,i) { return color(i % data.series.length); })
+	.attr("fill", function(d,i) { console.log(d, i, color(i % data.series.length)); return color(i % data.series.length); })
+//	.attr('fill', function (d, i) { return color(i); })
 	.attr("class", "bar")
-	.attr("width", x)
+	.attr("width", x)           // need scale ..
+
 	.attr("height", barHeight - 1);
 
 	// Add text label in bar
@@ -117,6 +335,7 @@
 	.attr("x", function(d) { return x(d) - 3; })
 	.attr("y", barHeight / 2)
 	.attr("fill", "red")
+	.attr('stroke', 'red')
 	.attr("dy", ".35em")
 	.text(function(d) { return d; });
 
@@ -144,6 +363,12 @@
 	.attr("class", "y axis")
 	.attr("transform", "translate(" + spaceForLabels + ", " + -gapBetweenGroups/2 + ")")
 	.call(yAxis);
+
+console.log(spaceForLabels, groupHeight, gapBetweenGroups, data.labels.length, (groupHeight + gapBetweenGroups) * data.labels.length);
+	chart.append("g")
+	.attr("class", "x axis")
+	.attr("transform", "translate(" + spaceForLabels + ", " + ( (groupHeight + gapBetweenGroups) * data.labels.length - 1) + ")")
+	.call(xAxis);
 
 	// Draw legend
 	var legendRectSize = 18,
