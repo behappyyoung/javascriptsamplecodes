@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Parse Bills</title>
+<style type="text/css">
+	 textarea {
+		width: 600px;
+		height: 400px;
+		display: block;
+	}
+</style>
+<script type="text/javascript"> 
+
+function validate_text() {
+	var input_text = document.getElementById("input_text").value;
+	console.log('input_text', input_text);
+	if (input_text=="") {
+		  alert("please enter text")
+		return false;
+	 }else{
+	 	 document.getElementById("output_text").value = input_text;
+	 }
+}
+
+function validate() {
+	var number = document.getElementById("number").value
+	var carrier = document.getElementById("carrier").value
+      if (number=="") {
+		  alert("please enter phone number, it should be 10 numbers long")
+		return false;
+	  }
+  else function join(number,carrier) {
+	  return number + carrier;
+	  return true;
+	  
+  }
+     var myresult = number.concat(carrier);
+	 document.write(myresult);
+	 return myresult;
+}
+</script>
+</head>
+
+  <body>
+
+
+    <textarea id="input_text">
+    	
+    </textarea>
+
+    <input id="number" name="number"  type="text" />
+		<select onchange="validate()" id="carrier">
+			<option id="verizon"value="@vtext.com">verizon</option>
+			<option id="att" value="@txt.att.net">att</option>
+		</select>
+
+
+	<button onclick="validate_text();" > Parse </button>
+
+	 <textarea id="output_text">
+    	
+    </textarea>
+
+</body>
+</html>
