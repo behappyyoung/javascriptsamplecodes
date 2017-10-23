@@ -165,7 +165,7 @@
   }
 
   var save_div_new = function(needClass=false, addclass=" "){
-      var divElements = $('.for-print').html();
+      var divElements = $('.for-save').html();
       var date = new Date;
       if($('.print-title'+addclass).text() == ''){
           var title = $('.sub-title'+addclass).text().trim() + date.toLocaleDateString();
@@ -193,9 +193,9 @@
       csvContent += "\r\n"
       // console.log('before', csvContent);
       if(needClass){
-          csvContent += exportTableToCSV_withdiv( $('.for-print table'+addclass));
+          csvContent += exportTableToCSV_withdiv( $('.for-save table'+addclass));
       }else{
-          csvContent += exportTableToCSV_withdiv( $('.for-print table'));
+          csvContent += exportTableToCSV_withdiv( $('.for-save table'));
       }
       // console.log('after', csvContent);
       var encodedUri = encodeURI(csvContent);
