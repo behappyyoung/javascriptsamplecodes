@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="youngApp">
+    <head>
+        <meta charset="utf-8">
+        <title> Raphaël - Pedigree </title>
+        <link rel='stylesheet' type='text/css' href='../font-awesome.min.css'/>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script
+                src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+                integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="../raphael.min.js"></script>
+        <script src="pedigree_yp120517.js"></script>
+        <style media="screen">
+            body {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            .no-display{
+                display: none;
+            }
+            #paper {
+                width: 1000px;
+                height: 1000px;
+                border: 1px solid;
+                background: #fff;
+                margin: 100px 100px;
+                z-index: 10;
+            }
+            .view-controls {
+                position: absolute;
+                left: 10px;
+                top: 100px;
+                opacity: 0.8;
+                z-index: 100000;
+                padding: 4px;
+            }
+            .info{
+                position: absolute;
+                background-color: #00A000;
+                min-width: 300px;
+                min-height: 500px;
+                z-index: 100;
+                /*display: none;*/
+            }
+            #personal div{
+                margin: 10px auto;
+            }
+            #clinical input{
+                margin: 10px auto;
+            }
+        </style>
+
+        <script>
+
+            var youngApp = angular.module('youngApp',  [])                           // for use of AngularJs with Django
+                                   .config(function($interpolateProvider) {
+                                          $interpolateProvider.startSymbol('{$');
+                                          $interpolateProvider.endSymbol('$}');
+                                    }
+            );
+            youngApp.controller('mainController', ['$scope', function($scope) {
+                
+                
+
+            }]);
+            (jQuery(document).ready(function() {
+
+                 var JsonPed = 
+ {
+    "sex":"female",
+    "id":"1234567891",
+    "name":"John Doe Proband",
+    "carrierStatus": "",
+    "mother":  {
+      "sex":"female",
+      "id":"mother1",
+      "name":"Jane Fox",
+      "carrierStatus": "carrier",
+      "father": {
+        "sex":"male",
+        "id":"mother father",
+        "name":"father father Fox",
+        "carrierStatus": "uncertain"
+        }
+    },
+    "father":  {
+      "sex":"male",
+      "id":"father1",
+      "name":"john father Fox",
+      "carrierStatus": "uncertain",
+      "father": {
+        "sex":"male",
+        "id":"father11",
+        "name":"father father Fox",
+        "carrierStatus": "uncertain"
+        }
+    },
+    "sons":  [{
+      "sex":"male",
+      "id":"son1",
+      "name":"jonn son Fox",
+      "carrierStatus": ""
+    },{
+      "sex":"male",
+      "id":"son2",
+      "name":"jonn son Fox",
+      "carrierStatus": ""
+    }],
+    "daughters":[{
+      "sex":"female",
+      "id":"daughter1",
+      "name":"jonn son Fox",
+      "carrierStatus": ""
+    }],
+    "siblings":[
+      {
+        "sex":"male",
+        "id":"sibling1",
+        "name":"Jane Fox",
+        "carrierStatus": ""
+      },
+      {
+        "sex":"female",
+        "id":"sibling2",
+        "name":"Jane Fox",
+        "carrierStatus": ""
+      }
+    ]
+  };
+                myPed = new yp_pedigree(1000, 1000);
+                myPed.setUpPed(JsonPed, 500, 400);
+
+                $('.draggable').draggable();
+                $('#info_save').on('click', function () {
+                    var current_pid = $('#info_id').html().trim();
+                    var name = $('#name').val();
+                    console.log(updatedPed[current_pid], name);
+                    updatedPed[current_pid]['name'] = name;
+                });
+                $('#save_pedigree').on('click', function () {
+                    var savedPed=[];
+                    console.log('updateped', updatedPed);
+                    for(ped in updatedPed){
+                        if(ped != 'undefined'){
+                            savedPed.push({id:updatedPed[ped].id, name: updatedPed[ped].name, father:updatedPed[ped].father, mother:updatedPed[ped].mother, sex:updatedPed[ped].sex, carrierStatus: updatedPed[ped].carrierStatus});
+                        }
+                    }
+                    console.log(updatedPed, savedPed, JSON.stringify(savedPed));
+                });
+                var input = document.getElementById("ped_file");
+                var output = document.getElementById("output");
+                var output2 = document.getElementById("output2");
+                input.addEventListener("change", function () {
+                  if (this.files && this.files[0]) {
+                    var myFile = this.files[0];
+                    var reader = new FileReader();
+                    
+                    reader.addEventListener('load', function (e) {
+                        var json_file_content = e.target.result;
+                        var new_json = JSON.parse(json_file_content);
+                         output.textContent = json_file_content;
+                        output2.textContent = JsonPed;
+                        console.log(JSON.parse(json_file_content) , JsonPed);
+                        myPed.clearPaper();
+                        myPed.setUpPed(new_json, 500, 400);
+                    });
+                    
+                    reader.readAsBinaryString(myFile);
+                  }   
+                });
+
+            }));
+        </script>
+    </head>
+    <body>
+        <div class="container" ng-controller="mainController">
+            <input type="file" name="" id="ped_file">
+            <div id="output" ></div>
+            <div id="output2" ></div>
+            <div class="command">
+                <div class="save"> <button class="button btn-primary" id="save_pedigree"> Save </button>  </div>
+            </div>
+            <div id="paper">
+                
+            </div>
+            <div class="view-controls">
+                <div class="view-controls-pan field-no-user-select" title="Pan">
+                    <div class="text-center">
+                        <span class="view-control-pan pan-up fa fa-fw fa-arrow-up" title="Pan up"></span>
+                    </div>
+                    <span class="view-control-pan pan-left fa fa-fw fa-arrow-left" title="Pan left"></span>
+                    <span class="view-control-pan pan-home fa fa-fw fa-user" title="Pan home"></span>
+                    <span class="view-control-pan pan-right fa fa-fw fa-arrow-right" title="Pan right"></span>
+                    <div class="text-center">
+                        <span class="view-control-pan pan-down fa fa-fw fa-arrow-down" title="Pan down"></span>
+                    </div>
+                    
+                </div>
+                <div class="view-controls-zoom field-no-user-select" title="Zoom">
+                    <div class="field-no-user-select zoom-button zoom-in fa fa-fw fa-search-plus" title="Zoom in"></div>
+                    <div class="field-no-user-select zoom-track" style="height: 200px;">
+                        <div class="field-no-user-select zoom-handle selected" title="Drag to zoom" style="top: 169px; position: relative;"></div>
+                    </div>
+                    <div class="field-no-user-select zoom-button zoom-out fa fa-fw fa-search-minus" title="Zoom out"></div>
+                    <div class="field-no-user-select zoom-crt-value"></div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    function closeInfo() {
+        $('.info').hide();
+    }
+</script>
+<div class="info fade  " id="infoWindow">
+                    <div class="" onclick="closeInfo();"> X </div>                    
+                    <div class="tabs" id="tabs">
+                        <ul>
+                            <li>
+                                <a href="#personal" class="personal"> Personal </a>
+                            </li>
+                            <li>
+                                <a href="#clinical" class="clinical"> Clinical </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab" id="personal" class="personal">
+                            <div  >
+                                <label> ID </label>
+                                <span class="id" id="info_id" > </span>
+                            </div>
+                            <div class="name">
+                                <label> Name </label>
+                                <input class="name" id="name"  />
+                            </div>
+                            <div class="relation" id="info_relation"></div>
+                           
+                        </div>
+                        <div class="tab" id="clinical">
+                            <input type="radio" name="carrier" value="" />
+                            UnKnown
+                            <input type="radio" name="carrier" value="notaffected" />
+                            Not affected
+                            <input type="radio" name="carrier" value="uncertain" />
+                            UnCertain
+                            <br />
+                            <input type="radio" name="carrier" value="carrier" />
+                            Carrier
+                            <input type="radio" name="carrier" value="affected" />
+                            Affected
+                        </div>
+
+
+                    </div>
+                     <div> <button class="button btn-default" id="info_save" >Save </button> </div>
+</div>
+

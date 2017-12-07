@@ -1,0 +1,35 @@
+
+  {
+    "sex":"male",
+    "id":"1234567891",
+    "name":"John Doe Proband",
+    "mother":  {
+      "sex":"female",
+      "id":"mother",
+      "name":"Jane Fox"
+    },
+    "father":  {
+      "sex":"male",
+      "id":"father",
+      "name":"john Fox"
+    },
+    "son":  {
+      "sex":"male",
+      "id":"son",
+      "name":"Jane Fox"
+    },
+    "siblings":[
+      {
+        "sex":"male",
+        "id":"sibling1",
+        "name":"Jane Fox"
+      },
+      {
+        "sex":"female",
+        "id":"sibling2",
+        "name":"Jane Fox"
+      }
+    ]
+  }
+
+

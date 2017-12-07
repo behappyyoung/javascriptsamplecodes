@@ -1,0 +1,31 @@
+[
+  {
+    "sex":"male",
+    "id":"1234567891",
+    "name":"John Doe"
+  },
+  {
+    "mother":"1234567892",
+    "sex":"female",
+    "id":"1234567898",
+    "name":"Jane Fox"
+  },
+  {
+    "mother":"1234567892",
+    "sex":"female",
+    "id":"1234567896",
+    "name":"Jane Smith"
+  },
+  {
+    "sex":"female",
+    "id":"1234567894",
+    "name":"Jane Smith"
+  },
+  {
+    "mother":"1234567894",
+    "sex":"female",
+    "father":"1234567891",
+    "id":"1234567892",
+    "name":"Jane Doe"
+  }
+]

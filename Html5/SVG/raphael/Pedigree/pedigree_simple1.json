@@ -1,0 +1,61 @@
+  {
+    "sex":"female",
+    "id":"1234567891",
+    "name":"John Doe Proband",
+    "carrierStatus": "",
+    "mother":  {
+      "sex":"female",
+      "id":"mother1",
+      "name":"Jane Fox",
+      "carrierStatus": "carrier",
+      "father": {
+        "sex":"male",
+        "id":"mother father",
+        "name":"father father Fox",
+        "carrierStatus": "uncertain"
+        }
+    },
+    "father":  {
+      "sex":"male",
+      "id":"father1",
+      "name":"john father Fox",
+      "carrierStatus": "uncertain",
+      "father": {
+        "sex":"male",
+        "id":"father11",
+        "name":"father father Fox",
+        "carrierStatus": "uncertain"
+        }
+    },
+    "sons":  [{
+      "sex":"male",
+      "id":"son1",
+      "name":"jonn son Fox",
+      "carrierStatus": ""
+    },{
+      "sex":"male",
+      "id":"son2",
+      "name":"jonn son Fox",
+      "carrierStatus": ""
+    }],
+    "daughters":[{
+      "sex":"female",
+      "id":"daughter1",
+      "name":"jonn son Fox",
+      "carrierStatus": ""
+    }],
+    "siblings":[
+      {
+        "sex":"male",
+        "id":"sibling1",
+        "name":"Jane Fox",
+        "carrierStatus": ""
+      },
+      {
+        "sex":"female",
+        "id":"sibling2",
+        "name":"Jane Fox",
+        "carrierStatus": ""
+      }
+    ]
+  }
