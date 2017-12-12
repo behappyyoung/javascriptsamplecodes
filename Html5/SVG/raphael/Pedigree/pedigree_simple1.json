@@ -10,7 +10,7 @@
       "carrierStatus": "carrier",
       "father": {
         "sex":"male",
-        "id":"mother father",
+        "id":"mother1-father",
         "name":"father father Fox",
         "carrierStatus": "uncertain"
         }
@@ -22,7 +22,7 @@
       "carrierStatus": "uncertain",
       "father": {
         "sex":"male",
-        "id":"father11",
+        "id":"father1-1",
         "name":"father father Fox",
         "carrierStatus": "uncertain"
         }

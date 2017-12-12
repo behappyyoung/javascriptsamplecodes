@@ -83,7 +83,7 @@
       "carrierStatus": "carrier",
       "father": {
         "sex":"male",
-        "id":"mother father",
+        "id":"mother-father",
         "name":"father father Fox",
         "carrierStatus": "uncertain"
         }
@@ -95,7 +95,7 @@
       "carrierStatus": "uncertain",
       "father": {
         "sex":"male",
-        "id":"father11",
+        "id":"father1-1",
         "name":"father father Fox",
         "carrierStatus": "uncertain"
         }
@@ -132,8 +132,8 @@
       }
     ]
   };
-                myPed = new yp_pedigree(1000, 1000);
-                myPed.setUpPed(JsonPed, 500, 400);
+                myPed = new yp_pedigree(1000, 1000, JsonPed);
+                myPed.initPed(500, 400);
 
                 $('.draggable').draggable();
                 $('#info_save').on('click', function () {
@@ -167,7 +167,7 @@
                         output2.textContent = JsonPed;
                         console.log(JSON.parse(json_file_content) , JsonPed);
                         myPed.clearPaper();
-                        myPed.setUpPed(new_json, 500, 400);
+                        myPed.initPed(500, 400, new_json);
                     });
                     
                     reader.readAsBinaryString(myFile);

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+      .node {
+      fill: #ccc;
+      stroke: #666;
+      stroke-width: 2px;
+      width: 180px;
+      height: 80px;
+      }
+      .link {
+      stroke: blue;
+      stroke-width: 3px;
+      }
+      svg {
+      border: 1px solid #000
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  </head>
+  <body>
+    <script>
+      const canvasWidth = 800;
+      const canvasHeight = 800;
+       
+      let nodeWidth = 180;
+      let nodeHeight = 60;
+      const nodeTopMargin = 30;
+      const nodeLeftMargin = 100;
+       
+      let left_list = [{
+          id: "node1",
+          className: "active"
+        },{
+          id: "node1-1",
+          className: "active"
+        }, {
+          id: "node2",
+          className : "active"
+        }, {
+          id: "node3"
+        },{
+          id: "node4"
+        },{
+          id: "node5"
+        },{
+          id: "node6"
+        },{
+          id: "node7"
+        }];
+      let main = [{
+          id: "Main"
+        }];
+      let right_list =[];
+
+      var columns = [
+        // column1 nodes
+        [{
+          id: "node1",
+          className: "active"
+        },{
+          id: "node1-1",
+          className: "active"
+        }, {
+          id: "node2",
+          className : "active"
+        }, {
+          id: "node3"
+        },{
+          id: "node4"
+        },{
+          id: "node5"
+        },{
+          id: "node6"
+        },{
+          id: "node7"
+        }],
+       // column2 nodes
+        [{
+          id: "node8"
+        }],
+        // column3 nodes
+        [{
+          id: "node9"
+        }, {
+          id: "node10"
+        },{
+          id: "node11"
+        }]
+      ];
+         
+       
+       
+      // Draw Main Canvas
+      const canvas = d3.select("body")
+        .append("svg")
+        .attr("width", canvasWidth)
+        .attr("height", canvasHeight);
+       
+       
+      // Get Column's First Node Vertical Position (y coordinate)
+      const getVerticalPosition = (nodes, nodeHeight, nodeTopMargin, canvasHeight) => {
+        const nodesCount = nodes.length;
+        return (canvasHeight - (nodesCount * nodeHeight + (nodesCount -1) * nodeTopMargin))/2;
+      };
+       
+      // Get First Column Horizontally Position (x coordinate)
+      const getHorizantalPosition = (columns, nodeWidth, nodeLeftMargin, canvasWidth) => {
+         const columnsCount = columns.length;
+         return (canvasWidth - (columnsCount * nodeWidth + (columnsCount -1) * nodeLeftMargin))/2
+      };
+       
+      // Get All Nodes positions (coordinates)  
+      const getColumnNodes = (columns, options) => {
+        const {
+          nodeHeight,
+          nodeWidth,
+          nodeTopMargin,
+          nodeLeftMargin,
+          canvasHeight, 
+          canvasWidth
+        } = options;
+         
+         
+        // First column horizantal position (x corordinate)
+        const columnHorizantalPosition = getHorizantalPosition(columns, nodeWidth, nodeLeftMargin, canvasWidth);
+         
+         
+        const allNodes = columns.map((column, index) => {
+          // First node vertical position of a column(y cordinate)
+          const verticalPosition = getVerticalPosition(column, nodeHeight, nodeTopMargin, canvasHeight);
+          const horizantalPosition = columnHorizantalPosition + index * (nodeLeftMargin + nodeWidth);
+          return column.map((node, nodeIndex) => {
+            return {
+              x: horizantalPosition,
+              y: verticalPosition + nodeIndex * (nodeTopMargin + nodeHeight),
+              data: node
+            }
+          })   
+        })
+         
+        return allNodes;
+      };
+       
+       
+      const columnNodes = getColumnNodes(columns, {
+          nodeHeight, nodeWidth, nodeTopMargin, nodeLeftMargin, canvasHeight, canvasWidth });
+       
+       
+      // Toatal Nodes
+      const nodes = columnNodes.reduce((prev, current) => prev.concat(current), []);
+       
+       
+      const getLinks = (columns) => {
+       return [].concat(
+         columns[0].map(({x, y, data}) => ({
+           source: {x, y}, 
+           target: columns[1][0],
+           data
+         })),
+         columns[2].map(({x, y, data}) => ({
+           source: columns[1][0],
+           target: {x, y},
+           data
+         }))
+       );
+      };
+       
+      // Total Links( Edges)
+      const links = getLinks(columnNodes);
+       
+      const diagonal = d3.svg.diagonal()
+        .projection(d => {  
+          return [d.y , d.x]
+        });
+       
+       
+      canvas.selectAll(".node")
+        .data(nodes)
+        .enter()
+        .append("rect")
+        .attr("x", d => d.x)
+        .attr("y", d => d.y)
+        .attr("class", "node");
+       
+       
+       
+      canvas.selectAll(".link")
+        .data(links)
+        .enter()
+        .append("path")
+        .attr("fill", "none")
+        .attr("stroke-width", 1)
+        .attr("stroke", (d) => {
+          return d.data && d.data.className == 'active' ? "red": "#666";
+        })
+        .attr("d", (data => {
+          const target = Object.assign({}, data.target);
+          const source = Object.assign({}, data.source);
+          // source 
+          const sx = source.x + nodeWidth;
+          const sy = source.y + nodeHeight/2;
+         
+          // target
+          const tx = target.x;
+          const ty = target.y + nodeHeight/2;
+         
+          const data1 = {
+            source: {x: sy, y: sx},
+            target: {x: ty, y: tx}
+          }
+          return diagonal(data1);
+        }));
+         
+    </script>
+  </body>
+</html>
