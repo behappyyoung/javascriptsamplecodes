@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css" >
+        .wrapper{
+            width: 500px;
+            margin: 50px auto;
+        }
+    </style>
+	<script src="raphael2.2.1.min.js"></script>
+	<script type="text/javascript">
+		var R, black, blue, red, green, shadow;
+		window.onload = function() {
+			R = Raphael("holder", 400, 400);
+			blue = R.rect(0, 0, 75, 75).attr({fill: "blue"});
+            red = R.rect(25, 25, 25, 175).attr({fill: "red"});
+            green = R.rect(125, 125, 145, 175, 15).attr({fill: "#33ff33"});
+            shadow = R.rect(130, 130, 145, 175, 15).attr({fill: "#7c7c7c"});
+
+            green.toFront();
+		};
+
+		var blueToFront = function() {
+			blue.toFront();
+		};
+
+		var redToFront = function() {
+			red.toFront();
+		};
+
+		var blueToBack = function() {
+			blue.toBack();
+		};
+
+		var redToBack = function() {
+			red.toBack();
+		};
+
+		var titleToBlue = function() {
+			blue.attr({title: "Title for blue."});
+        };
+        
+        // green.transform("t10, 10");
+
+	</script>
+	<title>Raphael.js Bug - Cannot bring element to front after adding title.</title>
+</head>
+
+<body>
+    <div class="wrapper">
+            <div id="holder"></div>
+    </div>
+
+<ol>
+	<li>Front: <a href="javascript:blueToFront();">Blue</a>, <a href="javascript:redToFront();">Red</a></li>
+	<li>Back: <a href="javascript:blueToBack();">Blue</a>, <a href="javascript:redToBack();">Red</a></li>
+	<li><a href="javascript:titleToBlue();">Add title to blue</a></li>
+</ol>
+</body>
+</html>
