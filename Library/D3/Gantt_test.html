@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gantt Chart Example 1</title>
+<link type="text/css" href="http://mbostock.github.io/d3/style.css" rel="stylesheet" />
+<style type="text/css">
+	html,body,#wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+ 
+.chart {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+ 
+.axis path,.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+ 
+.bar {
+	fill: #33b5e5;
+}
+ 
+.bar-failed {
+	fill: #CC0000;
+}
+ 
+.bar-running {
+	fill: #669900;
+}
+ 
+.bar-succeeded {
+	fill: #33b5e5;
+}
+ 
+.bar-killed {
+	fill: #ffbb33;
+}
+ 
+#forkme_banner {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	z-index: 10;
+	padding: 10px 50px 10px 10px;
+	color: #fff;
+	background:
+		url('http://dk8996.github.io/Gantt-Chart/images/blacktocat.png')
+		#0090ff no-repeat 95% 50%;
+	font-weight: 700;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+       <a id="forkme_banner" href="http://dk8996.github.io/Gantt-Chart/" target="_blank">View on GitHub</a>
+       <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+	<script type="text/javascript" src="http://static.mentful.com/gantt-chart-d3v2.js"></script>
+	<script type="text/javascript" >
+		
+		var tasks = [
+{"startDate":new Date("Sun Dec 09 01:36:45 EST 2012"),"endDate":new Date("Sun Dec 09 02:36:45 EST 2012"),"taskName":"E Job","status":"RUNNING"},
+{"startDate":new Date("Sat Dec 08 23:12:24 EST 2012"),"endDate":new Date("Sun Dec 09 00:26:13 EST 2012"),"taskName":"A Job","status":"KILLED"}];
+
+var taskStatus = {
+    "SUCCEEDED" : "bar",
+    "FAILED" : "bar-failed",
+    "RUNNING" : "bar-running",
+    "KILLED" : "bar-killed"
+};
+
+var taskNames = [ "D Job", "P Job", "E Job", "A Job", "N Job" ];
+
+tasks.sort(function(a, b) {
+    return a.endDate - b.endDate;
+});
+var maxDate = tasks[tasks.length - 1].endDate;
+tasks.sort(function(a, b) {
+    return a.startDate - b.startDate;
+});
+var minDate = tasks[0].startDate;
+
+var format = "%H:%M";
+
+var gantt = d3.gantt().taskTypes(taskNames).taskStatus(taskStatus).tickFormat(format);
+gantt(tasks);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<style>
+    .axis path,
+    .axis line 
+    {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+    }
+</style>
+ 
+<h2>D3 Simple Bar Chart</h2>
+
+ 
+<div id="containerChart">
+ 
+</div>
+ 
+<script src="../../jQuery/inc/jQuery-2.1.0.min.js"></script>
+<script src="d3.v3.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var currentData = 20;
+        var jsonData = [
+            { "group": "Healthy", "high": 26, "low": 10, "color":"blue" },
+
+            { "group": "Risky", "high": 24, "low":5, "color":"red" }
+        ];
+ 
+        var svgWidth = 400;
+        var svgHeight = 300;
+ 
+        var heightPad = 50;
+        var widthPad = 30;
+        
+        var svg = d3.select("#containerChart")
+            .append("svg")
+            .attr("width", svgWidth + (widthPad * 2))
+            .attr("height", svgHeight + (heightPad * 2))
+            .append("g")
+            .attr("transform", "translate(" + widthPad + "," + heightPad + ")");
+ 
+        //Set up scales
+        var xScale = d3.scale.ordinal()
+            .domain(jsonData.map(function(d) { return d.group; }))
+            .rangeRoundBands([0, svgWidth], .1);
+ 
+       var yScale = d3.scale.linear()
+            .domain([0, 30])
+            .range([svgHeight,0]);
+ 
+       // Create bars
+        svg.selectAll("rect")
+            .data(jsonData)
+            .enter().append("rect")
+            .attr("x", function (d) { return xScale(d.group) + 3*widthPad; })
+            .attr("y", function (d) { return yScale(d.high); })
+            // .attr("height", function (d) { return svgHeight - yScale(d.GoalsScored); })
+            .attr("height", function (d) { return svgHeight - yScale(d.high-d.low) ; })
+            // .attr("width", xScale.rangeBand())
+            .attr('width', 30)
+            .attr("fill", function (d) { return d.color; });
+ 
+        // Y axis
+        var yAxis = d3.svg.axis()
+            .scale(yScale)
+            .orient("left");
+ 
+        svg.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(" + widthPad + ",0)")
+            .call(yAxis)
+         .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -50)
+            .style("text-anchor", "end")
+            .text("risk score")
+        
+        // X axis
+        var xAxis = d3.svg.axis()
+        .scale(xScale)
+        .orient("bottom");
+ 
+        svg.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(" + widthPad + "," + svgHeight + ")")
+            .call(xAxis)
+        //  .append("text")
+        //     .attr("x", svgWidth / 2 - widthPad)
+        //     .attr("y", 50)
+        //     .text("Healthy");
+        // .append("line")
+        //                   .attr("x1", 0)
+        //                   .attr("y1", yScale(10))
+        //                  .attr("x2",  widthPad + svgHeight)
+        //                  .attr("y2", yScale(10));
+        
+        .append("rect")
+            .attr("x", 0)
+            .attr("y", -svgHeight + yScale(20)-5)
+            // .attr("height", function (d) { return svgHeight - yScale(d.GoalsScored); })
+            .attr("height", 10)
+            // .attr("width", xScale.rangeBand())
+            .attr('width', svgWidth)
+            .attr("fill", "green")
+
+        svg.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(" + widthPad + "," + svgHeight + ")")
+            .call(xAxis)
+            .append("text")
+            .style("text-anchor", "end")
+            .attr("x", svgWidth/2)
+            .attr("y", -svgHeight + yScale(20)-5 )
+            .style('fill', 'darkOrange')
+            .text(currentData);
+            
+        // svg.append("g")
+        //     .attr("class", "axis")
+        //     .attr("transform", "translate(" + widthPad + "," + svgHeight + ")")
+        //     .call(xAxis)
+        //     .append("text")
+        //     .attr("x", svgWidth/2)
+        //     .attr("y", -50 )
+        //     .text("test");
+ console.log(yScale(10), yScale(26), yScale(5));
+    });
+</script>
