@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <style>
+
+        .content{
+            width: 1400px;
+        }
+        .examples {
+            width: 670px;
+            margin: 0;
+            display: inline-block;
+        }
+        .chartbox {
+            width: 200px;
+            height: 200px;
+    	    border : solid;
+            display: inline-block;
+        }
+        .logbox{
+            width: 430px;
+        }
+        .activity{
+            display: inline-block;
+            margin: 4px;
+        }
+        .content{
+            clear: both;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js " >    </script>
+    <script src='path-donut-graph-animation.js'>    </script>
+</head>
+<body>
+
+<div class="content">
+
+
+    <div class="examples">
+        <h2> 150 /200 </h2>
+        <div> base path :  d="M10,80 A70,70 0 1,0  10,79.999"   stroke="#DFDFDF" stroke-width="10" </div>
+        <div class="activity">
+
+            <div class="chartbox">
+                <div class="chart">
+                    <span class="progress" id="progress_1" ></span>
+                </div> <br />
+                <span id="actual_1" class="actual"></span> %
+            </div>
+
+        </div>
+
+        <div class="activity">
+            <h2> Path Log </h2>
+            <div class="logbox">
+                <span id="pathlog_1" class="actual"></span>
+            </div>
+
+        </div>
+    </div>
+     <div class="examples">
+            <h2> 180 /200 </h2>
+            <div> base path : d="M80,20 A60,60 0 1,1  79.99,20" fill='#ff4444' stroke="#DFDFDF" stroke-width="20"  </div>
+        <div class="activity">
+
+            <div class="chartbox">
+                <div class="chart">
+                    <span class="progress" id="progress_2" ></span>
+                </div> <br />
+                <span id="actual_2" class="actual"></span> %
+            </div>
+
+        </div>
+
+        <div class="activity">
+            <h2> Path Log </h2>
+            <div class="logbox">
+                <span id="pathlog_2" class="actual"></span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="../showHtml.js"></script>
+<script src="../showJs.js"></script>
+
+</body>
+</html>

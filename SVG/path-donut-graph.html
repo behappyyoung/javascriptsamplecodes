@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <style>
+        .chartbox {
+            width: 200px;
+            height: 200px;
+            border : solid;
+            display: inline-block;
+        }
+        .logbox{
+            width: 500px;
+        }
+        .activity{
+            display: inline-block;
+            margin: 20px;
+        }
+        .content{
+            clear: both;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js " >    </script>
+    <script src='path-donut-graph.js'>    </script>
+</head>
+<body>
+
+<div class="content">
+
+
+
+    <div class="activity">
+        <h2> Title </h2>
+
+        <div class="chartbox">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <path d="M10,80 A70,70 0 1,0  10,79.999"   fill="none" stroke="#DFDFDF" stroke-width="10" /> </svg>
+        </div>
+
+    </div>
+
+
+    <div class="activity">
+        <h2> Title </h2>
+
+        <div class="chartbox">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <path d="M80,10 A70,70,0,1,1,10,80"   fill="none" stroke="#ffff00" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="activity">
+        <h2> Title </h2>
+
+        <div class="chartbox">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <path d="M80,20 A60,60 0 1,1 79.99,20" fill='#ff4444' stroke="#DFDFDF" stroke-width="20"  stroke-linejoin="round"   /> </svg>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<script src="../showHtml.js"></script>
+<script src="../showJs.js"></script>
+
+</body>
+</html>

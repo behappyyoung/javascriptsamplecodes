@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js " >
+
+    </script>
+    <style>
+        .calind {
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+<html>
+<div class="content">
+
+
+    <script>
+        function calcPath (value, total, R) {
+            var center;
+            var alpha = 360 / total * value,
+                    a = (90 - alpha) * Math.PI / 180,
+                    x = 70 + R * Math.cos(a),
+                    y = 70 - R * Math.sin(a),
+                    path;
+            if (total == value) {
+                path = "M"+ 70 +","+ (70 - R) +" A"+ R+","+ R+","+ 0+","+ 1+","+ 1+","+ 69.99+","+ 70 - R;
+            } else {
+                if(alpha > 180) {
+                    center = 1;
+                } else {
+                    center = 0;
+                }
+                path = "M"+ 70+","+ (70 - R) +" A"+ R+","+ R+","+ 0+"," + center +","+ 1+","+ x+","+ y;
+            }
+
+            return path;
+        }
+
+
+        function updatePath(progress_id,  value, total, color){
+            if(value<total){
+                path = calcPath(value, total, 50);
+            }else{
+                path = calcPath(total-0.1, total, 50);
+            }
+            $('#'+progress_id+'_progress').html('<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M20,70 A50,50 0 1,0  20,69"   fill="none" stroke="#DFDFDF" stroke-width="10" /> <path d="'+path+'"   fill="none" stroke="'+color+'" stroke-linejoin="round"   stroke-width="10" stroke-dasharray="10,2"/> </svg>');
+            $('#'+progress_id+'_actual').html(value);
+
+        }
+
+
+        jQuery(document).ready(function() {
+
+            var distance_value=0;
+            var distance_actual = 8;
+            var distance_intvar = setInterval(distanceUpdate, 20);
+
+            var step_value=0;
+            var step_actual = 1500;
+            var step_intvar = setInterval(stepUpdate, 20);
+
+            var floor_value=0;
+            var floor_actual = 10;
+            var floor_intvar = setInterval(floorUpdate, 100);
+
+            function distanceUpdate(){
+                distance_value = distance_value +0.1;
+                updatePath('distance', Number(distance_value).toFixed(2), 10, '#007DC0');
+                if(distance_value>distance_actual){
+                    clearInterval(distance_intvar);
+                    updatePath('distance', distance_actual, 10, '#007DC0');
+                }
+            }
+
+            function stepUpdate(){
+                step_value = step_value+50;
+                updatePath('step', step_value, 10000, 'green');
+                if(step_value>step_actual) {
+                    clearInterval(step_intvar);
+                    updatePath('step', step_actual, 10000, 'green');
+                }
+            }
+
+            function floorUpdate(){
+                floor_value = floor_value + 1;
+                updatePath('floor', Number(floor_value), 20, 'red');
+                if(floor_value>floor_actual) {
+                    clearInterval(floor_intvar);
+                    updatePath('floor', floor_actual, 20, 'red');
+                }
+            }
+
+
+
+        });
+    </script>
+    <div class="plantitle"> <div>Activity [Daily Goal] </div><span class="clear"></span></div>
+    <div class="activity">
+        <div class="calind">
+            <h2>MILES [10]</h2>
+            <div class="distance_chart">
+
+                <span id="distance_progress" ></span>
+
+            </div> <br />
+            <span class="percentage">%</br></span>
+            <span id="distance_actual" class="calgoal"></span>
+        </div>
+
+        <div class="calind">
+            <h2>FLOORS [20]</h2>
+            <div class="floor_chart">
+                <span id="floor_progress" ></span>
+            </div><br />
+            <span class="percentage"><?=number_format(($activity['floors']/20)*100, 1)?>%</br></span>
+            <span id="floor_actual" class="calgoal"><?=$activity['floors']?></span>
+
+        </div>
+
+        <div class="calind">
+            <h2>STEPS [10000]</h2>
+            <div class="step_chart">
+                <span id="step_progress" ></span>
+            </div><br />
+            <span class="percentage"><?=number_format(($activity['steps']/10000)*100, 1)?>%</br></span>
+
+            <span id="step_actual" class="calgoal"><?=$activity['steps']?></span>
+        </div>
+        <div class="calind">
+            <h2>CALORIES  [<?=$calory_goal?>]</h2>
+            <div class="calories_chart">
+                <span id="calories_progress" ></span>
+            </div><br />
+
+            <span class="percentage" id="" ><?php echo ($calories_goal!=0)? number_format(($calories_burned/$calories_goal)*100, 1).'%' : 'N/A'; ?></br> </span>
+            <span id="calories_actual" class="calgoal"><?=$calories_burned?></span>
+        </div>
+    </div>
+
+
+
+</div>
+</html>
+
+</body>
+</html>

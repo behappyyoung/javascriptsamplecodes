@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        SVG - Path Animation
+    </title>
+</head>
+<body>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="700" height="450">
+    <defs>
+        <path id = "s3" d = "M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60" fill = "none" stroke = "green" stroke-width = "3"/>
+
+        <path id="thepath" fill="none" stroke="#000000" d="M0.905,0.643c0,0,51.428,73.809,79.047,166.19s68.095,38.572,107.144-18.095
+c39.047-56.667,72.381-92.382,113.333-42.381S335.5,178.5,374,200.5s82-18.5,97.5-33.5"/>
+    </defs>
+
+    <use x = "10" y = "200" xlink:href = "#s3"/>
+    <use x = "200" y = "200" xlink:href = "#thepath"/>
+
+    <circle r="15" cx="15" cy="15" fill="green">
+        <animateMotion dur="4s">
+            <mpath xlink:href="#s3"/>
+        </animateMotion>
+    </circle>
+
+    <circle r="15" cx="200" cy="15" fill="slategrey">
+        <animateMotion dur="4s" repeatDur="indefinite" >
+            <mpath xlink:href="#thepath"/>
+        </animateMotion>
+    </circle>
+
+    <text  transform="translate(20,20)" font-size = "20">
+        <textPath  id="text"  xlink:href = "#s3">
+            Test Text
+        </textPath>
+    </text>
+
+    <animate xlink:href="#text"
+             attributeName="startOffset"
+             attributeType="XML"
+             to="100%"
+             dur="5s"
+             repeatDur="indefinite" />
+
+
+
+
+
+</svg>
+
+<script src="../showFile.js"> </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    
+
+<div class="panel-body">
+<div class="col-sm-5 details"> Total Fuel Ecomomy </div>
+<div class="col-sm-7 details-data"> <label id="fuel-mpg">  </label> MPG </div>
+            <div  class="col-xs-8"> <div id="visualization" > </div>
+            </div>
+</div>
+
+<script>        
+
+google.load("visualization", "1", {packages:["corechart"]});
+
+var dataArray = [['trip', 'Normal ', 'over 3']];
+dataArray.push( [1, 0, null]);
+dataArray.push([2, 2.5, null]);
+dataArray.push([2.6, 3, 3]);
+dataArray.push([2.9, null, 3.1]);
+dataArray.push([3, null, 3]);
+dataArray.push([4, null, 4]);
+dataArray.push([5, null, 4]);
+dataArray.push([6, 3.1, 3.1]);
+dataArray.push([7, 2, null]);
+
+function drawVisualization() {
+    // Create and populate the data table.
+    var data = google.visualization.arrayToDataTable(dataArray);
+  var shownumber = Math.floor(dataArray.length/10) ;
+  
+      var options_lines = {
+        //title: chartname+' Line intervals, default',
+        curveType:'function',
+        lineWidth: 2,
+        width: 600,
+            height: 400,
+        chartArea:{'left':'45'},
+        hAxis:{title : 'Trip',
+                showTextEvery : shownumber
+            },
+        intervals: { 'style':'line' } // Use line intervals.
+    };
+  
+  
+    // Create and draw the visualization.
+    new google.visualization.LineChart(document.getElementById('visualization')).
+        draw(data,  options_lines);
+  }
+  
+
+  google.setOnLoadCallback(drawVisualization);
+
+</script>
+
+
+
+
+
